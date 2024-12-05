@@ -5,7 +5,7 @@ import { MdSecurity } from "react-icons/md";
 import { CgPerformance, CgSupport } from "react-icons/cg";
 
 export default function Home() {
-  const videoSources = ["heroVideo.mp4", "heroVideo1.mp4"];
+  const videoSources = ["heroVideo.mp4"];
 
   const [selectedVideo, setSelectedVideo] = useState("heroVideo.mp4");
 
