@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import {
   FaXTwitter,
   FaLinkedin,
@@ -7,10 +8,13 @@ import {
 } from "react-icons/fa6";
 
 export default function Footer() {
+
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
   return (
     <footer className="bg-light py-4 border-top p-5 footer">
       <div className="container-fluid">
-        <div className="row">
+        <div className="row mt-5">
           {/* Company */}
           <div className="col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Company</h5>
@@ -85,7 +89,7 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="d-flex justify-content-between align-items-center pt-3 mt-4 border-top copyright">
-          <p className="mb-0">© 2024 Heapvue. All rights reserved</p>
+          <p className="mb-0">© {currentYear} Heapvue. All rights reserved</p>
           <div>
             <a href="#" className="me-3">
               Privacy Policy
