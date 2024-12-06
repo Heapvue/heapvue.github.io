@@ -12,11 +12,11 @@ export default function Footer() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   return (
-    <footer className="bg-light py-4 border-top p-5 footer">
+    <footer className="bg-light py-4 border-top p-2 p-lg-5 footer">
       <div className="container-fluid">
         <div className="row mt-5">
           {/* Company */}
-          <div className="col-md-2 mb-4 mb-md-0">
+          <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Company</h5>
             <ul className="list-unstyled">
               <li>About Us</li>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           {/* Subsideries */}
-          <div className="col-md-2 mb-4 mb-md-0">
+          <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Products & Patforms</h5>
             <ul className="list-unstyled">
               <li>Apnicareer</li>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="col-md-2 mb-4 mb-md-0">
+          <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Services</h5>
             <ul className="list-unstyled">
               <li>AI & Machine Learning</li>
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Industries */}
-          <div className="col-md-2 mb-4 mb-md-0">
+          <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Industries</h5>
             <ul className="list-unstyled">
               <li>Education and E-learning</li>
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Follow Us */}
-          <div className="col-md-2 mb-4 mb-md-0">
+          <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Connect with Us</h5>
             <div className="d-flex mt-3">
               <a href="#" className="text-decoration-none me-3 socialIcon">

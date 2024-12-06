@@ -27,7 +27,7 @@ function Navbar() {
       scrolled ? "scrolled" : ""
     }`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="https://heapvue.com">
           heapvue.
         </a>
         <button
