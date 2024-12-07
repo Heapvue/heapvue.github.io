@@ -6,6 +6,7 @@ import { MdSecurity } from "react-icons/md";
 import { CgPerformance, CgSupport } from "react-icons/cg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FiArrowUpRight } from "react-icons/fi";
+import Enquiry from "./components/enquiry";
 
 export default function Home() {
   const videoSources = ["heroVideo.mp4"];
@@ -29,7 +30,8 @@ export default function Home() {
               Accelerating growth with <br />
               <span className="gradient">AI for tomorrow.</span>
             </h1>
-            <Button text="Get in Touch" />
+            <Button text="Get in Touch" type="button" dataBsToggle="modal" dataBsTarget="#inquiryModal" />
+            <Enquiry />
           </div>
         </div>
 
