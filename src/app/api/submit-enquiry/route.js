@@ -16,6 +16,7 @@ export async function POST(req) {
 
     return new Response(JSON.stringify({ message: 'Form submitted successfully!' }), {
       status: 200,
+      url: process.env.NEXT_PUBLIC_GOOGLE_FORM_ID,
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
