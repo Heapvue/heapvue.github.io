@@ -557,6 +557,114 @@ body {
   .hero-content h1 {
     font-size: 5rem;
   }
+  
+  .ourFeature h2{
+    font-size: 40px;
+  }
+
+  .ourFeature .rightSide{
+    padding-left: 30px;
+  }
+  
+  .ourFeature .rightSide h3{
+    font-size: 25px;
+  }
+  
+  .ourFeature .rightSide p{
+    font-size: 16px;
+  }
+  
+  .ourFeature .rightSide .icon-box{
+    margin-right: 30px;
+  }
+  
+  .ourFeature .rightSide .icon-box .icon{
+    font-size: 65px;
+  }
+  
+  .ourServices .card .img-frame{
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .ourServices .card img {
+    height: 320px;
+  }
+  
+  .ourServices .card h5{
+    font-size: 16px;
+  }
+  
+  .ourServices .card p{
+    font-size: 25px;
+  }
+  
+  .Quote h2{
+    font-size: 65px;
+  }
+  
+  .testimonial .carousel{
+    width: 90%;
+  }
+  
+  .testimonial .buttons {
+    margin-left: 80px;
+  }
+  
+  .testimonial .reviewSec .card {
+    width: 90%;
+  }
+  
+  .testimonial .reviewSec .card .card-body {
+    width: 100% !important;
+  }
+  
+  .testimonial .reviewSec .card .card-body p {
+    font-size: 22px;
+  }
+  
+  .testimonial .reviewSec .card .card-body .clientDetails h6 {
+    font-size: 15px;
+  }
+  
+  .testimonial .reviewSec .card .card-body .clientDetails p {
+    font-size: 16px;
+  }
+  
+  .industries{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .industries h2{
+    font-size: 72px;
+    width: 100%;
+  }
+
+  .industries .arrowIcon{
+    font-size: 60px;
+  }
+  
+  .industries .card h5{
+    font-size: 16px;
+  }
+  
+  .industries .card p{
+    font-size: 25px;
+  }
+  
+  .transformation h2{
+    font-size: 72px;
+  }
+  
+  .transformation .badge {
+    font-size: 1rem;
+  }
+  
+  .transformation .text {
+    font-size: 2.5rem;
+    line-height: 40px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -566,6 +674,150 @@ body {
   
   .hero-content h1 {
     font-size: 3.7rem;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .navbar button{
+    box-shadow: none !important;
+    outline: none;
+    border: none;
+  }
+
+  .navbar .menuIcon{
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  .navbar.scrolled .menuIcon{
+    color: #333333;
+  }
+
+  .ourFeature{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .ourFeature h2{
+    font-size: 34px;
+  }
+
+  .ourFeature .rightSide{
+    padding-left: 0px;
+    margin-top: 50px;
+  }
+  
+  .ourFeature .rightSide h3{
+    font-size: 20px;
+  }
+  
+  .ourFeature .rightSide .icon-box{
+    margin-right: 20px;
+  }
+  
+  .ourFeature .rightSide .icon-box .icon{
+    font-size: 60px;
+  }
+
+  .ourServices .card {
+    margin-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .ourServices .card img {
+    height: 520px;
+  }
+  
+  .ourServices .card h5{
+    font-size: 16px;
+  }
+  
+  .ourServices .card p{
+    font-size: 25px;
+  }
+  
+  .Quote h2{
+    font-size: 70px;
+  }
+  
+  .testimonial .carousel{
+    width: 95%;
+  }
+  
+  .testimonial .buttons {
+    margin-left: 30px;
+  }
+  
+  .testimonial .reviewSec .card {
+    width: 95%;
+  }
+  
+  .testimonial .reviewSec .card .card-body {
+    width: 100% !important;
+  }
+  
+  .testimonial .reviewSec .card .card-body p {
+    font-size: 22px;
+  }
+  
+  .testimonial .reviewSec .card .card-body .clientDetails h6 {
+    font-size: 15px;
+  }
+  
+  .testimonial .reviewSec .card .card-body .clientDetails p {
+    font-size: 16px;
+  }
+  
+  .industries{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .industries .card{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 30px;
+  }
+  
+  .industries .card img{
+    height: 520px;
+  }
+  
+  .transformation h2{
+    font-size: 72px;
+    width: 100%;
+  }
+  
+  .transformation .carousel{
+    margin-top: 50px;
+  }
+  
+  .transformation .carousel-item {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .transformation .carousel-item img {
+    height: 520px;
+  }
+  
+  .transformation .badgeTextContainer {
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .transformation .badge {
+    font-size: 0.8rem;
+  }
+  
+  .transformation .text {
+    font-size: 2rem;
+    line-height: 35px;
+    width: 100%;
   }
 }
 
@@ -582,15 +834,15 @@ body {
 @media (max-width: 425px) {
 
   .hero-content h5 {
-    font-size: 0.7rem;
+    display: none;
   }
   
   .hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 
   .ourFeature{
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 0px;
   }
   
@@ -599,7 +851,7 @@ body {
   }
 
   .ourFeature .rightSide{
-    margin-top: 20px;
+    margin-top: 60px;
     padding-left: 0px;
   }
   
@@ -635,7 +887,7 @@ body {
   }
   
   .ourServices .card img {
-    height: 360px;
+    height: 300px;
   }
   
   .ourServices .card h5{
@@ -696,6 +948,10 @@ body {
     width: 100%;
   }
 
+  .industries .arrowIcon{
+    font-size: 50px;
+  }
+
   .industries .industriesSec{
     margin-top: 60px;
   }
@@ -706,6 +962,10 @@ body {
     margin-top: 20px;
   }
   
+  .industries .card img{
+    height: 300px;
+  }
+
   .industries .card h5{
     font-size: 16px;
   }
