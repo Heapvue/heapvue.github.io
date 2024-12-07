@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { ButtonSecondary } from "../button";
 import { IoIosSearch } from "react-icons/io";
+import { RiMenu3Fill } from "react-icons/ri";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +23,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg p-3 fixed-top ${
+    <nav className={`navbar navbar-expand-lg ps-1 pe-1 p-3 fixed-top ${
       scrolled ? "scrolled" : ""
     }`}>
       <div className="container-fluid">
@@ -39,7 +39,7 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <RiMenu3Fill className="menuIcon"/>
         </button>
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
