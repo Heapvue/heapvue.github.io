@@ -32,7 +32,6 @@ const Enquiry = () => {
 
       if (response.status === 200) {
         setMessage("Form submitted successfully.");
-        console.log(response.url);
         e.target.reset();
       } else {
         setMessage("Error submitting the form.");
