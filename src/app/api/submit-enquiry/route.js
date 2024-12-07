@@ -5,7 +5,7 @@ export async function POST(req) {
     const body = await req.text(); 
 
     const response = await axios.post(
-      `https://docs.google.com/forms/d/e/${process.env.NEXT_PUBLIC_GOOGLE_FORM_ID}-gsw/formResponse`,
+      'https://docs.google.com/forms/d/e/1FAIpQLScQlJAteWMX1BfFZk6ZBH0sjSWbMlWu1K8QAS2n1Q6dce-gsw/formResponse',
       body, 
       {
         headers: {
@@ -16,7 +16,6 @@ export async function POST(req) {
 
     return new Response(JSON.stringify({ message: 'Form submitted successfully!' }), {
       status: 200,
-      url: process.env.NEXT_PUBLIC_GOOGLE_FORM_ID,
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
