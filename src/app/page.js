@@ -56,7 +56,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="col-12 col-lg-6 rightSide">
-            <div className="d-flex justify-content-center mb-3">
+            <div className="d-flex justify-content-start mb-3">
               <div className="icon-box w-10">
                 <MdSecurity className="icon" />
               </div>
@@ -68,7 +68,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="d-flex justify-content-center mb-3">
+            <div className="d-flex justify-content-start mb-3">
               <div className="icon-box w-10">
                 <CgPerformance className="icon" />
               </div>
@@ -80,7 +80,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-start">
               <div className="icon-box">
                 <CgSupport className="icon" />
               </div>
