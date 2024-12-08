@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import $ from "jquery";
 import { ButtonSecondry } from "../button";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const Enquiry = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -11,15 +13,15 @@ const Enquiry = () => {
     Email: "",
     Phone: "",
     Message: "",
-  })
+  });
 
-  const onChange = event => {
-    setFormData({ ...formData, [event.target.name]: event.target.value })
-  }
+  const onChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
 
-  const handleSubmit = event => {
-    event.preventDefault()
-    setIsSubmitting(true)
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
     $.ajax({
       url: `https://script.google.com/macros/s/${process.env.NEXT_PUBLIC_GOOGLE_FORM_ID}/exec`,
       data: formData,
@@ -30,16 +32,16 @@ const Enquiry = () => {
           Email: "",
           Phone: "",
           Message: "",
-        })
-        toast.success('We will get back to you soon!');
-        setIsSubmitting(false)
+        });
+        toast.success("We will get back to you soon!");
+        setIsSubmitting(false);
       },
       error: function (err) {
-        toast.error('Something went wrong, please try again!');
-        setIsSubmitting(false)
+        toast.error("Something went wrong, please try again!");
+        setIsSubmitting(false);
       },
-    })
-  }
+    });
+  };
 
   return (
     <div className="enquiryPopup">
@@ -92,16 +94,22 @@ const Enquiry = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <input
-                    type="tel"
-                    className="form-control"
-                    name="Phone"
-                    id="phone"
+                  <PhoneInput
+                    country={"in"}
                     value={formData.Phone}
-                    autoComplete="off"
-                    placeholder="Your Phone Number"
-                    required
-                    onChange={onChange}
+                    onChange={(phone) => setFormData({ ...formData, Phone: phone })}
+                    inputProps={{
+                      name: "Phone",
+                      required: true,
+                      placeholder: "Your Phone Number",
+                    }}
+                    inputStyle={{
+                      width: "100%",
+                      height: "45px",
+                      fontSize: "15px",
+                      paddingLeft: "50px",
+                      marginTop: "30px !important",
+                    }}
                   />
                 </div>
                 <div className="mb-3">

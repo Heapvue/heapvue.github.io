@@ -5,10 +5,11 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { Toaster } from "react-hot-toast";
+import CookieBanner from "./components/cookieConsent";
 
 const metadata = {
-  title: "Heapvue - IT Services | Consulting | Software Solutions",
-  description: "Heapvue is a software development company that provides IT services, consulting, and software solutions to businesses.",
+  title: "Heapvue - Consulting | IT Services | Digital Transformation",
+  description: "Heapvue is a leading IT services company providing consulting, digital transformation, and technology services.",
 };
 
 export default function RootLayout({ children }) {
@@ -18,9 +19,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
       <body>
         <Navbar />
         <Toaster position="top-right" reverseOrder={false} />
+        <CookieBanner />
         {children}
         <Footer />
       </body>

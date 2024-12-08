@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { Button } from "./components/button";
 import { MdSecurity } from "react-icons/md";
 import { CgPerformance, CgSupport } from "react-icons/cg";

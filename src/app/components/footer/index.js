@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import {
   FaXTwitter,
@@ -91,12 +92,12 @@ export default function Footer() {
         <div className="d-flex justify-content-between align-items-center pt-3 mt-4 border-top copyright">
           <p className="mb-0">© {currentYear} Heapvue. All rights reserved</p>
           <div>
-            <a href="#" className="me-3">
+            <Link href="privacy-policy" className="me-3">
               Privacy Policy
-            </a>
-            <a href="#" className="me-3">
+            </Link>
+            <Link href="terms-of-service" className="me-3">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
