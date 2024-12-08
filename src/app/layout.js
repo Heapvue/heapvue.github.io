@@ -7,6 +7,11 @@ import Footer from "./components/footer";
 import { Toaster } from "react-hot-toast";
 import CookieBanner from "./components/cookieConsent";
 
+const metadata = {
+  title: "Heapvue - Consulting | IT Services | Digital Transformation",
+  description: "Heapvue is a leading IT services company providing consulting, digital transformation, and technology services.",
+};
+
 export default function RootLayout({ children }) {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -14,6 +19,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
       <body>
         <Navbar />
         <Toaster position="top-right" reverseOrder={false} />
