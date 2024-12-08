@@ -7,25 +7,30 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
 
-    window.addEventListener("scroll", handleScroll);
+      handleScroll();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg ps-1 pe-1 p-3 fixed-top ${
-      scrolled ? "scrolled" : ""
-    }`}>
+    <nav
+      className={`navbar navbar-expand-lg ps-1 pe-1 p-3 fixed-top ${
+        scrolled ? "scrolled" : ""
+      }`}
+    >
       <div className="container-fluid">
         <a className="navbar-brand" href="https://heapvue.com">
           heapvue.
@@ -39,7 +44,7 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <RiMenu3Fill className="menuIcon"/>
+          <RiMenu3Fill className="menuIcon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
