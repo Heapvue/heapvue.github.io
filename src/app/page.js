@@ -31,7 +31,6 @@ export default function Home() {
               <span className="gradient">AI for tomorrow.</span>
             </h1>
             <Button text="Get in Touch" type="button" dataBsToggle="modal" dataBsTarget="#inquiryModal" />
-            <Enquiry />
           </div>
         </div>
 
@@ -399,6 +398,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Enquiry />
     </>
   );
 }
