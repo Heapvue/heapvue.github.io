@@ -1,48 +1,45 @@
 "use client";
-
 import React, { useState } from "react";
-import axios from "axios";
+import $ from "jquery";
 import { ButtonSecondry } from "../button";
+import toast from 'react-hot-toast';
 
 const Enquiry = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    Phone: "",
+    Message: "",
+  })
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setMessage("");
+  const onChange = event => {
+    setFormData({ ...formData, [event.target.name]: event.target.value })
+  }
 
-    const formData = new FormData(e.target);
-    const formParams = new URLSearchParams();
-    formData.forEach((value, key) => {
-      formParams.append(key, value);
-    });
-
-    try {
-      const response = await axios.post(
-        "/api/submit-enquiry",
-        formParams.toString(),
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
-
-      if (response.status === 200) {
-        setMessage("Form submitted successfully.");
-        e.target.reset();
-      } else {
-        setMessage("Error submitting the form.");
-      }
-    } catch (error) {
-      console.error("Error submitting the form:", error);
-      setMessage("Error submitting the form.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const handleSubmit = event => {
+    event.preventDefault()
+    setIsSubmitting(true)
+    $.ajax({
+      url: `https://script.google.com/macros/s/${process.env.NEXT_PUBLIC_GOOGLE_FORM_ID}/exec`,
+      data: formData,
+      method: "post",
+      success: function (response) {
+        setFormData({
+          Name: "",
+          Email: "",
+          Phone: "",
+          Message: "",
+        })
+        toast.success('We will get back to you soon!');
+        setIsSubmitting(false)
+      },
+      error: function (err) {
+        toast.error('Something went wrong, please try again!');
+        setIsSubmitting(false)
+      },
+    })
+  }
 
   return (
     <div className="enquiryPopup">
@@ -67,49 +64,57 @@ const Enquiry = () => {
               ></button>
             </div>
             <div className="modal-body">
-              <form id="demoForm" onSubmit={handleSubmit} autoComplete="off">
+              <form onSubmit={handleSubmit} autoComplete="off">
                 <div className="mb-3">
                   <input
                     type="text"
                     className="form-control"
-                    name="entry.938846834"
-                    id="firstName"
+                    name="Name"
+                    id="name"
+                    value={formData.Name}
                     autoComplete="off"
                     placeholder="Your Name"
                     required
+                    onChange={onChange}
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     type="email"
                     className="form-control"
-                    name="entry.726387839"
+                    name="Email"
                     id="email"
+                    value={formData.Email}
                     autoComplete="off"
                     placeholder="Your Email Address"
                     required
+                    onChange={onChange}
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     type="tel"
                     className="form-control"
-                    name="entry.1616351108"
+                    name="Phone"
                     id="phone"
+                    value={formData.Phone}
                     autoComplete="off"
                     placeholder="Your Phone Number"
                     required
+                    onChange={onChange}
                   />
                 </div>
                 <div className="mb-3">
                   <textarea
                     className="form-control"
-                    name="entry.466848905"
+                    name="Message"
                     placeholder="Your Requirements"
                     id="Description"
+                    value={formData.Message}
                     autoComplete="off"
                     rows="3"
                     required
+                    onChange={onChange}
                   ></textarea>
                 </div>
                 <div className="mb-3 form-check">
@@ -143,7 +148,6 @@ const Enquiry = () => {
                   ></ButtonSecondry>
                 </div>
               </form>
-              {message && <p className="mt-3 text-center message">{message}</p>}
             </div>
           </div>
         </div>

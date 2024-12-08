@@ -152,13 +152,7 @@ body {
   color: #191919;
   font-size: 30px;
   font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.enquiryPopup .modal-content .message {
-  color: #191919;
-  font-size: 16px;
-  margin-top: 20px;
+  letter-spacing: 0px;
 }
 
 .enquiryPopup .modal-content input[type="text"],
@@ -170,11 +164,13 @@ body {
   margin-top: 30px;
   box-shadow: none;
   color: #191919;
+  font-size: 15px;
 }
 
 .enquiryPopup .modal-content input::placeholder {
   color: #191919;
   opacity: 0.5;
+  font-size: 15px;
 }
 
 .enquiryPopup .modal-content textarea {
@@ -184,10 +180,12 @@ body {
   margin-top: 30px;
   box-shadow: none;
   color: #191919;
+  font-size: 15px;
 }
 
 .enquiryPopup .modal-content textarea::placeholder {
   color: #191919;
+  font-size: 15px;
   opacity: 0.5;
 }
 
@@ -1057,5 +1055,9 @@ body {
     font-size: 1rem;
     line-height: 20px;
     width: 100%;
+  }
+
+  .enquiryPopup .modal-content h5 {
+    font-size: 25px;
   }
 }
