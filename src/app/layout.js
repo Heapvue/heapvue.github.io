@@ -5,11 +5,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { Toaster } from "react-hot-toast";
-
-const metadata = {
-  title: "Heapvue - IT Services | Consulting | Software Solutions",
-  description: "Heapvue is a software development company that provides IT services, consulting, and software solutions to businesses.",
-};
+import CookieBanner from "./components/cookieConsent";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -21,6 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <Toaster position="top-right" reverseOrder={false} />
+        <CookieBanner />
         {children}
         <Footer />
       </body>
