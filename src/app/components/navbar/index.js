@@ -1,12 +1,18 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { IoIosSearch } from "react-icons/io";
 import { RiMenu3Fill } from "react-icons/ri";
 
 function Navbar() {
+  const pathname = usePathname();
+
   const [scrolled, setScrolled] = useState(false);
+  const [isHomePage, setIsHomePage] = useState(false);
 
   useEffect(() => {
+    setIsHomePage(pathname === "/");
+
     if (typeof window !== "undefined") {
       const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -23,12 +29,12 @@ function Navbar() {
         window.removeEventListener("scroll", handleScroll);
       };
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <nav
       className={`navbar navbar-expand-lg ps-1 pe-1 p-3 fixed-top ${
-        scrolled ? "scrolled" : ""
+        isHomePage ? (scrolled ? "scrolled" : "") : "scrolled"
       }`}
     >
       <div className="container-fluid">
