@@ -23,8 +23,7 @@ export default function Footer() {
               <li>About Us</li>
               <li>Blog</li>
               <li>Careers</li>
-              <li>Investors</li>
-              <li>Newsroom</li>
+              <li><a href="contact">Contact Us</a></li>
             </ul>
           </div>
 
