@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "nprogress/nprogress.css";
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
@@ -655,6 +656,68 @@ body {
   text-decoration: underline #2469bc;
 }
 
+.contact {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.contact h2{
+  font-size: 90px;
+  font-weight: 600;
+}
+
+.contact .card{
+  border: 1px solid #dbdbdb;
+  height: 300px;
+  border-radius: 0px;
+  width: 350px;
+  padding: 10px;
+  margin: 30px;
+}
+
+.contact .card:hover{
+  border: 1px solid #191919;
+  transition: 0.3s ease;
+}
+
+.contact .card .icon{
+  font-size: 25px;
+  color: #191919;
+  border: 1px solid #dbdbdb;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.contact .card h5{
+  font-size: 20px;
+  font-weight: 700;
+  color: #191919;
+}
+
+.contact .card p{
+  font-size: 16px;
+  color: #555555;
+}
+
+.contact .bottomBanner{
+  margin-top: 120px;
+  background-color: #191919;
+}
+
+.contact .bottomBanner h2{
+  font-size: 90px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.contact .bottomBanner p{
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.9;
+  
+}
+
 @media (max-width: 1440px) {
   .hero-content h5 {
     font-size: 1.5rem;
@@ -1113,5 +1176,37 @@ body {
 
   .enquiryPopup .modal-content h5 {
     font-size: 25px;
+  }
+
+  .contact {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  
+  .contact h2{
+    font-size: 45px;
+    font-weight: 600;
+  }
+  
+  .contact .card{
+    width: 100%;
+    margin: 0px;
+    margin-top: 20px;
+  }
+  
+  .contact .bottomBanner{
+    margin-top: 120px;
+    background-color: #191919;
+  }
+  
+  .contact .bottomBanner h2{
+    font-size: 35px;
+  }
+  
+  .contact .bottomBanner p{
+    font-size: 15px;
+    color: #ffffff;
+    opacity: 0.9;
+    
   }
 }

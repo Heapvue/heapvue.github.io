@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { IoIosSearch } from "react-icons/io";
@@ -80,9 +81,9 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" href="contact">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="d-flex">
