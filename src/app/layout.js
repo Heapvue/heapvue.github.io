@@ -7,7 +7,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { Toaster } from "react-hot-toast";
 import CookieBanner from "./components/cookieConsent";
-import NProgress from "nprogress";
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
 const metadata = {
   title: "Heapvue - Consulting | IT Services | Digital Transformation",
@@ -16,23 +16,11 @@ const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
 
-    NProgress.start();
-
-    const timer = setTimeout(() => {
-      NProgress.done();
-    }, 500);
-
-    return () => {
-      clearTimeout(timer);
-      NProgress.done();
-    };
-  }, [pathname, searchParams]);
+  }, []);
 
   return (
     <html lang="en">
@@ -41,6 +29,12 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body>
+        <ProgressBar
+          height="3px"
+          color="#2469bc"
+          options={{ showSpinner: false }}
+          shallowRouting
+        />
         <Navbar />
         <Toaster position="top-right" reverseOrder={false} />
         <CookieBanner />
