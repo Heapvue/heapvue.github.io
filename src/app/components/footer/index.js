@@ -20,10 +20,10 @@ export default function Footer() {
           <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Company</h5>
             <ul className="list-unstyled">
-              <li>About Us</li>
-              <li>Blog</li>
-              <li>Careers</li>
-              <li><a href="contact">Contact Us</a></li>
+              <li><Link href="/about-us">About Us</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -40,13 +40,12 @@ export default function Footer() {
           <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Services</h5>
             <ul className="list-unstyled">
-              <li>AI & Machine Learning</li>
-              <li>Application Development</li>
-              <li>Cloud</li>
-              <li>DevOps</li>
-              <li>Enterprise Solutions</li>
-              <li>Generative AI</li>
-              <li>IoT</li>
+              <li><Link href="/services/ai-ml">AI & Machine Learning</Link></li>
+              <li><Link href="/services/application-development">Application Development</Link></li>
+              <li><Link href="/services/cloud-devops" >Cloud & DevOps</Link></li>
+              <li><Link href="/services/enterprise-solutions">Enterprise Solutions</Link></li>
+              <li><Link href="/services/generative-ai">Generative AI</Link></li>
+              <li><Link href="/services/iot">IoT</Link></li>
             </ul>
           </div>
 

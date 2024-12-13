@@ -1209,3 +1209,220 @@ body {
     
   }
 }
+
+.py-6 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.mb-6 {
+  margin-bottom: 4rem;
+}
+
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.rounded-4 {
+  border-radius: 1rem;
+}
+
+.careers-page .py-6 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.careers-page .mb-6 {
+  margin-bottom: 4rem;
+}
+
+.careers-page .card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.careers-page .card:hover {
+  transform: translateY(-5px);
+}
+
+.careers-page .badge {
+  font-weight: 500;
+  padding: 0.5em 1em;
+}
+
+/* Blog Home Styles */
+.blog-home {
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --text-muted: #6c757d;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 6rem 0 8rem;
+}
+
+.animate-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-up-delay {
+  animation: fadeInUp 0.6s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.animate-up-delay-2 {
+  animation: fadeInUp 0.6s ease-out 0.4s;
+  animation-fill-mode: both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.category-card {
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.newsletter-form .form-control {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.newsletter-form .btn {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.footer {
+  background-color: #f8f9fa;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  --primary-color: #818cf8;
+  --primary-dark: #6366f1;
+  --text-muted: #9ca3af;
+  
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .card {
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #2d3748 !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: #9ca3af !important;
+}
+
+/* About Page Styles */
+.about-page .hero-section {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 6rem 0 8rem;
+}
+
+.about-page .bg-gradient {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+}
+
+.about-page .hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-page .hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.about-page .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.about-page .bg-white\/10:hover {
+  transform: translateY(-5px);
+}
+
+.about-page .py-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Animations */
+.animate-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-up-delay {
+  animation: fadeInUp 0.6s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
