@@ -70,7 +70,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar .dropdown-menu a{
+.navbar .dropdown-menu a {
   color: #191919;
   text-decoration: none;
 }
@@ -725,23 +725,23 @@ body {
   color: #555555;
 }
 
-.contact h3{
+.contact h3 {
   font-size: 2rem;
   font-weight: 800;
 }
 
-.contact .accordion{
+.contact .accordion {
   width: 90%;
 }
 
-.contact .accordion .accordion-item{
+.contact .accordion .accordion-item {
   border: none;
   border-bottom: 1px solid #dbdbdb;
   box-shadow: none;
   outline: none;
 }
 
-.contact .accordion .accordion-item .accordion-button{
+.contact .accordion .accordion-item .accordion-button {
   background-color: transparent;
   color: #191919;
   font-size: 1.2rem;
@@ -752,7 +752,7 @@ body {
   outline: none;
 }
 
-.contact .accordion .accordion-body{
+.contact .accordion .accordion-body {
   background-color: transparent;
   color: #555555;
   font-size: 1rem;
@@ -763,14 +763,123 @@ body {
   outline: none;
 }
 
-.singlePage .titleSec h1 {
-  font-size: 6rem;
-  font-weight: 800;
+.about-page .who .details h2 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.about-page .who .details p {
+  font-size: 16px;
+  color: #555555;
+}
+
+.about-page .mission-vission .card {
+  border: 1px solid #dbdbdb;
+  border-radius: 0px;
+}
+
+.about-page .mission-vission .card:hover {
+  border: 1px solid #191919;
+  transition: 0.3s ease;
+}
+
+.about-page .mission-vission .card h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.about-page .mission-vission .card p {
+  font-size: 16px;
+  color: #555555;
+}
+
+.about-page .mission-vission .card .icon {
+  font-size: 20px;
+  color: #191919;
+  border: 1px solid #dbdbdb;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 5px;
+}
+
+.about-page .core h2 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.about-page .core .arrowIcon {
+  font-size: 60px;
+}
+
+.about-page .core .card {
+  border: 1px solid #dbdbdb;
+  height: 300px;
+  border-radius: 0px;
+  width: 350px;
+  padding: 10px;
+  margin: 30px;
+}
+
+.about-page .core .card:hover {
+  border: 1px solid #191919;
+  transition: 0.3s ease;
+}
+
+.about-page .core .card .icon {
+  font-size: 25px;
+  color: #191919;
+  border: 1px solid #dbdbdb;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.about-page .core .card h5 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191919;
+}
+
+.about-page .core .card p {
+  font-size: 16px;
+  color: #555555;
+}
+
+.about-page .why h2 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.about-page .why h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.about-page .why p {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.about-page .why .icon {
+  font-size: 40px;
+  color: #191919;
+}
+
+.singlePage .titleSec {
+  padding-left: 50px;
+}
+
+.singlePage .titleSec h2 {
+  font-size: 90px;
+  font-weight: 600;
 }
 
 .singlePage .titleSec p {
   font-size: 1.3rem;
   font-weight: 400;
+  opacity: 0.6;
 }
 
 @media (max-width: 1440px) {
@@ -1249,23 +1358,86 @@ body {
     margin-top: 20px;
   }
 
-  .contact .bottomBanner {
-    margin-top: 120px;
-    background-color: #191919;
+  .contact .accordion {
+    width: 100%;
   }
 
-  .contact .bottomBanner h2 {
+  .about-page .who {
+    margin-top: 150px;
+    margin-bottom: 60px;
+  }
+
+  .about-page .who .details h2 {
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: 900;
+  }
+
+  .about-page .who .details p {
+    font-size: 16px;
+    color: #555555;
+  }
+
+  .about-page .mission-vission .card {
+    margin-bottom: 10px;
+  }
+
+  .about-page .core h2 {
+    font-size: 35px;
+    font-weight: 900;
+  }
+
+  .about-page .core .arrowIcon {
+    font-size: 50px;
+  }
+
+  .about-page .core .card {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .about-page .why h2 {
     font-size: 35px;
   }
 
-  .contact .bottomBanner p {
-    font-size: 15px;
-    color: #ffffff;
-    opacity: 0.9;
+  .about-page .why h3 {
+    font-size: 20px;
   }
 
-  .contact .accordion{
-    width: 100%;
+  .about-page .why p {
+    font-size: 13px;
+  }
+
+  .about-page .why .icon {
+    font-size: 30px;
+  }
+
+  .bottomBanner {
+    margin-top: 0px;
+  }
+
+  .bottomBanner h2 {
+    font-size: 30px;
+  }
+
+  .bottomBanner p {
+    font-size: 15px;
+  }
+
+  .singlePage .titleSec {
+    padding-left: 0px;
+  }
+
+  .singlePage .titleSec h2 {
+    margin-top: 250px;
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+  .singlePage .titleSec p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.6;
   }
 }
 
