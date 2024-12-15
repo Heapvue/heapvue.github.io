@@ -56,29 +56,70 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item nav-item dropdown dropdown-fullwidth">
-              <a className="nav-link" aria-current="page" href="#">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Services
               </a>
+              <ul className="dropdown-menu">
+                <li className="dropdown-item">
+                  <Link href="/services/ai-ml">AI & Machine Learning</Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link href="/services/application-development">
+                    Application Development
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link href="/services/cloud-devops">Cloud & DevOps</Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link href="/services/enterprise-solutions">
+                    Enterprise Solutions
+                  </Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link href="/services/generative-ai">Generative AI</Link>
+                </li>
+                <li className="dropdown-item">
+                  <Link href="/services/iot">IoT</Link>
+                </li>
+              </ul>
             </li>
             <li className="nav-item nav-item dropdown dropdown-fullwidth">
-              <a className="nav-link" aria-current="page" href="#">
+              <a className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Solutions
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Industries
-              </a>
+              <ul className="dropdown-menu">
+                <li className="dropdown-item">
+                  <a href="https://apnicareer.com" target="_blank">
+                    Apnicareer
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a href="https://apptuner.dev" target="_blank">
+                    Apptuner
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="nav-item nav-item dropdown dropdown-fullwidth">
-              <a className="nav-link" aria-current="page" href="#">
+              <Link className="nav-link" href="blog">
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" href="careers">
                 Careers
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" href="contact">

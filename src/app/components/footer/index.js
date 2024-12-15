@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Subsideries */}
           <div className="col-12 col-md-2 mb-4 mb-md-0">
-            <h5 className="fw-bold">Products & Patforms</h5>
+            <h5 className="fw-bold">Products & Platforms</h5>
             <ul className="list-unstyled">
               <li><a href="https://apnicareer.com" target="_blank">Apnicareer</a></li>
               <li><a href="https://apptuner.dev" target="_blank">Apptuner</a></li>

@@ -70,16 +70,23 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar .nav-link:hover, .navbar .nav-link:active {
-  color: #ffffff;
+.navbar .dropdown-menu a{
+  color: #191919;
+  text-decoration: none;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:active,
+.navbar .nav-link:focus {
+  color: #ffffff !important;
 }
 
 .navbar.scrolled .nav-link {
-  color: #555555;
+  color: #555555 !important;
 }
 
 .navbar.scrolled .nav-link:hover {
-  color: #2469bc;
+  color: #2469bc !important;
 }
 
 .navbar .navIcons {
@@ -95,6 +102,23 @@ body {
   color: #555555;
 }
 
+.bottomBanner {
+  margin-top: 120px;
+  background-color: #191919;
+}
+
+.bottomBanner h2 {
+  font-size: 90px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.bottomBanner p {
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
 .footer h5 {
   color: #000000;
   font-size: 22px;
@@ -104,7 +128,8 @@ body {
   margin-top: 20px;
 }
 
-.footer ul li, .footer ul li a {
+.footer ul li,
+.footer ul li a {
   margin-top: 10px;
   text-decoration: underline #3f3f3f;
   color: #3f3f3f;
@@ -112,7 +137,8 @@ body {
   text-underline-offset: 5px;
 }
 
-.footer ul li:hover, .footer ul li a:hover {
+.footer ul li:hover,
+.footer ul li a:hover {
   color: #2469bc;
   transition: 0.3s;
   cursor: pointer;
@@ -189,7 +215,7 @@ body {
   opacity: 0.5;
 }
 
-.enquiryPopup .modal-content .form-check{
+.enquiryPopup .modal-content .form-check {
   margin-top: 30px;
 }
 
@@ -620,7 +646,7 @@ body {
   font-weight: 800;
 }
 
-.docs h5{
+.docs h5 {
   font-size: 1.2rem;
   font-weight: 800;
 }
@@ -660,12 +686,12 @@ body {
   margin-bottom: 60px;
 }
 
-.contact h2{
+.contact h2 {
   font-size: 90px;
   font-weight: 600;
 }
 
-.contact .card{
+.contact .card {
   border: 1px solid #dbdbdb;
   height: 300px;
   border-radius: 0px;
@@ -674,12 +700,12 @@ body {
   margin: 30px;
 }
 
-.contact .card:hover{
+.contact .card:hover {
   border: 1px solid #191919;
   transition: 0.3s ease;
 }
 
-.contact .card .icon{
+.contact .card .icon {
   font-size: 25px;
   color: #191919;
   border: 1px solid #dbdbdb;
@@ -688,33 +714,63 @@ body {
   text-align: center;
 }
 
-.contact .card h5{
+.contact .card h5 {
   font-size: 20px;
   font-weight: 700;
   color: #191919;
 }
 
-.contact .card p{
+.contact .card p {
   font-size: 16px;
   color: #555555;
 }
 
-.contact .bottomBanner{
-  margin-top: 120px;
-  background-color: #191919;
+.contact h3{
+  font-size: 2rem;
+  font-weight: 800;
 }
 
-.contact .bottomBanner h2{
-  font-size: 90px;
-  font-weight: 600;
-  color: #ffffff;
+.contact .accordion{
+  width: 90%;
 }
 
-.contact .bottomBanner p{
-  font-size: 20px;
-  color: #ffffff;
-  opacity: 0.9;
-  
+.contact .accordion .accordion-item{
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  box-shadow: none;
+  outline: none;
+}
+
+.contact .accordion .accordion-item .accordion-button{
+  background-color: transparent;
+  color: #191919;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 20px 0;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.contact .accordion .accordion-body{
+  background-color: transparent;
+  color: #555555;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 20px 0;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.singlePage .titleSec h1 {
+  font-size: 6rem;
+  font-weight: 800;
+}
+
+.singlePage .titleSec p {
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 @media (max-width: 1440px) {
@@ -1181,32 +1237,35 @@ body {
     margin-top: 80px;
     margin-bottom: 60px;
   }
-  
-  .contact h2{
+
+  .contact h2 {
     font-size: 45px;
     font-weight: 600;
   }
-  
-  .contact .card{
+
+  .contact .card {
     width: 100%;
     margin: 0px;
     margin-top: 20px;
   }
-  
-  .contact .bottomBanner{
+
+  .contact .bottomBanner {
     margin-top: 120px;
     background-color: #191919;
   }
-  
-  .contact .bottomBanner h2{
+
+  .contact .bottomBanner h2 {
     font-size: 35px;
   }
-  
-  .contact .bottomBanner p{
+
+  .contact .bottomBanner p {
     font-size: 15px;
     color: #ffffff;
     opacity: 0.9;
-    
+  }
+
+  .contact .accordion{
+    width: 100%;
   }
 }
 
@@ -1310,7 +1369,7 @@ body {
 
 .blog-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
 .category-card {
@@ -1340,7 +1399,7 @@ body {
   --primary-color: #818cf8;
   --primary-dark: #6366f1;
   --text-muted: #9ca3af;
-  
+
   background-color: #1f2937;
   color: #f9fafb;
 }
@@ -1375,7 +1434,7 @@ body {
 
 .about-page .hover-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
 .about-page .bg-white\/10 {
