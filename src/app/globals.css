@@ -998,6 +998,10 @@ body {
     font-size: 2.5rem;
     line-height: 40px;
   }
+
+  .singlePage .titleSec h2 {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1007,6 +1011,15 @@ body {
 
   .hero-content h1 {
     font-size: 3.7rem;
+  }
+
+  .singlePage .titleSec h2 {
+    margin-top: 100px;
+  }
+
+  .about-page .core .card {
+    width: 100%;
+    margin: 0px;
   }
 }
 
@@ -1149,6 +1162,52 @@ body {
     font-size: 2rem;
     line-height: 35px;
     width: 100%;
+  }
+
+  .about-page .who {
+    margin-bottom: 60px;
+  }
+
+  .about-page .core .card {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .about-page .why h2 {
+    font-size: 35px;
+  }
+
+  .about-page .why h3 {
+    font-size: 20px;
+  }
+
+  .about-page .why p {
+    font-size: 13px;
+  }
+
+  .about-page .why .icon {
+    font-size: 30px;
+  }
+
+  .bottomBanner {
+    margin-top: 0px;
+  }
+
+  .bottomBanner h2 {
+    font-size: 40px;
+  }
+
+  .bottomBanner p {
+    font-size: 15px;
+  }
+
+  .singlePage .titleSec {
+    padding-left: 20px;
+  }
+
+  .singlePage .titleSec h2 {
+    margin-top: 80px;
+    font-size: 50px;
   }
 }
 
