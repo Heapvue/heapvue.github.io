@@ -1,4 +1,15 @@
 import BotttomBanner from "../components/bottomBanner";
+import { LuUsers } from "react-icons/lu";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { GrUserExpert } from "react-icons/gr";
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { PiHandshake } from "react-icons/pi";
+import { CiStar } from "react-icons/ci";
+import { SlPeople } from "react-icons/sl";
+import { RiFocus3Line } from "react-icons/ri";
+import { GoEye } from "react-icons/go";
+import { FiArrowUpRight } from "react-icons/fi";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 const AboutUs = () => {
   return (
@@ -9,67 +20,88 @@ const AboutUs = () => {
           alt="About HeapVue"
           className="img-fluid w-100"
           style={{
-            maxHeight: "700px",
+            maxHeight: "500px",
             objectFit: "cover",
             filter: "brightness(0.6)",
           }}
         />
-        <div className="position-absolute top-50 start-50 translate-middle text-center titleSec">
+        <div
+          className="position-absolute top-50 start-0 translate-middle-y text-start titleSec"
+        >
           <div className="container">
-            <span className="badge bg-primary mb-3">ABOUT US</span>
-            <h1 className="display-3 fw-bold mb-3">
-              Innovating for a Better Tomorrow
-            </h1>
-            <p className="lead mb-0">
+            <h2>Innovating for a Better Tomorrow</h2>
+            <p>
               Transforming businesses through cutting-edge technology solutions
             </p>
           </div>
         </div>
       </div>
-
-      <div className="container-fluid p-4 p-lg-5">
-        {/* Introduction */}
+      <div className="container-fluid p-4 p-lg-5 who">
         <section className="mb-6">
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-4 mb-lg-0">
+          <div className="row align-items-stretch d-flex">
+            <div className="col-lg-6 d-flex">
               <img
                 src="/services.jpg"
-                alt="Our Team"
-                className="img-fluid rounded-4 shadow"
+                alt="About HeapVue"
+                className="img-fluid w-100"
+                style={{
+                  height: "100%",
+                  objectFit: "cover",
+                }}
               />
             </div>
-            <div className="col-lg-6">
-              <h2 className="display-6 fw-bold mb-4">Who We Are</h2>
-              <p className="lead text-muted mb-4">
-                At Heapvue, we are driven by a passion for innovation and a
-                commitment to delivering cutting-edge technology solutions that
-                transform businesses. As a trusted partner to organizations of
-                all sizes, we specialize in creating tailored software, web, and
-                mobile solutions that empower businesses to thrive in an
-                ever-evolving digital landscape.
+            <div className="col-lg-6 details d-flex flex-column justify-content-center ps-1 ps-lg-5">
+              <h2 className="mb-4">Who We Are?</h2>
+              <p className="mb-4">
+                At Heapvue, we leverage the transformative power of AI, machine
+                learning, and cloud technologies to drive businesses toward
+                unparalleled success and innovation. Our expertise lies in
+                applying advanced analytics, intelligent automation, and
+                scalable cloud solutions to address complex challenges,
+                streamline operations, and uncover new growth opportunities. By
+                integrating cutting-edge AI and ML models, we enable businesses
+                to make smarter, data-driven decisions, personalize customer
+                experiences, and achieve operational excellence.
+              </p>
+              <p className="mb-4">
+                With cloud computing at the core of our approach, we help
+                organizations transition to highly flexible, secure, and
+                cost-efficient infrastructures that adapt to their evolving
+                needs. Whether it's deploying AI-driven solutions, optimizing
+                workflows through machine learning, or ensuring seamless
+                scalability with cloud platforms, we are committed to unlocking
+                the full potential of technology for our clients.
+              </p>
+              <p className="mb-4">
+                At Heapvue, we believe in empowering businesses to stay
+                competitive in a fast-changing digital landscape. By partnering
+                with us, companies gain access to innovative tools,
+                forward-thinking strategies, and the technical expertise needed
+                to navigate the complexities of today’s technology-driven world
+                and reach new heights of success.
               </p>
               <div className="row g-4">
                 <div className="col-6">
                   <div className="d-flex align-items-center">
-                    <i className="bi bi-check-circle-fill text-primary fs-4 me-2"></i>
+                    <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
                     <span className="fw-bold">Industry Expertise</span>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="d-flex align-items-center">
-                    <i className="bi bi-check-circle-fill text-primary fs-4 me-2"></i>
+                    <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
                     <span className="fw-bold">Global Reach</span>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="d-flex align-items-center">
-                    <i className="bi bi-check-circle-fill text-primary fs-4 me-2"></i>
+                    <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
                     <span className="fw-bold">Innovative Solutions</span>
                   </div>
                 </div>
                 <div className="col-6">
                   <div className="d-flex align-items-center">
-                    <i className="bi bi-check-circle-fill text-primary fs-4 me-2"></i>
+                    <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
                     <span className="fw-bold">Customer Focus</span>
                   </div>
                 </div>
@@ -78,19 +110,18 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="mb-6">
-
-          <div className="row g-4">
-            <div className="col-md-6">
-              <div className="card h-100 border-0 shadow-sm">
-                <div className="card-body p-5">
+        <section className="mb-6 mission-vission">
+          <div className="row align-items-stretch">
+            <div className="col-lg-6 details d-flex flex-column justify-content-center">
+              <div className="card flex-grow-1 mb-4">
+                <div className="card-body p-3 p-lg-5">
                   <div className="d-flex align-items-center mb-4">
-                    <div className="icon-box bg-primary bg-opacity-10 rounded-3 p-3 me-4">
-                      <i className="bi bi-rocket-takeoff text-primary fs-2"></i>
+                    <div className="icon-box me-4">
+                      <RiFocus3Line className="icon" />
                     </div>
-                    <h3 className="h4 mb-0">Our Mission</h3>
+                    <h3>Our Mission</h3>
                   </div>
-                  <p className="text-muted mb-0">
+                  <p>
                     To harness the power of technology and innovation to provide
                     businesses with scalable, efficient, and impactful solutions
                     that drive growth, enhance productivity, and deliver
@@ -98,17 +129,15 @@ const AboutUs = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="col-md-6">
-              <div className="card h-100 border-0 shadow-sm">
-                <div className="card-body p-5">
+              <div className="card flex-grow-1">
+                <div className="card-body p-3 p-lg-5">
                   <div className="d-flex align-items-center mb-4">
-                    <div className="icon-box bg-primary bg-opacity-10 rounded-3 p-3 me-4">
-                      <i className="bi bi-eye text-primary fs-2"></i>
+                    <div className="icon-box me-4">
+                      <GoEye className="icon" />
                     </div>
-                    <h3 className="h4 mb-0">Our Vision</h3>
+                    <h3>Our Vision</h3>
                   </div>
-                  <p className="text-muted mb-0">
+                  <p>
                     To be the go-to technology partner for enterprises
                     worldwide, known for our excellence in crafting innovative
                     solutions that redefine industries and unlock new
@@ -117,48 +146,62 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
+            <div className="col-lg-6">
+              <img
+                src="/about2.jpg"
+                alt="Our Team"
+                className="img-fluid w-100"
+                style={{
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
           </div>
         </section>
 
         {/* Values */}
-        <section className="mb-6">
-          <h2 className="text-center display-6 fw-bold mb-5">
-            Our Core Values
-          </h2>
+        <section className="mb-6 core">
+          <div className="row">
+            <div className="col-10 col-md-10 text-start">
+              <h2 className="text-start mb-5">Our Core Values</h2>
+            </div>
+            <div className="col-2 col-md-2 text-end">
+              <FiArrowUpRight className="arrowIcon" />
+            </div>
+          </div>
+
           <div className="row g-4">
             {[
               {
-                icon: "bi-shield-lock",
+                icon: <PiHandshake />,
                 title: "Integrity",
                 desc: "We uphold honesty and transparency in all our engagements.",
               },
               {
-                icon: "bi-star",
+                icon: <CiStar />,
                 title: "Excellence",
                 desc: "We are committed to exceeding expectations with every project.",
               },
               {
-                icon: "bi-people-fill",
+                icon: <SlPeople />,
                 title: "Collaboration",
                 desc: "We work hand-in-hand with our clients, ensuring seamless communication.",
               },
               {
-                icon: "bi-lightbulb",
+                icon: <HiOutlineLightBulb />,
                 title: "Innovation",
                 desc: "We constantly push the boundaries of technology for impactful solutions.",
               },
             ].map((value, index) => (
               <div key={index} className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm">
-                  <div className="card-body text-center p-4">
-                    <div
-                      className="icon-box bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-4"
-                      style={{ width: "fit-content" }}
-                    >
-                      <i className={`bi ${value.icon} text-primary fs-2`}></i>
+                <div className="card">
+                  <div className="card-body d-flex flex-column justify-content-between align-items-start">
+                    <div className="icon">{value.icon}</div>
+                    <div>
+                      <h5>{value.title}</h5>
+                      <p>{value.desc}</p>
                     </div>
-                    <h3 className="h5 mb-3">{value.title}</h3>
-                    <p className="text-muted mb-0">{value.desc}</p>
                   </div>
                 </div>
               </div>
@@ -167,41 +210,37 @@ const AboutUs = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="mb-6 bg-light rounded-4 p-5">
-          <h2 className="text-center display-6 fw-bold mb-5">
-            Why Choose Heapvue?
-          </h2>
+        <section className="mb-6 bg-light p-3 p-lg-5 why">
+          <h2 className="text-center mb-5">Why Choose Heapvue?</h2>
           <div className="row g-4">
             {[
               {
-                icon: "bi-person-check",
+                icon: <LuUsers className="icon" />,
                 title: "Customer-Centric Approach",
                 desc: "We listen, understand, and deliver solutions tailored to your unique business needs.",
               },
               {
-                icon: "bi-people",
+                icon: <GrUserExpert className="icon" />,
                 title: "Expert Team",
                 desc: "Our team of skilled professionals combines technical expertise with industry knowledge.",
               },
               {
-                icon: "bi-shield-check",
+                icon: <AiOutlineSafetyCertificate className="icon" />,
                 title: "Quality Assurance",
                 desc: "We follow stringent quality control measures to ensure flawless execution.",
               },
               {
-                icon: "bi-lightning",
+                icon: <HiOutlineLightBulb className="icon" />,
                 title: "Innovation-Driven",
                 desc: "We leverage the latest technologies to build future-ready applications.",
               },
             ].map((item, index) => (
               <div key={index} className="col-md-6">
                 <div className="d-flex">
-                  <div className="icon-box bg-white rounded-3 p-3 me-4">
-                    <i className={`bi ${item.icon} text-primary fs-2`}></i>
-                  </div>
+                  <div className="icon-box p-3 me-4">{item.icon}</div>
                   <div>
-                    <h3 className="h5 mb-3">{item.title}</h3>
-                    <p className="text-muted mb-0">{item.desc}</p>
+                    <h3 className="mb-3">{item.title}</h3>
+                    <p className="mb-0">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -211,7 +250,10 @@ const AboutUs = () => {
 
         {/* CTA Section */}
         <section>
-          <BotttomBanner title="Ready to Transform?" desc="Let's create innovative solutions together that drive your business forward." />
+          <BotttomBanner
+            title="Ready to Transform?"
+            desc="Let's create innovative solutions together that drive your business forward."
+          />
         </section>
       </div>
     </div>
