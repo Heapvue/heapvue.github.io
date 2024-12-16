@@ -434,8 +434,7 @@ function Contact() {
         <BotttomBanner
           title="Let’s Solve It Together!"
           desc="Your success is our priority, and we look forward to crafting
-              solutions that make a difference.
-            </p>"
+              solutions that make a difference."
         />
       </div>
     </div>

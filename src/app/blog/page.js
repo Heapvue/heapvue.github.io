@@ -1,200 +1,241 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
+import { ButtonSecondry } from "../components/button";
+import { CiCalendarDate } from "react-icons/ci";
+import { LuUserRound } from "react-icons/lu";
+import { IoPricetagsOutline } from "react-icons/io5";
+import { PiShareFat } from "react-icons/pi";
+import { IoTimeOutline } from "react-icons/io5";
+import {
+  FaXTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebookF,
+} from "react-icons/fa6";
 
 const BlogHome = () => {
   const featuredPosts = [
     {
       id: 1,
-      title: "The Future of AI in Enterprise Solutions",
-      excerpt: "Explore how artificial intelligence is transforming business operations and decision-making processes.",
+      title:
+        "How to Detect and Respond to the Surge in Cloud-Based Token Theft",
+      excerpt:
+        "Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive. Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.",
       category: "Technology",
       image: "/services.jpg",
       date: "Mar 15, 2024",
-      readTime: "5 min read"
+      readTime: "5 min read",
     },
     {
       id: 2,
-      title: "Building Scalable Cloud Architecture",
-      excerpt: "Learn the best practices for designing cloud infrastructure that grows with your business.",
+      title:
+        "Tips for Efficient Knowledge Management Using Enterprise Search Software",
+      excerpt:
+        "Holistically pontificate installed base portals after maintainable products. Phosfluorescently engage worldwide methodologies with technology. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.",
       category: "Cloud",
-      image: "/services.jpg",
+      image: "/service1.jpg",
       date: "Mar 12, 2024",
-      readTime: "7 min read"
+      readTime: "7 min read",
     },
     {
       id: 3,
-      title: "The Rise of IoT in Smart Manufacturing",
-      excerpt: "Discover how IoT devices are revolutionizing the manufacturing industry with real-time monitoring.",
+      title:
+        "5 Reasons Why a GSA Replacement Has More Advantages Than the Original",
+      excerpt:
+        "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI. Wayfarers biodiesel helvetica yr meh. Whatever brunch vice mlkshk hashtag affogato messenger bag activated charcoal glossier godard fingerstache dreamcatcher.",
       category: "IoT",
-      image: "/services.jpg",
+      image: "/service2.jpg",
       date: "Mar 10, 2024",
-      readTime: "6 min read"
-    }
+      readTime: "6 min read",
+    },
   ];
 
   const categories = [
     {
       name: "Technology",
       icon: "bi-cpu",
-      description: "Latest tech trends and innovations"
+      description: "Latest tech trends and innovations",
     },
     {
       name: "Cloud Computing",
       icon: "bi-cloud",
-      description: "Cloud solutions and strategies"
+      description: "Cloud solutions and strategies",
     },
     {
       name: "Development",
       icon: "bi-code-square",
-      description: "Programming and development insights"
+      description: "Programming and development insights",
     },
     {
       name: "Design",
       icon: "bi-palette",
-      description: "UX/UI and design principles"
-    }
+      description: "UX/UI and design principles",
+    },
   ];
 
   return (
-    <div className="blog-home">
-      {/* Hero Section */}
-      <section className="hero-section position-relative overflow-hidden">
-        <div className="container py-6">
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-5 mb-lg-0">
-              <span className="badge bg-primary mb-3">BLOG</span>
-              <h1 className="display-4 fw-bold mb-4 animate-up">
-                Insights for the Digital Age
-              </h1>
-              <p className="lead text-muted mb-4 animate-up-delay">
-                Explore the latest trends in technology, development, and innovation. Stay ahead with expert insights and practical guides.
-              </p>
-              <div className="animate-up-delay-2">
-                <Link href="/blog/latest" className="btn btn-primary btn-lg me-3">
-                  Latest Articles
-                </Link>
-                <Link href="#categories" className="btn btn-outline-primary btn-lg">
-                  Browse Topics
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="position-relative animate-fade-in">
-                <Image
-                  src="/services.jpg"
-                  alt="Blog Hero"
-                  width={600}
-                  height={400}
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
+    <div className="container-fluid p-4 p-lg-5 blog">
+      <div className="row">
+        <div className="col-md-8">
+          <h2>
+            Insight's for the <br />
+            Digital Age
+          </h2>
         </div>
-        <div className="hero-shape position-absolute bottom-0 start-0 w-100">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#f8f9fa" fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
-        </div>
-      </section>
-
-      {/* Featured Articles */}
-      <section className="featured-section bg-light py-6">
-        <div className="container">
-          <h2 className="text-center mb-5">Featured Articles</h2>
-          <div className="row g-4">
-            {featuredPosts.map((post) => (
-              <div key={post.id} className="col-md-6 col-lg-4">
-                <Link href={`/blog/${post.id}`} className="text-decoration-none">
-                  <div className="card h-100 border-0 shadow-sm blog-card">
-                    <div className="position-relative">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        width={400}
-                        height={250}
-                        className="card-img-top"
-                      />
-                      <span className="badge bg-primary position-absolute top-0 end-0 m-3">
-                        {post.category}
-                      </span>
-                    </div>
-                    <div className="card-body">
-                      <div className="d-flex justify-content-between text-muted small mb-2">
-                        <span>{post.date}</span>
-                        <span>{post.readTime}</span>
-                      </div>
-                      <h3 className="h5 card-title">{post.title}</h3>
-                      <p className="card-text text-muted">{post.excerpt}</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories */}
-      <section id="categories" className="categories-section py-6">
-        <div className="container">
-          <h2 className="text-center mb-5">Explore Topics</h2>
-          <div className="row g-4">
-            {categories.map((category, index) => (
-              <div key={index} className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm category-card">
-                  <div className="card-body text-center p-4">
-                    <i className={`bi ${category.icon} text-primary fs-1 mb-3`}></i>
-                    <h3 className="h5 mb-2">{category.name}</h3>
-                    <p className="text-muted mb-0">{category.description}</p>
-                  </div>
+      </div>
+      <div className="row mt-5 text-start rightSide">
+        <div className="col-md-8">
+          {featuredPosts.map((post) => (
+            <div className="blogCard" key={post.id}>
+              <h1>{post.title}</h1>
+              <div className="d-flex align-items-center details">
+                <div className="d-flex align-items-center me-3 me-md-5">
+                  <CiCalendarDate className="icon me-2" />
+                  <p className="mb-0"> {post.date} </p>
+                </div>
+                <div className="d-flex align-items-center me-3 me-md-5">
+                  <LuUserRound className="icon me-2" />
+                  <p className="mb-0">Akhil</p>
+                </div>
+                <div className="d-flex align-items-center me-3 me-md-5">
+                  <IoPricetagsOutline className="icon me-2" />
+                  <p className="mb-0">{post.category}</p>
+                </div>
+                <div className="d-flex align-items-center">
+                  <IoTimeOutline className="icon me-2" />
+                  <p className="mb-0">{post.readTime}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={600}
+                height={600}
+                className="mt-3 custom-image"
+              />
 
-      {/* Newsletter */}
-      <section className="newsletter-section py-6 bg-light">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-4 mb-lg-0">
+              <div className="mt-3 bottomDetails">
+                <p className="card-text">{post.excerpt}</p>
+                <div className="d-flex mt-3 justify-content-between align-items-center share">
+                  <div className="d-flex align-items-center">
+                    <PiShareFat className="me-3 icon" />
+                    <FaFacebookF className="me-2 icon" />
+                    <FaXTwitter className="me-2 icon" />
+                    <FaLinkedin className="me-2 icon" />
+                  </div>
+                  <ButtonSecondry text="Continue Reading"></ButtonSecondry>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="col-md-4 ps-lg-5 pe-lg-5">
+          {/* Search Bar */}
+          <form className="d-flex mb-4" role="search">
+            <input
+              className="form-control me-2 rounded-0"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <ButtonSecondry text="Search" />
+          </form>
+
+          {/* Recent Posts */}
+          <div className="mt-5">
+            <h4 className="fw-bold mb-5">Recent Posts</h4>
+            <div className="d-flex mb-3">
               <Image
                 src="/services.jpg"
-                alt="Newsletter"
-                width={500}
-                height={300}
-                className="img-fluid"
+                alt="services"
+                width={100}
+                height={80}
+                className="me-3"
               />
+              <div>
+                <small className="text-muted">MARCH 30, 2022</small>
+                <p className="mb-0 fw-semibold">
+                  How to Detect and Respond to the Surge in Cloud-Based...
+                </p>
+              </div>
             </div>
-            <div className="col-lg-6">
-              <h2 className="mb-4">Stay Updated</h2>
-              <p className="lead text-muted mb-4">
-                Get the latest insights delivered directly to your inbox.
-              </p>
-              <form className="newsletter-form">
-                <div className="input-group mb-3">
-                  <input
-                    type="email"
-                    className="form-control form-control-lg"
-                    placeholder="Enter your email"
-                    aria-label="Email address"
-                  />
-                  <button className="btn btn-primary" type="submit">
-                    Subscribe
-                  </button>
-                </div>
-                <small className="text-muted">
-                  We respect your privacy. Unsubscribe at any time.
-                </small>
-              </form>
+
+            <div className="d-flex mb-3">
+              <Image
+                src="/service1.jpg"
+                alt="services"
+                width={100}
+                height={80}
+                className="me-3"
+              />
+              <div>
+                <small className="text-muted">MARCH 30, 2022</small>
+                <p className="mb-0 fw-semibold">
+                  Tips for Efficient Knowledge Management Using Enterpri...
+                </p>
+              </div>
+            </div>
+
+            <div className="d-flex mb-3">
+              <Image
+                src="/service2.jpg"
+                alt="services"
+                width={100}
+                height={80}
+                className="me-3"
+              />
+              <div>
+                <small className="text-muted">MARCH 20, 2022</small>
+                <p className="mb-0 fw-semibold">
+                  Why Digital Literacy is Essential for Your 21st Centur...
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      
+          {/* Categories */}
+          <div className="mt-5">
+            <h4 className="fw-bold mb-5">Categories</h4>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <a href="#" className="text-decoration-none text-dark">
+                  IT
+                </a>
+              </li>
+              <hr/>
+              <li className="mb-2">
+                <a href="#" className="text-decoration-none text-dark">
+                  Networks
+                </a>
+              </li>
+              <hr/>
+              <li className="mb-2">
+                <a href="#" className="text-decoration-none text-dark">
+                  Protection
+                </a>
+              </li>
+              <hr/>
+              <li className="mb-2">
+                <a href="#" className="text-decoration-none text-dark">
+                  Security
+                </a>
+              </li>
+              <hr/>
+              <li className="mb-2">
+                <a href="#" className="text-decoration-none text-dark">
+                  Solutions
+                </a>
+              </li>
+              <hr/>
+              <li>
+                <a href="#" className="text-decoration-none text-dark">
+                  Websites
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

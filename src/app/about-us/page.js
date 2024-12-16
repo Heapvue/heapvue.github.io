@@ -14,25 +14,10 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 const AboutUs = () => {
   return (
     <div className="about-page singlePage">
-      <div className="position-relative mb-6">
-        <img
-          src="/grid.png"
-          alt="About HeapVue"
-          className="img-fluid w-100"
-          style={{
-            maxHeight: "500px",
-            objectFit: "cover",
-            filter: "brightness(0.6)",
-          }}
-        />
-        <div
-          className="position-absolute top-50 start-0 translate-middle-y text-start titleSec"
-        >
-          <div className="container">
+      <div className="container-fluid p-4 p-lg-5 contact">
+      <div className="row">
+          <div className="col-md-8">
             <h2>Innovating for a Better Tomorrow</h2>
-            <p>
-              Transforming businesses through cutting-edge technology solutions
-            </p>
           </div>
         </div>
       </div>

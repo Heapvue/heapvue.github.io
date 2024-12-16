@@ -112,17 +112,17 @@ function Navbar() {
               </ul>
             </li>
             <li className="nav-item nav-item dropdown dropdown-fullwidth">
-              <Link className="nav-link" href="blog">
+              <Link className="nav-link" href="/blog">
                 Blog
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="careers">
+              <Link className="nav-link" href="/careers">
                 Careers
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="contact">
+              <Link className="nav-link" href="/contact">
                 Contact
               </Link>
             </li>
