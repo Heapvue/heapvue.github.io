@@ -867,6 +867,120 @@ body {
   color: #191919;
 }
 
+.blog {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.blog h2 {
+  font-size: 90px;
+  font-weight: 600;
+}
+
+.blog .blogCard{
+  margin-bottom: 80px;
+}
+
+.blog .blogCard h1{
+  font-size: 55px;
+  color: #191919;
+}
+
+.blog .blogCard .details .icon{
+  font-size: 22px;
+}
+
+.blog .blogCard .details p{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.blog .blogCard .custom-image{
+  object-fit: cover;
+  height: 600px;
+  width: 100%;
+}
+
+.blog .blogCard .bottomDetails p{
+  font-size: 18px;
+}
+
+.blog .blogCard .bottomDetails .share .icon{
+  font-size: 25px;
+}
+
+.blog .rightSide hr{
+  border: 1px solid #dbdbdb;
+}
+
+.careers {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.careers h2 {
+  font-size: 90px;
+  font-weight: 600;
+}
+
+.careers .card {
+  border: 1px solid #dbdbdb;
+  height: 300px;
+  border-radius: 0px;
+  width: 350px;
+  padding: 10px;
+  margin: 30px;
+}
+
+.careers .card:hover {
+  border: 1px solid #191919;
+  transition: 0.3s ease;
+}
+
+.careers .card .icon {
+  font-size: 25px;
+  color: #191919;
+  border: 1px solid #dbdbdb;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.careers .card h5 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191919;
+}
+
+.careers .card p {
+  font-size: 16px;
+  color: #555555;
+}
+
+.careers h3{
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.careers .jobCard hr{
+  border: 1px solid #c7c7c7;
+}
+
+.careers .jobCard .meta{
+  font-size: 18px;
+  color: #191919;
+  margin-right: 25px;
+}
+
+.careers .jobCard .meta .icon{
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.careers .jobCard .meta p{
+  padding-top: 13px;
+}
+
 .singlePage .titleSec {
   padding-left: 50px;
 }
@@ -998,6 +1112,10 @@ body {
     font-size: 2.5rem;
     line-height: 40px;
   }
+
+  .singlePage .titleSec h2 {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1007,6 +1125,15 @@ body {
 
   .hero-content h1 {
     font-size: 3.7rem;
+  }
+
+  .singlePage .titleSec h2 {
+    margin-top: 100px;
+  }
+
+  .about-page .core .card {
+    width: 100%;
+    margin: 0px;
   }
 }
 
@@ -1149,6 +1276,52 @@ body {
     font-size: 2rem;
     line-height: 35px;
     width: 100%;
+  }
+
+  .about-page .who {
+    margin-bottom: 60px;
+  }
+
+  .about-page .core .card {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .about-page .why h2 {
+    font-size: 35px;
+  }
+
+  .about-page .why h3 {
+    font-size: 20px;
+  }
+
+  .about-page .why p {
+    font-size: 13px;
+  }
+
+  .about-page .why .icon {
+    font-size: 30px;
+  }
+
+  .bottomBanner {
+    margin-top: 0px;
+  }
+
+  .bottomBanner h2 {
+    font-size: 40px;
+  }
+
+  .bottomBanner p {
+    font-size: 15px;
+  }
+
+  .singlePage .titleSec {
+    padding-left: 20px;
+  }
+
+  .singlePage .titleSec h2 {
+    margin-top: 80px;
+    font-size: 50px;
   }
 }
 
@@ -1362,8 +1535,42 @@ body {
     width: 100%;
   }
 
+  .blog {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  .blog h2 {
+    font-size: 45px;
+    font-weight: 600;
+  }
+  
+  .blog .blogCard{
+    margin-bottom: 80px;
+  }
+  
+  .blog .blogCard h1{
+    font-size: 35px;
+  }
+  
+  .blog .blogCard .details .icon{
+    font-size: 16px;
+  }
+  
+  .blog .blogCard .details p{
+    font-size: 10px;
+  }
+  
+  .blog .blogCard .bottomDetails p{
+    font-size: 16px;
+  }
+  
+  .blog .blogCard .bottomDetails .share .icon{
+    font-size: 20px;
+  }
+
   .about-page .who {
-    margin-top: 150px;
+    margin-top: 0px;
     margin-bottom: 60px;
   }
 
@@ -1422,6 +1629,40 @@ body {
 
   .bottomBanner p {
     font-size: 15px;
+  }
+
+  .careers {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  
+  .careers h2 {
+    font-size: 45px;
+    font-weight: 600;
+  }
+  
+  .careers .card {
+    width: 100%;
+    margin: 0px;
+    margin-top: 20px;
+  }
+
+  .careers h3{
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .careers .jobCard h4{
+    font-size: 16px;
+  }
+  
+  .careers .jobCard .meta .icon{
+    font-size: 13px;
+    margin-right: 8px;
+  }
+  
+  .careers .jobCard .meta p{
+    padding-top: 13px;
   }
 
   .singlePage .titleSec {

@@ -1,3 +1,11 @@
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { MdOutlineAutoGraph } from "react-icons/md";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { IoTrophyOutline } from "react-icons/io5";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { ButtonSecondry } from "../components/button";
+import BotttomBanner from "../components/bottomBanner";
+
 const Careers = () => {
   const jobOpenings = [
     {
@@ -7,21 +15,22 @@ const Careers = () => {
       type: "Full-time",
       experience: "5-8 years",
       department: "Engineering",
-      description: "We're looking for a Senior Software Engineer to join our growing team. You'll be working on cutting-edge technologies and helping shape the future of our products.",
+      description:
+        "We're looking for a Senior Software Engineer to join our growing team. You'll be working on cutting-edge technologies and helping shape the future of our products.",
       requirements: [
         "Bachelor's/Master's degree in Computer Science or related field",
         "5+ years of experience in full-stack development",
         "Strong proficiency in React, Node.js, and modern JavaScript",
         "Experience with cloud platforms (AWS/Azure/GCP)",
-        "Excellent problem-solving and communication skills"
+        "Excellent problem-solving and communication skills",
       ],
       responsibilities: [
         "Design and implement scalable software solutions",
         "Lead technical discussions and mentor junior developers",
         "Collaborate with cross-functional teams to deliver high-quality products",
         "Participate in code reviews and maintain coding standards",
-        "Contribute to architecture decisions and technical strategy"
-      ]
+        "Contribute to architecture decisions and technical strategy",
+      ],
     },
     {
       id: "pm-001",
@@ -30,21 +39,22 @@ const Careers = () => {
       type: "Full-time",
       experience: "4-6 years",
       department: "Product",
-      description: "We're seeking an experienced Product Manager to drive product strategy and execution. You'll work closely with engineering, design, and business teams to deliver exceptional products.",
+      description:
+        "We're seeking an experienced Product Manager to drive product strategy and execution. You'll work closely with engineering, design, and business teams to deliver exceptional products.",
       requirements: [
         "Bachelor's degree in Business, Technology, or related field",
         "4+ years of product management experience",
         "Strong analytical and problem-solving abilities",
         "Excellent communication and stakeholder management skills",
-        "Experience with agile methodologies"
+        "Experience with agile methodologies",
       ],
       responsibilities: [
         "Define product vision, strategy, and roadmap",
         "Gather and analyze user requirements and feedback",
         "Work with engineering teams to deliver features",
         "Monitor product metrics and drive improvements",
-        "Present to stakeholders and maintain documentation"
-      ]
+        "Present to stakeholders and maintain documentation",
+      ],
     },
     {
       id: "ux-001",
@@ -53,169 +63,127 @@ const Careers = () => {
       type: "Full-time",
       experience: "3-5 years",
       department: "Design",
-      description: "Join our design team to create beautiful, intuitive user experiences. You'll be responsible for designing user interfaces that delight our customers and drive business results.",
+      description:
+        "Join our design team to create beautiful, intuitive user experiences. You'll be responsible for designing user interfaces that delight our customers and drive business results.",
       requirements: [
         "Bachelor's degree in Design, HCI, or related field",
         "3+ years of UX/UI design experience",
         "Proficiency in Figma, Adobe Creative Suite",
         "Strong portfolio demonstrating user-centered design",
-        "Experience with design systems and component libraries"
+        "Experience with design systems and component libraries",
       ],
       responsibilities: [
         "Create user flows, wireframes, and high-fidelity designs",
         "Conduct user research and usability testing",
         "Collaborate with product and engineering teams",
         "Maintain and evolve our design system",
-        "Present design solutions to stakeholders"
-      ]
-    }
+        "Present design solutions to stakeholders",
+      ],
+    },
   ];
 
   return (
-    <div className="careers-page">
-      {/* Hero Section */}
-      <div className="position-relative mb-6">
-        <img
-          src="/services.jpg"
-          alt="Careers at HeapVue"
-          className="img-fluid w-100"
-          style={{ 
-            maxHeight: "500px", 
-            objectFit: "cover",
-            filter: "brightness(0.8)"
-          }}
-        />
-        <div
-          className="position-absolute bottom-0 start-0 p-5"
-          style={{
-            background: "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4), transparent)",
-            color: "white",
-            width: "100%",
-          }}
-        >
-          <div className="container">
-            <h1 className="display-4 fw-bold mb-3">Join Our Team</h1>
-            <p className="lead mb-0">Build the future with us</p>
+    <div className="container-fluid p-4 p-lg-5 careers">
+      <div className="row">
+        <div className="col-md-8">
+          <h2>Be Part of Our Mission to Transform</h2>
+        </div>
+      </div>
+      <div className="row mt-5 text-start">
+        <div className="col-md-3">
+          <div className="card">
+            <div className="card-body d-flex flex-column justify-content-between align-items-start">
+              <div className="icon">
+                <HiOutlineLightBulb />
+              </div>
+              <div>
+                <h5>Innovation First</h5>
+                <p>
+                  Work on cutting-edge technologies and challenging projects.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3">
+          <div className="card">
+            <div className="card-body d-flex flex-column justify-content-between align-items-start">
+              <div className="icon">
+                <FaPeopleGroup />
+              </div>
+              <div>
+                <h5>Growth Opportunities</h5>
+                <p>Continuous learning and career advancement paths.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3">
+          <div className="card">
+            <div className="card-body d-flex flex-column justify-content-between align-items-start">
+              <div className="icon">
+                <IoTrophyOutline />
+              </div>
+              <div>
+                <h5>Great Culture</h5>
+                <p>Collaborative environment with talented professionals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3">
+          <div className="card">
+            <div className="card-body d-flex flex-column justify-content-between align-items-start">
+              <div className="icon">
+                <MdOutlineAutoGraph />
+              </div>
+              <div>
+                <h5>Competitive Benefits</h5>
+                <p>
+                  Comprehensive package including health and wellness benefits.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className="container py-6">
-        {/* Why Join Us Section */}
-        <section className="mb-6">
-          <div className="text-center mb-5">
-            <h2 className="display-5 fw-bold text-primary mb-4">Why Join HeapVue?</h2>
-            <p className="lead text-muted mx-auto" style={{ maxWidth: "800px" }}>
-              At HeapVue, we're building the next generation of technology solutions. Join us in our mission to transform businesses through innovation.
-            </p>
-          </div>
-
-          <div className="row g-4">
-            {[
-              {
-                icon: "bi-rocket-takeoff",
-                title: "Innovation First",
-                desc: "Work on cutting-edge technologies and challenging projects"
-              },
-              {
-                icon: "bi-graph-up-arrow",
-                title: "Growth Opportunities",
-                desc: "Continuous learning and career advancement paths"
-              },
-              {
-                icon: "bi-people",
-                title: "Great Culture",
-                desc: "Collaborative environment with talented professionals"
-              },
-              {
-                icon: "bi-award",
-                title: "Competitive Benefits",
-                desc: "Comprehensive package including health and wellness benefits"
-              }
-            ].map((item, index) => (
-              <div key={index} className="col-md-6 col-lg-3">
-                <div className="card h-100 border-0 shadow-sm">
-                  <div className="card-body text-center p-4">
-                    <i className={`bi ${item.icon} text-primary fs-1 mb-3`}></i>
-                    <h4 className="h5 mb-3">{item.title}</h4>
-                    <p className="text-muted mb-0">{item.desc}</p>
+      <div className="row mt-5 mb-5">
+        <div className="col-md-12">
+          <h3>Open Positions <span className="jobLen">({jobOpenings.length} Openings)</span></h3>
+        </div>
+        <div className="col-md-12">
+          {jobOpenings.map((job) => (
+            <div key={job.id} className="jobCard mt-3">
+                <hr/>
+                <div className="d-flex justify-content-between align-items-center">
+                  <h4>{job.title}</h4>
+                  <ButtonSecondry text="Apply Now" />
+                </div>
+                <p className="text-muted">
+                  {job.location}
+                </p>
+                <div className="d-flex justify-content-start align-items-center">
+                  <div className="d-flex align-items-center meta">
+                    <MdOutlineLocationOn className="icon" />
+                    <p>{job.department}</p>
+                  </div>
+                  <div className="d-flex align-items-center meta">
+                    <MdOutlineLocationOn className="icon" />
+                    <p>{job.experience}</p>
+                  </div>
+                  <div className="d-flex align-items-center meta">
+                    <MdOutlineLocationOn className="icon" />
+                    <p>{job.type}</p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Current Openings */}
-        <section className="mb-6">
-          <h2 className="h2 mb-4">Current Openings</h2>
-          <div className="row g-4">
-            {jobOpenings.map((job) => (
-              <div key={job.id} className="col-12">
-                <div className="card border-0 shadow-sm">
-                  <div className="card-body p-4">
-                    <div className="d-flex flex-column flex-md-row justify-content-between align-items-start mb-3">
-                      <div>
-                        <h3 className="h4 mb-1">{job.title}</h3>
-                        <p className="text-muted mb-2">
-                          {job.department} · {job.location} · {job.type}
-                        </p>
-                        <div className="d-flex gap-3">
-                          <span className="badge bg-primary">Experience: {job.experience}</span>
-                          <span className="badge bg-secondary">{job.department}</span>
-                        </div>
-                      </div>
-                      <button 
-                        className="btn btn-primary mt-3 mt-md-0"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#job-${job.id}`}
-                      >
-                        View Details
-                      </button>
-                    </div>
-                    
-                    <div className="collapse" id={`job-${job.id}`}>
-                      <hr />
-                      <div className="mt-3">
-                        <p>{job.description}</p>
-                        
-                        <h5 className="mb-3">Requirements:</h5>
-                        <ul className="mb-4">
-                          {job.requirements.map((req, index) => (
-                            <li key={index}>{req}</li>
-                          ))}
-                        </ul>
-
-                        <h5 className="mb-3">Responsibilities:</h5>
-                        <ul className="mb-4">
-                          {job.responsibilities.map((resp, index) => (
-                            <li key={index}>{resp}</li>
-                          ))}
-                        </ul>
-
-                        <button className="btn btn-primary">
-                          Apply Now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="text-center py-5 bg-light rounded-4">
-          <h3 className="mb-4">Don't see the right role?</h3>
-          <p className="lead mb-4">
-            We're always looking for talented individuals to join our team. Send us your resume and we'll keep you in mind for future opportunities.
-          </p>
-          <button className="btn btn-primary btn-lg px-5">
-            Submit Your Resume
-          </button>
-        </section>
+            </div>
+          ))}
+        </div>
       </div>
+      <BotttomBanner
+          title="Don't see the right role?"
+          desc="We're always looking for talented individuals to join our team."
+        />
     </div>
   );
 };
