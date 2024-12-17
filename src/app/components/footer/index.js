@@ -70,12 +70,12 @@ export default function Footer() {
           <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Connect with Us</h5>
             <div className="d-flex mt-3">
-              <a href="https://www.facebook.com/heapvue" target="_blank" className="text-decoration-none me-3 socialIcon">
+              {/* <a href="https://www.facebook.com/heapvue" target="_blank" className="text-decoration-none me-3 socialIcon">
                 <FaFacebookF />
               </a>
               <a href="https://www.instagram.com/heapvue" target="_blank" className="text-decoration-none me-3 socialIcon">
                 <FaInstagram />
-              </a>
+              </a> */}
               <a href="https://www.linkedin.com/company/heapvue" target="_blank" className="text-decoration-none me-3 socialIcon">
                 <FaLinkedin />
               </a>

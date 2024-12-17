@@ -74,7 +74,7 @@ const BlogHome = () => {
   ];
 
   return (
-    <div className="container-fluid p-4 p-lg-5 blog">
+    <div className="container-fluid p-3 p-lg-5 blog">
       <div className="row">
         <div className="col-md-8">
           <h2>
@@ -150,7 +150,7 @@ const BlogHome = () => {
                 alt="services"
                 width={100}
                 height={80}
-                className="me-3"
+                className="me-3 latest-image-container"
               />
               <div>
                 <small className="text-muted">MARCH 30, 2022</small>
@@ -166,7 +166,7 @@ const BlogHome = () => {
                 alt="services"
                 width={100}
                 height={80}
-                className="me-3"
+                className="me-3 latest-image-container"
               />
               <div>
                 <small className="text-muted">MARCH 30, 2022</small>
@@ -182,7 +182,7 @@ const BlogHome = () => {
                 alt="services"
                 width={100}
                 height={80}
-                className="me-3"
+                className="me-3 latest-image-container"
               />
               <div>
                 <small className="text-muted">MARCH 20, 2022</small>

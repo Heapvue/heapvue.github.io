@@ -100,7 +100,7 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="service1.jpg" className="card-img-top" alt="..." />
+                <img src="service1.jpg" loading="lazy" className="card-img-top" alt="..." />
               </div>
               <div className="card-body">
                 <h5 className="card-title">AI & MACHINE LEARNING</h5>
@@ -115,7 +115,7 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="service2.jpg" className="card-img-top" alt="..." />
+                <img src="service2.jpg" loading="lazy" className="card-img-top" alt="..." />
               </div>
               <div className="card-body">
                 <h5 className="card-title">SOFTWARE DEVELOPMENT</h5>
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="service3.jpg" className="card-img-top" alt="..." />
+                <img src="service3.jpg" loading="lazy" className="card-img-top" alt="..." />
               </div>
               <div className="card-body">
                 <h5 className="card-title">CLOUD COMPUTING</h5>
@@ -175,7 +175,7 @@ export default function Home() {
                       </p>
                       <div className="d-flex justify-content-start mt-4 align-items-center">
                         <div className="clientImg">
-                          <img src="Rajiv.jpg" alt="Client Image" />
+                          <img src="Rajiv.jpg" loading="lazy" alt="Client Image" />
                         </div>
                         <div className="clientDetails">
                           <h6>Rajiv Ambat</h6>
@@ -183,7 +183,7 @@ export default function Home() {
                         </div>
                         <div className="verticalLine"></div>
                         <div className="companyLogo ms-3">
-                          <img src="clientLogo1.png" alt="Company Logo" />
+                          <img src="clientLogo1.png" loading="lazy" alt="Company Logo" />
                         </div>
                       </div>
                     </div>
@@ -201,7 +201,7 @@ export default function Home() {
                       </p>
                       <div className="d-flex justify-content-start mt-4 align-items-center">
                         <div className="clientImg">
-                          <img src="Sandeep.jpg" alt="Client Image" />
+                          <img src="Sandeep.jpg" loading="lazy" alt="Client Image" />
                         </div>
                         <div className="clientDetails">
                           <h6>Dr Sandeep Prabhakar</h6>
@@ -209,7 +209,7 @@ export default function Home() {
                         </div>
                         <div className="verticalLine"></div>
                         <div className="companyLogo ms-3">
-                          <img src="clientLogo.png" alt="Company Logo" />
+                          <img src="clientLogo.png" loading="lazy" alt="Company Logo" />
                         </div>
                       </div>
                     </div>
@@ -227,7 +227,7 @@ export default function Home() {
                       </p>
                       <div className="d-flex justify-content-start mt-4 align-items-center">
                         <div className="clientImg">
-                          <img src="client.jpeg" alt="Client Image" />
+                          <img src="client.jpeg" loading="lazy" alt="Client Image" />
                         </div>
                         <div className="clientDetails">
                           <h6>Summaya Amad</h6>
@@ -235,7 +235,7 @@ export default function Home() {
                         </div>
                         <div className="verticalLine"></div>
                         <div className="companyLogo ms-3">
-                          <img src="clientLogo.png" alt="Company Logo" />
+                          <img src="clientLogo.png" loading="lazy" alt="Company Logo" />
                         </div>
                       </div>
                     </div>
@@ -275,7 +275,7 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="industries.jpg" className="card-img-top" alt="..." />
+                <img src="industries.jpg" loading="lazy" className="card-img-top" alt="..." />
               </div>
               <div className="card-body">
                 <h5 className="card-title">HEALTHCARE</h5>
@@ -290,7 +290,7 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="industries1.jpg" className="card-img-top" alt="..." />
+                <img src="industries1.jpg" loading="lazy" className="card-img-top" alt="..." />
               </div>
               <div className="card-body">
                 <h5 className="card-title">Finance & Banking</h5>
@@ -305,7 +305,7 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="industries2.jpg" className="card-img-top" alt="..." />
+                <img src="industries2.jpg" loading="lazy" className="card-img-top" alt="..." />
               </div>
               <div className="card-body">
                 <h5 className="card-title">Retail and E-commerce</h5>
@@ -333,6 +333,7 @@ export default function Home() {
                 <div className="carousel-item active position-relative">
                   <img
                     src="industries.jpg"
+                    loading="lazy"
                     className="d-block w-100"
                     alt="Industry Image"
                   />
@@ -349,6 +350,7 @@ export default function Home() {
                 <div className="carousel-item position-relative">
                   <img
                     src="industries1.jpg"
+                    loading="lazy"
                     className="d-block w-100"
                     alt="Industry Image"
                   />
@@ -363,6 +365,7 @@ export default function Home() {
                 <div className="carousel-item position-relative">
                   <img
                     src="industries2.jpg"
+                    loading="lazy"
                     className="d-block w-100"
                     alt="Industry Image"
                   />

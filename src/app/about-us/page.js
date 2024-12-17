@@ -13,140 +13,132 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 const AboutUs = () => {
   return (
-    <div className="about-page singlePage">
-      <div className="container-fluid p-4 p-lg-5 contact">
-      <div className="row">
+    <div>
+      <div className="container-fluid p-4 p-lg-5 about-page">
+        <div className="row">
           <div className="col-md-8">
             <h2>Innovating for a Better Tomorrow</h2>
           </div>
         </div>
-      </div>
-      <div className="container-fluid p-4 p-lg-5 who">
-        <section className="mb-6">
-          <div className="row align-items-stretch d-flex">
-            <div className="col-lg-6 d-flex">
-              <img
-                src="/services.jpg"
-                alt="About HeapVue"
-                className="img-fluid w-100"
-                style={{
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-            <div className="col-lg-6 details d-flex flex-column justify-content-center ps-1 ps-lg-5">
-              <h2 className="mb-4">Who We Are?</h2>
-              <p className="mb-4">
-                At Heapvue, we leverage the transformative power of AI, machine
-                learning, and cloud technologies to drive businesses toward
-                unparalleled success and innovation. Our expertise lies in
-                applying advanced analytics, intelligent automation, and
-                scalable cloud solutions to address complex challenges,
-                streamline operations, and uncover new growth opportunities. By
-                integrating cutting-edge AI and ML models, we enable businesses
-                to make smarter, data-driven decisions, personalize customer
-                experiences, and achieve operational excellence.
-              </p>
-              <p className="mb-4">
-                With cloud computing at the core of our approach, we help
-                organizations transition to highly flexible, secure, and
-                cost-efficient infrastructures that adapt to their evolving
-                needs. Whether it's deploying AI-driven solutions, optimizing
-                workflows through machine learning, or ensuring seamless
-                scalability with cloud platforms, we are committed to unlocking
-                the full potential of technology for our clients.
-              </p>
-              <p className="mb-4">
-                At Heapvue, we believe in empowering businesses to stay
-                competitive in a fast-changing digital landscape. By partnering
-                with us, companies gain access to innovative tools,
-                forward-thinking strategies, and the technical expertise needed
-                to navigate the complexities of today’s technology-driven world
-                and reach new heights of success.
-              </p>
-              <div className="row g-4">
-                <div className="col-6">
-                  <div className="d-flex align-items-center">
-                    <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
-                    <span className="fw-bold">Industry Expertise</span>
-                  </div>
+        <div className="row align-items-stretch d-flex mt-5 mb-5 who">
+          <div className="col-lg-6 d-flex">
+            <img
+              src="/services.jpg"
+              loading="lazy"
+              alt="About HeapVue"
+              className="img-fluid w-100"
+              style={{
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+          <div className="col-lg-6 details d-flex flex-column justify-content-center ps-1 ps-lg-5">
+            <h2 className="mb-4">Who We Are?</h2>
+            <p className="mb-4">
+              At Heapvue, we leverage the transformative power of AI, machine
+              learning, and cloud technologies to drive businesses toward
+              unparalleled success and innovation. Our expertise lies in
+              applying advanced analytics, intelligent automation, and scalable
+              cloud solutions to address complex challenges, streamline
+              operations, and uncover new growth opportunities. By integrating
+              cutting-edge AI and ML models, we enable businesses to make
+              smarter, data-driven decisions, personalize customer experiences,
+              and achieve operational excellence.
+            </p>
+            <p className="mb-4">
+              With cloud computing at the core of our approach, we help
+              organizations transition to highly flexible, secure, and
+              cost-efficient infrastructures that adapt to their evolving needs.
+              Whether it's deploying AI-driven solutions, optimizing workflows
+              through machine learning, or ensuring seamless scalability with
+              cloud platforms, we are committed to unlocking the full potential
+              of technology for our clients.
+            </p>
+            <p className="mb-4">
+              At Heapvue, we believe in empowering businesses to stay
+              competitive in a fast-changing digital landscape. By partnering
+              with us, companies gain access to innovative tools,
+              forward-thinking strategies, and the technical expertise needed to
+              navigate the complexities of today’s technology-driven world and
+              reach new heights of success.
+            </p>
+            <div className="row g-4">
+              <div className="col-6">
+                <div className="d-flex align-items-center">
+                  <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
+                  <span className="fw-bold">Industry Expertise</span>
                 </div>
-                <div className="col-6">
-                  <div className="d-flex align-items-center">
-                    <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
-                    <span className="fw-bold">Global Reach</span>
-                  </div>
+              </div>
+              <div className="col-6">
+                <div className="d-flex align-items-center">
+                  <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
+                  <span className="fw-bold">Global Reach</span>
                 </div>
-                <div className="col-6">
-                  <div className="d-flex align-items-center">
-                    <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
-                    <span className="fw-bold">Innovative Solutions</span>
-                  </div>
+              </div>
+              <div className="col-6">
+                <div className="d-flex align-items-center">
+                  <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
+                  <span className="fw-bold">Innovative Solutions</span>
                 </div>
-                <div className="col-6">
-                  <div className="d-flex align-items-center">
-                    <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
-                    <span className="fw-bold">Customer Focus</span>
-                  </div>
+              </div>
+              <div className="col-6">
+                <div className="d-flex align-items-center">
+                  <IoIosCheckmarkCircleOutline className="text-primary fs-4 me-2" />
+                  <span className="fw-bold">Customer Focus</span>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="mb-6 mission-vission">
-          <div className="row align-items-stretch">
-            <div className="col-lg-6 details d-flex flex-column justify-content-center">
-              <div className="card flex-grow-1 mb-4">
-                <div className="card-body p-3 p-lg-5">
-                  <div className="d-flex align-items-center mb-4">
-                    <div className="icon-box me-4">
-                      <RiFocus3Line className="icon" />
-                    </div>
-                    <h3>Our Mission</h3>
+        </div>
+        <div className="row align-items-stretch mt-5 mb-5 mission-vission">
+          <div className="col-lg-6 details d-flex flex-column justify-content-center">
+            <div className="card flex-grow-1 mb-4">
+              <div className="card-body p-3 p-lg-5">
+                <div className="d-flex align-items-center mb-4">
+                  <div className="icon-box me-4">
+                    <RiFocus3Line className="icon" />
                   </div>
-                  <p>
-                    To harness the power of technology and innovation to provide
-                    businesses with scalable, efficient, and impactful solutions
-                    that drive growth, enhance productivity, and deliver
-                    measurable results.
-                  </p>
+                  <h3>Our Mission</h3>
                 </div>
-              </div>
-              <div className="card flex-grow-1">
-                <div className="card-body p-3 p-lg-5">
-                  <div className="d-flex align-items-center mb-4">
-                    <div className="icon-box me-4">
-                      <GoEye className="icon" />
-                    </div>
-                    <h3>Our Vision</h3>
-                  </div>
-                  <p>
-                    To be the go-to technology partner for enterprises
-                    worldwide, known for our excellence in crafting innovative
-                    solutions that redefine industries and unlock new
-                    possibilities.
-                  </p>
-                </div>
+                <p>
+                  To harness the power of technology and innovation to provide
+                  businesses with scalable, efficient, and impactful solutions
+                  that drive growth, enhance productivity, and deliver
+                  measurable results.
+                </p>
               </div>
             </div>
-            <div className="col-lg-6">
-              <img
-                src="/about2.jpg"
-                alt="Our Team"
-                className="img-fluid w-100"
-                style={{
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
+            <div className="card flex-grow-1">
+              <div className="card-body p-3 p-lg-5">
+                <div className="d-flex align-items-center mb-4">
+                  <div className="icon-box me-4">
+                    <GoEye className="icon" />
+                  </div>
+                  <h3>Our Vision</h3>
+                </div>
+                <p>
+                  To be the go-to technology partner for enterprises worldwide,
+                  known for our excellence in crafting innovative solutions that
+                  redefine industries and unlock new possibilities.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-
-        {/* Values */}
-        <section className="mb-6 core">
+          <div className="col-lg-6">
+            <img
+              src="/about2.jpg"
+              loading="lazy"
+              alt="Our Team"
+              className="img-fluid w-100"
+              style={{
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+        </div>
+        <div className="core mt-5 mb-5">
           <div className="row">
             <div className="col-10 col-md-10 text-start">
               <h2 className="text-start mb-5">Our Core Values</h2>
@@ -156,7 +148,7 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="row g-4">
+          <div className="row">
             {[
               {
                 icon: <PiHandshake />,
@@ -192,10 +184,10 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
 
         {/* Why Choose Us */}
-        <section className="mb-6 bg-light p-3 p-lg-5 why">
+        <div className="mt-5 mb-5 pt-5 pb-5 row bg-light why">
           <h2 className="text-center mb-5">Why Choose Heapvue?</h2>
           <div className="row g-4">
             {[
@@ -231,15 +223,12 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
 
-        {/* CTA Section */}
-        <section>
-          <BotttomBanner
-            title="Ready to Transform?"
-            desc="Let's create innovative solutions together that drive your business forward."
-          />
-        </section>
+        <BotttomBanner
+          title="Ready to Transform?"
+          desc="Let's create innovative solutions together that drive your business forward."
+        />
       </div>
     </div>
   );
