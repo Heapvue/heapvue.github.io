@@ -37,7 +37,7 @@ function Contact() {
                 </div>
                 <div>
                   <h5>Visit us</h5>
-                  <p>Visit our office HQ.</p>
+                  <p>Heapvue, 2nd Floor, Thymuriyil Building, S Janatha Rd, Palarivattom, Kochi, Kerala 682025.</p>
                   <ButtonSecondry text={"View on Google Maps"}></ButtonSecondry>
                 </div>
               </div>

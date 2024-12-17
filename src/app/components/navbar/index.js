@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { IoIosSearch } from "react-icons/io";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -10,27 +9,31 @@ function Navbar() {
 
   const [scrolled, setScrolled] = useState(false);
   const [isHomePage, setIsHomePage] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   useEffect(() => {
     setIsHomePage(pathname === "/");
 
     if (typeof window !== "undefined") {
       const handleScroll = () => {
-        if (window.scrollY > 50) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
+        setScrolled(window.scrollY > 50);
       };
 
       handleScroll();
-
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
   }, [pathname]);
+
+  useEffect(() => {
+    setIsCollapsed(true);
+  }, [pathname]);
+
+  const toggleNavbar = () => {
+    setIsCollapsed(!isCollapsed);
+  };
 
   return (
     <nav
@@ -39,21 +42,23 @@ function Navbar() {
       }`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="https://heapvue.com">
+        <Link className="navbar-brand" href="/">
           heapvue.
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
           aria-controls="navbarText"
-          aria-expanded="false"
+          aria-expanded={!isCollapsed}
           aria-label="Toggle navigation"
+          onClick={toggleNavbar}
         >
           <RiMenu3Fill className="menuIcon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarText">
+        <div
+          className={`collapse navbar-collapse ${isCollapsed ? "" : "show"}`}
+          id="navbarText"
+        >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item nav-item dropdown dropdown-fullwidth">
               <a
@@ -91,11 +96,13 @@ function Navbar() {
               </ul>
             </li>
             <li className="nav-item nav-item dropdown dropdown-fullwidth">
-              <a className="nav-link dropdown-toggle"
+              <a
+                className="nav-link dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
-                aria-expanded="false">
+                aria-expanded="false"
+              >
                 Solutions
               </a>
               <ul className="dropdown-menu">
@@ -128,7 +135,7 @@ function Navbar() {
             </li>
           </ul>
           <div className="d-flex">
-            <IoIosSearch className="navIcons" />
+            {/* <IoIosSearch className="navIcons" /> */}
           </div>
         </div>
       </div>
