@@ -52,7 +52,7 @@ function Contact() {
                 <div>
                   <h5>Call us</h5>
                   <p>Mon - Fri from 9am to 5pm.</p>
-                  <ButtonSecondry text={"+91 0000000000"}></ButtonSecondry>
+                  <ButtonSecondry text={"+91 9400171674"}></ButtonSecondry>
                 </div>
               </div>
             </div>

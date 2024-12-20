@@ -1000,7 +1000,6 @@ body {
 
 .service-page .background-section{
   position: relative;
-  background-image: url('/services.jpg'); 
   background-size: cover;
   background-position: center; 
   color: white;

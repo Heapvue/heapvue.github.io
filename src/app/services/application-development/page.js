@@ -26,7 +26,7 @@ const ApplicationDevelopment = () => {
     <>
       <div className="service-page">
         <div className="container-fluid">
-          <div className="row background-section">
+          <div className="row background-section" style={{backgroundImage: `url('/applicationDevelopmentB.jpg')`}}>
             <div className="col-md-8 title">
               <span className="badge bg-primary mb-3">SERVICES</span>
               <h2>Application Development</h2>
