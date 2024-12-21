@@ -148,7 +148,7 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row g-3">
             {[
               {
                 icon: <PiHandshake />,
@@ -171,8 +171,8 @@ const AboutUs = () => {
                 desc: "We constantly push the boundaries of technology for impactful solutions.",
               },
             ].map((value, index) => (
-              <div key={index} className="col-md-6 col-lg-3">
-                <div className="card">
+              <div key={index} className="col-12 col-md-6 col-lg-3">
+                <div className="card h-100">
                   <div className="card-body d-flex flex-column justify-content-between align-items-start">
                     <div className="icon">{value.icon}</div>
                     <div>

@@ -10,7 +10,7 @@ import Enquiry from "./components/enquiry";
 export default function Home() {
   const videoSources = ["heroVideo.mp4"];
 
-  const [selectedVideo, setSelectedVideo] = useState("heroVideo.mp4");
+  const [selectedVideo, setSelectedVideo] = useState("/heroVideo.mp4");
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * videoSources.length);

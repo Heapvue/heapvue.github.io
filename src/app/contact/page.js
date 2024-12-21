@@ -14,9 +14,9 @@ function Contact() {
             <h2>Let's Build Something Great Together</h2>
           </div>
         </div>
-        <div className="row mt-5 text-start">
-          <div className="col-md-3">
-            <div className="card">
+        <div className="row mt-5 mb-5 text-start g-3">
+          <div className="col-12 col-md-6 col-lg-3">
+            <div className="card h-100">
               <div className="card-body d-flex flex-column justify-content-between align-items-start">
                 <div className="icon">
                   <IoChatbubblesOutline />
@@ -29,8 +29,8 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="col-md-3">
-            <div className="card">
+          <div className="col-12 col-md-6 col-lg-3">
+            <div className="card h-100">
               <div className="card-body d-flex flex-column justify-content-between align-items-start">
                 <div className="icon">
                   <IoLocationOutline />
@@ -43,8 +43,8 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="col-md-3">
-            <div className="card">
+          <div className="col-12 col-md-6 col-lg-3">
+            <div className="card h-100">
               <div className="card-body d-flex flex-column justify-content-between align-items-start">
                 <div className="icon">
                   <FiPhone />
@@ -57,8 +57,8 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="col-md-3">
-            <div className="card">
+          <div className="col-12 col-md-6 col-lg-3">
+            <div className="card h-100">
               <div className="card-body d-flex flex-column justify-content-between align-items-start">
                 <div className="icon">
                   <SlCallIn />
