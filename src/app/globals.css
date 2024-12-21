@@ -105,6 +105,16 @@ body {
   color: #555555;
 }
 
+.navbar .offcanvas .offcanvas-header {
+  justify-content: space-between;
+}
+
+.navbar .offcanvas .offcanvas-header button {
+  font-size: 40px;
+  color: #191919;
+  background-color: transparent;
+}
+
 .bottomBanner {
   margin-top: 120px;
   background-color: #191919;
@@ -696,11 +706,8 @@ body {
 
 .contact .card {
   border: 1px solid #dbdbdb;
-  height: 300px;
   border-radius: 0px;
-  width: 350px;
   padding: 10px;
-  margin: 30px;
 }
 
 .contact .card:hover {
@@ -721,6 +728,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #191919;
+  margin-top: 20px;
 }
 
 .contact .card p {
@@ -827,11 +835,8 @@ body {
 
 .about-page .core .card {
   border: 1px solid #dbdbdb;
-  height: 300px;
   border-radius: 0px;
-  width: 350px;
   padding: 10px;
-  margin: 30px;
 }
 
 .about-page .core .card:hover {
@@ -852,6 +857,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #191919;
+  margin-top: 20px;
 }
 
 .about-page .core .card p {
@@ -938,11 +944,8 @@ body {
 
 .careers .card {
   border: 1px solid #dbdbdb;
-  height: 300px;
   border-radius: 0px;
-  width: 350px;
   padding: 10px;
-  margin: 30px;
 }
 
 .careers .card:hover {
@@ -963,6 +966,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #191919;
+  margin-top: 20px;
 }
 
 .careers .card p {
@@ -1004,6 +1008,7 @@ body {
   background-position: center; 
   color: white;
   padding: 50px;
+  height: 400px;
 }
 
 .service-page .background-section::before {
@@ -1292,6 +1297,32 @@ body {
 
   .navbar.scrolled .menuIcon {
     color: #333333;
+  }
+
+  .navbar .offcanvas .offcanvas-header .navbar-brand {
+    font-size: 30px;
+    font-weight: 700;
+    color: #191919;
+  }
+
+  .navbar .offcanvas .offcanvas-body .nav-link {
+    color: #191919 !important;
+    font-size: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    margin-top: 20px;
+  }
+
+  .navbar .offcanvas .offcanvas-body .dropdown-menu {
+    border: none;
+    padding: 10px;
+  }
+
+  .navbar .offcanvas .offcanvas-body .dropdown-menu .dropdown-item {
+    border-bottom: 1px solid #dbdbdb;
+    margin-top: 10px;
+    color: #191919;
+    font-size: 20px;
+    padding: 10px 0px;
   }
 
   .ourFeature {
@@ -1891,6 +1922,10 @@ body {
   
   .service-page .industriSec .card .iconI{
     font-size: 30px;
+  }
+
+  .service-page .industriSec .card h5{
+    font-size: 13px;
   }
 
   .singlePage .titleSec {
