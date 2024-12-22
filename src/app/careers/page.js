@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { MdOutlineAutoGraph } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -5,11 +7,24 @@ import { IoTrophyOutline } from "react-icons/io5";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { ButtonSecondry } from "../components/button";
 import BotttomBanner from "../components/bottomBanner";
+import Apply from "../components/apply";
 
 const Careers = () => {
+  const [selectedJob, setSelectedJob] = useState({
+    jobId: "",
+    jobTitle: "",
+  });
+
+  const setJob = (jobId, jobTitle) => {
+    setSelectedJob({
+      jobId: jobId,
+      jobTitle: jobTitle,
+    });
+  };
+
   const jobOpenings = [
     {
-      id: "sde-001",
+      id: "SDE-001",
       title: "Senior Software Engineer",
       location: "Kochi, India (Hybrid)",
       type: "Full-time",
@@ -33,7 +48,7 @@ const Careers = () => {
       ],
     },
     {
-      id: "pm-001",
+      id: "PM-001",
       title: "Product Manager",
       location: "Kochi, India (Hybrid)",
       type: "Full-time",
@@ -57,7 +72,7 @@ const Careers = () => {
       ],
     },
     {
-      id: "ux-001",
+      id: "UX-001",
       title: "UX/UI Designer",
       location: "Kochi, India (Hybrid)",
       type: "Full-time",
@@ -149,41 +164,49 @@ const Careers = () => {
       </div>
       <div className="row mt-5 mb-5">
         <div className="col-md-12">
-          <h3>Open Positions <span className="jobLen">({jobOpenings.length} Openings)</span></h3>
+          <h3>
+            Open Positions{" "}
+            <span className="jobLen">({jobOpenings.length} Openings)</span>
+          </h3>
         </div>
         <div className="col-md-12">
           {jobOpenings.map((job) => (
             <div key={job.id} className="jobCard mt-3">
-                <hr/>
-                <div className="d-flex justify-content-between align-items-center">
-                  <h4>{job.title}</h4>
-                  <ButtonSecondry text="Apply Now" />
+              <hr />
+              <div className="d-flex justify-content-between align-items-center">
+                <h4>{job.title}</h4>
+                <ButtonSecondry
+                  text="Apply Now"
+                  type="button"
+                  dataBsToggle="modal"
+                  dataBsTarget="#careersModal"
+                  onClick={() => setJob(job.id, job.title)}
+                />
+              </div>
+              <p className="text-muted">{job.location}</p>
+              <div className="d-flex justify-content-start align-items-center">
+                <div className="d-flex align-items-center meta">
+                  <MdOutlineLocationOn className="icon" />
+                  <p>{job.department}</p>
                 </div>
-                <p className="text-muted">
-                  {job.location}
-                </p>
-                <div className="d-flex justify-content-start align-items-center">
-                  <div className="d-flex align-items-center meta">
-                    <MdOutlineLocationOn className="icon" />
-                    <p>{job.department}</p>
-                  </div>
-                  <div className="d-flex align-items-center meta">
-                    <MdOutlineLocationOn className="icon" />
-                    <p>{job.experience}</p>
-                  </div>
-                  <div className="d-flex align-items-center meta">
-                    <MdOutlineLocationOn className="icon" />
-                    <p>{job.type}</p>
-                  </div>
+                <div className="d-flex align-items-center meta">
+                  <MdOutlineLocationOn className="icon" />
+                  <p>{job.experience}</p>
                 </div>
+                <div className="d-flex align-items-center meta">
+                  <MdOutlineLocationOn className="icon" />
+                  <p>{job.type}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
       <BotttomBanner
-          title="Don't see the right role?"
-          desc="We're always looking for talented individuals to join our team."
-        />
+        title="Ready to Transform?"
+        desc="Let's create innovative solutions together that drive your business forward."
+      />
+      <Apply post={selectedJob} />
     </div>
   );
 };
