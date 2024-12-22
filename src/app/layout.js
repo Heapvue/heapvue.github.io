@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import Navbar from "./components/navbar";
@@ -16,6 +17,10 @@ const metadata = {
 
 export default function RootLayout({ children }) {
 
+  const pathname = usePathname();
+  const baseUrl = "https://heapvue.com"; 
+  const canonicalUrl = `${baseUrl}${pathname}`; 
+
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
 
@@ -26,6 +31,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <link rel="canonical" href={canonicalUrl} />
       </head>
       <body>
         <ProgressBar
