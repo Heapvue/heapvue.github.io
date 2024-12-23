@@ -6,12 +6,14 @@ import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 
 function Navbar() {
   const pathname = usePathname();
-
   const [scrolled, setScrolled] = useState(false);
   const [isHomePage, setIsHomePage] = useState(false);
+  const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
   useEffect(() => {
     setIsHomePage(pathname === "/");
+
+    setIsOffcanvasOpen(false);
 
     if (typeof window !== "undefined") {
       const handleScroll = () => {
@@ -26,6 +28,10 @@ function Navbar() {
     }
   }, [pathname]);
 
+  const toggleOffcanvas = () => {
+    setIsOffcanvasOpen(!isOffcanvasOpen);
+  };
+
   return (
     <nav
       className={`navbar navbar-expand-lg ps-1 pe-1 p-3 fixed-top ${
@@ -39,25 +45,24 @@ function Navbar() {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
+          onClick={toggleOffcanvas}
           aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
           <RiMenu3Fill className="menuIcon" />
         </button>
         <div
-          className="offcanvas offcanvas-end"
+          className={`offcanvas offcanvas-end ${isOffcanvasOpen ? 'show' : ''}`}
           tabIndex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header">
-            <Link className="navbar-brand" href="/">
+            <Link className="navbar-brand" href="/" onClick={() => setIsOffcanvasOpen(false)}>
               heapvue.
             </Link>
             <button
-              data-bs-dismiss="offcanvas"
+              onClick={() => setIsOffcanvasOpen(false)}
               aria-label="Close"
             >
               <RiCloseFill className="closeIcon" />
@@ -77,26 +82,34 @@ function Navbar() {
                 </a>
                 <ul className="dropdown-menu">
                   <li className="dropdown-item">
-                    <Link href="/services/ai-ml">AI & Machine Learning</Link>
+                    <Link href="/services/ai-ml" onClick={() => setIsOffcanvasOpen(false)}>
+                      AI & Machine Learning
+                    </Link>
                   </li>
                   <li className="dropdown-item">
-                    <Link href="/services/application-development">
+                    <Link href="/services/application-development" onClick={() => setIsOffcanvasOpen(false)}>
                       Application Development
                     </Link>
                   </li>
                   <li className="dropdown-item">
-                    <Link href="/services/cloud-devops">Cloud & DevOps</Link>
+                    <Link href="/services/cloud-devops" onClick={() => setIsOffcanvasOpen(false)}>
+                      Cloud & DevOps
+                    </Link>
                   </li>
                   <li className="dropdown-item">
-                    <Link href="/services/enterprise-solutions">
+                    <Link href="/services/enterprise-solutions" onClick={() => setIsOffcanvasOpen(false)}>
                       Enterprise Solutions
                     </Link>
                   </li>
                   <li className="dropdown-item">
-                    <Link href="/services/generative-ai">Generative AI</Link>
+                    <Link href="/services/generative-ai" onClick={() => setIsOffcanvasOpen(false)}>
+                      Generative AI
+                    </Link>
                   </li>
                   <li className="dropdown-item">
-                    <Link href="/services/iot">IoT</Link>
+                    <Link href="/services/iot" onClick={() => setIsOffcanvasOpen(false)}>
+                      IoT
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -112,36 +125,33 @@ function Navbar() {
                 </a>
                 <ul className="dropdown-menu">
                   <li className="dropdown-item">
-                    <a href="https://apnicareer.com" target="_blank">
+                    <a href="https://apnicareer.com" target="_blank" onClick={() => setIsOffcanvasOpen(false)}>
                       Apnicareer
                     </a>
                   </li>
                   <li className="dropdown-item">
-                    <a href="https://apptuner.dev" target="_blank">
+                    <a href="https://apptuner.dev" target="_blank" onClick={() => setIsOffcanvasOpen(false)}>
                       Apptuner
                     </a>
                   </li>
                 </ul>
               </li>
               <li className="nav-item nav-item dropdown dropdown-fullwidth">
-                <Link className="nav-link" href="/blog">
+                <Link className="nav-link" href="/blog" onClick={() => setIsOffcanvasOpen(false)}>
                   Blog
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/careers">
+                <Link className="nav-link" href="/careers" onClick={() => setIsOffcanvasOpen(false)}>
                   Careers
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/contact">
+                <Link className="nav-link" href="/contact" onClick={() => setIsOffcanvasOpen(false)}>
                   Contact
                 </Link>
               </li>
             </ul>
-          </div>
-          <div className="d-flex">
-            {/* <IoIosSearch className="navIcons" /> */}
           </div>
         </div>
       </div>
