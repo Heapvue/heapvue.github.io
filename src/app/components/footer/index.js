@@ -33,6 +33,8 @@ export default function Footer() {
             <ul className="list-unstyled">
               <li><a href="https://apnicareer.com" target="_blank">Apnicareer</a></li>
               <li><a href="https://apptuner.dev" target="_blank">Apptuner</a></li>
+              <li><a>LMS & E-learning</a></li>
+              <li><a>WhatsApp Integration</a></li>
             </ul>
           </div>
 
