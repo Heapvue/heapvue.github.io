@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ButtonSecondry } from "../components/button";
@@ -12,43 +13,16 @@ import {
   FaInstagram,
   FaFacebookF,
 } from "react-icons/fa6";
+import { getAllPosts } from "@/lib/blog";
 
 const BlogHome = () => {
-  const featuredPosts = [
-    {
-      id: 1,
-      title:
-        "How to Detect and Respond to the Surge in Cloud-Based Token Theft",
-      excerpt:
-        "Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive. Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.",
-      category: "Technology",
-      image: "/services.jpg",
-      date: "Mar 15, 2024",
-      readTime: "5 min read",
-    },
-    {
-      id: 2,
-      title:
-        "Tips for Efficient Knowledge Management Using Enterprise Search Software",
-      excerpt:
-        "Holistically pontificate installed base portals after maintainable products. Phosfluorescently engage worldwide methodologies with technology. Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.",
-      category: "Cloud",
-      image: "/service1.jpg",
-      date: "Mar 12, 2024",
-      readTime: "7 min read",
-    },
-    {
-      id: 3,
-      title:
-        "5 Reasons Why a GSA Replacement Has More Advantages Than the Original",
-      excerpt:
-        "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI. Wayfarers biodiesel helvetica yr meh. Whatever brunch vice mlkshk hashtag affogato messenger bag activated charcoal glossier godard fingerstache dreamcatcher.",
-      category: "IoT",
-      image: "/service2.jpg",
-      date: "Mar 10, 2024",
-      readTime: "6 min read",
-    },
-  ];
+  const posts = getAllPosts();
+  
+  // Sort posts by date in descending order (newest first)
+  const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+  // Get recent posts from sorted array
+  const recentPosts = sortedPosts.slice(0, 3);
 
   const categories = [
     {
@@ -78,24 +52,26 @@ const BlogHome = () => {
       <div className="row">
         <div className="col-md-8">
           <h2>
-            Insight's for the <br />
+            Insights for the <br />
             Digital Age
           </h2>
         </div>
       </div>
       <div className="row mt-5 text-start rightSide">
         <div className="col-md-8">
-          {featuredPosts.map((post) => (
-            <div className="blogCard" key={post.id}>
-              <h1>{post.title}</h1>
+          {sortedPosts.map((post, index) => (
+            <div className="blogCard" key={post.slug}>
+              <Link href={`/blog/${post.slug}`} className="text-decoration-none">
+                <h1>{post.title}</h1>
+              </Link>
               <div className="d-flex align-items-center details">
                 <div className="d-flex align-items-center me-3 me-md-5">
                   <CiCalendarDate className="icon me-2" />
-                  <p className="mb-0"> {post.date} </p>
+                  <p className="mb-0">{post.date}</p>
                 </div>
                 <div className="d-flex align-items-center me-3 me-md-5">
                   <LuUserRound className="icon me-2" />
-                  <p className="mb-0">Akhil</p>
+                  <p className="mb-0">{post.author}</p>
                 </div>
                 <div className="d-flex align-items-center me-3 me-md-5">
                   <IoPricetagsOutline className="icon me-2" />
@@ -106,13 +82,16 @@ const BlogHome = () => {
                   <p className="mb-0">{post.readTime}</p>
                 </div>
               </div>
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={600}
-                height={600}
-                className="mt-3 custom-image"
-              />
+              <Link href={`/blog/${post.slug}`}>
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={800}
+                  height={400}
+                  className="mt-3 custom-image"
+                  priority={index === 0}
+                />
+              </Link>
 
               <div className="mt-3 bottomDetails">
                 <p className="card-text">{post.excerpt}</p>
@@ -123,7 +102,9 @@ const BlogHome = () => {
                     <FaXTwitter className="me-2 icon" />
                     <FaLinkedin className="me-2 icon" />
                   </div>
-                  <ButtonSecondry text="Continue Reading"></ButtonSecondry>
+                  <Link href={`/blog/${post.slug}`}>
+                    <ButtonSecondry text="Continue Reading" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -144,94 +125,43 @@ const BlogHome = () => {
           {/* Recent Posts */}
           <div className="mt-5">
             <h4 className="fw-bold mb-5">Recent Posts</h4>
-            <div className="d-flex mb-3">
-              <Image
-                src="/services.jpg"
-                alt="services"
-                width={100}
-                height={80}
-                className="me-3 latest-image-container"
-              />
-              <div>
-                <small className="text-muted">MARCH 30, 2022</small>
-                <p className="mb-0 fw-semibold">
-                  How to Detect and Respond to the Surge in Cloud-Based...
-                </p>
+            {recentPosts.map((post) => (
+              <div key={post.slug} className="d-flex mb-3">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={100}
+                  height={80}
+                  className="me-3 latest-image-container"
+                />
+                <div>
+                  <small className="text-muted">{post.date}</small>
+                  <Link href={`/blog/${post.slug}`} className="text-decoration-none">
+                    <p className="mb-0 fw-semibold text-dark">
+                      {post.title.length > 50
+                        ? post.title.substring(0, 50) + "..."
+                        : post.title}
+                    </p>
+                  </Link>
+                </div>
               </div>
-            </div>
-
-            <div className="d-flex mb-3">
-              <Image
-                src="/service1.jpg"
-                alt="services"
-                width={100}
-                height={80}
-                className="me-3 latest-image-container"
-              />
-              <div>
-                <small className="text-muted">MARCH 30, 2022</small>
-                <p className="mb-0 fw-semibold">
-                  Tips for Efficient Knowledge Management Using Enterpri...
-                </p>
-              </div>
-            </div>
-
-            <div className="d-flex mb-3">
-              <Image
-                src="/service2.jpg"
-                alt="services"
-                width={100}
-                height={80}
-                className="me-3 latest-image-container"
-              />
-              <div>
-                <small className="text-muted">MARCH 20, 2022</small>
-                <p className="mb-0 fw-semibold">
-                  Why Digital Literacy is Essential for Your 21st Centur...
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Categories */}
           <div className="mt-5">
             <h4 className="fw-bold mb-5">Categories</h4>
             <ul className="list-unstyled">
-              <li className="mb-2">
-                <a href="#" className="text-decoration-none text-dark">
-                  IT
-                </a>
-              </li>
-              <hr/>
-              <li className="mb-2">
-                <a href="#" className="text-decoration-none text-dark">
-                  Networks
-                </a>
-              </li>
-              <hr/>
-              <li className="mb-2">
-                <a href="#" className="text-decoration-none text-dark">
-                  Protection
-                </a>
-              </li>
-              <hr/>
-              <li className="mb-2">
-                <a href="#" className="text-decoration-none text-dark">
-                  Security
-                </a>
-              </li>
-              <hr/>
-              <li className="mb-2">
-                <a href="#" className="text-decoration-none text-dark">
-                  Solutions
-                </a>
-              </li>
-              <hr/>
-              <li>
-                <a href="#" className="text-decoration-none text-dark">
-                  Websites
-                </a>
-              </li>
+              {categories.map((category, index) => (
+                <React.Fragment key={category.name}>
+                  <li className="mb-2">
+                    <a href="#" className="text-decoration-none text-dark">
+                      {category.name}
+                    </a>
+                  </li>
+                  {index < categories.length - 1 && <hr />}
+                </React.Fragment>
+              ))}
             </ul>
           </div>
         </div>
