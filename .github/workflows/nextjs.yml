@@ -74,7 +74,9 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Set environment variables
-        run: echo "NEXT_PUBLIC_GOOGLE_FORM_ID=${{ secrets.GOOGLE_FORM_ID }}" >> $GITHUB_ENV
+        run: |
+          echo "NEXT_PUBLIC_GOOGLE_FORM_ID=${{ secrets.GOOGLE_FORM_ID }}" >> $GITHUB_ENV
+          echo "NEXT_PUBLIC_CAREERS_FORM_ID=${{ secrets.CAREERS_FORM_ID }}" >> $GITHUB_ENV
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
