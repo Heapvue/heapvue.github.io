@@ -1,25 +1,30 @@
-import { VscGraph } from "react-icons/vsc";
-import { GiProcessor } from "react-icons/gi";
-import { IoCameraOutline } from "react-icons/io5";
-import { GoWorkflow } from "react-icons/go";
-import {
-  MdOutlineRecommend,
-  MdScreenSearchDesktop,
-  MdOutlineLocalHospital,
+import { 
+  MdOutlineIntegrationInstructions,
+  MdOutlineHealthAndSafety,
   MdAttachMoney,
   MdOutlinePrecisionManufacturing,
+  MdOutlineSecurityUpdate,
+  MdOutlineSpeed,
+  MdOutlineAutoMode,
 } from "react-icons/md";
-import { RiShoppingBag3Line } from "react-icons/ri";
-import {
+import { 
   BsDatabase,
-  BsLightning,
-  BsPersonCheck,
-  BsCashCoin,
+  BsShieldCheck,
+  BsGear,
   BsCart3,
   BsTruck,
+  BsBuilding,
 } from "react-icons/bs";
+import { 
+  FiArrowUpRight,
+  FiUsers,
+  FiServer,
+} from "react-icons/fi";
+import { 
+  TbSettingsAutomation,
+  TbWorldWww,
+} from "react-icons/tb";
 import BotttomBanner from "@/app/components/bottomBanner";
-import { FiArrowUpRight } from "react-icons/fi";
 
 const EnterpriseSolutions = () => {
   return (
@@ -54,17 +59,17 @@ const EnterpriseSolutions = () => {
           <div className="row mt-5 mb-5">
             {[
               {
-                icon: <VscGraph />,
+                icon: <TbWorldWww />,
                 title: "End-to-End Custom Development",
                 desc: "From requirement gathering to deployment, we deliver software that aligns with your goals",
               },
               {
-                icon: <GiProcessor />,
+                icon: <MdOutlineIntegrationInstructions />,
                 title: "Integration with Existing Systems",
                 desc: "Seamless operations by integrating with legacy systems and third-party applications",
               },
               {
-                icon: <IoCameraOutline />,
+                icon: <FiUsers />,
                 title: "Customer Relationship Management",
                 desc: "Enhanced customer engagement with custom CRM solutions and integrations",
               },
@@ -95,22 +100,22 @@ const EnterpriseSolutions = () => {
               <div className="row g-4">
                 {[
                   {
-                    icon: <BsDatabase />,
+                    icon: <BsGear />,
                     title: "Tailored Solutions",
                     desc: "Software specific to your organizational needs",
                   },
                   {
-                    icon: <BsLightning />,
+                    icon: <FiServer />,
                     title: "Future-Ready Technology",
                     desc: "Built with cutting-edge tools and frameworks",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <BsShieldCheck />,
                     title: "Data Security",
                     desc: "Robust protocols ensuring data security and compliance",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <BsDatabase />,
                     title: "Scalable Architecture",
                     desc: "Solutions that grow with your business",
                   },
@@ -149,32 +154,32 @@ const EnterpriseSolutions = () => {
           <div className="row mt-5 mb-5">
             {[
               {
-                icon: <VscGraph />,
+                icon: <TbSettingsAutomation />,
                 title: "Tailored to Your Business Needs",
                 desc: "Solutions that cater to your specific workflows and industry requirements",
               },
               {
-                icon: <GiProcessor />,
+                icon: <MdOutlineSpeed />,
                 title: "Scalable Architecture",
                 desc: "Future-ready solutions that evolve with your business needs",
               },
               {
-                icon: <IoCameraOutline />,
+                icon: <MdOutlineIntegrationInstructions />,
                 title: "Comprehensive Services",
                 desc: "From ERP systems to advanced analytics tools",
               },
               {
-                icon: <GoWorkflow />,
+                icon: <BsShieldCheck />,
                 title: "Security and Compliance",
                 desc: "Robust security measures and regulatory compliance",
               },
               {
-                icon: <MdOutlineRecommend />,
+                icon: <MdOutlineSecurityUpdate />,
                 title: "Post-deployment Support",
                 desc: "Ongoing support to ensure continued success",
               },
               {
-                icon: <MdOutlineRecommend />,
+                icon: <MdOutlineAutoMode />,
                 title: "Agile Development",
                 desc: "Faster delivery and flexible customization",
               },
@@ -204,7 +209,7 @@ const EnterpriseSolutions = () => {
             <div className="row g-4 justify-content-center">
               {[
                 {
-                  icon: <MdOutlineLocalHospital />,
+                  icon: <MdOutlineHealthAndSafety />,
                   name: "Healthcare",
                 },
                 {
@@ -224,7 +229,7 @@ const EnterpriseSolutions = () => {
                   name: "Logistics",
                 },
                 {
-                  icon: <RiShoppingBag3Line />,
+                  icon: <BsBuilding />,
                   name: "Retail",
                 },
               ].map((industry, index) => (

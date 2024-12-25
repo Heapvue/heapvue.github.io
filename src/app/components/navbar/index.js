@@ -335,6 +335,16 @@ function Navbar() {
                       Apptuner
                     </a>
                   </li>
+                  <li className="dropdown-item">
+                    <Link href="/solutions/lms" onClick={() => setIsOffcanvasOpen(false)}>
+                      LMS Integration
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/solutions/whatsapp" onClick={() => setIsOffcanvasOpen(false)}>
+                      WhatsApp Integration
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item nav-item dropdown dropdown-fullwidth">

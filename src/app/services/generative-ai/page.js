@@ -1,26 +1,25 @@
 import React from "react";
-import { VscGraph } from "react-icons/vsc";
-import { GiProcessor } from "react-icons/gi";
-import { IoCameraOutline } from "react-icons/io5";
-import { GoWorkflow } from "react-icons/go";
-import {
-  MdOutlineRecommend,
-  MdScreenSearchDesktop,
-  MdOutlineLocalHospital,
+import { 
+  MdOutlineAutoAwesome,
+  MdOutlineDesignServices,
+  MdOutlineCode,
+  MdOutlineSmartToy,
+  MdOutlineLightbulb,
+  MdOutlineDataExploration,
+  MdOutlineHealthAndSafety,
   MdAttachMoney,
   MdOutlinePrecisionManufacturing,
 } from "react-icons/md";
-import { RiShoppingBag3Line } from "react-icons/ri";
-import {
-  BsDatabase,
+import { 
   BsLightning,
+  BsClockHistory,
   BsPersonCheck,
-  BsCashCoin,
   BsCart3,
   BsTruck,
+  BsShop,
 } from "react-icons/bs";
-import BotttomBanner from "@/app/components/bottomBanner";
 import { FiArrowUpRight } from "react-icons/fi";
+import BotttomBanner from "@/app/components/bottomBanner";
 
 const GenerativeAI = () => {
   return (
@@ -42,7 +41,6 @@ const GenerativeAI = () => {
                 Transform Your Business with Generative AI
               </h3>
               <p className="subDesc">
-                {" "}
                 At HeapVue, we unlock the immense potential of Generative AI to
                 transform how businesses create, innovate, and automate. Our
                 state-of-the-art solutions enable faster, smarter, and more
@@ -57,32 +55,32 @@ const GenerativeAI = () => {
           <div className="row mt-5 mb-5">
             {[
               {
-                icon: <VscGraph />,
+                icon: <MdOutlineAutoAwesome />,
                 title: "Content Generation",
                 desc: "Automate creation of high-quality text, images, audio, and video content",
               },
               {
-                icon: <GiProcessor />,
+                icon: <MdOutlineDesignServices />,
                 title: "Design Automation",
                 desc: "Simplify product design and prototyping processes with AI-powered tools",
               },
               {
-                icon: <IoCameraOutline />,
+                icon: <MdOutlineCode />,
                 title: "Code Assistance",
                 desc: "Enhance developer productivity with AI-driven code generation",
               },
               {
-                icon: <GoWorkflow />,
+                icon: <MdOutlineSmartToy />,
                 title: "Custom Chatbots",
                 desc: "Deploy AI systems that generate contextually accurate responses",
               },
               {
-                icon: <MdOutlineRecommend />,
+                icon: <MdOutlineLightbulb />,
                 title: "Idea Exploration",
                 desc: "Leverage AI to brainstorm unique concepts and strategies",
               },
               {
-                icon: <MdScreenSearchDesktop />,
+                icon: <MdOutlineDataExploration />,
                 title: "Data Augmentation",
                 desc: "Synthesize realistic datasets for training and testing",
               },
@@ -115,12 +113,12 @@ const GenerativeAI = () => {
               <div className="row g-4">
                 {[
                   {
-                    icon: <BsDatabase />,
+                    icon: <MdOutlineLightbulb />,
                     title: "Foster Innovation",
                     desc: "Generate creative ideas and solutions that drive growth",
                   },
                   {
-                    icon: <BsLightning />,
+                    icon: <BsClockHistory />,
                     title: "Save Time",
                     desc: "Automate complex tasks, increasing efficiency",
                   },
@@ -130,7 +128,7 @@ const GenerativeAI = () => {
                     desc: "Develop unique, tailor-made customer experiences",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <BsLightning />,
                     title: "Reduce Costs",
                     desc: "Optimize resources and minimize manual intervention",
                   },
@@ -158,7 +156,7 @@ const GenerativeAI = () => {
             <div className="row g-4 justify-content-center">
               {[
                 {
-                  icon: <MdOutlineLocalHospital />,
+                  icon: <MdOutlineHealthAndSafety />,
                   name: "Healthcare",
                 },
                 {
@@ -178,7 +176,7 @@ const GenerativeAI = () => {
                   name: "Logistics",
                 },
                 {
-                  icon: <RiShoppingBag3Line />,
+                  icon: <BsShop />,
                   name: "Retail",
                 },
               ].map((industry, index) => (
