@@ -1,22 +1,24 @@
-import { VscGraph } from "react-icons/vsc";
-import { GiProcessor } from "react-icons/gi";
-import { IoCameraOutline } from "react-icons/io5";
-import { GoWorkflow } from "react-icons/go";
-import {
-  MdOutlineRecommend,
-  MdScreenSearchDesktop,
-  MdOutlineLocalHospital,
-  MdAttachMoney,
-  MdOutlinePrecisionManufacturing,
+import { 
+  MdOutlineWebAsset,
+  MdOutlineDesignServices,
+  MdOutlineShoppingCart,
+  MdOutlineDashboardCustomize,
+  MdApi,
+  MdOutlineSecurity,
+  MdOutlineHealthAndSafety,
+  MdOutlineStorefront,
 } from "react-icons/md";
-import { RiShoppingBag3Line } from "react-icons/ri";
-import {
-  BsDatabase,
-  BsLightning,
-  BsPersonCheck,
-  BsCashCoin,
-  BsCart3,
+import { 
+  BiMobileAlt,
+  BiDevices,
+  BiCodeAlt,
+  BiMobile
+} from "react-icons/bi";
+import { 
+  BsBank2,
+  BsBuilding,
   BsTruck,
+  BsShop,
 } from "react-icons/bs";
 import BotttomBanner from "@/app/components/bottomBanner";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -55,32 +57,32 @@ const ApplicationDevelopment = () => {
           <div className="row mt-5 mb-5">
             {[
               {
-                icon: <VscGraph />,
+                icon: <MdOutlineWebAsset />,
                 title: "Custom Web Development",
                 desc: "From simple websites to complex web applications, we build custom solutions that align with your business objectives",
               },
               {
-                icon: <GiProcessor />,
+                icon: <MdOutlineDesignServices />,
                 title: "Responsive Design",
                 desc: "Ensuring seamless user experiences across devices, from desktops to smartphones",
               },
               {
-                icon: <IoCameraOutline />,
+                icon: <MdOutlineShoppingCart />,
                 title: "E-Commerce Solutions",
                 desc: "Robust platforms to take your online store to the next level with secure, scalable designs",
               },
               {
-                icon: <GoWorkflow />,
+                icon: <MdOutlineDashboardCustomize />,
                 title: "Content Management Systems",
                 desc: "Empowering you with easy-to-manage CMS platforms like WordPress, Drupal, and Joomla",
               },
               {
-                icon: <MdOutlineRecommend />,
+                icon: <MdApi />,
                 title: "API Integrations",
                 desc: "Connecting your systems and streamlining workflows with third-party API integrations",
               },
               {
-                icon: <MdScreenSearchDesktop />,
+                icon: <MdOutlineSecurity />,
                 title: "Website Maintenance",
                 desc: "Ongoing support to ensure your website stays secure, updated, and optimized",
               },
@@ -111,22 +113,22 @@ const ApplicationDevelopment = () => {
               <div className="row g-4">
                 {[
                   {
-                    icon: <BsDatabase />,
+                    icon: <BiMobileAlt />,
                     title: "Custom Mobile App Development",
                     desc: "Tailor-made applications that meet your unique business needs",
                   },
                   {
-                    icon: <BsLightning />,
+                    icon: <BiDevices />,
                     title: "Cross-Platform Development",
                     desc: "Seamless experiences on both iOS and Android platforms",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <BiCodeAlt />,
                     title: "Native App Development",
                     desc: "High-performance apps for iOS (Swift) and Android (Kotlin)",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <BiMobile />,
                     title: "Progressive Web Applications (PWAs)",
                     desc: "Blazing-fast, web-based apps that provide a native-like experience across devices.",
                   },
@@ -164,32 +166,32 @@ const ApplicationDevelopment = () => {
           <div className="row mt-5 mb-5">
             {[
               {
-                icon: <VscGraph />,
+                icon: <MdOutlineWebAsset />,
                 title: "Custom E-commerce Solutions",
                 desc: "Personalized online stores aligned with your brand identity",
               },
               {
-                icon: <GiProcessor />,
+                icon: <MdOutlineDesignServices />,
                 title: "Secure Payment Gateways",
                 desc: "Multiple payment options with top-tier security",
               },
               {
-                icon: <IoCameraOutline />,
+                icon: <MdOutlineShoppingCart />,
                 title: "SEO-Ready Stores",
                 desc: "Optimized for better search engine visibility",
               },
               {
-                icon: <GoWorkflow />,
+                icon: <MdOutlineDashboardCustomize />,
                 title: "Third-Party Integrations",
                 desc: "Seamless integration with CRM, ERP, and other tools",
               },
               {
-                icon: <MdOutlineRecommend />,
+                icon: <MdApi />,
                 title: "Speed & Performance",
                 desc: "Lightning-fast loading times for better conversion",
               },
               {
-                icon: <MdScreenSearchDesktop />,
+                icon: <MdOutlineSecurity />,
                 title: "Secure & Scalable",
                 desc: "Built to protect data and grow with your business",
               },
@@ -218,19 +220,19 @@ const ApplicationDevelopment = () => {
             <div className="row g-4 justify-content-center">
               {[
                 {
-                  icon: <MdOutlineLocalHospital />,
+                  icon: <MdOutlineHealthAndSafety />,
                   name: "Healthcare",
                 },
                 {
-                  icon: <BsCart3 />,
+                  icon: <BsShop />,
                   name: "E-commerce",
                 },
                 {
-                  icon: <MdAttachMoney />,
+                  icon: <BsBank2 />,
                   name: "Finance",
                 },
                 {
-                  icon: <MdOutlinePrecisionManufacturing />,
+                  icon: <BsBuilding />,
                   name: "Manufacturing",
                 },
                 {
@@ -238,7 +240,7 @@ const ApplicationDevelopment = () => {
                   name: "Logistics",
                 },
                 {
-                  icon: <RiShoppingBag3Line />,
+                  icon: <MdOutlineStorefront />,
                   name: "Retail",
                 },
               ].map((industry, index) => (

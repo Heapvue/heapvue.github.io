@@ -1,26 +1,28 @@
 import React from "react";
-import { VscGraph } from "react-icons/vsc";
-import { GiProcessor } from "react-icons/gi";
-import { IoCameraOutline } from "react-icons/io5";
-import { GoWorkflow } from "react-icons/go";
-import {
-  MdOutlineRecommend,
-  MdScreenSearchDesktop,
-  MdOutlineLocalHospital,
+import { 
+  MdOutlineDevices,
+  MdOutlineAutoMode,
+  MdOutlineAnalytics,
+  MdOutlineMonitor,
+  MdOutlineHealthAndSafety,
   MdAttachMoney,
   MdOutlinePrecisionManufacturing,
+  MdOutlineStorefront,
 } from "react-icons/md";
-import { RiShoppingBag3Line } from "react-icons/ri";
-import {
+import { 
   BsDatabase,
   BsLightning,
   BsPersonCheck,
-  BsCashCoin,
   BsCart3,
   BsTruck,
 } from "react-icons/bs";
+import { 
+  FiArrowUpRight,
+} from "react-icons/fi";
+import { 
+  AiOutlineSafety,
+} from "react-icons/ai";
 import BotttomBanner from "@/app/components/bottomBanner";
-import { FiArrowUpRight } from "react-icons/fi";
 
 const IoTSolutions = () => {
   return (
@@ -40,7 +42,6 @@ const IoTSolutions = () => {
             <div className="text-start col-md-10">
               <h3 className="subHead">Transform Your Business with IoT</h3>
               <p className="subDesc">
-                {" "}
                 At HeapVue, we harness the power of IoT to bridge the gap
                 between the physical and digital worlds, empowering businesses
                 to streamline operations and unlock new opportunities.
@@ -54,22 +55,22 @@ const IoTSolutions = () => {
           <div className="row mt-5 mb-5">
             {[
               {
-                icon: <VscGraph />,
+                icon: <MdOutlineDevices />,
                 title: "Smart Devices and Connectivity",
                 desc: "Enable seamless communication between devices for real-time data exchange",
               },
               {
-                icon: <GiProcessor />,
+                icon: <MdOutlineAutoMode />,
                 title: "IoT-Driven Automation",
                 desc: "Automate processes with intelligent devices that respond to changing conditions",
               },
               {
-                icon: <IoCameraOutline />,
+                icon: <MdOutlineAnalytics />,
                 title: "Predictive Analytics",
                 desc: "Leverage IoT data for actionable insights and maintenance",
               },
               {
-                icon: <GoWorkflow />,
+                icon: <MdOutlineMonitor />,
                 title: "Remote Monitoring",
                 desc: "Track assets and processes remotely for efficiency and compliance",
               },
@@ -110,7 +111,7 @@ const IoTSolutions = () => {
                     desc: "Use real-time data insights for informed decisions",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <AiOutlineSafety />,
                     title: "Cost Reduction",
                     desc: "Lower maintenance and energy costs through monitoring",
                   },
@@ -143,7 +144,7 @@ const IoTSolutions = () => {
             <div className="row g-4 justify-content-center">
               {[
                 {
-                  icon: <MdOutlineLocalHospital />,
+                  icon: <MdOutlineHealthAndSafety />,
                   name: "Healthcare",
                 },
                 {
@@ -160,10 +161,10 @@ const IoTSolutions = () => {
                 },
                 {
                   icon: <BsTruck />,
-                  name: "Transporation",
+                  name: "Transportation",
                 },
                 {
-                  icon: <RiShoppingBag3Line />,
+                  icon: <MdOutlineStorefront />,
                   name: "Retail",
                 },
               ].map((industry, index) => (

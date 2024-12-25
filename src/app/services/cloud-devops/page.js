@@ -1,26 +1,34 @@
 import React from "react";
-import { VscGraph } from "react-icons/vsc";
-import { GiProcessor } from "react-icons/gi";
-import { IoCameraOutline } from "react-icons/io5";
-import { GoWorkflow } from "react-icons/go";
-import {
-  MdOutlineRecommend,
-  MdScreenSearchDesktop,
-  MdOutlineLocalHospital,
+import { 
+  MdSecurity,
+  MdAutorenew,
+  MdOutlineMonetizationOn,
+  MdOutlineAutoMode,
+  MdOutlineHealthAndSafety,
+  MdOutlineStorefront,
   MdAttachMoney,
   MdOutlinePrecisionManufacturing,
+  MdDeviceHub,
 } from "react-icons/md";
-import { RiShoppingBag3Line } from "react-icons/ri";
-import {
-  BsDatabase,
+import { 
+  BsCloudArrowUp,
+  BsHddNetwork,
+  BsShieldCheck,
+  BsSpeedometer2,
+  BsGear,
   BsLightning,
   BsPersonCheck,
-  BsCashCoin,
   BsCart3,
   BsTruck,
 } from "react-icons/bs";
-import BotttomBanner from "@/app/components/bottomBanner";
+import { 
+  SiKubernetes,
+  SiDocker,
+  SiGithubactions,
+  SiJenkins
+} from "react-icons/si";
 import { FiArrowUpRight } from "react-icons/fi";
+import BotttomBanner from "@/app/components/bottomBanner";
 
 const Service = () => {
   return (
@@ -56,32 +64,32 @@ const Service = () => {
           <div className="row mt-5 mb-5">
             {[
               {
-                icon: <VscGraph />,
+                icon: <BsCloudArrowUp />,
                 title: "Cloud Migration",
                 desc: "Seamlessly transition your on-premise systems to the cloud",
               },
               {
-                icon: <GiProcessor />,
+                icon: <BsHddNetwork />,
                 title: "Multi-Cloud & Hybrid",
                 desc: "Maximize flexibility with integrated cloud platforms",
               },
               {
-                icon: <IoCameraOutline />,
+                icon: <BsShieldCheck />,
                 title: "Security & Compliance",
                 desc: "Protect data with robust security measures",
               },
               {
-                icon: <GoWorkflow />,
+                icon: <BsSpeedometer2 />,
                 title: "Performance Tuning",
                 desc: "Enhance speed and reliability with proactive monitoring",
               },
               {
-                icon: <MdOutlineRecommend />,
+                icon: <MdOutlineMonetizationOn />,
                 title: "Cost Management",
                 desc: "Optimize expenses with detailed analysis",
               },
               {
-                icon: <MdScreenSearchDesktop />,
+                icon: <MdOutlineAutoMode />,
                 title: "Automation",
                 desc: "Streamline operations with automated workflows",
               },
@@ -114,7 +122,7 @@ const Service = () => {
               <div className="row g-4">
                 {[
                   {
-                    icon: <BsDatabase />,
+                    icon: <BsGear />,
                     title: "Customized Solutions",
                     desc: "Tailored cloud strategies that align with your business goals",
                   },
@@ -129,7 +137,7 @@ const Service = () => {
                     desc: "Solutions that grow with your business demands",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <MdAutorenew />,
                     title: "Future-Ready",
                     desc: "Stay ahead with innovative cloud solutions",
                   },
@@ -170,27 +178,27 @@ const Service = () => {
           <div className="row mt-5 mb-5">
             {[
               {
-                icon: <VscGraph />,
+                icon: <SiGithubactions />,
                 title: "CI/CD Implementation",
                 desc: "Automate your software development pipeline with Continuous Integration and Deployment practices",
               },
               {
-                icon: <GiProcessor />,
+                icon: <SiDocker />,
                 title: "Infrastructure as Code",
                 desc: "Replace manual configurations with code-based infrastructure management",
               },
               {
-                icon: <IoCameraOutline />,
+                icon: <SiJenkins />,
                 title: "Monitoring & Logging",
                 desc: "Gain real-time insights into your applications and infrastructure",
               },
               {
-                icon: <GoWorkflow />,
+                icon: <MdDeviceHub />,
                 title: "Cloud-Native DevOps",
                 desc: "Leverage cloud platforms to scale your DevOps workflows seamlessly",
               },
               {
-                icon: <MdOutlineRecommend />,
+                icon: <SiKubernetes />,
                 title: "Containerization",
                 desc: "Optimize deployment with Docker and Kubernetes",
               }
@@ -216,29 +224,29 @@ const Service = () => {
           <div className="row mt-5 mb-5 bg-light empowerSec">
             <div className="col-lg-5">
               <h3 className="h2 mb-4">
-              Benefits of Heapvue's DevOps Consultation
+                Benefits of Heapvue's DevOps Consultation
               </h3>
             </div>
             <div className="col-lg-7 rightSec">
               <div className="row g-4">
                 {[
                   {
-                    icon: <BsDatabase />,
+                    icon: <BsSpeedometer2 />,
                     title: "Accelerated Delivery",
                     desc: "Implement agile methodologies for faster releases",
                   },
                   {
-                    icon: <BsLightning />,
+                    icon: <BsPersonCheck />,
                     title: "Improved Collaboration",
                     desc: "Foster better communication between teams",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <MdSecurity />,
                     title: "Enhanced Quality",
                     desc: "Ensure reliable builds with automated testing",
                   },
                   {
-                    icon: <BsPersonCheck />,
+                    icon: <MdOutlineMonetizationOn />,
                     title: "Cost Efficiency",
                     desc: "Reduce operational overhead through automation",
                   },
@@ -266,7 +274,7 @@ const Service = () => {
             <div className="row g-4 justify-content-center">
               {[
                 {
-                  icon: <MdOutlineLocalHospital />,
+                  icon: <MdOutlineHealthAndSafety />,
                   name: "Healthcare",
                 },
                 {
@@ -286,7 +294,7 @@ const Service = () => {
                   name: "Logistics",
                 },
                 {
-                  icon: <RiShoppingBag3Line />,
+                  icon: <MdOutlineStorefront />,
                   name: "Retail",
                 },
               ].map((industry, index) => (
