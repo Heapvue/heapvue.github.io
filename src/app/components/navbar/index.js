@@ -6,6 +6,10 @@ import { RiMenu3Fill, RiCloseFill, RiBrainLine, RiWhatsappFill } from "react-ico
 import { SiMoodle } from "react-icons/si";
 import { FaLaptopCode, FaRocket } from "react-icons/fa";
 import { ButtonSecondry } from "../button";
+import { MdHealthAndSafety, MdSchool, MdElectricBolt, MdAccountBalance } from "react-icons/md";
+import { GiFactory, GiCargoShip } from "react-icons/gi";
+import { BsBank2, BsShop, BsBuilding } from "react-icons/bs";
+import { HiOfficeBuilding } from "react-icons/hi";
 
 function Navbar() {
   const pathname = usePathname();
@@ -147,6 +151,141 @@ function Navbar() {
                             <div>
                               <h6>IoT</h6>
                               <p>Connected device solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li className="nav-item dropdown position-static">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Industries
+              </a>
+              <div className="dropdown-menu mega-menu w-100">
+                <div className="container-fluid">
+                  <div className="row p-4">
+                    <div className="col-lg-3 mb-4">
+                      <div className="mega-menu-item">
+                        <Link href="/industries/education">
+                          <div className="d-flex align-items-center">
+                            <MdSchool className="mega-menu-icon" />
+                            <div>
+                              <h6>Education</h6>
+                              <p>E-learning Solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="mega-menu-item">
+                        <Link href="/industries/energy">
+                          <div className="d-flex align-items-center">
+                            <MdElectricBolt className="mega-menu-icon" />
+                            <div>
+                              <h6>Energy & Utilities</h6>
+                              <p>Smart Energy Solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="mega-menu-item">
+                        <Link href="/industries/finance">
+                          <div className="d-flex align-items-center">
+                            <BsBank2 className="mega-menu-icon" />
+                            <div>
+                              <h6>Finance & Banking</h6>
+                              <p>FinTech Solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="col-lg-3 mb-4">
+                      <div className="mega-menu-item">
+                        <Link href="/industries/government">
+                          <div className="d-flex align-items-center">
+                            <MdAccountBalance className="mega-menu-icon" />
+                            <div>
+                              <h6>Government</h6>
+                              <p>Public Sector Solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="mega-menu-item">
+                        <Link href="/industries/healthcare">
+                          <div className="d-flex align-items-center">
+                            <MdHealthAndSafety className="mega-menu-icon" />
+                            <div>
+                              <h6>Healthcare</h6>
+                              <p>Digital Health Solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="mega-menu-item">
+                        <Link href="/industries/logistics">
+                          <div className="d-flex align-items-center">
+                            <GiCargoShip className="mega-menu-icon" />
+                            <div>
+                              <h6>Logistics</h6>
+                              <p>Transportation Solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="col-lg-3 mb-4">
+                      <div className="mega-menu-item">
+                        <Link href="/industries/manufacturing">
+                          <div className="d-flex align-items-center">
+                            <GiFactory className="mega-menu-icon" />
+                            <div>
+                              <h6>Manufacturing</h6>
+                              <p>Smart Manufacturing</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="mega-menu-item">
+                        <Link href="/industries/real-estate">
+                          <div className="d-flex align-items-center">
+                            <BsBuilding className="mega-menu-icon" />
+                            <div>
+                              <h6>Real Estate</h6>
+                              <p>Construction Solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="col-lg-3 mb-4">
+                      <div className="mega-menu-item">
+                        <Link href="/industries/retail">
+                          <div className="d-flex align-items-center">
+                            <BsShop className="mega-menu-icon" />
+                            <div>
+                              <h6>Retail</h6>
+                              <p>E-commerce Solutions</p>
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="mega-menu-item">
+                        <Link href="/industries/startups">
+                          <div className="d-flex align-items-center">
+                            <HiOfficeBuilding className="mega-menu-icon" />
+                            <div>
+                              <h6>Startups & SMEs</h6>
+                              <p>Growth Solutions</p>
                             </div>
                           </div>
                         </Link>
@@ -310,6 +449,69 @@ function Navbar() {
                   <li className="dropdown-item">
                     <Link href="/services/iot" onClick={() => setIsOffcanvasOpen(false)}>
                       IoT
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item dropdown dropdown-fullwidth">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Industries
+                </a>
+                <ul className="dropdown-menu">
+                  <li className="dropdown-item">
+                    <Link href="/industries/education" onClick={() => setIsOffcanvasOpen(false)}>
+                      Education and E-learning
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/energy" onClick={() => setIsOffcanvasOpen(false)}>
+                      Energy and Utilities
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/finance" onClick={() => setIsOffcanvasOpen(false)}>
+                      Finance and Banking
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/government" onClick={() => setIsOffcanvasOpen(false)}>
+                      Government and Public Sector
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/healthcare" onClick={() => setIsOffcanvasOpen(false)}>
+                      Healthcare
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/logistics" onClick={() => setIsOffcanvasOpen(false)}>
+                      Logistics and Transportation
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/manufacturing" onClick={() => setIsOffcanvasOpen(false)}>
+                      Manufacturing
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/real-estate" onClick={() => setIsOffcanvasOpen(false)}>
+                      Real Estate and Construction
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/retail" onClick={() => setIsOffcanvasOpen(false)}>
+                      Retail and E-commerce
+                    </Link>
+                  </li>
+                  <li className="dropdown-item">
+                    <Link href="/industries/startups" onClick={() => setIsOffcanvasOpen(false)}>
+                      Startups and SMEs
                     </Link>
                   </li>
                 </ul>

@@ -55,16 +55,16 @@ export default function Footer() {
           <div className="col-12 col-md-2 mb-4 mb-md-0">
             <h5 className="fw-bold">Industries</h5>
             <ul className="list-unstyled">
-              <li>Education and E-learning</li>
-              <li>Energy and Utilities</li>
-              <li>Finance and Banking</li>
-              <li>Government and Public Sector</li>
-              <li>Healthcare</li>
-              <li>Logistics and Transportation</li>
-              <li>Manufacturing</li>
-              <li>Real Estate and Construction</li>
-              <li>Retail and E-commerce</li>
-              <li>Startups and SMEs</li>
+              <li><Link href="/industries/education">Education and E-learning</Link></li>
+              <li><Link href="/industries/energy">Energy and Utilities</Link></li>
+              <li><Link href="/industries/finance">Finance and Banking</Link></li>
+              <li><Link href="/industries/government">Government and Public Sector</Link></li>
+              <li><Link href="/industries/healthcare">Healthcare</Link></li>
+              <li><Link href="/industries/logistics">Logistics and Transportation</Link></li>
+              <li><Link href="/industries/manufacturing">Manufacturing</Link></li>
+              <li><Link href="/industries/real-estate">Real Estate and Construction</Link></li>
+              <li><Link href="/industries/retail">Retail and E-commerce</Link></li>
+              <li><Link href="/industries/startups">Startups and SMEs</Link></li>
             </ul>
           </div>
 
