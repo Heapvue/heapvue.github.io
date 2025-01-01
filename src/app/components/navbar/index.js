@@ -321,7 +321,7 @@ function Navbar() {
                           </div>
                         </a>
                       </div>
-                      <div className="mega-menu-item">
+                      {/* <div className="mega-menu-item">
                         <a href="https://apptuner.dev" target="_blank">
                           <div className="d-flex align-items-center">
                             <FaRocket className="mega-menu-icon" />
@@ -331,7 +331,7 @@ function Navbar() {
                             </div>
                           </div>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="col-lg-4 mb-4">
                       <h5 className="mega-menu-title">Integrations</h5>
@@ -532,11 +532,11 @@ function Navbar() {
                       Apnicareer
                     </a>
                   </li>
-                  <li className="dropdown-item">
+                  {/* <li className="dropdown-item">
                     <a href="https://apptuner.dev" target="_blank" onClick={() => setIsOffcanvasOpen(false)}>
                       Apptuner
                     </a>
-                  </li>
+                  </li> */}
                   <li className="dropdown-item">
                     <Link href="/solutions/lms" onClick={() => setIsOffcanvasOpen(false)}>
                       LMS Integration

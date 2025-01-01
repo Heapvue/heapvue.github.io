@@ -29,7 +29,12 @@ export default function Home() {
               Accelerating growth with <br />
               <span className="gradient">AI for tomorrow.</span>
             </h1>
-            <Button text="Get in Touch" type="button" dataBsToggle="modal" dataBsTarget="#inquiryModal" />
+            <Button
+              text="Get in Touch"
+              type="button"
+              dataBsToggle="modal"
+              dataBsTarget="#inquiryModal"
+            />
           </div>
         </div>
 
@@ -100,7 +105,12 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="service1.jpg" loading="lazy" className="card-img-top" alt="..." />
+                <img
+                  src="service1.jpg"
+                  loading="lazy"
+                  className="card-img-top"
+                  alt="..."
+                />
               </div>
               <div className="card-body">
                 <h5 className="card-title">AI & MACHINE LEARNING</h5>
@@ -115,7 +125,12 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="service2.jpg" loading="lazy" className="card-img-top" alt="..." />
+                <img
+                  src="service2.jpg"
+                  loading="lazy"
+                  className="card-img-top"
+                  alt="..."
+                />
               </div>
               <div className="card-body">
                 <h5 className="card-title">SOFTWARE DEVELOPMENT</h5>
@@ -130,7 +145,12 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="service3.jpg" loading="lazy" className="card-img-top" alt="..." />
+                <img
+                  src="service3.jpg"
+                  loading="lazy"
+                  className="card-img-top"
+                  alt="..."
+                />
               </div>
               <div className="card-body">
                 <h5 className="card-title">CLOUD COMPUTING</h5>
@@ -167,24 +187,32 @@ export default function Home() {
                   <div className="card mx-auto">
                     <div className="card-body">
                       <p>
-                        “We are delighted to be associated to your company and
-                        specially with your IP Attorney who has given us clear
-                        directions on how to handle our case. We have
-                        successfully started our campaign of registering our
-                        brand globally and look forward to see better results.”
+                        “HeapVue has been a game-changer for NuvoVivo, creating
+                        a robust tech stack that allows us to deliver
+                        personalized diet and exercise plans. Their expertise is
+                        now helping us pioneer an exciting new AI project to
+                        further personalize our clients’ experiences.”
                       </p>
                       <div className="d-flex justify-content-start mt-4 align-items-center">
                         <div className="clientImg">
-                          <img src="Rajiv.jpg" loading="lazy" alt="Client Image" />
+                          <img
+                            src="/images/testimonials/Rajiv.jpg"
+                            loading="lazy"
+                            alt="Client Image"
+                          />
                         </div>
                         <div className="clientDetails">
                           <h6>Rajiv Ambat</h6>
                           <p>Nuvovivo Healthcare Pvt Ltd.</p>
                         </div>
-                        <div className="verticalLine"></div>
+                        {/* <div className="verticalLine"></div>
                         <div className="companyLogo ms-3">
-                          <img src="clientLogo1.png" loading="lazy" alt="Company Logo" />
-                        </div>
+                          <img
+                            src="clientLogo1.png"
+                            loading="lazy"
+                            alt="Company Logo"
+                          />
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -193,29 +221,36 @@ export default function Home() {
                   <div className="card mx-auto">
                     <div className="card-body">
                       <p>
-                        “We are delighted to be associated to your company and
-                        specially with your IP Attorney who has given us clear
-                        directions on how to handle our case. We have
-                        successfully started our campaign of registering our
-                        brand globally and look forward to see better results.”
+                        “Thank you, Heapvue, for crafting a stunning website for
+                        Lifemithra! Your creativity, professionalism, and
+                        dedication have truly exceeded our expectations. We're
+                        excited to showcase your exceptional work”
                       </p>
                       <div className="d-flex justify-content-start mt-4 align-items-center">
                         <div className="clientImg">
-                          <img src="Sandeep.jpg" loading="lazy" alt="Client Image" />
+                          <img
+                            src="/images/testimonials/manoj.jpeg"
+                            loading="lazy"
+                            alt="Client Image"
+                          />
                         </div>
                         <div className="clientDetails">
-                          <h6>Dr Sandeep Prabhakar</h6>
-                          <p>SOLVEMyHealth Vitality Healthcare Pvt Ltd.</p>
+                          <h6>CG Manoj Kumar</h6>
+                          <p>Lifemithra Academy</p>
                         </div>
-                        <div className="verticalLine"></div>
+                        {/* <div className="verticalLine"></div>
                         <div className="companyLogo ms-3">
-                          <img src="clientLogo.png" loading="lazy" alt="Company Logo" />
-                        </div>
+                          <img
+                            src="clientLogo.png"
+                            loading="lazy"
+                            alt="Company Logo"
+                          />
+                        </div> */}
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="carousel-item">
+                {/* <div className="carousel-item">
                   <div className="card mx-auto">
                     <div className="card-body">
                       <p>
@@ -227,7 +262,11 @@ export default function Home() {
                       </p>
                       <div className="d-flex justify-content-start mt-4 align-items-center">
                         <div className="clientImg">
-                          <img src="client.jpeg" loading="lazy" alt="Client Image" />
+                          <img
+                            src="client.jpeg"
+                            loading="lazy"
+                            alt="Client Image"
+                          />
                         </div>
                         <div className="clientDetails">
                           <h6>Summaya Amad</h6>
@@ -235,12 +274,16 @@ export default function Home() {
                         </div>
                         <div className="verticalLine"></div>
                         <div className="companyLogo ms-3">
-                          <img src="clientLogo.png" loading="lazy" alt="Company Logo" />
+                          <img
+                            src="clientLogo.png"
+                            loading="lazy"
+                            alt="Company Logo"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="d-flex justify-content-start mt-4 buttons">
@@ -275,7 +318,12 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="industries.jpg" loading="lazy" className="card-img-top" alt="..." />
+                <img
+                  src="industries.jpg"
+                  loading="lazy"
+                  className="card-img-top"
+                  alt="..."
+                />
               </div>
               <div className="card-body">
                 <h5 className="card-title">HEALTHCARE</h5>
@@ -290,7 +338,12 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="industries1.jpg" loading="lazy" className="card-img-top" alt="..." />
+                <img
+                  src="industries1.jpg"
+                  loading="lazy"
+                  className="card-img-top"
+                  alt="..."
+                />
               </div>
               <div className="card-body">
                 <h5 className="card-title">Finance & Banking</h5>
@@ -305,7 +358,12 @@ export default function Home() {
           <div className="col-12 col-lg-4 p-0">
             <div className="card">
               <div className="img-frame">
-                <img src="industries2.jpg" loading="lazy" className="card-img-top" alt="..." />
+                <img
+                  src="industries2.jpg"
+                  loading="lazy"
+                  className="card-img-top"
+                  alt="..."
+                />
               </div>
               <div className="card-body">
                 <h5 className="card-title">Retail and E-commerce</h5>
@@ -340,8 +398,8 @@ export default function Home() {
                   <div className="badgeTextContainer">
                     <div className="badge">SOFTWARE DEVELOPMENT</div>
                     <div className="text">
-                    Our software development services are designed to help you
-                    create custom solutions.
+                      Our software development services are designed to help you
+                      create custom solutions.
                     </div>
                   </div>
                 </div>
@@ -356,8 +414,10 @@ export default function Home() {
                   />
                   <div className="badgeTextContainer">
                     <div className="badge">CLOUD COMPUTING</div>
-                    <div className="text">Our software development services are designed to help you
-                    create custom solutions.</div>
+                    <div className="text">
+                      Our software development services are designed to help you
+                      create custom solutions.
+                    </div>
                   </div>
                 </div>
 
@@ -371,8 +431,10 @@ export default function Home() {
                   />
                   <div className="badgeTextContainer">
                     <div className="badge">MACHINE LEARNING</div>
-                    <div className="text">Our software development services are designed to help you
-                    create custom solutions.</div>
+                    <div className="text">
+                      Our software development services are designed to help you
+                      create custom solutions.
+                    </div>
                   </div>
                 </div>
               </div>
