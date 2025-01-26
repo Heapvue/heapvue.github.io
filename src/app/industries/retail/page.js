@@ -23,6 +23,18 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Retail Solutions | Smart Retail Technology | Heapvue',
+  description: 'Transform retail operations with Heapvue\'s AI-powered solutions. Enhance customer experience, optimize inventory management, and drive sales growth.',
+  keywords: 'retail technology, smart retail, inventory management, customer analytics, AI retail solutions',
+  openGraph: {
+    title: 'Retail Solutions | Smart Retail Technology | Heapvue',
+    description: 'Transform retail operations with Heapvue\'s AI-powered solutions. Enhance customer experience, optimize inventory management, and drive sales growth.',
+    images: '/images/industries/retail.jpg',
+  }
+};
 
 const Retail = () => {
   return (

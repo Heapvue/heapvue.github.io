@@ -10,6 +10,7 @@ import { RiFocus3Line } from "react-icons/ri";
 import { GoEye } from "react-icons/go";
 import { FiArrowUpRight } from "react-icons/fi";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { Metadata } from 'next'
 
 const AboutUs = () => {
   return (
@@ -60,7 +61,7 @@ const AboutUs = () => {
               competitive in a fast-changing digital landscape. By partnering
               with us, companies gain access to innovative tools,
               forward-thinking strategies, and the technical expertise needed to
-              navigate the complexities of today’s technology-driven world and
+              navigate the complexities of today's technology-driven world and
               reach new heights of success.
             </p>
             <div className="row g-4">
@@ -235,3 +236,14 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+export const metadata = {
+  title: 'About Heapvue | Leading AI & Technology Solutions Provider',
+  description: 'Learn about Heapvue\'s mission to transform businesses through innovative AI and technology solutions. Discover our values, expertise, and commitment to excellence.',
+  keywords: 'about us, technology company, AI solutions provider, tech innovation, company mission, tech expertise',
+  openGraph: {
+    title: 'About Heapvue | Leading AI & Technology Solutions Provider',
+    description: 'Learn about Heapvue\'s mission to transform businesses through innovative AI and technology solutions. Discover our values, expertise, and commitment to excellence.',
+    images: '/images/about-us.jpg',
+  }
+};

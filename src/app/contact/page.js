@@ -4,6 +4,18 @@ import { FiPhone } from "react-icons/fi";
 import { SlCallIn } from "react-icons/sl";
 import { ButtonSecondry, Button } from "../components/button";
 import BotttomBanner from "../components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Contact Heapvue | Get in Touch for AI & Technology Solutions',
+  description: 'Connect with Heapvue for innovative AI and technology solutions. Reach out to discuss your project, get expert consultation, or explore partnership opportunities.',
+  keywords: 'contact us, get in touch, technology consultation, AI solutions, business inquiry, tech support',
+  openGraph: {
+    title: 'Contact Heapvue | Get in Touch for AI & Technology Solutions',
+    description: 'Connect with Heapvue for innovative AI and technology solutions. Reach out to discuss your project, get expert consultation, or explore partnership opportunities.',
+    images: '/images/contact.jpg',
+  }
+};
 
 function Contact() {
   return (
@@ -251,7 +263,7 @@ function Contact() {
                         question:
                           "What is expected from us during the development process?",
                         answer:
-                          "Your involvement is crucial for the project’s success. We may require inputs such as detailed requirements, feedback on prototypes, and timely approvals to ensure alignment with your vision.",
+                          "Your involvement is crucial for the project's success. We may require inputs such as detailed requirements, feedback on prototypes, and timely approvals to ensure alignment with your vision.",
                       },
                       {
                         id: "serv7",
@@ -312,7 +324,7 @@ function Contact() {
                         question:
                           "How do I request a consultation or demo for your services?",
                         answer:
-                          "You can request a consultation or demo by contacting us through our website’s contact form, email, or phone. Our team will promptly respond to schedule a session tailored to your needs.",
+                          "You can request a consultation or demo by contacting us through our website's contact form, email, or phone. Our team will promptly respond to schedule a session tailored to your needs.",
                       },
                       {
                         id: "custom1",
@@ -432,7 +444,7 @@ function Contact() {
           </div>
         </div>
         <BotttomBanner
-          title="Let’s Solve It Together!"
+          title="Let's Solve It Together!"
           desc="Your success is our priority, and we look forward to crafting
               solutions that make a difference."
         />

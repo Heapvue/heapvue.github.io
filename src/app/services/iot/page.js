@@ -23,6 +23,7 @@ import {
   AiOutlineSafety,
 } from "react-icons/ai";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
 
 const IoTSolutions = () => {
   return (
@@ -191,3 +192,14 @@ const IoTSolutions = () => {
 };
 
 export default IoTSolutions;
+
+export const metadata = {
+  title: 'IoT Solutions | Internet of Things Services | Heapvue',
+  description: 'Connect and optimize your devices with Heapvue\'s IoT solutions. Enable smart operations, real-time monitoring, and data-driven decision making.',
+  keywords: 'IoT solutions, Internet of Things, connected devices, smart sensors, IoT platform, industrial IoT',
+  openGraph: {
+    title: 'IoT Solutions | Internet of Things Services | Heapvue',
+    description: 'Connect and optimize your devices with Heapvue\'s IoT solutions. Enable smart operations, real-time monitoring, and data-driven decision making.',
+    images: '/images/services/iot.jpg',
+  }
+};

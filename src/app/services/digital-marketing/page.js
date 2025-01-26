@@ -1,3 +1,16 @@
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Digital Marketing & SEO Services | Online Growth Solutions | Heapvue',
+  description: 'Boost your online presence with Heapvue\'s digital marketing and SEO services. Drive traffic, increase conversions, and grow your business digitally.',
+  keywords: 'digital marketing, SEO services, online marketing, search engine optimization, content marketing, social media marketing',
+  openGraph: {
+    title: 'Digital Marketing & SEO Services | Online Growth Solutions | Heapvue',
+    description: 'Boost your online presence with Heapvue\'s digital marketing and SEO services. Drive traffic, increase conversions, and grow your business digitally.',
+    images: '/images/services/digital-marketing.jpg',
+  }
+};
+
 const DigitalMarketing = () => {
   return (
     <div className="service-page">

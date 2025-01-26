@@ -20,6 +20,25 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Education Solutions | Smart Learning Technologies | Heapvue',
+  description: 'Transform education with Heapvue\'s AI-powered learning solutions. Featuring adaptive learning, smart classrooms, and intelligent analytics for enhanced educational outcomes.',
+  keywords: 'AI education, smart learning, educational technology, adaptive learning, learning analytics, smart classrooms, educational solutions',
+  openGraph: {
+    title: 'Education Solutions | Smart Learning Technologies | Heapvue',
+    description: 'Transform education with Heapvue\'s AI-powered learning solutions. Featuring adaptive learning, smart classrooms, and intelligent analytics for enhanced educational outcomes.',
+    images: [
+      {
+        url: '/images/industries/education.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Heapvue Education Solutions',
+      },
+    ],
+  },
+}
 
 const Education = () => {
   return (

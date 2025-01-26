@@ -29,6 +29,18 @@ import {
 } from "react-icons/si";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Cloud & DevOps Services | Infrastructure Solutions | Heapvue',
+  description: 'Modernize your infrastructure with Heapvue\'s cloud and DevOps solutions. Enable continuous delivery, optimize cloud operations, and enhance scalability.',
+  keywords: 'cloud computing, DevOps, infrastructure automation, continuous integration, continuous deployment, cloud migration, kubernetes',
+  openGraph: {
+    title: 'Cloud & DevOps Services | Infrastructure Solutions | Heapvue',
+    description: 'Modernize your infrastructure with Heapvue\'s cloud and DevOps solutions. Enable continuous delivery, optimize cloud operations, and enhance scalability.',
+    images: '/images/services/cloud-devops.jpg',
+  }
+};
 
 const Service = () => {
   return (

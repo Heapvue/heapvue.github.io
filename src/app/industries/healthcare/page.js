@@ -21,6 +21,18 @@ import {
 import { FiArrowUpRight } from "react-icons/fi";
 import { RiHeartPulseLine, RiHospitalLine } from "react-icons/ri";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Healthcare Solutions | Medical Technology Services | Heapvue',
+  description: 'Transform healthcare delivery with Heapvue\'s AI-powered solutions. Enhance patient care, streamline clinical workflows, and improve operational efficiency.',
+  keywords: 'healthcare technology, medical AI solutions, clinical workflow automation, healthcare analytics, patient care optimization',
+  openGraph: {
+    title: 'Healthcare Solutions | Medical Technology Services | Heapvue',
+    description: 'Transform healthcare delivery with Heapvue\'s AI-powered solutions. Enhance patient care, streamline clinical workflows, and improve operational efficiency.',
+    images: '/images/industries/healthcare.jpg',
+  }
+};
 
 const Healthcare = () => {
   return (

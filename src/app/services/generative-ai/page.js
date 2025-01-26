@@ -20,6 +20,7 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
 
 const GenerativeAI = () => {
   return (
@@ -203,3 +204,14 @@ const GenerativeAI = () => {
 };
 
 export default GenerativeAI;
+
+export const metadata = {
+  title: 'Generative AI Solutions | AI Content & Creation | Heapvue',
+  description: 'Harness the power of generative AI with Heapvue\'s cutting-edge solutions. Create content, automate processes, and innovate with next-gen AI technology.',
+  keywords: 'generative AI, AI content creation, natural language processing, AI automation, machine learning, creative AI',
+  openGraph: {
+    title: 'Generative AI Solutions | AI Content & Creation | Heapvue',
+    description: 'Harness the power of generative AI with Heapvue\'s cutting-edge solutions. Create content, automate processes, and innovate with next-gen AI technology.',
+    images: '/images/services/generative-ai.jpg',
+  }
+};

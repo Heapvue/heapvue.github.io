@@ -194,3 +194,14 @@ const Finance = () => {
 };
 
 export default Finance; 
+
+export const metadata = {
+  title: 'Solutions for Finance Industry | Heapvue',
+  description: 'Transform your financial institution with Heapvue\'s AI-powered solutions. Enhance security, automate operations, and improve customer experience.',
+  keywords: 'finance technology, AI in finance, banking technology, financial software solutions',
+  openGraph: {
+    title: 'Solutions for Finance Industry | Heapvue',
+    description: 'Transform your financial institution with Heapvue\'s AI-powered solutions. Enhance security, automate operations, and improve customer experience.',
+    images: '/images/industries/finance.jpg',
+  }
+}; 

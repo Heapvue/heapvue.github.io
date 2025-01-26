@@ -20,6 +20,18 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Energy Solutions | Smart Grid Technology | Heapvue',
+  description: 'Optimize energy operations with Heapvue\'s AI-powered solutions. Enhance grid efficiency, enable predictive maintenance, and drive sustainability initiatives.',
+  keywords: 'energy technology, smart grid solutions, renewable energy, energy analytics, AI energy management',
+  openGraph: {
+    title: 'Energy Solutions | Smart Grid Technology | Heapvue',
+    description: 'Optimize energy operations with Heapvue\'s AI-powered solutions. Enhance grid efficiency, enable predictive maintenance, and drive sustainability initiatives.',
+    images: '/images/industries/energy.jpg',
+  }
+};
 
 const Energy = () => {
   return (

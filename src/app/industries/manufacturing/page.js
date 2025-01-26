@@ -20,6 +20,18 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Manufacturing Solutions | Smart Factory Technology | Heapvue',
+  description: 'Transform your manufacturing operations with Heapvue\'s AI-powered solutions. Optimize production, enhance quality control, and enable predictive maintenance.',
+  keywords: 'manufacturing technology, industrial automation, smart factory, predictive maintenance, quality control, AI manufacturing',
+  openGraph: {
+    title: 'Manufacturing Solutions | Smart Factory Technology | Heapvue',
+    description: 'Transform your manufacturing operations with Heapvue\'s AI-powered solutions. Optimize production, enhance quality control, and enable predictive maintenance.',
+    images: '/images/industries/manufacturing.jpg',
+  }
+};
 
 const Manufacturing = () => {
   return (

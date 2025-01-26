@@ -25,6 +25,18 @@ import {
   TbWorldWww,
 } from "react-icons/tb";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Enterprise Software Solutions | Digital Transformation | Heapvue',
+  description: 'Drive digital transformation with Heapvue\'s enterprise solutions. Streamline operations, enhance productivity, and achieve business agility.',
+  keywords: 'enterprise software, digital transformation, business solutions, enterprise applications, workflow automation, business process management',
+  openGraph: {
+    title: 'Enterprise Software Solutions | Digital Transformation | Heapvue',
+    description: 'Drive digital transformation with Heapvue\'s enterprise solutions. Streamline operations, enhance productivity, and achieve business agility.',
+    images: '/images/services/enterprise-solutions.jpg',
+  }
+};
 
 const EnterpriseSolutions = () => {
   return (

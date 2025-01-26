@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from 'next'
 
 function Terms() {
   return (
@@ -188,3 +189,14 @@ function Terms() {
 }
 
 export default Terms;
+
+export const metadata = {
+  title: 'Terms of Service | Heapvue Legal Information',
+  description: 'Read Heapvue\'s terms of service. Understand our policies, user agreements, and service conditions for using our technology solutions and services.',
+  keywords: 'terms of service, legal terms, user agreement, service conditions, legal information, terms and conditions',
+  openGraph: {
+    title: 'Terms of Service | Heapvue Legal Information',
+    description: 'Read Heapvue\'s terms of service. Understand our policies, user agreements, and service conditions for using our technology solutions and services.',
+    images: '/images/legal.jpg',
+  }
+};
