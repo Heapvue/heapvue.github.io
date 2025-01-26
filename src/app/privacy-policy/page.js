@@ -1,3 +1,5 @@
+import { Metadata } from 'next'
+
 const PrivacyPolicy = () => {
   return (
     <>
@@ -115,7 +117,7 @@ const PrivacyPolicy = () => {
               third-party entities.
             </p>
 
-            <h3 id="children">Children’s Privacy</h3>
+            <h3 id="children">Children's Privacy</h3>
             <p>
               Our services are not intended for children under 18 years of age.
               If you believe we have collected data from a child, please contact
@@ -168,7 +170,7 @@ const PrivacyPolicy = () => {
                       <a href="#third-party">Third-Party Websites</a>
                     </li>
                     <li>
-                      <a href="#children">Children’s Privacy</a>
+                      <a href="#children">Children's Privacy</a>
                     </li>
                     <li>
                       <a href="#changes">Changes to This Policy</a>
@@ -188,3 +190,14 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
+
+export const metadata = {
+  title: 'Privacy Policy | Data Protection Information | Heapvue',
+  description: 'Learn about Heapvue\'s commitment to protecting your privacy. Understand how we collect, use, and safeguard your personal information.',
+  keywords: 'privacy policy, data protection, personal information, privacy terms, data security, GDPR compliance',
+  openGraph: {
+    title: 'Privacy Policy | Data Protection Information | Heapvue',
+    description: 'Learn about Heapvue\'s commitment to protecting your privacy. Understand how we collect, use, and safeguard your personal information.',
+    images: '/images/legal.jpg',
+  }
+};

@@ -20,6 +20,18 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Logistics & Supply Chain Solutions | Heapvue',
+  description: 'Optimize your supply chain with Heapvue\'s AI-powered logistics solutions. Enhance transportation efficiency, automate operations, and improve delivery performance.',
+  keywords: 'logistics technology, supply chain solutions, transportation management, fleet optimization, warehouse automation, AI logistics',
+  openGraph: {
+    title: 'Logistics & Supply Chain Solutions | Heapvue',
+    description: 'Optimize your supply chain with Heapvue\'s AI-powered logistics solutions. Enhance transportation efficiency, automate operations, and improve delivery performance.',
+    images: '/images/industries/logistics.jpg',
+  }
+};
 
 const Logistics = () => {
   return (

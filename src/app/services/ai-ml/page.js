@@ -20,6 +20,18 @@ import {
 } from "react-icons/bs";
 import BotttomBanner from "@/app/components/bottomBanner";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'AI & Machine Learning Solutions | Advanced Analytics | Heapvue',
+  description: 'Transform your business with Heapvue\'s AI and Machine Learning solutions. Leverage advanced analytics, automation, and intelligent decision-making capabilities.',
+  keywords: 'artificial intelligence, machine learning, AI solutions, predictive analytics, deep learning, neural networks, AI consulting',
+  openGraph: {
+    title: 'AI & Machine Learning Solutions | Advanced Analytics | Heapvue',
+    description: 'Transform your business with Heapvue\'s AI and Machine Learning solutions. Leverage advanced analytics, automation, and intelligent decision-making capabilities.',
+    images: '/images/services/ai-ml.jpg',
+  }
+};
 
 const AIMachineLearning = () => {
   return (

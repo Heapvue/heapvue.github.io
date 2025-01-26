@@ -10,9 +10,12 @@ import CookieBanner from "./components/cookieConsent";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
 const metadata = {
-  title: "Heapvue - Consulting | IT Services | Digital Transformation",
-  description:
-    "Heapvue is a leading IT services company providing consulting, digital transformation, and technology services.",
+  title: "Heapvue - Enterprise IT Consulting & Digital Transformation Services",
+  description: "Heapvue delivers enterprise-grade IT consulting, digital transformation, and technology services. We help businesses modernize their technology stack and drive innovation.",
+  keywords: "IT consulting, digital transformation, enterprise IT services, technology consulting, software development, cloud solutions",
+  author: "Heapvue",
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({ children }) {
@@ -31,6 +34,10 @@ export default function RootLayout({ children }) {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="author" content={metadata.author} />
+        <meta name="robots" content={metadata.robots} />
+        <meta name="viewport" content={metadata.viewport} />
         <link rel="canonical" href={canonicalUrl} />
       </head>
       <body>

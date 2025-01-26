@@ -21,6 +21,18 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Solutions for Government & Public Sector | Heapvue',
+  description: 'Modernize public services with Heapvue\'s AI-powered government solutions. Enhance citizen engagement, improve operational efficiency, and drive digital transformation.',
+  keywords: 'government technology, AI in government, public sector solutions, smart city, digital government, e-governance',
+  openGraph: {
+    title: 'Solutions for Government & Public Sector | Heapvue',
+    description: 'Modernize public services with Heapvue\'s AI-powered government solutions. Enhance citizen engagement, improve operational efficiency, and drive digital transformation.',
+    images: '/images/industries/government.jpg',
+  }
+};
 
 const Government = () => {
   return (

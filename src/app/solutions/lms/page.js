@@ -3,6 +3,7 @@ import { SiMoodle } from "react-icons/si";
 import { FaGraduationCap, FaChartLine, FaUsers, FaCogs } from "react-icons/fa";
 import { IoMdAnalytics } from "react-icons/io";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
 
 function LMSIntegration() {
   return (
@@ -141,3 +142,14 @@ function LMSIntegration() {
 }
 
 export default LMSIntegration;
+
+export const metadata = {
+  title: 'Learning Management System Solutions | E-Learning Platform | Heapvue',
+  description: 'Transform education with Heapvue\'s advanced LMS solutions. Enable seamless learning experiences, track progress, and optimize educational outcomes.',
+  keywords: 'learning management system, LMS, e-learning platform, online education, educational technology, digital learning',
+  openGraph: {
+    title: 'Learning Management System Solutions | E-Learning Platform | Heapvue',
+    description: 'Transform education with Heapvue\'s advanced LMS solutions. Enable seamless learning experiences, track progress, and optimize educational outcomes.',
+    images: '/images/solutions/lms.jpg',
+  }
+};

@@ -23,6 +23,18 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Solutions for Startups | Innovation Technology | Heapvue',
+  description: 'Accelerate your startup growth with Heapvue\'s AI-powered solutions. Scale operations, optimize processes, and drive innovation with cutting-edge technology.',
+  keywords: 'startup technology, AI for startups, business scaling, innovation solutions, startup automation',
+  openGraph: {
+    title: 'Solutions for Startups | Innovation Technology | Heapvue',
+    description: 'Accelerate your startup growth with Heapvue\'s AI-powered solutions. Scale operations, optimize processes, and drive innovation with cutting-edge technology.',
+    images: '/images/industries/startups.jpg',
+  }
+};
 
 const Startup = () => {
   return (

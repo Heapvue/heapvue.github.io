@@ -14,6 +14,7 @@ import {
   FaFacebookF,
 } from "react-icons/fa6";
 import { getAllPosts } from "@/lib/blog";
+import { Metadata } from 'next'
 
 const BlogHome = () => {
   const posts = getAllPosts();
@@ -171,3 +172,14 @@ const BlogHome = () => {
 };
 
 export default BlogHome;
+
+export const metadata = {
+  title: 'Heapvue Blog | AI & Technology Insights and Updates',
+  description: 'Stay informed with the latest insights on AI, technology trends, and digital innovation. Expert articles, industry updates, and tech knowledge sharing.',
+  keywords: 'tech blog, AI insights, technology trends, digital innovation, tech news, industry updates',
+  openGraph: {
+    title: 'Heapvue Blog | AI & Technology Insights and Updates',
+    description: 'Stay informed with the latest insights on AI, technology trends, and digital innovation. Expert articles, industry updates, and tech knowledge sharing.',
+    images: '/images/blog.jpg',
+  }
+};

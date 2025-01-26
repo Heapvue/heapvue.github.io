@@ -22,6 +22,18 @@ import {
 } from "react-icons/bs";
 import BotttomBanner from "@/app/components/bottomBanner";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Custom Application Development Services | Software Solutions | Heapvue',
+  description: 'Build powerful custom applications with Heapvue\'s development expertise. Create scalable, secure, and innovative software solutions for your business.',
+  keywords: 'application development, custom software, web applications, mobile apps, software development, full-stack development',
+  openGraph: {
+    title: 'Custom Application Development Services | Software Solutions | Heapvue',
+    description: 'Build powerful custom applications with Heapvue\'s development expertise. Create scalable, secure, and innovative software solutions for your business.',
+    images: '/images/services/application-development.jpg',
+  }
+};
 
 const ApplicationDevelopment = () => {
   return (

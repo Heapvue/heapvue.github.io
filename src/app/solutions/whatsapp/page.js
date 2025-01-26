@@ -2,6 +2,7 @@ import React from "react";
 import { RiWhatsappFill, RiCustomerService2Fill } from "react-icons/ri";
 import { FaRobot, FaChartLine, FaUsersCog, FaShieldAlt } from "react-icons/fa";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
 
 function WhatsAppIntegration() {
   return (
@@ -137,3 +138,14 @@ function WhatsAppIntegration() {
 }
 
 export default WhatsAppIntegration;
+
+export const metadata = {
+  title: 'WhatsApp Business Solutions | Messaging Integration | Heapvue',
+  description: 'Enhance customer engagement with Heapvue\'s WhatsApp Business solutions. Enable seamless communication, automate responses, and improve customer service.',
+  keywords: 'WhatsApp Business, messaging solutions, customer engagement, business communication, WhatsApp integration',
+  openGraph: {
+    title: 'WhatsApp Business Solutions | Messaging Integration | Heapvue',
+    description: 'Enhance customer engagement with Heapvue\'s WhatsApp Business solutions. Enable seamless communication, automate responses, and improve customer service.',
+    images: '/images/solutions/whatsapp.jpg',
+  }
+};

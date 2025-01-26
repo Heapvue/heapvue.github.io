@@ -23,6 +23,18 @@ import {
 } from "react-icons/bs";
 import { FiArrowUpRight } from "react-icons/fi";
 import BotttomBanner from "@/app/components/bottomBanner";
+import { Metadata } from 'next'
+
+export const metadata = {
+  title: 'Real Estate Solutions | Property Technology | Heapvue',
+  description: 'Revolutionize property management with Heapvue\'s AI-powered real estate solutions. Optimize property operations, enhance tenant experience, and improve asset management.',
+  keywords: 'real estate technology, proptech solutions, property management software, smart buildings, AI real estate',
+  openGraph: {
+    title: 'Real Estate Solutions | Property Technology | Heapvue',
+    description: 'Revolutionize property management with Heapvue\'s AI-powered real estate solutions. Optimize property operations, enhance tenant experience, and improve asset management.',
+    images: '/images/industries/real-estate.jpg',
+  }
+};
 
 const RealEstate = () => {
   return (
