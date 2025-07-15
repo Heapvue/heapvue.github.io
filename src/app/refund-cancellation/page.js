@@ -1,134 +1,57 @@
 import React from "react";
 import { Metadata } from 'next'
 
-function Terms() {
+function RefundCancellation() {
   return (
     <>
       <div className="container py-5 docs">
         <div className="row">
           <div className="col-lg-8">
-            <h1 className="display-4 mb-4">Terms of Service</h1>
-            <p className="text-muted">Effective Date: 1 Jan 2025</p>
+            <h1 className="display-4 mb-4">Refund & Cancellation Policy</h1>
+            <p className="text-muted">Last Updated: 15 July 2025</p>
 
-            <h3 id="acceptence">Acceptance of Terms</h3>
             <p>
-              By accessing and using our website (heapvue.com), you agree to
-              comply with and be bound by these Terms and Conditions. If you do
-              not agree with these terms, you are advised not to use the Website
-              or any related services.
+              At Heapvue, we take pride in delivering high-quality software development
+              services tailored to your business needs. Please read our Refund and
+              Cancellation Policy carefully before engaging in any project with us.
             </p>
 
-            <h3 id="how-use">Use of the Website</h3>
+            <h3 id="refund">Refund Policy</h3>
+            <p>
+              Heapvue follows a strict no refund policy. Once a payment is made
+              towards a project, it is non-refundable under any circumstances.
+              This includes but is not limited to partial work, change in client
+              requirements, or dissatisfaction with the project progress, provided
+              the work aligns with the initially agreed scope and timelines.
+            </p>
+
+            <h3 id="cancellation">Cancellation Policy</h3>
+            <p>
+              Clients may choose to cancel the project at any point during its
+              execution. However, in the event of cancellation:
+            </p>
             <ul>
               <li>
-                <strong>License:</strong> Heapvue grants you a limited,
-                non-exclusive, and revocable license to access and use the
-                Website for informational and personal purposes only.
+                The client is required to pay for all work completed up to the
+                date of cancellation, based on the effort and milestones achieved.
               </li>
               <li>
-                <strong>To Improve Experiences:</strong> Use analytics to
-                enhance website functionality, develop new features, and
-                personalize content.
+                Any outstanding dues must be cleared before the release of any
+                deliverables.
               </li>
               <li>
-                <strong>Prohibited Activities:</strong> While using the Website,
-                you agree not to:
-                <ul>
-                  <li>Violate any applicable laws or regulations.</li>
-                  <li>
-                    Attempt unauthorized access to the Website, its servers, or
-                    related systems.
-                  </li>
-                  <li>Use the Website for illegal or unethical purposes.</li>
-                  <li>
-                    Upload or transmit harmful code, viruses, or malicious
-                    software.
-                  </li>
-                </ul>
+                Deliverables will be provided strictly as per the original contract
+                and payment terms. Additional requests or scope changes beyond the
+                initial agreement may not be included or will be charged separately.
               </li>
             </ul>
-
-            <h3 id="intellectual">Intellectual Property</h3>
-            <ul>
-              <li>
-                <strong>Copyright:</strong> All content on the Website,
-                including text, graphics, logos, and software, is the property
-                of Heapvue and is protected under copyright laws.
-              </li>
-              <li>
-                <strong>Trademarks:</strong> All trademarks, logos, and service
-                marks displayed on the Website are the property of Heapvue or
-                their respective owners. Unauthorized use is strictly
-                prohibited.
-              </li>
-            </ul>
-
-            <h3 id="privacy">Privacy Policy</h3>
-            <p>
-              Your use of the Website is also governed by our Privacy Policy. By
-              using the Website, you consent to the collection and use of your
-              information as described in our Privacy Policy.
-            </p>
-
-            <h3 id="third">Third-Party Content and Links</h3>
-            <p>
-              The Website may contain links to third-party websites. Heapvue
-              does not endorse or take responsibility for the content, policies,
-              or practices of these websites. You access third-party websites at
-              your own risk.
-            </p>
-
-            <h3 id="disclaimer">Disclaimer of Warranties</h3>
-            <ul>
-              <li>
-                The Website and its content are provided "as is" and "as
-                available" without any warranties, express or implied, including
-                but not limited to warranties of merchantability, fitness for a
-                particular purpose, or non-infringement.
-              </li>
-              <li>
-                Heapvue does not guarantee the accuracy, completeness, or
-                reliability of the content or functionality of the Website.
-              </li>
-            </ul>
-
-            <h3 id="limitation">Limitation of Liability</h3>
-            <p>
-              Heapvue shall not be held liable for any direct, indirect,
-              incidental, or consequential damages arising from your use of the
-              Website or inability to use the Website, including any errors,
-              interruptions, or delays.
-            </p>
-
-            <h3 id="modifications">Modifications to Terms</h3>
-            <p>
-              Heapvue reserves the right to modify these Terms and Conditions at
-              any time. Any changes will be effective immediately upon posting
-              the updated Terms on the Website. It is your responsibility to
-              review the Terms periodically. Continued use of the Website
-              signifies your acceptance of the updated Terms.
-            </p>
-
-            <h3 id="security">Security and Data</h3>
-            <p>
-              Heapvue stores data collected through the Website on secure
-              servers. While we implement reasonable safeguards to protect your
-              information, no system is entirely immune to breaches. Users are
-              advised to exercise caution when submitting personal data online.
-            </p>
-
-            <h3 id="limited-license">Limited License</h3>
-            <p>
-              Heapvue strictly prohibits the uploading, transmission, or
-              distribution of malicious code, hacking materials, or any harmful
-              content. Violators will be subject to immediate termination of
-              access and legal action if necessary.
-            </p>
 
             <h3 id="contact">Contact Us</h3>
             <p>
-              For any questions or concerns about these Terms and Conditions,
-              you can contact us at:
+              We encourage all clients to review and approve the scope, timelines,
+              and payment terms at the outset of the project to ensure clarity and
+              transparency throughout the engagement. If you have any questions
+              regarding this policy, please feel free to contact us at:
             </p>
             <p>
               <strong>Heapvue Technologies</strong>
@@ -145,37 +68,13 @@ function Terms() {
                   <h5 className="card-title">Table of contents</h5>
                   <ul>
                     <li>
-                      <a href="#acceptence">Acceptance of Terms</a>
+                      <a href="#refund">Refund Policy</a>
                     </li>
                     <li>
-                      <a href="#how-use">Use of the Website</a>
+                      <a href="#cancellation">Cancellation Policy</a>
                     </li>
                     <li>
-                      <a href="#intellectual">Intellectual Property</a>
-                    </li>
-                    <li>
-                      <a href="#privacy">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="#third">Third-Party Content and Links</a>
-                    </li>
-                    <li>
-                      <a href="#disclaimer"> Disclaimer of Warranties</a>
-                    </li>
-                    <li>
-                      <a href="#limitation"> Limitation of Liability</a>
-                    </li>
-                    <li>
-                      <a href="#modifications">Modifications to Terms</a>
-                    </li>
-                    <li>
-                      <a href="#security">Security and Data</a>
-                    </li>
-                    <li>
-                      <a href="#limited-license">Limited License</a>
-                    </li>
-                    <li>
-                      <a href="#contact">Contact Information</a>
+                      <a href="#contact">Contact Us</a>
                     </li>
                   </ul>
                 </div>
@@ -188,15 +87,15 @@ function Terms() {
   );
 }
 
-export default Terms;
+export default RefundCancellation;
 
 export const metadata = {
-  title: 'Terms of Service | Heapvue Legal Information',
-  description: 'Read Heapvue\'s terms of service. Understand our policies, user agreements, and service conditions for using our technology solutions and services.',
-  keywords: 'terms of service, legal terms, user agreement, service conditions, legal information, terms and conditions',
+  title: 'Refund & Cancellation Policy | Heapvue',
+  description: 'Understand Heapvue\'s refund and cancellation policies for our software development services. Learn about our payment terms and project cancellation guidelines.',
+  keywords: 'refund policy, cancellation policy, payment terms, project cancellation, software development services',
   openGraph: {
-    title: 'Terms of Service | Heapvue Legal Information',
-    description: 'Read Heapvue\'s terms of service. Understand our policies, user agreements, and service conditions for using our technology solutions and services.',
+    title: 'Refund & Cancellation Policy | Heapvue',
+    description: 'Understand Heapvue\'s refund and cancellation policies for our software development services. Learn about our payment terms and project cancellation guidelines.',
     images: '/images/legal.jpg',
   }
 };
