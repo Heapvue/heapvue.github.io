@@ -10,6 +10,11 @@ export const metadata = {
   description: 'Heapvue builds cutting-edge enterprise software, high-performance cloud architectures, and intelligence-driven custom solutions.',
   keywords: 'IT Consulting, Custom Software, Cloud Infrastructure, AI Development, Enterprise Software, Web Development',
   robots: 'index, follow',
+  icons: {
+    icon: '/images/minilogo_heapvue.png',
+    shortcut: '/images/minilogo_heapvue.png',
+    apple: '/images/minilogo_heapvue.png',
+  },
 };
 
 export default function RootLayout({ children }) {
