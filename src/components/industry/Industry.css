@@ -1,0 +1,1221 @@
+/* Industry Page Styles */
+
+/* ==========================================================================
+   Industry Hero Section (W: 1440 Fill x H: 648 / Wrapper: 1440 x 728)
+   ========================================================================== */
+.industry-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 648px;
+  min-height: 648px;
+  background-image: url('/images/industrybg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.industry-hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.75) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.industry-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 24px;
+}
+
+/* Badge Capsule */
+.industry-hero-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  margin-bottom: 24px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  width: fit-content;
+}
+
+.industry-hero-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.industry-hero-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: 0.02em;
+}
+
+/* Main Title */
+.industry-hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  max-width: 860px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle Text */
+.industry-hero-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  max-width: 780px;
+  font-weight: 400;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Media Queries for Hero */
+@media (max-width: 991px) {
+  .industry-hero-wrapper {
+    height: auto;
+    min-height: 520px;
+    padding: 100px 16px 60px 16px;
+  }
+
+  .industry-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .industry-hero-subtext {
+    font-size: 0.92rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .industry-hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   About Healthcare Section (W: 1200 Fill x H: 510 Hug)
+   ========================================================================== */
+.about-healthcare-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.about-healthcare-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 510px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 0 16px;
+}
+
+/* Left Written Content Box (W: 541px x H: 428px) */
+.about-healthcare-content-box {
+  width: 100%;
+  max-width: 541px;
+  min-height: 428px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-healthcare-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.about-healthcare-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.about-healthcare-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.about-healthcare-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px 0;
+}
+
+.about-healthcare-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+}
+
+.about-healthcare-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Right Image Box (W: 570px x H: 510px) */
+.about-healthcare-img-box {
+  width: 100%;
+  max-width: 570px;
+  height: 510px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.about-healthcare-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Responsive Queries for About Healthcare */
+@media (max-width: 991px) {
+  .about-healthcare-wrapper {
+    padding: 60px 0;
+  }
+
+  .about-healthcare-container {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+    gap: 36px;
+  }
+
+  .about-healthcare-content-box {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .about-healthcare-img-box {
+    max-width: 100%;
+    height: 380px;
+  }
+
+  .about-healthcare-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   Healthcare Challenges Section (W: 1200 Fill x H: 1087 Hug)
+   ========================================================================== */
+.healthcare-challenges-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.healthcare-challenges-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 1087px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* Header Box (W: 801px x H: 171px) */
+.challenges-header-box {
+  width: 100%;
+  max-width: 801px;
+  min-height: 171px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.challenges-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.challenges-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.challenges-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.challenges-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.challenges-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+  max-width: 680px;
+  text-align: center;
+}
+
+/* 6 Cards Grid (3 per row across 1200px) */
+.challenges-cards-grid {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.challenge-card-item {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.challenge-img-wrapper {
+  width: 100%;
+  height: 218px; /* Exact image height: 218px (Card image: 385 x 218) */
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.challenge-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.challenge-card-item:hover .challenge-img {
+  transform: scale(1.03);
+}
+
+.challenge-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.challenge-num-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background-color: #F3E8FF;
+  color: #7C3AED;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.challenge-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1E293B;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.challenge-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive Queries for Challenges Section */
+@media (max-width: 1024px) {
+  .challenges-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .challenges-header-box {
+    margin-bottom: 36px;
+  }
+
+  .challenges-main-title {
+    font-size: 1.8rem;
+  }
+
+  .challenges-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ==========================================================================
+   Industry Solutions Grid Section
+   ========================================================================== */
+.industry-solutions-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 125px 0;
+  background-color: #fafbfc;
+}
+
+.industry-solutions-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.industry-solutions-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 56px;
+  max-width: 720px;
+}
+
+.industry-solutions-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.industry-solutions-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.industry-solutions-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4a5568;
+  letter-spacing: 0.04em;
+}
+
+.industry-solutions-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
+
+.blue-highlight {
+  color: #0555FF;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.industry-solutions-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Grid layout */
+.industry-solutions-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.industry-solution-card {
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-solution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.industry-card-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.industry-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1E293B;
+  margin: 0 0 8px 0;
+}
+
+.industry-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .industry-solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .industry-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Discover How To Map Heapvue to Your Stack Section (W: 1200 Fill x H: 301.89 Hug)
+   ========================================================================== */
+.map-stack-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.map-stack-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 301.89px;
+  background-color: #040d21;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  box-shadow: 0 12px 40px rgba(4, 13, 33, 0.15);
+}
+
+.map-stack-graphic-left {
+  position: absolute;
+  left: 0;
+  top: 57.26px;
+  width: 332.08px;
+  height: 184.75px;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.map-stack-graphic-right {
+  position: absolute;
+  right: 0;
+  top: 57.26px;
+  width: 332.08px;
+  height: 184.75px;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.map-stack-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+}
+
+.map-stack-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  width: 100%;
+}
+
+.map-stack-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
+
+.map-stack-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 28px 0;
+  font-weight: 400;
+  max-width: 620px;
+}
+
+.map-stack-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #040d21;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+}
+
+.map-stack-btn:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+  color: #040d21;
+}
+
+/* Responsive Queries for Map Stack Section */
+@media (max-width: 1024px) {
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    width: 250px;
+    height: 138px;
+    opacity: 0.4;
+  }
+
+  .map-stack-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-stack-container {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    width: 180px;
+    height: 100px;
+    opacity: 0.25;
+  }
+
+  .map-stack-title {
+    font-size: 1.5rem;
+  }
+
+  .map-stack-subtext {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Healthcare Support Section (W: 1201 Fill x H: 1477 Hug)
+   ========================================================================== */
+.healthcare-support-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.healthcare-support-container {
+  width: 100%;
+  max-width: 1201px;
+  min-height: 1477px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 0 16px;
+}
+
+/* Header Box (W: 1201px x H: 148px) */
+.support-header-box {
+  width: 100%;
+  max-width: 1201px;
+  min-height: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.support-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 620px;
+}
+
+.support-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.support-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.support-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.support-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.blue-italic-text {
+  color: #0555FF;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.support-header-right {
+  max-width: 480px;
+  padding-top: 36px;
+}
+
+.support-header-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 5 Rows Container Box (W: 1201px x H: 1273px) */
+.support-rows-container {
+  width: 100%;
+  max-width: 1201px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Each Row Item (W: 1201px Fill, Content: 196px, Equal 32px top/bottom padding) */
+.support-row-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 310px 1fr 489px;
+  gap: 32px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 32px 0;
+}
+
+.support-col-title h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.support-col-desc p {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  max-width: 340px;
+}
+
+.support-col-image {
+  width: 489px;
+  height: 196px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.support-row-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.support-row-item:hover .support-row-img {
+  transform: scale(1.03);
+}
+
+/* Responsive Queries for Healthcare Support Section */
+@media (max-width: 1100px) {
+  .support-row-item {
+    grid-template-columns: 260px 1fr 400px;
+    gap: 20px;
+  }
+
+  .support-col-image {
+    width: 400px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 991px) {
+  .healthcare-support-wrapper {
+    padding: 60px 0;
+  }
+
+  .support-header-box {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .support-header-right {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .support-row-item {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    min-height: auto;
+    gap: 20px;
+    padding: 24px 0;
+  }
+
+  .support-col-image {
+    grid-column: span 2;
+    width: 100%;
+    height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .support-main-title {
+    font-size: 1.8rem;
+  }
+
+  .support-row-item {
+    grid-template-columns: 1fr;
+  }
+
+  .support-col-image {
+    grid-column: span 1;
+    height: 200px;
+  }
+}
+
+/* ==========================================================================
+   Highlighted Projects Section (W: 1199.84px x H: 162px Hug)
+   ========================================================================== */
+.highlighted-projects-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.highlighted-projects-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 162px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.selected-projects-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #EFF6FF;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(5, 85, 255, 0.04);
+  width: fit-content;
+}
+
+.selected-projects-badge .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.selected-projects-badge .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0555FF;
+  letter-spacing: 0.02em;
+}
+
+.highlighted-projects-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.highlighted-projects-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 auto;
+  font-weight: 400;
+  max-width: 860px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .highlighted-projects-wrapper {
+    padding: 50px 0;
+  }
+
+  .highlighted-projects-title {
+    font-size: 1.8rem;
+  }
+
+  .highlighted-projects-subtext {
+    font-size: 0.88rem;
+  }
+}
+
+/* ==========================================================================
+   Healthcare Projects 3-Card Grid Section (W: 1199.84px x H: 502px Hug)
+   ========================================================================== */
+.projects-grid-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 0 100px 0;
+  background-color: #ffffff;
+}
+
+.projects-grid-outer {
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 16px;
+}
+
+.projects-grid-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 502px;
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.project-card-item {
+  width: 384px;
+  min-height: 502px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card-item:hover {
+  transform: translateY(-4px);
+}
+
+.project-card-image-wrapper {
+  width: 384px;
+  height: 335px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  background-color: #f1f5f9;
+}
+
+.project-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.project-card-item:hover .project-card-img {
+  transform: scale(1.03);
+}
+
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 0 0 0;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.project-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1E293B;
+  margin: 0 0 8px 0;
+  line-height: 1.35;
+}
+
+.project-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+}
+
+.project-card-link {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #0555FF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.project-card-link:hover {
+  color: #0033cc;
+}
+
+/* Nav Arrow Buttons */
+.projects-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: #040D21;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.projects-nav-btn:hover {
+  background-color: #0555FF;
+  transform: scale(1.05);
+}
+
+/* Responsive Queries for Projects Grid */
+@media (max-width: 1200px) {
+  .projects-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .project-card-item,
+  .project-card-image-wrapper {
+    width: 100%;
+  }
+
+  .project-card-image-wrapper {
+    height: 280px;
+  }
+}
+
+@media (max-width: 991px) {
+  .projects-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .projects-nav-btn {
+    display: none;
+  }
+}
+
+
+
+

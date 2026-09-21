@@ -1,0 +1,403 @@
+/* Products Page Styles */
+
+/* ==========================================================================
+   Products Hero Section (W: 1440 Fill x H: 648 / Wrapper: 1440 x 728)
+   ========================================================================== */
+.products-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 648px;
+  min-height: 648px;
+  background-image: url('/images/productbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.products-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 80px;
+}
+
+/* Badge Capsule */
+.products-hero-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  margin-bottom: 24px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+}
+
+.products-hero-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.products-hero-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: 0.02em;
+}
+
+/* Main Title */
+.products-hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  max-width: 780px;
+}
+
+.blue-gradient-text {
+  color: #0555FF;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Subtitle Text */
+.products-hero-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0;
+  max-width: 620px;
+  font-weight: 400;
+}
+
+/* Responsive Media Queries for Hero */
+@media (max-width: 991px) {
+  .products-hero-wrapper {
+    height: auto;
+    min-height: 520px;
+    padding: 80px 16px 60px 16px;
+  }
+
+  .products-hero-container {
+    padding: 0 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .products-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .products-hero-subtext {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .products-hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   Products Grid Section
+   ========================================================================== */
+.products-grid-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.products-grid-container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 0 24px;
+}
+
+/* Header Box */
+.products-grid-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.products-grid-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 620px;
+}
+
+.products-section-tag {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0555FF;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.products-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px 0;
+}
+
+.products-main-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Feature Badges Container on Right */
+.products-feature-highlights {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #F8FAFC;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 14px 24px;
+  border-radius: 50px;
+}
+
+.feature-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0555FF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.feature-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.2;
+}
+
+.feature-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.74rem;
+  color: #64748b;
+}
+
+.feature-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #E2E8F0;
+}
+
+/* 5 Products Grid (5 Columns) */
+.products-cards-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.product-card-item {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 20px 0 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  min-height: 440px;
+}
+
+.product-card-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(5, 85, 255, 0.25);
+  box-shadow: 0 12px 32px rgba(5, 85, 255, 0.08);
+}
+
+.product-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.product-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.product-name {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.product-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+  min-height: 64px;
+}
+
+.product-tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.product-tag-pill {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+  background-color: #F1F5F9;
+  color: #0555FF;
+}
+
+.product-learn-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0555FF;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.product-learn-more-link:hover {
+  color: #0033cc;
+  gap: 9px;
+}
+
+/* Card Mockup Graphic Box */
+.product-preview-mock {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  height: 155px;
+  background-color: #F8FAFC;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px 10px 0 10px;
+}
+
+.product-preview-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: top left;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-card-item:hover .product-preview-img {
+  transform: scale(1.02);
+}
+
+/* Responsive Media Queries for Products */
+@media (max-width: 1200px) {
+  .products-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products-grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-feature-highlights {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 16px;
+  }
+
+  .feature-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+@media (max-width: 575px) {
+  .products-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    NEXT_PUBLIC_GOOGLE_FORM_ID: process.env.NEXT_PUBLIC_GOOGLE_FORM_ID,
-  },
+  reactStrictMode: true,
   images: {
-    domains: ["images.unsplash.com"],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
 };
 

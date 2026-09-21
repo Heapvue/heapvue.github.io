@@ -1,0 +1,1059 @@
+/* Solutions Page Styles */
+
+/* ==========================================================================
+   Solutions Hero Section (W: 1440 Fill x H: 648 / Wrapper: 1440 x 728)
+   ========================================================================== */
+.solutions-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 648px;
+  min-height: 648px;
+  background-image: url('/images/industrybg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.solutions-hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.75) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.solutions-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 24px;
+}
+
+/* Badge Capsule */
+.solutions-hero-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  margin-bottom: 24px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  width: fit-content;
+}
+
+.solutions-hero-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.solutions-hero-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: 0.02em;
+}
+
+/* Main Title */
+.solutions-hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  max-width: 920px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle Text */
+.solutions-hero-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  max-width: 780px;
+  font-weight: 400;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Media Queries for Hero */
+@media (max-width: 991px) {
+  .solutions-hero-wrapper {
+    height: auto;
+    min-height: 520px;
+    padding: 100px 16px 60px 16px;
+  }
+
+  .solutions-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .solutions-hero-subtext {
+    font-size: 0.92rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .solutions-hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   About Platform Development Section (W: 1440 Fill x H: 529 Hug)
+   ========================================================================== */
+.about-platform-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 529px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 53px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Content Box (685w x 356h Hug) */
+.about-platform-content {
+  width: 100%;
+  max-width: 685px;
+  min-height: 356px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.about-platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #EFF6FF;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.about-platform-badge .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.about-platform-badge .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: 0.02em;
+}
+
+.about-platform-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.blue-italic-text {
+  color: #0555FF;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.about-platform-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.about-platform-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.about-platform-logos-wrapper {
+  width: 100%;
+}
+
+.about-platform-logos-wrapper .company-logos-wrapper {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .about-platform-wrapper {
+    padding-top: 40px;
+    min-height: auto;
+  }
+
+  .about-platform-title {
+    font-size: 1.8rem;
+  }
+
+  .about-platform-text {
+    font-size: 0.88rem;
+  }
+}
+
+/* ==========================================================================
+   Platforms We Design and Deliver Section (W: 1200 Fill x H: 814 Hug)
+   ========================================================================== */
+.platforms-build-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.platforms-build-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 814px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 0 16px;
+}
+
+/* Header Box (W: 1200px x H: 148px) */
+.platforms-header-box {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.platforms-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 620px;
+}
+
+.platforms-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.platforms-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.platforms-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.platforms-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.platforms-header-right {
+  max-width: 420px;
+  padding-top: 36px;
+}
+
+.platforms-header-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 6 Grid Box (W: 1200px x H: 610px / Each row: 1200 x 293, Each card: 313 x 293) */
+.platforms-grid-box {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 610px;
+  display: grid;
+  grid-template-columns: repeat(3, 313px);
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.platform-card-item {
+  width: 313px;
+  height: 293px;
+  min-height: 293px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.platform-card-item:hover {
+  transform: translateY(-4px);
+}
+
+.platform-icon-box {
+  width: 141px;
+  height: 141px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 82, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(0, 51, 204, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.platform-card-item:hover .platform-icon-box {
+  border-color: rgba(0, 82, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 51, 204, 0.08);
+}
+
+.platform-icon-img {
+  width: 141px !important;
+  height: 141px !important;
+  object-fit: contain;
+}
+
+.platform-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.35;
+  margin: 0 0 10px 0;
+}
+
+.platform-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive Queries for Platforms Grid Section */
+@media (max-width: 991px) {
+  .platforms-build-wrapper {
+    padding: 60px 0;
+  }
+
+  .platforms-header-box {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .platforms-header-right {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .platforms-grid-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+    min-height: auto;
+  }
+
+  .platform-card-item {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .platforms-main-title {
+    font-size: 1.8rem;
+  }
+
+  .platforms-grid-box {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .platform-card-item {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   Discover How To Map Heapvue to Your Stack Section (W: 1200 Fill x H: 301.89 Hug)
+   ========================================================================== */
+.map-stack-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.map-stack-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 301.89px;
+  background-color: #040d21;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  box-shadow: 0 12px 40px rgba(4, 13, 33, 0.15);
+}
+
+.map-stack-graphic-left {
+  position: absolute;
+  left: 0;
+  top: 57.26px;
+  width: 332.08px;
+  height: 184.75px;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.map-stack-graphic-right {
+  position: absolute;
+  right: 0;
+  top: 57.26px;
+  width: 332.08px;
+  height: 184.75px;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.map-stack-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+}
+
+.map-stack-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  width: 100%;
+}
+
+.map-stack-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
+
+.map-stack-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 28px 0;
+  font-weight: 400;
+  max-width: 620px;
+}
+
+.map-stack-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #040d21;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+}
+
+.map-stack-btn:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+  color: #040d21;
+}
+
+@media (max-width: 1024px) {
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    width: 250px;
+    height: 138px;
+    opacity: 0.4;
+  }
+
+  .map-stack-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-stack-container {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    width: 180px;
+    height: 100px;
+    opacity: 0.25;
+  }
+
+  .map-stack-title {
+    font-size: 1.5rem;
+  }
+
+  .map-stack-subtext {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Solutions Projects Section (W: 1200 Fill x H: 648.85 Hug)
+   ========================================================================== */
+.solutions-projects-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.solutions-projects-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 648.85px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 0 16px;
+}
+
+.solutions-projects-header {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 162px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.solutions-cards-block {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 430.85px;
+  display: grid;
+  grid-template-columns: repeat(3, 385px);
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.solutions-card-item {
+  width: 385px;
+  height: 430.88px;
+  min-height: 430.88px;
+  border: 1px solid rgba(0, 82, 255, 0.15);
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solutions-card-item:hover {
+  transform: translateY(-4px);
+  border-color: #0555FF;
+  box-shadow: 0 8px 24px rgba(5, 85, 255, 0.08);
+}
+
+.solutions-card-img-box {
+  width: 385px;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.solutions-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.solutions-card-item:hover .solutions-card-img {
+  transform: scale(1.03);
+}
+
+.solutions-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.solutions-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.35;
+  margin: 0 0 8px 0;
+}
+
+.solutions-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+}
+
+.solutions-card-link {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #0555FF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.solutions-card-link:hover {
+  color: #0033cc;
+}
+
+@media (max-width: 1200px) {
+  .solutions-cards-block {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .solutions-card-item,
+  .solutions-card-img-box {
+    width: 100%;
+  }
+
+  .solutions-card-item {
+    height: auto;
+    min-height: 430px;
+  }
+}
+
+@media (max-width: 991px) {
+  .solutions-cards-block {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .solutions-cards-block {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ==========================================================================
+   Platform Approach Section (W: 1201 Fill x H: 1788 Hug)
+   ========================================================================== */
+.platform-approach-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 35px 0;
+  background-color: #ffffff;
+}
+
+.platform-approach-container {
+  width: 100%;
+  max-width: 1201px;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 0 16px;
+}
+
+/* Header Box (W: 1200px x H: 148px) */
+.platform-approach-header {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.platform-approach-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 620px;
+}
+
+.platform-approach-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.platform-approach-badge .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.platform-approach-badge .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.platform-approach-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.platform-approach-header-right {
+  max-width: 420px;
+  padding-top: 36px;
+}
+
+.platform-approach-header-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 5 Approach Rows (W: 1172px x H: 268px each) */
+.platform-approach-rows {
+  width: 100%;
+  max-width: 1172px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(5, 85, 255, 0.18);
+  margin: 0 auto;
+}
+
+.platform-approach-row {
+  width: 100%;
+  max-width: 1172px;
+  height: 268px;
+  min-height: 268px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 336px;
+  border-bottom: 1px solid rgba(5, 85, 255, 0.18);
+  padding: 0;
+}
+
+.approach-row-left {
+  width: 568px;
+  max-width: 568px;
+  height: 204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.approach-step-tag {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0555FF;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.approach-row-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+
+.approach-row-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+  max-width: 480px;
+}
+
+.approach-row-right {
+  width: 268px;
+  height: 268px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.approach-row-img {
+  width: 180px !important;
+  height: 180px !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive Queries for Platform Approach Section */
+@media (max-width: 1200px) {
+  .platform-approach-row {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .platform-approach-wrapper {
+    padding: 60px 0;
+  }
+
+  .platform-approach-header {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .platform-approach-header-right {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .platform-approach-row {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+    gap: 24px;
+    padding: 32px 0;
+    align-items: flex-start;
+  }
+
+  .approach-row-left {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .approach-row-right {
+    align-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .platform-approach-main-title {
+    font-size: 1.8rem;
+  }
+
+  .approach-row-right {
+    width: 200px;
+    height: 200px;
+  }
+
+  .approach-row-img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+/* ==========================================================================
+   Custom Platform Banner Section (W: 1200 Fill x H: 328 Hug)
+   ========================================================================== */
+.custom-platform-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 35px 0 80px 0;
+  background-color: #ffffff;
+}
+
+.custom-platform-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 328px;
+  min-height: 328px;
+  border-radius: 16px;
+  padding: 22px;
+  background: linear-gradient(135deg, #B58EFF 0%, #834DFF 45%, #C9AEFF 100%);
+  box-shadow: 0 10px 32px rgba(131, 77, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-platform-inner {
+  width: 100%;
+  height: 100%;
+  background: #F4F0FA;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 56px;
+  text-align: center;
+}
+
+.custom-platform-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: #2F2C25;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin: 0;
+  max-width: 960px;
+}
+
+@media (max-width: 991px) {
+  .custom-platform-wrapper {
+    padding: 50px 16px;
+  }
+
+  .custom-platform-container {
+    height: auto;
+    min-height: 260px;
+    padding: 16px;
+  }
+
+  .custom-platform-inner {
+    padding: 28px 24px;
+  }
+
+  .custom-platform-text {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .custom-platform-text {
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+}
+
+
+
+
+
+

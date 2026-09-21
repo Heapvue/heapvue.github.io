@@ -1,57 +1,33 @@
-"use client";
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./globals.css";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import { Toaster } from "react-hot-toast";
-import CookieBanner from "./components/cookieConsent";
-import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@/app/globals.css';
+import '@/components/home/Home.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import ClientProviders from '@/components/ClientProviders';
 
-const metadata = {
-  title: "Heapvue - Enterprise IT Consulting & Digital Transformation Services",
-  description: "Heapvue delivers enterprise-grade IT consulting, digital transformation, and technology services. We help businesses modernize their technology stack and drive innovation.",
-  keywords: "IT consulting, digital transformation, enterprise IT services, technology consulting, software development, cloud solutions",
-  author: "Heapvue",
-  robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
+export const metadata = {
+  title: 'Heapvue | Premium IT Solutions, Cloud Architecture & AI Integrations',
+  description: 'Heapvue builds cutting-edge enterprise software, high-performance cloud architectures, and intelligence-driven custom solutions.',
+  keywords: 'IT Consulting, Custom Software, Cloud Infrastructure, AI Development, Enterprise Software, Web Development',
+  robots: 'index, follow',
 };
 
 export default function RootLayout({ children }) {
-
-  const pathname = usePathname();
-  const baseUrl = "https://heapvue.com"; 
-  const canonicalUrl = `${baseUrl}${pathname}`; 
-
-  useEffect(() => {
-    import("bootstrap/dist/js/bootstrap.bundle.min.js");
-
-  }, []);
-
   return (
     <html lang="en">
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords} />
-        <meta name="author" content={metadata.author} />
-        <meta name="robots" content={metadata.robots} />
-        <meta name="viewport" content={metadata.viewport} />
-        <link rel="canonical" href={canonicalUrl} />
-      </head>
-      <body>
-        <ProgressBar
-          height="3px"
-          color="#2469bc"
-          options={{ showSpinner: false }}
-          shallowRouting
-        />
-        <Navbar />
-        <Toaster position="top-right" reverseOrder={false} />
-        <CookieBanner />
-        {children}
-        <Footer />
+      <body className="d-flex flex-column min-vh-100">
+        <ClientProviders>
+          <header className="fixed-top" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #e2e8f0', zIndex: 1050, boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
+            <div className="w-100 py-2 text-white text-center fw-medium px-3" style={{ backgroundColor: '#002b80', fontSize: '0.8rem', letterSpacing: '0.03em' }}>
+              Power AI Agents with Institutional Intelligence – DeepJudge Is Partnering with Harvey
+            </div>
+            <Navbar />
+          </header>
+          <main className="flex-grow-1" style={{ paddingTop: '110px' }}>
+            {children}
+          </main>
+          <Footer />
+        </ClientProviders>
       </body>
     </html>
   );

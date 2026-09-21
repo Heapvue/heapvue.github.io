@@ -1,0 +1,1099 @@
+/* Consulting Page Styles */
+
+/* ==========================================================================
+   Consulting Hero Section (W: 1440 Fill x H: 648 / Wrapper: 1440 x 728)
+   ========================================================================== */
+.consulting-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 648px;
+  min-height: 648px;
+  background-image: url('/images/consultbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.consulting-hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(10, 15, 30, 0.65) 0%, rgba(10, 15, 30, 0.82) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.consulting-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 24px;
+}
+
+/* Badge Capsule */
+.consulting-hero-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  margin-bottom: 24px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  width: fit-content;
+}
+
+.consulting-hero-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.consulting-hero-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: 0.02em;
+}
+
+/* Main Title */
+.consulting-hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  max-width: 880px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle Text */
+.consulting-hero-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  max-width: 800px;
+  font-weight: 400;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Media Queries for Hero */
+@media (max-width: 991px) {
+  .consulting-hero-wrapper {
+    height: auto;
+    min-height: 520px;
+    padding: 100px 16px 60px 16px;
+  }
+
+  .consulting-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .consulting-hero-subtext {
+    font-size: 0.92rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .consulting-hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   About AI Consulting Section (W: 1200 Fill x H: 510 Hug)
+   ========================================================================== */
+.about-ai-consulting-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.about-ai-consulting-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 510px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 0 16px;
+}
+
+/* Left Content Box (541px x 378px Hug) */
+.about-ai-consulting-content {
+  width: 100%;
+  max-width: 541px;
+  min-height: 378px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-ai-consulting-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.about-ai-consulting-badge .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.about-ai-consulting-badge .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.about-ai-consulting-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px 0;
+}
+
+.about-ai-consulting-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-ai-consulting-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Right Side Image Box (598px x 510px Hug - 2 images @ 289px each) */
+.about-ai-consulting-images-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.consulting-img-item {
+  width: 289px;
+  height: 510px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.consulting-img-item:hover {
+  transform: translateY(-4px);
+}
+
+.consulting-dual-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Responsive Queries */
+@media (max-width: 991px) {
+  .about-ai-consulting-wrapper {
+    padding: 60px 0;
+  }
+
+  .about-ai-consulting-container {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+    gap: 36px;
+  }
+
+  .about-ai-consulting-content {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .about-ai-consulting-images-box {
+    width: 100%;
+    max-width: 598px;
+    height: auto;
+  }
+
+  .consulting-img-item {
+    width: calc(50% - 10px);
+    height: 380px;
+  }
+
+  .about-ai-consulting-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-ai-consulting-images-box {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .consulting-img-item {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* ==========================================================================
+   Consulting Services Grid Section (W: 1440 Fill x H: 1291 Hug)
+   ========================================================================== */
+.consulting-grid-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.consulting-grid-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+  padding: 0 16px;
+}
+
+/* Header Box (W: 1200px x H: 148px) */
+.consulting-grid-header {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.consulting-grid-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 620px;
+}
+
+.consulting-grid-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.consulting-grid-badge .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.consulting-grid-badge .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.consulting-grid-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.consulting-grid-header-right {
+  max-width: 440px;
+  padding-top: 36px;
+}
+
+.consulting-grid-header-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 9 Cards Grid (W: 1200px x H: 1023px / Each card: 384px x 325px) */
+.consulting-cards-grid {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.consulting-service-card {
+  width: 384px;
+  height: 325px;
+  min-height: 325px;
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consulting-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.consulting-card-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consulting-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.consulting-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+
+.consulting-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Footer Subtext */
+.consulting-grid-footer-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  text-align: center;
+  max-width: 680px;
+  font-weight: 400;
+}
+
+/* Responsive Queries */
+@media (max-width: 1200px) {
+  .consulting-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .consulting-service-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .consulting-grid-wrapper {
+    padding: 60px 0;
+  }
+
+  .consulting-grid-header {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .consulting-grid-header-right {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .consulting-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .consulting-grid-main-title {
+    font-size: 1.8rem;
+  }
+
+  .consulting-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .consulting-service-card {
+    height: auto;
+    min-height: 280px;
+  }
+}
+
+/* ==========================================================================
+   Discover How To Map Heapvue to Your Stack Section (W: 1200 Fill x H: 301.89 Hug)
+   ========================================================================== */
+.map-stack-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.map-stack-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 301.89px;
+  background-color: #040d21;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  box-shadow: 0 12px 40px rgba(4, 13, 33, 0.15);
+}
+
+.map-stack-graphic-left {
+  position: absolute;
+  left: 0;
+  top: 57.26px;
+  width: 332.08px;
+  height: 184.75px;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.map-stack-graphic-right {
+  position: absolute;
+  right: 0;
+  top: 57.26px;
+  width: 332.08px;
+  height: 184.75px;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.map-stack-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+}
+
+.map-stack-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  width: 100%;
+}
+
+.map-stack-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
+
+.map-stack-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 28px 0;
+  font-weight: 400;
+  max-width: 620px;
+}
+
+.map-stack-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #040d21;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+}
+
+.map-stack-btn:hover {
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+  color: #040d21;
+}
+
+@media (max-width: 1024px) {
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    width: 250px;
+    height: 138px;
+    opacity: 0.4;
+  }
+
+  .map-stack-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-stack-container {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    width: 180px;
+    height: 100px;
+    opacity: 0.25;
+  }
+
+  .map-stack-title {
+    font-size: 1.5rem;
+  }
+
+  .map-stack-subtext {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-stack-graphic-left,
+  .map-stack-graphic-right {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Consulting Engagements Section (W: 1201 Fill x H: 735 Hug)
+   ========================================================================== */
+.consulting-engagements-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.consulting-engagements-container {
+  width: 100%;
+  max-width: 1201px;
+  min-height: 735px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 0 16px;
+}
+
+/* Header Box (W: 1201px x H: 148px) */
+.engagements-header-box {
+  width: 100%;
+  max-width: 1201px;
+  min-height: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.engagements-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 620px;
+}
+
+.engagements-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.engagements-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.engagements-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.engagements-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.engagements-header-right {
+  max-width: 480px;
+  padding-top: 36px;
+}
+
+.engagements-header-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 3 Cards Block (W: 1199px x H: 531px / Each card: 392px x 531px) */
+.engagements-cards-block {
+  width: 100%;
+  max-width: 1201px;
+  min-height: 531px;
+  display: grid;
+  grid-template-columns: repeat(3, 392px);
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.engagement-card-item {
+  width: 392px;
+  height: 531px;
+  min-height: 531px;
+  border-radius: 24px;
+  padding: 14px 14px 28px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 55%, #D7E8FF 100%);
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(5, 85, 255, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.engagement-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(5, 85, 255, 0.1);
+  border-color: rgba(5, 85, 255, 0.3);
+}
+
+.engagement-card-img-box {
+  width: 364px;
+  height: 225px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #e2e8f0;
+}
+
+.engagement-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.engagement-card-item:hover .engagement-card-img {
+  transform: scale(1.03);
+}
+
+.engagement-card-body {
+  width: 100%;
+  padding: 24px 14px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.blue-dash-line {
+  width: 28px;
+  height: 3.5px;
+  background-color: #0555FF;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.engagement-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.35;
+  margin: 0 0 12px 0;
+}
+
+.engagement-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive Queries for Engagements Section */
+@media (max-width: 1200px) {
+  .engagements-cards-block {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .engagement-card-item,
+  .engagement-card-img-box {
+    width: 100%;
+  }
+
+  .engagement-card-item {
+    height: auto;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 991px) {
+  .consulting-engagements-wrapper {
+    padding: 60px 0;
+  }
+
+  .engagements-header-box {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+  }
+
+  .engagements-header-right {
+    padding-top: 0;
+    max-width: 100%;
+  }
+
+  .engagements-cards-block {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .engagements-main-title {
+    font-size: 1.8rem;
+  }
+
+  .engagements-cards-block {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .engagement-card-item {
+    min-height: auto;
+  }
+}
+
+/* ==========================================================================
+   Consulting Approach Section (W: 1200 Fill x H: 603 Hug)
+   ========================================================================== */
+.consulting-approach-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.consulting-approach-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 603px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 0 16px;
+}
+
+/* Header Box (W: 801px x H: 212px) */
+.approach-header-box {
+  width: 100%;
+  max-width: 801px;
+  min-height: 212px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.approach-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.approach-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.approach-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.02em;
+}
+
+.approach-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.approach-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+  max-width: 680px;
+  text-align: center;
+}
+
+/* 5 Columns Grid (W: 1200px x H: 335px / Each column: 227.75px x 263.16px) */
+.approach-columns-grid {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(5, 227.75px);
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.approach-col-item {
+  width: 227.75px;
+  min-height: 263.16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.approach-col-item:hover {
+  transform: translateY(-4px);
+}
+
+.approach-col-icon {
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.approach-col-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.35;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.approach-col-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Footer Subtext */
+.approach-footer-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  text-align: center;
+  max-width: 640px;
+  font-weight: 400;
+}
+
+/* Responsive Queries for Approach Section */
+@media (max-width: 1200px) {
+  .approach-columns-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .approach-col-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .consulting-approach-wrapper {
+    padding: 60px 0;
+  }
+
+  .approach-columns-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .approach-main-title {
+    font-size: 1.8rem;
+  }
+
+  .approach-columns-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .approach-col-item {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .approach-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+
+
+
+

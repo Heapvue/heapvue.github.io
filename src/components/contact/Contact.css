@@ -1,0 +1,554 @@
+/* Contact Us Page Styles */
+
+/* ==========================================================================
+   Contact Hero Section (W: 1440 Fill x H: 648 / Wrapper: 1440 x 728)
+   ========================================================================== */
+.contact-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 648px;
+  min-height: 648px;
+  background-image: url('/images/contactusbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.65) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 24px;
+}
+
+/* Badge Capsule */
+.contact-hero-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  margin-bottom: 24px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  width: fit-content;
+}
+
+.contact-hero-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0033cc;
+}
+
+.contact-hero-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Main Title */
+.contact-hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+  max-width: 840px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle Text */
+.contact-hero-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  max-width: 740px;
+  font-weight: 400;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .contact-hero-wrapper {
+    height: auto;
+    min-height: 520px;
+    padding: 120px 16px 60px 16px;
+  }
+
+  .contact-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .contact-hero-subtext {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+   Contact Options Section (W: 1440 Fill x H: 269 Hug / Content: 1200 x 269)
+   ========================================================================== */
+.contact-options-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 269px;
+  display: flex;
+  justify-content: center;
+  margin: 100px auto 125px auto;
+}
+
+.contact-options-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 269px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.contact-options-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.contact-option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.contact-option-card:hover {
+  transform: translateY(-4px);
+}
+
+.contact-option-icon-box {
+  width: 140px;
+  height: 140px;
+  border-radius: 14px;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  background: linear-gradient(135deg, rgba(235, 243, 255, 0.5) 0%, rgba(245, 249, 255, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(5, 85, 255, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-option-card:hover .contact-option-icon-box {
+  border-color: #0555FF;
+  box-shadow: 0 8px 24px rgba(5, 85, 255, 0.12);
+}
+
+.contact-option-icon {
+  width: 56px !important;
+  height: 56px !important;
+  object-fit: contain;
+}
+
+.contact-option-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1E293B;
+  margin: 0 0 10px 0;
+}
+
+.contact-option-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive Queries */
+@media (max-width: 1024px) {
+  .contact-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-options-wrapper {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-options-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ==========================================================================
+   Contact Form Section (W: 1200 Hug x H: 626 Hug)
+   ========================================================================== */
+.contact-form-section-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 125px; /* Standard section gap */
+}
+
+.contact-form-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 626px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 0 16px;
+}
+
+/* Left Column */
+.contact-form-left {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-form-badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  width: fit-content;
+}
+
+.contact-form-badge-capsule .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.contact-form-badge-capsule .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4a5568;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact-form-main-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #2F2C25;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 36px 0;
+}
+
+.contact-blue-highlight {
+  color: #0555FF;
+  font-style: italic;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Contact Info Blocks */
+.contact-info-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-label {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #701A1E;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.info-value-link {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #0555FF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.info-value-link:hover {
+  color: #0033cc;
+  text-decoration: underline;
+}
+
+.info-value-address {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #0555FF;
+  margin: 0;
+  font-weight: 400;
+  max-width: 380px;
+}
+
+/* Right Column: Contact Form */
+.contact-form-right {
+  flex: 1;
+  width: 100%;
+  max-width: 660px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabs */
+.contact-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.contact-tab-btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-tab-btn.active {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-tab-btn:hover:not(.active) {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+/* Form Elements */
+.contact-form-element {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-section-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #701A1E;
+  margin: 0 0 4px 0;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.contact-input,
+.contact-select,
+.contact-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.92rem;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.contact-input:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.contact-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Checkbox & Submit */
+.form-bottom-action {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 6px;
+  background-color: #3b82f6;
+  border: none;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+}
+
+.contact-submit-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.contact-form-success {
+  padding: 40px 24px;
+  border-radius: 8px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  text-align: center;
+  color: #166534;
+}
+
+.contact-form-success h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 991px) {
+  .contact-form-container {
+    flex-direction: column;
+    min-height: auto;
+    gap: 40px;
+  }
+
+  .contact-form-left,
+  .contact-form-right {
+    max-width: 100%;
+  }
+
+  .contact-form-main-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-tabs {
+    flex-wrap: wrap;
+  }
+}
+
+
