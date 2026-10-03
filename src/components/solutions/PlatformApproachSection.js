@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const approachSteps = [
+const defaultApproachSteps = [
   {
     step: '// 001',
     title: 'Understand operational workflows & business requirements',
@@ -46,7 +46,12 @@ const approachSteps = [
   },
 ];
 
-export default function PlatformApproachSection() {
+export default function PlatformApproachSection({
+  badgeText = 'Our Methodology',
+  title = <>Our Approach to<br /><span className="blue-italic-text">Platform Development</span></>,
+  desc = 'Every organisation has unique operational needs. Our development process focuses on understanding these requirements and designing platforms that are both efficient and scalable.',
+  steps = defaultApproachSteps,
+}) {
   return (
     <section className="platform-approach-wrapper">
       <div className="platform-approach-container">
@@ -56,26 +61,24 @@ export default function PlatformApproachSection() {
           <div className="platform-approach-header-left">
             <div className="platform-approach-badge">
               <span className="badge-bullet"></span>
-              <span className="badge-text">How We Enable Healthcare</span>
+              <span className="badge-text">{badgeText}</span>
             </div>
             <h2 className="platform-approach-main-title">
-              Our Approach to
-              <br />
-              <span className="blue-italic-text">Platform Development</span>
+              {title}
             </h2>
           </div>
 
           {/* Right Description Box */}
           <div className="platform-approach-header-right">
             <p className="platform-approach-header-desc">
-              Every organisation has unique operational needs. Our development process focuses on understanding these requirements and designing platforms that are both efficient and scalable.
+              {desc}
             </p>
           </div>
         </div>
 
         {/* 5 Approach Rows (1172 x 268 each) */}
         <div className="platform-approach-rows">
-          {approachSteps.map((item, index) => (
+          {steps.map((item, index) => (
             <div key={index} className="platform-approach-row">
               {/* Left Content (568 x 204) */}
               <div className="approach-row-left">
@@ -87,8 +90,8 @@ export default function PlatformApproachSection() {
               {/* Right Image (Centered, non-touching top/bottom lines) */}
               <div className="approach-row-right">
                 <Image
-                  src={item.image}
-                  alt={item.alt}
+                  src={item.image || '/images/sol5.png'}
+                  alt={item.alt || item.title}
                   width={180}
                   height={180}
                   className="approach-row-img"
@@ -102,3 +105,4 @@ export default function PlatformApproachSection() {
     </section>
   );
 }
+

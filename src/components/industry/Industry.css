@@ -1216,6 +1216,190 @@
   }
 }
 
+/* ==========================================================================
+   Clickable Selected Projects Section (Matching Target Design)
+   ========================================================================== */
+.industry-projects-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 100px 0;
+  background-color: #ffffff;
+}
+
+.industry-projects-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.industry-projects-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 860px;
+}
+
+.industry-projects-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  background-color: #EFF6FF;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(5, 85, 255, 0.04);
+}
+
+.industry-projects-badge .badge-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0555FF;
+}
+
+.industry-projects-badge .badge-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0555FF;
+}
+
+.industry-projects-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.industry-projects-subtext {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+.industry-projects-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.industry-projects-grid.two-cols {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 840px;
+}
+
+.industry-project-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(5, 85, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.industry-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(5, 85, 255, 0.12);
+  border-color: #0555FF;
+}
+
+.industry-project-card-img-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.industry-project-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.industry-project-card:hover .industry-project-card-img {
+  transform: scale(1.04);
+}
+
+.industry-project-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.industry-project-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  line-height: 1.35;
+}
+
+.industry-project-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 20px 0;
+  font-weight: 400;
+}
+
+.industry-project-card-link {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0555FF;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+  margin-top: auto;
+}
+
+.industry-project-card:hover .industry-project-card-link {
+  color: #0033cc;
+}
+
+@media (max-width: 991px) {
+  .industry-projects-grid,
+  .industry-projects-grid.two-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .industry-projects-grid,
+  .industry-projects-grid.two-cols {
+    grid-template-columns: 1fr;
+  }
+  .industry-projects-title {
+    font-size: 1.8rem;
+  }
+}
+
+
 
 
 

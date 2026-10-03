@@ -3,7 +3,15 @@
 import React from 'react';
 import CompanyLogosSection from '@/components/home/CompanyLogosSection';
 
-export default function AboutPlatformSection() {
+export default function AboutPlatformSection({
+  badgeText = 'About Platform Development',
+  title = <>Building Future-Ready <span className="blue-italic-text">Digital Platforms</span></>,
+  paragraphs = [
+    'Many organisations struggle to manage their operations using generic software that does not fit their workflows. Off-the-shelf systems often lack flexibility, integrate poorly with other tools, or cannot scale as the organisation grows.',
+    'Heapvue helps organisations design and build custom digital platforms tailored to their operational needs. These platforms can manage internal processes, customer interactions, transactions, and data flows while integrating seamlessly with other systems.',
+    'Our approach focuses on building scalable, secure, and easy-to-manage platforms that simplify operations and support long-term growth.',
+  ],
+}) {
   return (
     <section className="about-platform-wrapper">
       {/* Top Title & Description Box (685w x 356h Hug) */}
@@ -11,25 +19,21 @@ export default function AboutPlatformSection() {
         {/* Pill Badge */}
         <div className="about-platform-badge">
           <span className="badge-bullet"></span>
-          <span className="badge-text">About Platform Development</span>
+          <span className="badge-text">{badgeText}</span>
         </div>
 
         {/* Main Heading */}
         <h2 className="about-platform-title">
-          Building Future-Ready <span className="blue-italic-text">Digital Platforms</span>
+          {title}
         </h2>
 
         {/* Paragraphs */}
         <div className="about-platform-text-group">
-          <p className="about-platform-text">
-            Many organisations struggle to manage their operations using generic software that does not fit their workflows. Off-the-shelf systems often lack flexibility, integrate poorly with other tools, or cannot scale as the organisation grows.
-          </p>
-          <p className="about-platform-text">
-            Heapvue helps organisations design and build custom digital platforms tailored to their operational needs. These platforms can manage internal processes, customer interactions, transactions, and data flows while integrating seamlessly with other systems.
-          </p>
-          <p className="about-platform-text">
-            Our approach focuses on building scalable, secure, and easy-to-manage platforms that simplify operations and support long-term growth.
-          </p>
+          {paragraphs.map((para, index) => (
+            <p key={index} className="about-platform-text">
+              {para}
+            </p>
+          ))}
         </div>
       </div>
 
@@ -40,3 +44,4 @@ export default function AboutPlatformSection() {
     </section>
   );
 }
+

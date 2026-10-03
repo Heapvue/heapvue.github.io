@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 
-const faqData = [
+const defaultFaqData = [
   {
     id: 1,
     question: "Are Heapvue's messages really personalized, or just sophisticated templates?",
@@ -32,7 +32,8 @@ const faqData = [
   },
 ];
 
-export default function FaqSection() {
+export default function FaqSection({ customFaqs }) {
+  const faqs = customFaqs || defaultFaqData;
   const [openId, setOpenId] = useState(1); // Item 1 open by default
 
   const toggleFaq = (id) => {
@@ -75,13 +76,14 @@ export default function FaqSection() {
 
           {/* Right Column Accordion (598w x 726h) */}
           <div className="faq-right-column">
-            {faqData.map((item) => {
-              const isOpen = openId === item.id;
+            {faqs.map((item, index) => {
+              const itemId = item.id || index + 1;
+              const isOpen = openId === itemId;
               return (
                 <div
-                  key={item.id}
+                  key={itemId}
                   className={`faq-accordion-item ${isOpen ? 'active' : ''}`}
-                  onClick={() => toggleFaq(item.id)}
+                  onClick={() => toggleFaq(itemId)}
                 >
                   <div className="faq-accordion-header">
                     <h3 className="faq-question">{item.question}</h3>
@@ -104,3 +106,4 @@ export default function FaqSection() {
     </section>
   );
 }
+

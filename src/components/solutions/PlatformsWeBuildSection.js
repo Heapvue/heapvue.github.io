@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const platformItems = [
+const defaultPlatformItems = [
   {
     id: 1,
     title: 'Customer relationship management (CRM) systems',
@@ -54,7 +54,12 @@ const platformItems = [
   },
 ];
 
-export default function PlatformsWeBuildSection() {
+export default function PlatformsWeBuildSection({
+  badgeText = 'What We Build',
+  title = <>Platforms We <span className="blue-italic-text">Design</span><br />and <span className="blue-italic-text">Deliver</span></>,
+  desc = 'We develop platforms designed around how businesses actually operate. Typical platform solutions include:',
+  items = defaultPlatformItems,
+}) {
   return (
     <section className="platforms-build-wrapper">
       <div className="platforms-build-container">
@@ -64,31 +69,29 @@ export default function PlatformsWeBuildSection() {
           <div className="platforms-header-left">
             <div className="platforms-badge-capsule">
               <span className="badge-bullet"></span>
-              <span className="badge-text">What We Build</span>
+              <span className="badge-text">{badgeText}</span>
             </div>
             <h2 className="platforms-main-title">
-              Platforms We <span className="blue-italic-text">Design</span>
-              <br />
-              and <span className="blue-italic-text">Deliver</span>
+              {title}
             </h2>
           </div>
 
           {/* Right Description Box */}
           <div className="platforms-header-right">
             <p className="platforms-header-desc">
-              We develop platforms designed around how businesses actually operate. Typical platform solutions include:
+              {desc}
             </p>
           </div>
         </div>
 
         {/* 6 Icons Grid Box (1200 x 610) */}
         <div className="platforms-grid-box">
-          {platformItems.map((item) => (
-            <div key={item.id} className="platform-card-item">
+          {items.map((item, index) => (
+            <div key={item.id || index} className="platform-card-item">
               <div className="platform-icon-box">
                 <Image
-                  src={item.icon}
-                  alt={item.alt}
+                  src={item.icon || '/images/sol1.png'}
+                  alt={item.alt || item.title}
                   width={141}
                   height={141}
                   className="platform-icon-img"
@@ -103,3 +106,4 @@ export default function PlatformsWeBuildSection() {
     </section>
   );
 }
+
