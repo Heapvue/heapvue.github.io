@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const solutionsProjects = [
+const defaultSolutionsProjects = [
   {
     id: 1,
     title: 'Custom CRM Platform for a Financial Services Firm',
@@ -31,7 +31,12 @@ const solutionsProjects = [
   },
 ];
 
-export default function SolutionsProjectsSection() {
+export default function SolutionsProjectsSection({
+  badgeText = 'Selected Projects',
+  title = <>Highlighted Projects Across <span className="blue-italic-text">Enterprise Solutions</span></>,
+  subtext = 'As organizations continue to evolve digitally, systems must be secure, reliable, and easy to manage. Heapvue helps businesses build and modernise digital infrastructure that supports growth and operational efficiency.',
+  projects = defaultSolutionsProjects,
+}) {
   return (
     <section className="solutions-projects-wrapper">
       <div className="solutions-projects-container">
@@ -40,27 +45,27 @@ export default function SolutionsProjectsSection() {
           {/* Pill Badge */}
           <div className="selected-projects-badge">
             <span className="badge-bullet"></span>
-            <span className="badge-text">Selected Projects</span>
+            <span className="badge-text">{badgeText}</span>
           </div>
 
           {/* Main Title */}
           <h2 className="highlighted-projects-title">
-            Highlighted Projects Across <span className="blue-italic-text">Healthcare Solutions</span>
+            {title}
           </h2>
 
           {/* Subtext */}
           <p className="highlighted-projects-subtext">
-            As healthcare continues to evolve digitally, organisations require systems that are secure, reliable, and easy to manage. Heapvue helps healthcare providers build and modernise digital infrastructure that supports better patient care, efficient operations, and long-term scalability.
+            {subtext}
           </p>
         </div>
 
         {/* 3 Cards Block Container (1200 x 430.85 Hug) */}
         <div className="solutions-cards-block">
-          {solutionsProjects.map((project) => (
-            <div key={project.id} className="solutions-card-item">
+          {projects.map((project, index) => (
+            <div key={project.id || index} className="solutions-card-item">
               <div className="solutions-card-img-box">
                 <Image
-                  src={project.image}
+                  src={project.image || '/images/sol4.png'}
                   alt={project.title}
                   width={385}
                   height={220}
@@ -73,7 +78,7 @@ export default function SolutionsProjectsSection() {
                   <h3 className="solutions-card-title">{project.title}</h3>
                   <p className="solutions-card-desc">{project.description}</p>
                 </div>
-                <Link href={project.link} className="solutions-card-link">
+                <Link href={project.link || '/contact'} className="solutions-card-link">
                   View Project
                 </Link>
               </div>
@@ -84,3 +89,4 @@ export default function SolutionsProjectsSection() {
     </section>
   );
 }
+
