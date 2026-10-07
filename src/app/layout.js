@@ -23,12 +23,9 @@ export default function RootLayout({ children }) {
       <body className="d-flex flex-column min-vh-100">
         <ClientProviders>
           <header className="fixed-top" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #e2e8f0', zIndex: 1050, boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
-            <div className="w-100 py-2 text-white text-center fw-medium px-3" style={{ backgroundColor: '#002b80', fontSize: '0.8rem', letterSpacing: '0.03em' }}>
-              Power AI Agents with Institutional Intelligence – DeepJudge Is Partnering with Harvey
-            </div>
             <Navbar />
           </header>
-          <main className="flex-grow-1" style={{ paddingTop: '110px' }}>
+          <main className="flex-grow-1" style={{ paddingTop: '75px' }}>
             {children}
           </main>
           <Footer />

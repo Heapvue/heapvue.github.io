@@ -37,8 +37,8 @@ export default function FlowDiagram() {
       <div className="v-logo-wrapper">
         <div className="v-logo-card">
           <Image 
-            src="/images/logomini.png" 
-            alt="Heapvue V symbol" 
+            src="/images/Heapvue_Logo (3).png" 
+            alt="Heapvue logo" 
             width={155} 
             height={108} 
             className="v-logo-img"

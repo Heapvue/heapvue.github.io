@@ -118,12 +118,17 @@ export default function Footer() {
 
               {/* Tagline */}
               <h3 className="footer-tagline">
-                Valley AI - LinkedIn Outbound That Books Meetings
+                Premium IT Solutions, Cloud Architecture &amp; AI Integrations
               </h3>
+
+              {/* Address */}
+              <p className="footer-address">
+                39/2475-B1, SUITE C54 LR, TOWERS, SJRRA 104 S J RD, Palarivattom, Ernakulam, Ernakulam- 682025, Kerala
+              </p>
 
               {/* Contact Link */}
               <p className="footer-contact">
-                Contact: <a href="mailto:hey@joinvalley.co">hey@joinvalley.co</a>
+                Contact: <a href="mailto:contact@heapvue.com">contact@heapvue.com</a>
               </p>
 
               {/* Work Email Form */}
@@ -149,8 +154,9 @@ export default function Footer() {
               <div className="footer-links-col">
                 <h4 className="footer-col-title">Company</h4>
                 <ul>
-                  <li><Link href="/about">About</Link></li>
+                  <li><Link href="/about">About Us</Link></li>
                   <li><Link href="/careers">Careers</Link></li>
+                  <li><Link href="/contact">Contact Us</Link></li>
                 </ul>
               </div>
 
@@ -158,8 +164,11 @@ export default function Footer() {
               <div className="footer-links-col">
                 <h4 className="footer-col-title">Products</h4>
                 <ul>
-                  <li><Link href="/services">Personalization</Link></li>
-                  <li><Link href="/pricing">Pricing</Link></li>
+                  <li><a href="https://vuecart.heapvue.com/in-en" target="_blank" rel="noopener noreferrer">VueCart</a></li>
+                  <li><a href="https://heapsync.heapvue.com/" target="_blank" rel="noopener noreferrer">HeapSync</a></li>
+                  <li><a href="https://chatpress.heapvue.com/" target="_blank" rel="noopener noreferrer">ChatPress</a></li>
+                  <li><a href="https://apptuner.dev/" target="_blank" rel="noopener noreferrer">AppTuner</a></li>
+                  <li><a href="https://dev.learnly.heapvue.com/" target="_blank" rel="noopener noreferrer">Learnly</a></li>
                 </ul>
               </div>
 
@@ -167,10 +176,10 @@ export default function Footer() {
               <div className="footer-links-col">
                 <h4 className="footer-col-title">Resources</h4>
                 <ul>
-                  <li><Link href="/roi-calculator">ROI Calculator</Link></li>
-                  <li><Link href="/examples">Messaging Examples</Link></li>
-                  <li><Link href="/fit">Is Valley a fit for me?</Link></li>
                   <li><Link href="/blog">Blog</Link></li>
+                  <li><Link href="/solutions">Solutions</Link></li>
+                  <li><Link href="/consulting">Consulting</Link></li>
+                  <li><Link href="/industries">Industries</Link></li>
                 </ul>
               </div>
 
@@ -178,8 +187,9 @@ export default function Footer() {
               <div className="footer-links-col">
                 <h4 className="footer-col-title">Socials</h4>
                 <ul>
-                  <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                  <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Enabled</a></li>
+                  <li><a href="https://www.linkedin.com/company/heapvue/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                  <li><a href="https://x.com/heapvue" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+                  <li><a href="https://www.facebook.com/heapvue" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                 </ul>
               </div>
             </div>
