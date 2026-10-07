@@ -425,11 +425,10 @@
   border-radius: 16px;
 }
 
-/* Testimonials Section (1440px x 810px) */
+/* Testimonials Section */
 .testimonials-section-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1440px;
   height: 810px;
   min-height: 810px;
   background-image: url('/images/testimonibg.png');
@@ -2109,6 +2108,14 @@
   margin: 0 0 10px 0;
   letter-spacing: -0.01em;
   max-width: 440px;
+}
+
+.footer-address {
+  font-size: 0.85rem;
+  color: #8E8E93;
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+  max-width: 380px;
 }
 
 .footer-contact {

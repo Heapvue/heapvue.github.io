@@ -80,7 +80,7 @@ export default function ContactFormSection() {
             <div className="info-block">
               <span className="info-label">ADDRESS</span>
               <p className="info-value-address">
-                Heapvue, 2nd Floor, Thymuriyil Building, S Janatha Rd, Palarivattom, Kochi, Kerala 682025.
+                39/2475-B1, SUITE C54 LR, TOWERS, SJRRA 104 S J RD, Palarivattom, Ernakulam, Ernakulam- 682025, Kerala
               </p>
             </div>
           </div>
