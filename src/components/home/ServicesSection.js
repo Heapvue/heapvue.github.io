@@ -82,8 +82,8 @@ export default function ServicesSection() {
 
         {/* Bottom Explore Button */}
         <div className="services-btn-wrapper">
-          <Link href="/services" className="btn services-btn">
-            Explore Our Services <FiArrowRight size={16} />
+          <Link href="/solutions" className="btn services-btn">
+            Explore Our Solutions <FiArrowRight size={16} />
           </Link>
         </div>
       </div>

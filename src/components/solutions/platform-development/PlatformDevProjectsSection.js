@@ -42,11 +42,11 @@ export default function PlatformDevProjectsSection() {
           </div>
 
           <h2 className="highlighted-projects-title">
-            Highlighted Projects Across <span className="blue-italic-text">Healthcare Solutions</span>
+            Highlighted Projects Across <span className="blue-italic-text">Enterprise Platforms</span>
           </h2>
 
           <p className="highlighted-projects-subtext">
-            As healthcare continues to evolve digitally, organisations require systems that are secure, reliable, and easy to manage. Heapvue helps healthcare providers build and modernise digital infrastructure that supports better patient care, efficient operations, and long-term scalability.
+            Organisations require digital platforms that are secure, reliable, and easy to scale. Heapvue helps enterprises engineer multi-tenant systems, operational dashboards, and high-performance digital infrastructure.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export default function PlatformDevProjectsSection() {
                   <p className="solutions-card-desc">{project.description}</p>
                 </div>
                 <Link href={project.link} className="solutions-card-link">
-                  View Project
+                  Discuss similar project
                 </Link>
               </div>
             </div>

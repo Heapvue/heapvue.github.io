@@ -9,24 +9,24 @@ const legacyProjects = [
     id: 1,
     title: 'HealthTech Platform Migration and Modernisation',
     description:
-      'A health tech startup was operating on a legacy PHP Laravel system that posed security risks and made integration with other platforms difficult. Heapvue migrated the platform to a modern technology stack and integrated multiple systems, improving security and enabling seamless data exchange.',
-    image: '/images/sol4.png',
+      'A health tech company was operating on a legacy PHP monolithic system that posed security risks and made third-party API integration difficult. Heapvue migrated the platform to a modern containerized stack, improving security and enabling real-time data exchange.',
+    image: '/images/sol5.png',
     link: '/contact',
   },
   {
     id: 2,
-    title: 'E-commerce Platform Migration for an FMCG Company',
+    title: 'Enterprise ERP & Order Engine Modernisation',
     description:
-      'An FMCG company faced frequent disruptions due to WooCommerce plugin conflicts and platform instability. Heapvue developed a custom Node.js platform tailored to their operational needs, providing greater stability, scalability, and long-term maintainability.',
-    image: '/images/sol4.png',
+      'An established retail distributor faced system bottlenecks during peak sales due to legacy database locks. Heapvue decoupled the order processing pipeline into an asynchronous event-driven service, increasing transaction throughput by 4x.',
+    image: '/images/sol6.png',
     link: '/contact',
   },
   {
     id: 3,
-    title: 'Security Hardening for a Healthcare Technology Platform',
+    title: 'Database Cloud Migration & Infrastructure Modernisation',
     description:
-      'A healthcare company faced multiple security threats, including brute-force attacks and SQL injection attempts. Heapvue strengthened their infrastructure using secure network architecture and implemented enhanced security measures to protect sensitive data and prevent system vulnerabilities.',
-    image: '/images/sol4.png',
+      'Migrated complex on-premise relational database clusters to secure cloud-managed database instances with zero data loss, implementing automated automated failover and automated backups.',
+    image: '/images/sol7.png',
     link: '/contact',
   },
 ];
@@ -50,7 +50,7 @@ export default function LegacyProjectsSection() {
 
           {/* Subtext */}
           <p className="highlighted-projects-subtext">
-            Discover how Heapvue helps organisations upgrade their legacy systems, overcome security vulnerabilities, and establish resilient digital platforms.
+            Discover how Heapvue helps organisations upgrade aging systems, eliminate technical debt, and establish resilient cloud foundations.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function LegacyProjectsSection() {
                   <p className="solutions-card-desc">{project.description}</p>
                 </div>
                 <Link href={project.link} className="solutions-card-link">
-                  View Project
+                  Discuss similar project
                 </Link>
               </div>
             </div>

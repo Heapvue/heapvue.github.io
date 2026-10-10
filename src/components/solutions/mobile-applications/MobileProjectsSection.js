@@ -10,23 +10,23 @@ const mobileProjects = [
     title: 'Patient Engagement App for a Hospital Chain',
     description:
       'A leading hospital chain wanted a mobile application that would allow patients to schedule appointments, manage follow-ups, access doctor recommendations, and conduct online consultations. Heapvue developed a mobile platform that simplified patient interactions and improved access to healthcare services.',
-    image: '/images/sol4.png',
+    image: '/images/sol1.png',
     link: '/contact',
   },
   {
     id: 2,
-    title: 'Lifestyle Coaching and Wellness App',
+    title: 'Lifestyle Coaching and Wellness Mobile App',
     description:
       'A lifestyle coaching company required a mobile application to deliver diet plans, exercise routines, reminders, and educational content to its users. Heapvue built an app that allowed users to access personalised guidance and helpful resources to support healthier lifestyle habits.',
-    image: '/images/sol4.png',
+    image: '/images/sol5.png',
     link: '/contact',
   },
   {
     id: 3,
-    title: 'Multilingual Voice-to-Text Mobile Application',
+    title: 'Multilingual Voice-to-Text Mobile Client Application',
     description:
-      'A technology product company required a mobile application that could convert voice input in one language into text in another language while correcting grammar. Heapvue developed a subscription-based mobile platform capable of processing multilingual voice inputs and generating structured text outputs.',
-    image: '/images/sol4.png',
+      'Engineered an iOS and Android client application with low-latency audio capture, offline buffer synchronization, and real-time transcription display connecting to cloud speech translation pipelines.',
+    image: '/images/sol6.png',
     link: '/contact',
   },
 ];
@@ -74,7 +74,7 @@ export default function MobileProjectsSection() {
                   <p className="solutions-card-desc">{project.description}</p>
                 </div>
                 <Link href={project.link} className="solutions-card-link">
-                  View Project
+                  Discuss similar project
                 </Link>
               </div>
             </div>

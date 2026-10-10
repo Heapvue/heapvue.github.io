@@ -54,7 +54,7 @@ export default function PlatformDevApproachSection() {
           <div className="platform-approach-header-left">
             <div className="platform-approach-badge">
               <span className="badge-bullet"></span>
-              <span className="badge-text">How We Enable Healthcare</span>
+              <span className="badge-text">How We Engineer Digital Platforms</span>
             </div>
             <h2 className="platform-approach-main-title">
               Our Approach to

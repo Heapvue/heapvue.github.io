@@ -1,38 +1,38 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import { FiTarget, FiSearch, FiCpu, FiLayers, FiTrendingUp } from 'react-icons/fi';
 
 const approachSteps = [
   {
     id: 1,
     title: 'Understanding Business Challenges',
     description: 'We analyse your objectives and challenges to define the right AI approach.',
-    icon: '/images/con7.png',
+    icon: FiTarget,
   },
   {
     id: 2,
     title: 'Identifying AI Value Opportunities',
     description: 'We uncover high-value opportunities to drive real business impact.',
-    icon: '/images/con7.png',
+    icon: FiSearch,
   },
   {
     id: 3,
     title: 'Selecting the Right AI Technology',
     description: 'We evaluate & recommend the right technologies & models for your needs.',
-    icon: '/images/con7.png',
+    icon: FiCpu,
   },
   {
     id: 4,
     title: 'Designing Integrated AI Solutions',
     description: 'We design scalable solutions that work seamlessly with your current infrastructure.',
-    icon: '/images/con7.png',
+    icon: FiLayers,
   },
   {
     id: 5,
     title: 'AI Implementation & Optimisation',
     description: 'We partner with you through deployment, optimisation & ongoing enhancement.',
-    icon: '/images/con7.png',
+    icon: FiTrendingUp,
   },
 ];
 
@@ -40,7 +40,7 @@ export default function ConsultingApproachSection() {
   return (
     <section className="consulting-approach-wrapper">
       <div className="consulting-approach-container">
-        {/* Top Header Box (801 x 212 Hug) */}
+        {/* Top Header Box */}
         <div className="approach-header-box">
           <div className="approach-badge-capsule">
             <span className="badge-bullet" />
@@ -58,23 +58,20 @@ export default function ConsultingApproachSection() {
           </p>
         </div>
 
-        {/* 5 Columns Grid (1200 x 335 Hug - Each box 227.75 x 263.16) */}
+        {/* 5 Columns Grid - Distinct Icons per Step */}
         <div className="approach-columns-grid">
-          {approachSteps.map((step) => (
-            <div key={step.id} className="approach-col-item">
-              <div className="approach-col-icon">
-                <Image
-                  src={step.icon}
-                  alt={step.title}
-                  width={88}
-                  height={88}
-                  style={{ objectFit: 'contain' }}
-                />
+          {approachSteps.map((step) => {
+            const IconComp = step.icon;
+            return (
+              <div key={step.id} className="approach-col-item">
+                <div className="approach-col-icon d-flex align-items-center justify-content-center text-primary" style={{ width: '88px', height: '88px', margin: '0 auto 16px auto', borderRadius: '50%', backgroundColor: '#eff6ff' }}>
+                  <IconComp size={36} />
+                </div>
+                <h3 className="approach-col-title">{step.title}</h3>
+                <p className="approach-col-desc">{step.description}</p>
               </div>
-              <h3 className="approach-col-title">{step.title}</h3>
-              <p className="approach-col-desc">{step.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Bottom Footer Subtext */}

@@ -48,9 +48,6 @@ export default function LegacySystemModernisationPage() {
       {/* What We Modernise Section */}
       <WhatWeModerniseSection />
 
-      {/* Map Stack Section */}
-      <MapStackSection />
-
       {/* Selected Projects Section */}
       <LegacyProjectsSection />
 

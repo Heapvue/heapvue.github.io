@@ -7,26 +7,26 @@ import Link from 'next/link';
 const integrationProjects = [
   {
     id: 1,
-    title: 'Secure Infrastructure for a Healthcare Technology Platform',
+    title: 'Zero-Trust Infrastructure for a Healthcare Technology Platform',
     description:
-      'A healthcare company faced repeated brute-force attacks, SQL injection attempts, and other security vulnerabilities that threatened sensitive patient data. Heapvue implemented a secure network architecture and strengthened system protections, significantly improving infrastructure security.',
-    image: '/images/sol4.png',
+      'A healthcare platform faced repeated brute-force attacks and SQL injection attempts threatening sensitive patient data. Heapvue deployed zero-trust network architecture, web application firewalls (WAF), and automated intrusion prevention, hardening the environment against malicious traffic.',
+    image: '/images/sol7.png',
     link: '/contact',
   },
   {
     id: 2,
-    title: 'Integrated Data Systems for a HealthTech Startup',
+    title: 'Enterprise API Gateway & Multi-System Data Integration',
     description:
-      'A health tech startup required multiple systems to communicate seamlessly while maintaining strong data protection. Heapvue designed integrations between their applications and implemented a modern architecture that enabled secure and efficient data flow across platforms.',
-    image: '/images/sol4.png',
+      'A multi-subsidiary enterprise required disparate ERP, CRM, and accounting systems to synchronize bi-directionally. Heapvue engineered a resilient API gateway with rate-limiting, event queues, and automated schema reconciliation.',
+    image: '/images/sol8.png',
     link: '/contact',
   },
   {
     id: 3,
-    title: 'Secure System Architecture for Scalable Applications',
+    title: 'Cloud SIEM Telemetry & Automated Threat Monitoring',
     description:
-      'Organisations operating complex digital platforms often require secure system architecture that supports both integration and protection. Heapvue implemented secure infrastructure solutions that enabled safe communication between services while strengthening overall platform security.',
-    image: '/images/sol4.png',
+      'Implemented centralized audit telemetry connecting AWS CloudTrail, Microsoft Sentinel, and Datadog to provide real-time visibility and automated anomaly alerts for a high-concurrency fintech environment.',
+    image: '/images/sol9.png',
     link: '/contact',
   },
 ];
@@ -45,12 +45,12 @@ export default function IntegrationProjectsSection() {
 
           {/* Main Title */}
           <h2 className="highlighted-projects-title">
-            Highlighted Projects in <span className="blue-italic-text">System Integration & Security</span>
+            Highlighted Projects in <span className="blue-italic-text">System Integration &amp; Security</span>
           </h2>
 
           {/* Subtext */}
           <p className="highlighted-projects-subtext">
-            Discover how Heapvue protects sensitive patient records, unifies data systems for healthtech startups, and secures scalable system architectures.
+            Discover how Heapvue protects sensitive enterprise data, unifies middleware pipelines, and hardens cloud architecture.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function IntegrationProjectsSection() {
                   <p className="solutions-card-desc">{project.description}</p>
                 </div>
                 <Link href={project.link} className="solutions-card-link">
-                  View Project
+                  Discuss similar project
                 </Link>
               </div>
             </div>

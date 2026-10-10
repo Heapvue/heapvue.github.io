@@ -10,15 +10,15 @@ const aiProjects = [
     title: 'AI Customer Engagement Chatbot for a Nutraceutical Company',
     description:
       'A nutraceutical company wanted to assist website visitors with product information and recommendations. Heapvue built a RAG-based AI chatbot trained on the company’s knowledge base to answer queries, provide information, and recommend products to visitors in real time.',
-    image: '/images/sol4.png',
+    image: '/images/sol1.png',
     link: '/contact',
   },
   {
     id: 2,
-    title: 'Multilingual Voice-to-Text Application',
+    title: 'Multilingual Voice-to-Text & Neural NLP Engine',
     description:
-      'A company required a mobile application capable of converting voice input in one language into text in another language with grammar correction. Heapvue developed a multilingual voice processing system that enables users to communicate and generate text across languages more easily.',
-    image: '/images/sol4.png',
+      'Engineered an intelligent speech processing and translation architecture capable of real-time multi-language voice transcription, grammatical structuring, and text synthesis with sub-200ms model response times.',
+    image: '/images/sol2.png',
     link: '/contact',
   },
   {
@@ -26,7 +26,7 @@ const aiProjects = [
     title: 'AI-Assisted Learning Tool for Special Education',
     description:
       'An educational organisation needed a training tool for children with special needs that could help them learn words and phrases through visual prompts. Heapvue developed an interactive learning module that uses images and structured exercises to make language learning more engaging and accessible.',
-    image: '/images/sol4.png',
+    image: '/images/sol3.png',
     link: '/contact',
   },
 ];
@@ -45,7 +45,7 @@ export default function AiProjectsSection() {
 
           {/* Main Title */}
           <h2 className="highlighted-projects-title">
-            Highlighted Projects in <span className="blue-italic-text">AI & Intelligent Automation</span>
+            Highlighted Projects in <span className="blue-italic-text">AI &amp; Intelligent Automation</span>
           </h2>
 
           {/* Subtext */}
@@ -74,7 +74,7 @@ export default function AiProjectsSection() {
                   <p className="solutions-card-desc">{project.description}</p>
                 </div>
                 <Link href={project.link} className="solutions-card-link">
-                  View Project
+                  Discuss similar project
                 </Link>
               </div>
             </div>

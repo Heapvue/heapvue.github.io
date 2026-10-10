@@ -7,28 +7,23 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 const defaultFaqData = [
   {
     id: 1,
-    question: "Are Heapvue's messages really personalized, or just sophisticated templates?",
-    answer: "Every Heapvue message is based on 60+ data points of research - recent LinkedIn posts, company news, podcast appearances, funding rounds, job changes, mutual connections. The AI references what the prospect actually cares about, in your voice.",
+    question: 'What is Heapvue’s hybrid technology model?',
+    answer: 'Heapvue combines ready-to-deploy proprietary software products (like VueCart, HeapSync, and ChatPress) with bespoke cloud and AI engineering capabilities. Clients can deploy pre-built platforms rapidly, build custom architectures, or customize a hybrid solution.',
   },
   {
     id: 2,
-    question: "Does Heapvue find leads, or do I provide lists?",
-    answer: "Heapvue can do both. Our AI continuously scans buying signals to discover high-intent leads automatically, or you can import existing target account lists to enrich and sequence.",
+    question: 'How do you handle data privacy and security?',
+    answer: 'All architectures are built with zero-trust security foundations, end-to-end encryption, and role-based access controls designed to comply with DPDP, GDPR, and HIPAA regulatory frameworks.',
   },
   {
     id: 3,
-    question: "Will my LinkedIn account get restricted?",
-    answer: "No. Heapvue enforces human-like delay patterns, cloud-based dedicated IP addresses, and safety limits that strictly adhere to platform usage terms.",
+    question: 'Can Heapvue integrate with our existing enterprise stack?',
+    answer: 'Yes. We specialize in building secure API gateways, middleware connectors, and cloud telemetry linking natively with Microsoft Sentinel, Datadog, Splunk, Elastic, and other enterprise systems.',
   },
   {
     id: 4,
-    question: "What does Heapvue replace in my current stack?",
-    answer: "Heapvue replaces separate data enrichment subscriptions, manual outreach tools, and sales intelligence add-ons into one unified AI automation workflow.",
-  },
-  {
-    id: 5,
-    question: "How fast can we get onboarded and start generating meetings?",
-    answer: "Most teams are fully onboarded and launching their first automated AI campaigns within less than 24 hours.",
+    question: 'How can we schedule a technical discovery call?',
+    answer: 'You can submit an inquiry through our Contact page. Our solutions architects will review your requirements and coordinate an introductory session within 24 business hours.',
   },
 ];
 
@@ -40,33 +35,52 @@ export default function FaqSection({ customFaqs }) {
     setOpenId(openId === id ? null : id);
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <section className="faq-section-wrapper">
+      {/* Dynamic JSON-LD Schema for FAQs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <div className="faq-container">
-        {/* Main 2-Column Box (1200w x 586h) */}
+        {/* Main 2-Column Box */}
         <div className="faq-main-box">
-          {/* Left Column (Question Title & Half-cut Logo) */}
+          {/* Left Column */}
           <div className="faq-left-column">
             <div className="faq-left-top">
               {/* Badge Capsule */}
               <div className="faq-badge-capsule">
                 <span className="badge-bullet"></span>
-                <span className="badge-text">Book an Appointment</span>
+                <span className="badge-text">Frequently Asked Questions</span>
               </div>
 
-              {/* Left Title Block (303w x 164h Hug) */}
+              {/* Left Title Block */}
               <h2 className="faq-title">
                 Have <span className="faq-highlight">Questions</span>?
                 <br />
-                We got Answers
+                We Got Answers
               </h2>
             </div>
 
-            {/* Bottom Half-cut Logo Image (418w x 292h) */}
+            {/* Bottom Half-cut Logo Image */}
             <div className="faq-logo-wrapper">
               <Image
                 src="/images/qlogo.png"
-                alt="Heapvue Q Emblem"
+                alt="Heapvue Emblem"
                 width={418}
                 height={292}
                 className="faq-qlogo-img"
@@ -74,27 +88,35 @@ export default function FaqSection({ customFaqs }) {
             </div>
           </div>
 
-          {/* Right Column Accordion (598w x 726h) */}
+          {/* Right Column Accordion */}
           <div className="faq-right-column">
             {faqs.map((item, index) => {
               const itemId = item.id || index + 1;
               const isOpen = openId === itemId;
+
               return (
                 <div
                   key={itemId}
                   className={`faq-accordion-item ${isOpen ? 'active' : ''}`}
-                  onClick={() => toggleFaq(itemId)}
                 >
-                  <div className="faq-accordion-header">
-                    <h3 className="faq-question">{item.question}</h3>
-                    <button className="faq-toggle-btn" aria-label="Toggle answer">
-                      {isOpen ? <FiMinus size={18} /> : <FiPlus size={18} />}
-                    </button>
-                  </div>
+                  <button
+                    className="faq-accordion-header"
+                    onClick={() => toggleFaq(itemId)}
+                    aria-expanded={isOpen}
+                  >
+                    <span className="faq-question-text">{item.question}</span>
+                    <span className="faq-icon-wrapper">
+                      {isOpen ? (
+                        <FiMinus className="faq-icon-svg" />
+                      ) : (
+                        <FiPlus className="faq-icon-svg" />
+                      )}
+                    </span>
+                  </button>
 
                   {isOpen && (
-                    <div className="faq-accordion-content">
-                      <p className="faq-answer">{item.answer}</p>
+                    <div className="faq-accordion-body">
+                      <p className="faq-answer-text">{item.answer}</p>
                     </div>
                   )}
                 </div>
@@ -106,4 +128,3 @@ export default function FaqSection({ customFaqs }) {
     </section>
   );
 }
-

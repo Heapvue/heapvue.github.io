@@ -48,9 +48,6 @@ export default function SystemIntegrationSecurityPage() {
       {/* What We Help Organisations Achieve Section */}
       <WhatWeIntegrateSection />
 
-      {/* Map Stack Section */}
-      <MapStackSection />
-
       {/* Selected Projects Section */}
       <IntegrationProjectsSection />
 

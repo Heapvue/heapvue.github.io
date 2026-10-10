@@ -5,9 +5,10 @@
   width: 100%;
   background-color: #ffffff;
   overflow-x: hidden;
+  margin-top: -105px; /* Pulls container to Y: 0 so background image sits directly behind transparent navbar */
 }
 
-/* Background image spans full width edge-to-edge */
+/* Background image spans full width edge-to-edge starting at screen top */
 .hero-bg-container {
   position: absolute;
   top: 0;
@@ -25,8 +26,14 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  padding-top: 237px; /* Offset below header (Y: 237 in Figma) */
+  padding-top: 180px; /* Offset below header (100px header + 80px spacing to badge) */
   text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  .hero-content {
+    padding-top: 155px;
+  }
 }
 
 /* AI Badge */
@@ -56,19 +63,157 @@
   letter-spacing: 0.02em;
 }
 
-/* Heading Image */
-.heading-img-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
+/* Hero Semantic H1 */
+.hero-main-title {
+  font-size: 2.85rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  max-width: 860px;
+  margin: 0 auto 20px auto;
   padding: 0 16px;
+  text-align: center;
 }
 
-.heading-img {
-  width: 100%;
+.hero-gradient-text {
+  background: linear-gradient(135deg, #0555FF 0%, #002299 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .hero-main-title {
+    font-size: 2.1rem;
+  }
+}
+
+/* Dual Lane Cards (Option C) */
+.hero-dual-lane-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   max-width: 820px;
-  height: auto;
-  object-fit: contain;
+  margin: 28px auto 24px auto;
+  padding: 0 16px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .hero-dual-lane-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-lane-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-lane-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(5, 85, 255, 0.1);
+  border-color: #93c5fd;
+}
+
+.hero-lane-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.hero-lane-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-lane-icon.products-icon {
+  background-color: #eff6ff;
+  color: #0555ff;
+}
+
+.hero-lane-icon.services-icon {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.hero-lane-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.hero-lane-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.hero-lane-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #475569;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.hero-lane-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0555ff;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.hero-lane-link:hover {
+  gap: 10px;
+  color: #002299;
+}
+
+.hero-direct-cta {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.hero-consult-btn {
+  background-color: #0555ff !important;
+  border-color: #0555ff !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 14px rgba(5, 85, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.hero-consult-btn:hover {
+  background-color: #002299 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 85, 255, 0.35);
 }
 
 /* Subheading */
@@ -95,7 +240,7 @@
   max-width: 480px;
   background-color: #ffffff;
   border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  border-radius: 0px !important;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
@@ -105,15 +250,17 @@
   box-shadow: none !important;
   font-size: 0.95rem;
   padding: 10px 16px;
+  border-radius: 0px !important;
 }
 
 .submit-btn {
-  background-color: #002299 !important;
+  background-color: #051d5c !important;
   color: #ffffff !important;
   border: none !important;
+  border-radius: 0px !important;
   font-size: 0.95rem;
   font-weight: 600;
-  padding: 10px 24px;
+  padding: 11px 24px;
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -122,7 +269,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #001aa6 !important;
+  background-color: #002299 !important;
 }
 
 /* Avatars & Ratings */
@@ -178,8 +325,10 @@
 
 @media (min-width: 992px) {
   .diagram-wrapper {
-    height: 426px; /* Exactly W 990 H 426 in Figma */
-    margin-bottom: 231px; /* Accounts for 106px V-logo card overflow + 125px Figma section gap */
+    height: 426px;
+    /* Exactly W 990 H 426 in Figma */
+    margin-bottom: 231px;
+    /* Accounts for 106px V-logo card overflow + 125px Figma section gap */
   }
 }
 
@@ -219,7 +368,8 @@
 @media (min-width: 992px) {
   .v-logo-wrapper {
     position: absolute;
-    top: 314px; /* Figma Y: 314 relative to diagram */
+    top: 314px;
+    /* Figma Y: 314 relative to diagram */
     left: 50%;
     transform: translateX(-50%);
     margin-top: 0;
@@ -265,7 +415,8 @@
   .about-section-container {
     flex-direction: row;
     justify-content: space-between;
-    gap: 42px; /* Figma Auto Layout gap: 42px */
+    gap: 42px;
+    /* Figma Auto Layout gap: 42px */
     height: 510px;
   }
 }
@@ -344,7 +495,8 @@
   width: 100%;
   max-width: 598px;
   display: flex;
-  gap: 10px; /* Figma Auto Layout gap: 9.67px */
+  gap: 10px;
+  /* Figma Auto Layout gap: 9.67px */
   height: 510px;
 }
 
@@ -441,7 +593,8 @@
   justify-content: space-between;
   padding: 60px 0 40px 0;
   overflow: hidden;
-  margin-bottom: 125px; /* Gap: 125 to next section as shown in Figma */
+  margin-bottom: 125px;
+  /* Gap: 125 to next section as shown in Figma */
 }
 
 .testimonials-top-content {
@@ -449,7 +602,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px; /* Figma Auto Layout gap: 8px */
+  gap: 8px;
+  /* Figma Auto Layout gap: 8px */
   z-index: 2;
 }
 
@@ -623,12 +777,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 125px; /* Gap: 125px as specified in Figma auto layout */
+  margin-bottom: 125px;
+  /* Gap: 125px as specified in Figma auto layout */
 }
 
 @media (min-width: 992px) {
   .services-section-wrapper {
-    height: 633px; /* W 1440 Fill x H 633 in Figma */
+    height: 633px;
+    /* W 1440 Fill x H 633 in Figma */
   }
 }
 
@@ -787,7 +943,7 @@
   .services-section-wrapper {
     height: auto;
   }
-  
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
@@ -810,7 +966,8 @@
 .platform-section-wrapper {
   position: relative;
   width: 100%;
-  margin-bottom: 125px; /* Gap: 125px as specified in Figma auto layout */
+  margin-bottom: 125px;
+  /* Gap: 125px as specified in Figma auto layout */
   overflow: hidden;
 }
 
@@ -841,14 +998,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 125px; /* Gap: 125px as specified in Figma auto layout */
+  margin-bottom: 125px;
+  /* Gap: 125px as specified in Figma auto layout */
   overflow: hidden;
 }
 
 .company-logos-container {
   width: 100%;
-  max-width: 1265px; /* Exact Figma inner container width: 1265px */
-  height: 72px; /* Exact Figma inner container height: 72px */
+  max-width: 1265px;
+  /* Exact Figma inner container width: 1265px */
+  height: 72px;
+  /* Exact Figma inner container height: 72px */
   display: flex;
   align-items: center;
   position: relative;
@@ -861,7 +1021,8 @@
   flex-direction: column;
   justify-content: center;
   min-width: 160px;
-  padding-right: 38px; /* Spacing 38px */
+  padding-right: 38px;
+  /* Spacing 38px */
   z-index: 5;
   background-color: #ffffff;
   box-shadow: 12px 0 16px -4px #ffffff;
@@ -900,7 +1061,8 @@
 .logos-marquee-track {
   display: flex;
   align-items: center;
-  gap: 38px; /* Exact Figma spacing: 38px */
+  gap: 38px;
+  /* Exact Figma spacing: 38px */
   white-space: nowrap;
   animation: logoMarquee 25s linear infinite;
   will-change: transform;
@@ -914,6 +1076,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-100% / 4));
   }
@@ -923,7 +1086,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: rgba(19, 19, 19, 0.45); /* Figma 32% / light tone #131313 */
+  color: rgba(19, 19, 19, 0.45);
+  /* Figma 32% / light tone #131313 */
   font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: -0.02em;
@@ -974,18 +1138,22 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 125px; /* Gap: 125px as specified in Figma auto layout */
+  margin-bottom: 125px;
+  /* Gap: 125px as specified in Figma auto layout */
 }
 
 .casestudy-container {
   width: 100%;
-  max-width: 1200px; /* Exact Figma width: 1200px */
-  min-height: 897px; /* Exact Figma height: 897px */
+  max-width: 1200px;
+  /* Exact Figma width: 1200px */
+  min-height: 897px;
+  /* Exact Figma height: 897px */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 16px;
-  gap: 56px; /* Figma Spacing 56 */
+  gap: 56px;
+  /* Figma Spacing 56 */
 }
 
 /* Header (W: 801.54px x H: 209px, Gap: 16px) */
@@ -997,7 +1165,8 @@
   width: 100%;
   max-width: 801.54px;
   min-height: 209px;
-  gap: 16px; /* Figma Gap 16 */
+  gap: 16px;
+  /* Figma Gap 16 */
 }
 
 .casestudy-badge-capsule {
@@ -1072,7 +1241,8 @@
 }
 
 .casestudy-nav-btn.prev-btn {
-  background-color: #94a3b8; /* Muted grey-blue button */
+  background-color: #94a3b8;
+  /* Muted grey-blue button */
   color: #ffffff;
 }
 
@@ -1081,7 +1251,8 @@
 }
 
 .casestudy-nav-btn.next-btn {
-  background-color: #002299; /* Primary dark blue button */
+  background-color: #002299;
+  /* Primary dark blue button */
   color: #ffffff;
 }
 
@@ -1095,7 +1266,7 @@
     height: auto;
     aspect-ratio: 1200 / 554;
   }
-  
+
   .casestudy-title {
     font-size: 1.8rem;
   }
@@ -1109,13 +1280,16 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 125px; /* Standard section gap */
+  margin-bottom: 125px;
+  /* Standard section gap */
 }
 
 .industries-container {
   width: 100%;
-  max-width: 1200px; /* Exact Figma width: 1200px */
-  min-height: 917.98px; /* Exact Figma height: 917.98px */
+  max-width: 1200px;
+  /* Exact Figma width: 1200px */
+  min-height: 917.98px;
+  /* Exact Figma height: 917.98px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1131,11 +1305,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 56px; /* Gap between header and 8 boxes: 56px */
+  margin-bottom: 56px;
+  /* Gap between header and 8 boxes: 56px */
 }
 
 .industries-title-block {
-  max-width: 512px; /* Figma Title Block W: 512px */
+  max-width: 512px;
+  /* Figma Title Block W: 512px */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1157,14 +1333,16 @@
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
   font-size: 2.35rem;
   font-weight: 700;
-  color: #2F2C25; /* Figma primary title color */
+  color: #2F2C25;
+  /* Figma primary title color */
   line-height: 1.18;
   letter-spacing: -0.02em;
   margin: 0;
 }
 
 .industries-highlight {
-  color: #0555FF; /* Figma blue theme color */
+  color: #0555FF;
+  /* Figma blue theme color */
   font-style: italic;
   font-weight: 700;
 }
@@ -1184,7 +1362,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 325.29px);
-  gap: 10px; /* Precise gap fitting 1200 x 660 layout */
+  gap: 10px;
+  /* Precise gap fitting 1200 x 660 layout */
   width: 100%;
   max-width: 1200px;
   height: 660px;
@@ -1342,13 +1521,16 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 125px; /* Standard section gap */
+  margin-bottom: 125px;
+  /* Standard section gap */
 }
 
 .integrations-container {
   width: 100%;
-  max-width: 1200px; /* Exact Figma width: 1200px */
-  min-height: 298.85px; /* Exact Figma height: 298.85px */
+  max-width: 1200px;
+  /* Exact Figma width: 1200px */
+  min-height: 298.85px;
+  /* Exact Figma height: 298.85px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1438,13 +1620,16 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 125px; /* Standard section gap */
+  margin-bottom: 125px;
+  /* Standard section gap */
 }
 
 .appointment-container {
   width: 100%;
-  max-width: 1200px; /* Exact Figma width: 1200px */
-  min-height: 901.83px; /* Exact Figma height: 901.83px */
+  max-width: 1200px;
+  /* Exact Figma width: 1200px */
+  min-height: 901.83px;
+  /* Exact Figma height: 901.83px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1460,7 +1645,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 56px; /* Gap to main box */
+  margin-bottom: 56px;
+  /* Gap to main box */
 }
 
 .appointment-badge-capsule {
@@ -1484,7 +1670,8 @@
   letter-spacing: -0.02em;
   margin: 0 0 16px 0;
   width: 100%;
-  max-width: 732px; /* Exact Figma Title Spacing: 732w x 100h */
+  max-width: 732px;
+  /* Exact Figma Title Spacing: 732w x 100h */
 }
 
 .appointment-highlight {
@@ -1563,7 +1750,8 @@
   color: #ffffff;
   line-height: 1.2;
   margin: 0 0 28px 0;
-  max-width: 387px; /* Figma Title W: 387px x H: 100px */
+  max-width: 387px;
+  /* Figma Title W: 387px x H: 100px */
   letter-spacing: -0.01em;
 }
 
@@ -1665,13 +1853,16 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 125px; /* Standard section gap */
+  margin-bottom: 125px;
+  /* Standard section gap */
 }
 
 .faq-container {
   width: 100%;
-  max-width: 1200px; /* Exact Figma width: 1200px */
-  min-height: 586px; /* Exact Figma height: 586px */
+  max-width: 1200px;
+  /* Exact Figma width: 1200px */
+  min-height: 586px;
+  /* Exact Figma height: 586px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1733,7 +1924,8 @@
   letter-spacing: -0.02em;
   margin: 0;
   width: 100%;
-  max-width: 303px; /* Exact Figma Title: 303w x 164h Hug */
+  max-width: 303px;
+  /* Exact Figma Title: 303w x 164h Hug */
   min-height: 164px;
 }
 
@@ -1766,7 +1958,8 @@
 /* Right Column / Accordion (W: 598px x H: 726px) */
 .faq-right-column {
   width: 598px;
-  min-width: 598px; /* Exact Figma Right Box Width: 598px */
+  min-width: 598px;
+  /* Exact Figma Right Box Width: 598px */
   min-height: 586px;
   border-left: 1px solid #E2E8F0;
   display: flex;
@@ -1897,48 +2090,46 @@
   justify-content: center;
   background-color: #020B26;
   overflow: hidden;
-  height: 550px;
+  height: 560px;
 }
 
 .cta-banner-container {
   width: 100%;
-  max-width: 1440px; /* Exact Figma width: 1440px */
-  height: 550px; /* Exact Figma height: 550px */
+  max-width: 1440px;
+  height: 560px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 16px;
+  padding: 0 24px;
 }
 
 /* Striped Graphic Decorative Images (up.png & down.png) */
 .cta-graphic-top-right {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 40px;
+  right: 64px;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.6;
+  opacity: 0.72;
   mix-blend-mode: screen;
 }
 
 .cta-graphic-bottom-left {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 40px;
+  left: 64px;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.6;
+  opacity: 0.72;
   mix-blend-mode: screen;
 }
 
 .cta-graphic-img {
-  width: 332px !important;
-  height: 184px !important;
+  width: 300px !important;
+  height: auto !important;
   object-fit: contain;
   display: block;
-  opacity: 0.6;
-  mix-blend-mode: screen;
 }
 
 /* Centered CTA Content Box */
@@ -1950,117 +2141,165 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  max-width: 814px; /* Exact Figma Title Container: 814w x 144h Hug */
+  max-width: 880px;
 }
 
+/* Badge (Rectangle with Square Corners as in Figma Reference) */
 .cta-badge-capsule {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 20px;
-  margin-bottom: 24px;
-  border-radius: 50px;
+  padding: 6px 14px;
+  margin-bottom: 22px;
+  border-radius: 0px !important;
   background-color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   width: auto;
-  max-width: none;
-  height: 40px;
+  max-width: 100%;
+  height: auto;
+  min-height: 32px;
   white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.cta-badge-capsule .badge-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 0px !important;
+  background-color: #0044cc;
+  flex-shrink: 0;
 }
 
 .cta-badge-capsule .badge-text {
+  font-family: inherit;
+  font-size: clamp(0.56rem, 2.3vw, 0.8rem);
+  font-weight: 500;
+  color: #1e293b;
   white-space: nowrap;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
 }
 
+/* Main Title */
 .cta-main-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-  font-size: 3.1rem;
+  font-family: inherit;
+  font-size: 3.75rem;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
   margin: 0 0 16px 0;
   width: 100%;
-  max-width: 814px; /* Exact Figma Main Title: 814w x 144h Hug */
-  min-height: 144px;
+  max-width: 880px;
   text-align: center;
 }
 
+/* Subtext */
 .cta-subtext {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.75);
+  font-family: inherit;
+  font-size: clamp(0.66rem, 2.6vw, 1.02rem);
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
   margin: 0 0 32px 0;
   width: 100%;
-  max-width: 491px; /* Exact Figma Sub text: 491w x 24h Hug */
-  min-height: 24px;
+  max-width: 620px;
   text-align: center;
   font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Email Form Box (W: 470px x H: 47px) */
+/* Email Form Box */
 .cta-form-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 470px;
-  height: 47px;
+  max-width: 500px;
+  height: 48px;
+  margin: 0 auto;
 }
 
 .cta-form-container {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
   width: 100%;
-  max-width: 470px;
-  height: 47px;
+  max-width: 500px;
+  height: 48px;
   background-color: #ffffff;
-  border-radius: 6px;
+  border-radius: 0px !important;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .cta-email-input {
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
   border: none !important;
   box-shadow: none !important;
-  font-size: 0.95rem;
-  padding: 10px 18px;
+  font-size: 0.9rem;
+  padding: 0 18px;
   outline: none;
-  color: #1e293b;
+  color: #0f172a;
+  border-radius: 0px !important;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+.cta-email-input::placeholder {
+  color: #64748b;
+  font-size: 0.88rem;
 }
 
 .cta-submit-btn {
-  background-color: #002299 !important;
+  flex: 0 0 auto;
+  height: 100%;
+  background-color: #003bb3 !important;
   color: #ffffff !important;
   border: none !important;
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 10px 24px;
+  border-radius: 0px !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0 22px;
   white-space: nowrap;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   transition: background-color 0.2s ease !important;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .cta-submit-btn:hover {
-  background-color: #001aa6 !important;
+  background-color: #002d8f !important;
 }
 
 /* 2. Site Footer Navigation Bar (W: 1440 Fill x H: 492) */
 .site-footer {
+  position: relative;
   width: 100%;
-  min-height: 492px;
-  background-color: #0B0B0C;
+  min-height: 480px;
+  background-color: #0e0e0e;
+  background-image: url('/images/footer_bg_1920.png?v=6');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   color: #ffffff;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 64px 0 36px 0;
   display: flex;
   justify-content: center;
+  font-family: inherit;
+  overflow: hidden;
 }
 
 .site-footer-container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 1440px;
   padding: 0 80px;
@@ -2100,87 +2339,76 @@
 }
 
 .footer-tagline {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 1.25rem;
+  font-family: inherit;
+  font-size: 1.15rem;
   font-weight: 500;
   color: #ffffff;
-  line-height: 1.35;
-  margin: 0 0 10px 0;
+  line-height: 1.4;
+  margin: 0 0 24px 0;
   letter-spacing: -0.01em;
   max-width: 440px;
 }
 
-.footer-address {
-  font-size: 0.85rem;
-  color: #8E8E93;
-  line-height: 1.5;
-  margin: 0 0 10px 0;
-  max-width: 380px;
-}
-
-.footer-contact {
-  font-size: 0.9rem;
-  color: #8E8E93;
-  margin: 0 0 28px 0;
-}
-
-.footer-contact a {
-  color: #8E8E93;
-  text-decoration: none;
-  font-weight: 400;
-  transition: color 0.2s ease;
-}
-
-.footer-contact a:hover {
-  color: #ffffff;
-}
-
 .footer-work-email-form {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
 }
 
 .work-email-box {
   display: flex;
+  align-items: stretch;
   width: 100%;
-  max-width: 300px;
-  height: 44px;
-  border-radius: 6px;
-  overflow: hidden;
+  max-width: 320px;
+  height: 46px;
+  border-radius: 0px !important;
 }
 
 .work-email-box input {
-  background-color: #1C1C1E;
-  border: 1px solid #2C2C2E;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 46px;
+  background-color: #121316;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-right: none;
   color: #ffffff;
-  font-size: 0.9rem;
-  padding: 10px 16px;
+  font-size: 0.88rem;
+  padding: 0 16px;
   outline: none;
-  flex: 1;
-  border-radius: 6px 0 0 6px;
+  border-radius: 0px !important;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.work-email-box input:focus {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .work-email-box input::placeholder {
-  color: #8E8E93;
+  color: #71717a;
+  font-size: 0.86rem;
 }
 
 .work-email-box button {
-  background-color: #007AFF;
-  border: none;
-  color: #ffffff;
-  width: 44px;
-  height: 44px;
-  border-radius: 0 6px 6px 0;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  background-color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: none;
+  color: #0b0c0f;
+  border-radius: 0px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 0;
 }
 
 .work-email-box button:hover {
-  background-color: #0056b3;
+  background-color: #0555FF;
+  color: #ffffff;
+  border-color: #0555FF;
 }
 
 .footer-links-grid {
@@ -2195,10 +2423,10 @@
 }
 
 .footer-col-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-family: inherit;
   font-size: 0.95rem;
-  font-weight: 500;
-  color: #8E8E93;
+  font-weight: 600;
+  color: #ffffff;
   margin-bottom: 20px;
   text-transform: capitalize;
 }
@@ -2213,33 +2441,65 @@
 }
 
 .footer-links-col a {
-  font-size: 0.95rem;
-  color: #E5E5EA;
-  text-decoration: none;
+  font-size: 0.92rem;
+  color: #8E8E93;
+  text-decoration: none !important;
   transition: color 0.2s ease;
   font-weight: 400;
 }
 
 .footer-links-col a:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
+/* Social Icon Buttons (Square Radius) */
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #121316;
+  color: #8E8E93;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.footer-social-btn:hover {
+  background-color: #0555FF;
+  color: #ffffff;
+  border-color: #0555FF;
+  transform: translateY(-2px);
+}
+
+/* Bottom Bar: Copyright & Legal (Small letters, no underlines) */
 .footer-bottom-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 28px;
   margin-top: 56px;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: #8E8E93;
 }
 
 .copyright-text {
   margin: 0;
-  letter-spacing: 0.05em;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+  color: #8E8E93;
+  font-size: 0.82rem;
+  text-transform: none !important;
 }
 
 .legal-links {
@@ -2249,13 +2509,16 @@
 
 .legal-links a {
   color: #8E8E93;
-  text-decoration: none;
-  letter-spacing: 0.05em;
+  text-decoration: none !important;
+  letter-spacing: 0.01em;
+  font-size: 0.82rem;
+  text-transform: none !important;
   transition: color 0.2s ease;
 }
 
 .legal-links a:hover {
   color: #ffffff;
+  text-decoration: none !important;
 }
 
 /* Responsive Media Queries */
@@ -2264,20 +2527,45 @@
     padding: 0 24px;
   }
 
-  .cta-banner-wrapper, .cta-banner-container {
+  .cta-banner-wrapper {
     height: auto;
-    min-height: 480px;
-    padding: 60px 16px;
+    min-height: auto;
+    padding: 70px 20px 80px;
+  }
+
+  .cta-banner-container {
+    height: auto;
+    min-height: auto;
+    padding: 0;
   }
 
   .cta-main-title {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
+    line-height: 1.2;
     max-width: 100%;
-    min-height: auto;
+    margin-bottom: 16px;
+  }
+
+  .cta-subtext {
+    font-size: 0.95rem;
+    max-width: 520px;
+    margin-bottom: 30px;
+  }
+
+  .cta-graphic-top-right {
+    top: 15px;
+    right: 20px;
+    opacity: 0.4;
+  }
+
+  .cta-graphic-bottom-left {
+    bottom: 15px;
+    left: 20px;
+    opacity: 0.4;
   }
 
   .cta-graphic-img {
-    width: 160px !important;
+    width: 200px !important;
   }
 
   .footer-top-grid {
@@ -2286,28 +2574,177 @@
   }
 
   .footer-links-grid {
-    flex-wrap: wrap;
-    gap: 32px 48px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px 24px;
+    width: 100%;
+  }
+
+  .footer-socials-col {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-banner-wrapper {
+    padding: 60px 16px 70px;
+  }
+
+  /* Hide decorative corner stripes on mobile so they don't collide with text */
+  .cta-graphic-top-right,
+  .cta-graphic-bottom-left {
+    display: none !important;
+  }
+
+  .cta-badge-capsule {
+    padding: 5px 12px;
+    max-width: 100%;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    white-space: nowrap !important;
+  }
+
+  .cta-badge-capsule .badge-text {
+    font-size: clamp(0.56rem, 2.3vw, 0.76rem);
+    line-height: 1.2;
+    white-space: nowrap !important;
+  }
+
+  .cta-main-title {
+    font-size: 2.1rem;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+
+  .cta-subtext {
+    font-size: clamp(0.64rem, 2.6vw, 0.92rem);
+    line-height: 1.4;
+    max-width: 100%;
+    margin-bottom: 26px;
+    white-space: nowrap !important;
   }
 }
 
 @media (max-width: 575px) {
+  .cta-banner-wrapper {
+    padding: 48px 14px 58px;
+  }
+
+  .cta-badge-capsule {
+    padding: 4px 8px;
+    gap: 5px;
+    margin-bottom: 16px;
+    min-height: 28px;
+    white-space: nowrap !important;
+  }
+
+  .cta-badge-capsule .badge-bullet {
+    width: 4px;
+    height: 4px;
+  }
+
+  .cta-badge-capsule .badge-text {
+    font-size: clamp(0.52rem, 2.3vw, 0.72rem);
+    white-space: nowrap !important;
+  }
+
   .cta-main-title {
-    font-size: 1.7rem;
+    font-size: 1.85rem;
+    line-height: 1.22;
+    margin-bottom: 12px;
+  }
+
+  .cta-subtext {
+    font-size: clamp(0.62rem, 2.7vw, 0.86rem);
+    white-space: nowrap !important;
+    margin-bottom: 22px;
+  }
+
+  .cta-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 46px;
   }
 
   .cta-form-container {
-    flex-direction: column;
-    height: auto;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    width: 100%;
+    height: 46px !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 0px !important;
+    overflow: hidden;
+    gap: 0 !important;
   }
 
   .cta-email-input {
-    border-radius: 6px 6px 0 0;
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    height: 100% !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    padding: 0 12px;
+    font-size: 0.82rem;
+    color: #0f172a;
+  }
+
+  .cta-email-input::placeholder {
+    font-size: 0.8rem;
+    color: #64748b;
   }
 
   .cta-submit-btn {
-    border-radius: 0 0 6px 6px;
+    flex: 0 0 auto;
+    width: auto;
+    height: 100% !important;
+    border-radius: 0px !important;
+    border: none !important;
     justify-content: center;
+    background-color: #003bb3 !important;
+    box-shadow: none !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0 14px;
+    white-space: nowrap !important;
+    gap: 6px;
+  }
+
+  .footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 12px;
+    width: 100%;
+  }
+
+  .footer-links-col a {
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .footer-col-title {
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+    white-space: nowrap;
+  }
+
+  .footer-socials-col {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
   }
 
   .footer-bottom-bar {
@@ -2317,15 +2754,62 @@
   }
 }
 
+@media (max-width: 375px) {
+  .cta-banner-wrapper {
+    padding: 44px 10px 52px;
+  }
 
+  .cta-badge-capsule {
+    padding: 3px 6px;
+    gap: 4px;
+  }
 
+  .cta-badge-capsule .badge-text {
+    font-size: 0.52rem;
+  }
 
+  .cta-main-title {
+    font-size: 1.65rem;
+  }
 
+  .cta-subtext {
+    font-size: 0.6rem;
+  }
 
+  .cta-form-wrapper,
+  .cta-form-container {
+    height: 44px !important;
+  }
 
+  .cta-email-input {
+    padding: 0 8px;
+    font-size: 0.76rem;
+  }
 
+  .cta-email-input::placeholder {
+    font-size: 0.72rem;
+  }
 
+  .cta-submit-btn {
+    padding: 0 10px;
+    font-size: 0.76rem;
+    gap: 4px;
+  }
 
+  .footer-links-grid {
+    gap: 24px 8px;
+  }
 
+  .footer-links-col a {
+    font-size: 0.78rem;
+  }
 
+  .footer-col-title {
+    font-size: 0.82rem;
+  }
 
+  .footer-social-btn {
+    width: 35px;
+    height: 35px;
+  }
+}

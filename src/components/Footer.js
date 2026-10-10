@@ -4,10 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
+import {
+  FaLinkedinIn,
+  FaXTwitter,
+  FaInstagram,
+  FaFacebookF
+} from 'react-icons/fa6';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
-  const [workEmail, setWorkEmail] = useState('');
+  const [newsletterEmail, setNewsletterEmail] = useState('');
 
   const handleCtaSubmit = (e) => {
     e.preventDefault();
@@ -17,11 +23,11 @@ export default function Footer() {
     }
   };
 
-  const handleWorkEmailSubmit = (e) => {
+  const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    if (workEmail) {
-      alert(`Work email submitted: ${workEmail}`);
-      setWorkEmail('');
+    if (newsletterEmail) {
+      alert(`Subscribed to newsletter: ${newsletterEmail}`);
+      setNewsletterEmail('');
     }
   };
 
@@ -73,9 +79,9 @@ export default function Footer() {
               Digital Reality
             </h2>
 
-            {/* Sub Text (491w x 24h Hug) */}
+            {/* Sub Text (Reduced to fit in one line across all resolutions) */}
             <p className="cta-subtext">
-              Let's create innovative solutions together that drive your business forward.
+              Let's create innovative solutions for your business.
             </p>
 
             {/* Book a Demo Form Box (470w x 47h) */}
@@ -116,33 +122,23 @@ export default function Footer() {
                 />
               </Link>
 
-              {/* Tagline */}
+              {/* Subtext */}
               <h3 className="footer-tagline">
-                Premium IT Solutions, Cloud Architecture &amp; AI Integrations
+                Where Innovation Meets Organization
               </h3>
 
-              {/* Address */}
-              <p className="footer-address">
-                39/2475-B1, SUITE C54 LR, TOWERS, SJRRA 104 S J RD, Palarivattom, Ernakulam, Ernakulam- 682025, Kerala
-              </p>
-
-              {/* Contact Link */}
-              <p className="footer-contact">
-                Contact: <a href="mailto:contact@heapvue.com">contact@heapvue.com</a>
-              </p>
-
-              {/* Work Email Form */}
-              <form onSubmit={handleWorkEmailSubmit} className="footer-work-email-form">
+              {/* Subscribe Newsletter Form */}
+              <form onSubmit={handleNewsletterSubmit} className="footer-work-email-form">
                 <div className="work-email-box">
                   <input
                     type="email"
-                    placeholder="Work Email"
-                    value={workEmail}
-                    onChange={(e) => setWorkEmail(e.target.value)}
+                    placeholder="Subscribe newsletter"
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
                     required
                   />
-                  <button type="submit" aria-label="Submit work email">
-                    <FiArrowRight size={16} />
+                  <button type="submit" aria-label="Subscribe to newsletter">
+                    <FiArrowRight size={18} />
                   </button>
                 </div>
               </form>
@@ -164,11 +160,11 @@ export default function Footer() {
               <div className="footer-links-col">
                 <h4 className="footer-col-title">Products</h4>
                 <ul>
-                  <li><a href="https://vuecart.heapvue.com/in-en" target="_blank" rel="noopener noreferrer">VueCart</a></li>
-                  <li><a href="https://heapsync.heapvue.com/" target="_blank" rel="noopener noreferrer">HeapSync</a></li>
-                  <li><a href="https://chatpress.heapvue.com/" target="_blank" rel="noopener noreferrer">ChatPress</a></li>
-                  <li><a href="https://apptuner.dev/" target="_blank" rel="noopener noreferrer">AppTuner</a></li>
-                  <li><a href="https://dev.learnly.heapvue.com/" target="_blank" rel="noopener noreferrer">Learnly</a></li>
+                  <li><a href="https://vuecart.heapvue.com/in-en" target="_blank" rel="noopener noreferrer">Vuecart</a></li>
+                  <li><a href="https://heapsync.heapvue.com/" target="_blank" rel="noopener noreferrer">Heapsync</a></li>
+                  <li><a href="https://chatpress.heapvue.com/" target="_blank" rel="noopener noreferrer">Chatpress</a></li>
+                  <li><a href="https://apptuner.dev/" target="_blank" rel="noopener noreferrer">Apptuner</a></li>
+                  <li><a href="https://learnly.heapvue.com/" target="_blank" rel="noopener noreferrer">Learnly</a></li>
                 </ul>
               </div>
 
@@ -183,26 +179,59 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* Socials */}
-              <div className="footer-links-col">
+              {/* Socials - Icon Buttons */}
+              <div className="footer-links-col footer-socials-col">
                 <h4 className="footer-col-title">Socials</h4>
-                <ul>
-                  <li><a href="https://www.linkedin.com/company/heapvue/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                  <li><a href="https://x.com/heapvue" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
-                  <li><a href="https://www.facebook.com/heapvue" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                </ul>
+                <div className="footer-social-icons">
+                  <a
+                    href="https://www.linkedin.com/company/heapvue/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="footer-social-btn"
+                  >
+                    <FaLinkedinIn size={16} />
+                  </a>
+                  <a
+                    href="https://x.com/heapvue"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X"
+                    className="footer-social-btn"
+                  >
+                    <FaXTwitter size={15} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/heapvue/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="footer-social-btn"
+                  >
+                    <FaInstagram size={16} />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/heapvue"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    className="footer-social-btn"
+                  >
+                    <FaFacebookF size={15} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Bottom Bar: Copyright & Legal */}
+          {/* Bottom Bar: Copyright & Legal (Small letters, no underlines) */}
           <div className="footer-bottom-bar">
             <p className="copyright-text">
-              &copy; {currentYear} HEAPVUE. ALL RIGHTS RESERVED
+              &copy; {currentYear} Heapvue. All rights reserved.
             </p>
             <div className="legal-links">
-              <Link href="/privacy">PRIVACY POLICY</Link>
-              <Link href="/terms">TERMS OF SERVICES</Link>
+              <Link href="/privacy">Privacy Policy</Link>
+              <Link href="/terms">Terms of Services</Link>
             </div>
           </div>
         </div>
