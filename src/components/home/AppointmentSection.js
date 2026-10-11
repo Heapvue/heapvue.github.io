@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FiArrowRight, FiClock, FiShield, FiCode, FiCheck } from 'react-icons/fi';
+import { FiArrowRight, FiCode, FiLayers, FiShield, FiClock } from 'react-icons/fi';
 
 export default function AppointmentSection() {
   return (
@@ -25,81 +25,83 @@ export default function AppointmentSection() {
         </div>
 
         {/* Content Box */}
-        <div className="appointment-main-box row g-4 align-items-stretch" style={{ background: '#ffffff', borderRadius: '16px', border: '1px solid #e2e8f0', padding: '36px', boxShadow: '0 8px 30px rgba(0,0,0,0.04)' }}>
-          {/* Left Box */}
-          <div className="col-12 col-lg-6 d-flex flex-column justify-content-between pe-lg-4">
-            <div>
-              <div className="pipeline-tag mb-3 d-inline-block px-3 py-1 rounded-pill" style={{ backgroundColor: '#eff6ff', color: '#0555ff', fontSize: '0.8rem', fontWeight: 700 }}>
+        <div className="appointment-main-box">
+          {/* Left Box (Dark textured background with warm amber glow, matching reference image) */}
+          <div className="appointment-left-box">
+            <div className="appointment-left-top">
+              <div className="pipeline-tag">
                 DIRECT ACCESS TO PRACTITIONERS
               </div>
 
-              <h3 className="appointment-box-title mb-3" style={{ fontSize: '1.75rem', fontWeight: 700, color: '#0f172a' }}>
+              <h3 className="appointment-box-title">
                 Schedule an Architecture &amp; Solution Discovery Call
               </h3>
+            </div>
 
-              <p className="text-muted mb-4" style={{ lineHeight: 1.6 }}>
+            <div className="appointment-left-bottom">
+              <Link href="/contact" className="appointment-demo-btn">
+                Book Consultation Now <FiArrowRight size={16} />
+              </Link>
+
+              <p className="appointment-box-subtext">
                 Connect directly with our solutions architects to evaluate feasibility, determine buy vs. build trade-offs, and receive transparent estimates.
               </p>
             </div>
-
-            <div className="pt-2">
-              <Link href="/contact" className="btn btn-primary d-inline-flex align-items-center gap-2 px-4 py-3 fw-semibold shadow-sm" style={{ backgroundColor: '#0555ff', borderRadius: '8px', fontSize: '0.95rem' }}>
-                Book Consultation Now <FiArrowRight size={16} />
-              </Link>
-            </div>
           </div>
 
-          {/* Right Box (Replaces static calender.png image with real interactive schedule card) */}
-          <div className="col-12 col-lg-6">
-            <div className="p-4 rounded-3 h-100 d-flex flex-column justify-content-center" style={{ backgroundColor: '#f8fafc', border: '1px solid #e2e8f0' }}>
-              <h4 className="fw-bold mb-3 text-dark" style={{ fontSize: '1.1rem' }}>
-                What We Cover in Your 30-Minute Session:
-              </h4>
-
-              <div className="d-flex flex-column gap-3 mb-4">
-                <div className="d-flex align-items-start gap-3">
-                  <div className="rounded-circle p-1 bg-white border d-flex align-items-center justify-content-center text-primary mt-1" style={{ width: '28px', height: '28px' }}>
-                    <FiCode size={14} />
-                  </div>
-                  <div>
-                    <h6 className="mb-0 fw-bold" style={{ fontSize: '0.92rem' }}>Technical Feasibility &amp; Stack Fit</h6>
-                    <small className="text-muted">Analysis of your existing codebase, APIs, and cloud environment.</small>
-                  </div>
+          {/* Right Box: Modern Gradient Theme Cards (Zero Radius, No Buttons) */}
+          <div className="appointment-right-box">
+            <div className="appointment-cards-grid">
+              {/* Card 1: Electric Heapvue Blue */}
+              <div className="appointment-coverage-card card-heapvue-blue">
+                <div className="coverage-card-icon">
+                  <FiCode size={24} />
                 </div>
-
-                <div className="d-flex align-items-start gap-3">
-                  <div className="rounded-circle p-1 bg-white border d-flex align-items-center justify-content-center text-success mt-1" style={{ width: '28px', height: '28px' }}>
-                    <FiCheck size={14} />
-                  </div>
-                  <div>
-                    <h6 className="mb-0 fw-bold" style={{ fontSize: '0.92rem' }}>Buy vs. Build vs. Customise Evaluation</h6>
-                    <small className="text-muted">Compare proprietary product deployment vs. custom engineering.</small>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-start gap-3">
-                  <div className="rounded-circle p-1 bg-white border d-flex align-items-center justify-content-center text-warning mt-1" style={{ width: '28px', height: '28px' }}>
-                    <FiShield size={14} />
-                  </div>
-                  <div>
-                    <h6 className="mb-0 fw-bold" style={{ fontSize: '0.92rem' }}>Compliance &amp; Security Baseline</h6>
-                    <small className="text-muted">Initial review of data privacy (DPDP, GDPR) and zero-trust guidelines.</small>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-start gap-3">
-                  <div className="rounded-circle p-1 bg-white border d-flex align-items-center justify-content-center text-info mt-1" style={{ width: '28px', height: '28px' }}>
-                    <FiClock size={14} />
-                  </div>
-                  <div>
-                    <h6 className="mb-0 fw-bold" style={{ fontSize: '0.92rem' }}>Rapid Response SLA</h6>
-                    <small className="text-muted">All inquiries acknowledged with direct calendar access within 24 hours.</small>
-                  </div>
-                </div>
+                <h5 className="coverage-card-title">
+                  Technical Feasibility &amp; Stack Fit
+                </h5>
+                <p className="coverage-card-desc">
+                  Analysis of your existing codebase, APIs, and cloud environment.
+                </p>
               </div>
 
-              <div className="text-center pt-2 border-top">
-                <span className="text-muted small">No sales pressure. Direct discussion with technology architects.</span>
+              {/* Card 2: Deep Obsidian Navy */}
+              <div className="appointment-coverage-card card-deep-navy">
+                <div className="coverage-card-icon">
+                  <FiLayers size={24} />
+                </div>
+                <h5 className="coverage-card-title">
+                  Buy vs. Build vs. Customise Evaluation
+                </h5>
+                <p className="coverage-card-desc">
+                  Compare proprietary product deployment vs. custom engineering.
+                </p>
+              </div>
+
+              {/* Card 3: Royal Midnight Blue */}
+              <div className="appointment-coverage-card card-royal-blue">
+                <div className="coverage-card-icon">
+                  <FiShield size={24} />
+                </div>
+                <h5 className="coverage-card-title">
+                  Compliance &amp; Security Baseline
+                </h5>
+                <p className="coverage-card-desc">
+                  Initial review of data privacy (DPDP, GDPR) and zero-trust guidelines.
+                </p>
+              </div>
+
+              {/* Card 4: Dark Slate */}
+              <div className="appointment-coverage-card card-dark-slate">
+                <div className="coverage-card-icon">
+                  <FiClock size={24} />
+                </div>
+                <h5 className="coverage-card-title">
+                  Rapid Response SLA
+                </h5>
+                <p className="coverage-card-desc">
+                  All inquiries acknowledged with direct calendar access within 24 hours.
+                </p>
               </div>
             </div>
           </div>

@@ -81,6 +81,10 @@
 .site-navbar .container {
   display: flex;
   align-items: center;
+  max-width: 1360px !important;
+  width: 100% !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
 }
 
 .nav-links-list {

@@ -7,6 +7,7 @@ import IntegrationsSection from '@/components/home/IntegrationsSection';
 import AppointmentSection from '@/components/home/AppointmentSection';
 import FaqSection from '@/components/home/FaqSection';
 import PlatformSection from '@/components/home/PlatformSection';
+import ClientsSection from '@/components/home/ClientsSection';
 import CaseStudySection from '@/components/home/CaseStudySection';
 
 const homeFaqs = [
@@ -55,6 +56,9 @@ export default function Home() {
 
       {/* Platform Section */}
       <PlatformSection />
+
+      {/* Trusted by Clients Section */}
+      <ClientsSection />
 
       {/* Featured Case Study Section (Live HTML banner with interactive controls) */}
       <CaseStudySection />

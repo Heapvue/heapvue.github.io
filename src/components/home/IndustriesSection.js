@@ -73,7 +73,7 @@ export default function IndustriesSection() {
           <div className="industries-title-block">
             {/* Pill Badge Capsule */}
             <div className="industries-badge-capsule">
-              <span className="badge-bullet"></span>
+              <span className="badge-bullet">▪</span>
               <span className="badge-text">Industries We Work For</span>
             </div>
 
@@ -81,7 +81,7 @@ export default function IndustriesSection() {
             <h2 className="industries-main-title">
               Smart Technology <span className="industries-highlight">Solutions</span>
               <br />
-              for <span className="industries-highlight">Modern Industries</span>.
+              for <span className="industries-highlight">Modern Industries</span>
             </h2>
           </div>
 

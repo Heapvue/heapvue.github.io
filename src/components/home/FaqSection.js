@@ -65,14 +65,14 @@ export default function FaqSection({ customFaqs }) {
               {/* Badge Capsule */}
               <div className="faq-badge-capsule">
                 <span className="badge-bullet"></span>
-                <span className="badge-text">Frequently Asked Questions</span>
+                <span className="badge-text">Book an Appointment</span>
               </div>
 
               {/* Left Title Block */}
               <h2 className="faq-title">
-                Have <span className="faq-highlight">Questions</span>?
+                Have <span className="faq-highlight">Questions?</span>
                 <br />
-                We Got Answers
+                We got Answers
               </h2>
             </div>
 
@@ -100,6 +100,7 @@ export default function FaqSection({ customFaqs }) {
                   className={`faq-accordion-item ${isOpen ? 'active' : ''}`}
                 >
                   <button
+                    type="button"
                     className="faq-accordion-header"
                     onClick={() => toggleFaq(itemId)}
                     aria-expanded={isOpen}
