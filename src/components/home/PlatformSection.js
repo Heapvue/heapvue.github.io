@@ -3,13 +3,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  FiArrowRight, 
-  FiArrowUpRight, 
-  FiTrendingUp, 
-  FiShoppingBag, 
-  FiUsers, 
-  FiActivity 
+import {
+  FiArrowRight,
+  FiArrowUpRight,
+  FiTrendingUp,
+  FiShoppingBag,
+  FiUsers,
+  FiActivity
 } from 'react-icons/fi';
 
 export default function PlatformSection() {
@@ -29,10 +29,10 @@ export default function PlatformSection() {
           </div>
 
           {/* SVG Curved Dashed Connector Lines */}
-          <svg 
-            className="platform-connector-svg" 
-            viewBox="0 0 1140 460" 
-            fill="none" 
+          <svg
+            className="platform-connector-svg"
+            viewBox="0 0 1140 460"
+            fill="none"
             preserveAspectRatio="none"
             aria-hidden="true"
           >
@@ -80,11 +80,11 @@ export default function PlatformSection() {
           {/* Central White Disc with Heapvue Logo */}
           <div className="platform-center-disc-wrapper">
             <div className="platform-center-disc">
-              <Image 
-                src="/images/Heapvue Icon.png" 
-                alt="Heapvue Logo" 
-                width={112} 
-                height={112} 
+              <Image
+                src="/images/Heapvue Icon.png"
+                alt="Heapvue Logo"
+                width={112}
+                height={112}
                 className="platform-v-symbol-img"
                 priority
               />
@@ -126,7 +126,7 @@ export default function PlatformSection() {
                   <FiTrendingUp className="platform-trend-icon" size={19} />
                 </div>
                 <p className="platform-card-desc">
-                  Stores supported by VueCart.
+                  Stores supported by Vuecart.
                 </p>
               </div>
             </div>

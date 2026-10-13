@@ -5,7 +5,7 @@ import FaqSection from '@/components/home/FaqSection';
 
 export const metadata = {
   title: 'Products | Heapvue - Ready-to-Deploy Software Products',
-  description: 'Explore Heapvue’s proprietary software platforms: VueCart headless commerce, HeapSync CRM, ChatPress AI, AppTuner, and Learnly LMS.',
+  description: 'Explore Heapvue’s proprietary software platforms: Vuecart headless commerce, Heapsync CRM, ChatPress AI, Apptuner, and Learnly LMS.',
 };
 
 const productFaqs = [

@@ -26,7 +26,7 @@ Before executing page restructuring, a fundamental strategic choice must be lock
 
 | Model | Current State | Proposed Structure | Recommendation & Impact |
 | :--- | :--- | :--- | :--- |
-| **Option A: Product Company** | Home sells revenue intelligence. | Home leads with flagship product (HeapSync / ChatPress / Revenue AI). Solutions, consulting, and industries become secondary under `/services`. | Best if Heapvue's primary enterprise value is recurring software licenses (SaaS). |
+| **Option A: Product Company** | Home sells revenue intelligence. | Home leads with flagship product (Heapsync / ChatPress / Revenue AI). Solutions, consulting, and industries become secondary under `/services`. | Best if Heapvue's primary enterprise value is recurring software licenses (SaaS). |
 | **Option B: Services Company** | Solutions, consulting, and industries describe custom software development. | Home leads with engineering capabilities and what Heapvue builds. Products sit as a secondary showcase of proprietary accelerators/frameworks. | Best if Heapvue's revenue is driven by custom engineering, cloud delivery, and client retainers. |
 | **Option C: Hybrid (Both)** *(Recommended)* | Mixed messaging across pages. | **Two distinct lanes from the hero:** "Products" (off-the-shelf software) and "Services" (custom engineering & consulting), each with its own index, FAQ, and CTA. Every industry sector receives a clear **"Built On"** strip explicitly stating *Buy, Build, or Customise*. | **Preserves all existing investments**, removes user confusion, and directly resolves the overlap between products and custom services. |
 
@@ -174,9 +174,9 @@ Before executing page restructuring, a fundamental strategic choice must be lock
 3. **Sector Imagery:**
    - Remove repeating images (`indus1` through `indus11`). Ensure zero duplicate imagery across the page.
 4. **"Built On" Product vs. Custom Build Strips:**
-   - Resolve the conflict where industry verticals pitch custom software that directly clashes with off-the-shelf products (Finance custom CRM vs. HeapSync CRM; Education custom LMS vs. Learnly LMS; Retail custom e-commerce vs. VueCart):
+   - Resolve the conflict where industry verticals pitch custom software that directly clashes with off-the-shelf products (Finance custom CRM vs. Heapsync CRM; Education custom LMS vs. Learnly LMS; Retail custom e-commerce vs. Vuecart):
    - Add a explicit **"Built On" strip** for each sector detailing:
-     - **Buy:** Off-the-shelf product license (e.g. HeapSync, VueCart).
+     - **Buy:** Off-the-shelf product license (e.g. Heapsync, Vuecart).
      - **Build:** 100% bespoke software engineered from scratch.
      - **Customise:** Hybrid deployment extending the proprietary product core.
 
@@ -196,7 +196,7 @@ Before executing page restructuring, a fundamental strategic choice must be lock
 - Integrate the general careers pitch into About.
 
 #### B. `/products`
-- Update product catalog (VueCart, HeapSync, ChatPress, AppTuner, Learnly):
+- Update product catalog (Vuecart, Heapsync, ChatPress, Apptuner, Learnly):
   - Replace dev URL `https://dev.learnly.heapvue.com/` with production host.
   - Remove unsupported "Enterprise ready" claims.
   - Enrich each product card with:

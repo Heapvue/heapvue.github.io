@@ -119,7 +119,7 @@ export default function AboutPage() {
               <span className="badge bg-primary fs-6 p-2 px-3 rounded-pill">2023</span>
               <div>
                 <h5 className="fw-bold text-dark mb-1">Incubation of Proprietary Products</h5>
-                <p className="text-muted small mb-0">Developed and released our core software accelerators: VueCart for headless commerce, HeapSync for CRM, and Learnly for modern learning management.</p>
+                <p className="text-muted small mb-0">Developed and released our core software accelerators: Vuecart for headless commerce, Heapsync for CRM, and Learnly for modern learning management.</p>
               </div>
             </div>
 

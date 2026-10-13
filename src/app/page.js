@@ -14,7 +14,7 @@ const homeFaqs = [
   {
     id: 1,
     question: 'How do Heapvue’s software products differ from your custom engineering services?',
-    answer: 'Heapvue provides both ready-to-deploy software products (such as VueCart for e-commerce, HeapSync for CRM, and ChatPress for AI interactions) and bespoke software engineering. You can adopt our pre-built products for rapid deployment or engage our engineering teams for fully customized architecture tailored to your proprietary requirements.',
+    answer: 'Heapvue provides both ready-to-deploy software products (such as Vuecart for e-commerce, Heapsync for CRM, and ChatPress for AI interactions) and bespoke software engineering. You can adopt our pre-built products for rapid deployment or engage our engineering teams for fully customized architecture tailored to your proprietary requirements.',
   },
   {
     id: 2,

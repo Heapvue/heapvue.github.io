@@ -130,14 +130,14 @@ const solutionsSubmenus = [
 const productsSubmenus = [
   {
     name: 'Vuecart',
-    path: 'https://vuecart.heapvue.com/in-en',
+    path: 'https://Vuecart.heapvue.com/in-en',
     desc: 'High-speed headless e-commerce platform for modern brands.',
     icon: FiShoppingBag,
     isExternal: true,
   },
   {
     name: 'Heapsync',
-    path: 'https://heapsync.heapvue.com/',
+    path: 'https://Heapsync.heapvue.com/',
     desc: 'Unified customer relationship & pipeline management CRM.',
     icon: FiUsers,
     isExternal: true,
@@ -151,7 +151,7 @@ const productsSubmenus = [
   },
   {
     name: 'Apptuner',
-    path: 'https://apptuner.dev/',
+    path: 'https://Apptuner.dev/',
     desc: 'Mobile & web application optimization and performance analytics.',
     icon: FiZap,
     isExternal: true,

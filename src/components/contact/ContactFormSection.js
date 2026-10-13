@@ -99,10 +99,10 @@ export default function ContactFormSection() {
                   <p className="small text-dark mb-1" style={{ lineHeight: '1.4' }}>
                     39/2475-B1, Suite C54, LR Towers, SJRRA 104 S J Road, Palarivattom, Ernakulam, Kerala 682025, India
                   </p>
-                  <a 
-                    href="https://maps.google.com/?q=Palarivattom+Kochi+Kerala" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href="https://maps.google.com/?q=Palarivattom+Kochi+Kerala"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="small text-primary fw-semibold text-decoration-none d-inline-flex align-items-center gap-1"
                   >
                     View on Google Maps <FiExternalLink size={12} />
@@ -226,10 +226,10 @@ export default function ContactFormSection() {
                         <option value="ai-consulting">AI Strategy &amp; Governance Advisory</option>
                       </optgroup>
                       <optgroup label="Proprietary Products">
-                        <option value="vuecart">VueCart Headless Commerce</option>
-                        <option value="heapsync">HeapSync CRM</option>
+                        <option value="Vuecart">Vuecart Headless Commerce</option>
+                        <option value="Heapsync">Heapsync CRM</option>
                         <option value="chatpress">ChatPress AI Agent</option>
-                        <option value="apptuner">AppTuner DevOps</option>
+                        <option value="Apptuner">Apptuner DevOps</option>
                         <option value="learnly">Learnly LMS</option>
                       </optgroup>
                       <option value="general">Other Technical Inquiry</option>
@@ -303,8 +303,8 @@ export default function ContactFormSection() {
                     </label>
                   </div>
 
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="btn btn-primary w-100 py-3 fw-bold"
                     style={{ backgroundColor: '#0555FF', borderRadius: '8px', fontSize: '1rem' }}
                   >

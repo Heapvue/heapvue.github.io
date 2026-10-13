@@ -8,7 +8,7 @@ const defaultFaqData = [
   {
     id: 1,
     question: 'What is Heapvue’s hybrid technology model?',
-    answer: 'Heapvue combines ready-to-deploy proprietary software products (like VueCart, HeapSync, and ChatPress) with bespoke cloud and AI engineering capabilities. Clients can deploy pre-built platforms rapidly, build custom architectures, or customize a hybrid solution.',
+    answer: 'Heapvue combines ready-to-deploy proprietary software products (like Vuecart, Heapsync, and ChatPress) with bespoke cloud and AI engineering capabilities. Clients can deploy pre-built platforms rapidly, build custom architectures, or customize a hybrid solution.',
   },
   {
     id: 2,

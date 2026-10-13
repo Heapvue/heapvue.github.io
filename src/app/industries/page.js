@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import '@/components/industry/Industry.css';
 import FaqSection from '@/components/home/FaqSection';
-import { 
-  FiActivity, 
-  FiShoppingBag, 
-  FiDollarSign, 
-  FiBookOpen, 
-  FiZap, 
-  FiArrowRight, 
-  FiCheckCircle, 
-  FiLayers 
+import {
+  FiActivity,
+  FiShoppingBag,
+  FiDollarSign,
+  FiBookOpen,
+  FiZap,
+  FiArrowRight,
+  FiCheckCircle,
+  FiLayers
 } from 'react-icons/fi';
 
 export const metadata = {
@@ -44,10 +44,10 @@ const industries = [
     accentColor: '#16a34a',
     summary: 'High-conversion commerce architectures, headless storefronts, and automated inventory systems engineered for high traffic and promotion spikes.',
     builtOn: {
-      product: 'VueCart Headless Commerce',
-      buy: 'Deploy VueCart for high-speed headless digital storefronts',
+      product: 'Vuecart Headless Commerce',
+      buy: 'Deploy Vuecart for high-speed headless digital storefronts',
       build: 'Custom multi-vendor marketplace or bespoke warehouse ERP',
-      customise: 'VueCart core extended with custom ERP and localized payment engines',
+      customise: 'Vuecart core extended with custom ERP and localized payment engines',
     },
     challengesSolved: [
       'Slow catalog browsing and checkout abandonment during flash sales',
@@ -63,10 +63,10 @@ const industries = [
     accentColor: '#d97706',
     summary: 'Institutional-grade security, client lifecycle management, and financial workflow automation with strict audit logging.',
     builtOn: {
-      product: 'HeapSync CRM',
-      buy: 'License HeapSync for centralized client and lead tracking',
+      product: 'Heapsync CRM',
+      buy: 'License Heapsync for centralized client and lead tracking',
       build: 'Bespoke loan origination or algorithmic transaction processing engine',
-      customise: 'HeapSync CRM customized with proprietary financial compliance rules',
+      customise: 'Heapsync CRM customized with proprietary financial compliance rules',
     },
     challengesSolved: [
       'Scattered lead tracking across spreadsheets and disconnected databases',
@@ -100,7 +100,7 @@ const industriesFaqs = [
   {
     id: 1,
     question: 'How does Heapvue decide whether to Buy, Build, or Customise for my sector?',
-    answer: 'We analyze your core business differentiation. If your operational needs align with industry standards, licensing one of our proprietary products (VueCart, HeapSync, Learnly) saves months of development time. If your workflow is your secret sauce, we engineer a custom solution from scratch. For hybrid needs, we customize our product base.',
+    answer: 'We analyze your core business differentiation. If your operational needs align with industry standards, licensing one of our proprietary products (Vuecart, Heapsync, Learnly) saves months of development time. If your workflow is your secret sauce, we engineer a custom solution from scratch. For hybrid needs, we customize our product base.',
   },
   {
     id: 2,
@@ -160,8 +160,8 @@ export default function IndustriesIndexPage() {
             {industries.map((sec) => {
               const IconComp = sec.icon;
               return (
-                <div 
-                  key={sec.id} 
+                <div
+                  key={sec.id}
                   id={sec.id}
                   className="card border-0 shadow-sm p-4 p-md-5"
                   style={{ borderRadius: '16px', backgroundColor: '#ffffff', border: '1px solid #e2e8f0' }}
@@ -170,7 +170,7 @@ export default function IndustriesIndexPage() {
                     {/* Left Column: Sector Info */}
                     <div className="col-12 col-lg-6">
                       <div className="d-flex align-items-center gap-3 mb-3">
-                        <div 
+                        <div
                           className="rounded-3 p-3 d-flex align-items-center justify-content-center"
                           style={{ backgroundColor: '#EFF6FF', color: sec.accentColor, width: '56px', height: '56px' }}
                         >

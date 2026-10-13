@@ -160,10 +160,10 @@ export default function Footer() {
               <div className="footer-links-col">
                 <h4 className="footer-col-title">Products</h4>
                 <ul>
-                  <li><a href="https://vuecart.heapvue.com/in-en" target="_blank" rel="noopener noreferrer">Vuecart</a></li>
-                  <li><a href="https://heapsync.heapvue.com/" target="_blank" rel="noopener noreferrer">Heapsync</a></li>
+                  <li><a href="https://Vuecart.heapvue.com/in-en" target="_blank" rel="noopener noreferrer">Vuecart</a></li>
+                  <li><a href="https://Heapsync.heapvue.com/" target="_blank" rel="noopener noreferrer">Heapsync</a></li>
                   <li><a href="https://chatpress.heapvue.com/" target="_blank" rel="noopener noreferrer">Chatpress</a></li>
-                  <li><a href="https://apptuner.dev/" target="_blank" rel="noopener noreferrer">Apptuner</a></li>
+                  <li><a href="https://Apptuner.dev/" target="_blank" rel="noopener noreferrer">Apptuner</a></li>
                   <li><a href="https://learnly.heapvue.com/" target="_blank" rel="noopener noreferrer">Learnly</a></li>
                 </ul>
               </div>

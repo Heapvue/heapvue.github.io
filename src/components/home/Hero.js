@@ -14,8 +14,8 @@ import { BsStars } from 'react-icons/bs';
 import { IoSend } from 'react-icons/io5';
 
 const QUICK_PROMPTS = [
-  'Deploy VueCart E-Commerce',
-  'Explore HeapSync CRM',
+  'Deploy Vuecart E-Commerce',
+  'Explore Heapsync CRM',
   'Cloud Architecture & Modernization'
 ];
 
@@ -31,9 +31,9 @@ export default function Hero() {
     if (!inputValue.trim()) return;
 
     const val = inputValue.toLowerCase();
-    if (val.includes('vuecart') || val.includes('product') || val.includes('e-commerce')) {
+    if (val.includes('Vuecart') || val.includes('product') || val.includes('e-commerce')) {
       window.location.href = '/products';
-    } else if (val.includes('crm') || val.includes('heapsync')) {
+    } else if (val.includes('crm') || val.includes('Heapsync')) {
       window.location.href = '/products';
     } else {
       window.location.href = '/solutions';
@@ -65,7 +65,7 @@ export default function Hero() {
                 <input
                   type="text"
                   className="hero-ai-input"
-                  placeholder="Ask ChatPress"
+                  placeholder="Ask Chatpress"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                 />
@@ -117,7 +117,7 @@ export default function Hero() {
               <FiBox size={20} />
             </div>
             <h3 className="hero-quad-title">
-              VueCart &amp; HeapSync Enterprise Suite
+              Vuecart &amp; Heapsync Enterprise Suite
             </h3>
             <p className="hero-quad-desc">
               Deploy specialized business SaaS platforms including headless e-commerce, CRM, and automated LMS.

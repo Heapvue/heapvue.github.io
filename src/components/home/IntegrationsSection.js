@@ -17,7 +17,7 @@ import {
 const platforms = [
   {
     name: 'Vucart',
-    docUrl: 'https://vuecart.heapvue.com/in-en',
+    docUrl: 'https://Vuecart.heapvue.com/in-en',
     icon: FiShoppingCart,
     isExternal: true,
   },
@@ -35,7 +35,7 @@ const platforms = [
   },
   {
     name: 'Apptuner',
-    docUrl: 'https://apptuner.dev/',
+    docUrl: 'https://Apptuner.dev/',
     icon: FiSliders,
     isExternal: true,
   },
@@ -47,7 +47,7 @@ const platforms = [
   },
   {
     name: 'Heapsync',
-    docUrl: 'https://heapsync.heapvue.com/',
+    docUrl: 'https://Heapsync.heapvue.com/',
     icon: FiUsers,
     isExternal: true,
   },

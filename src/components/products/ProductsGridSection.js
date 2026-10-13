@@ -3,47 +3,47 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  FiShoppingCart, 
-  FiUsers, 
-  FiMessageSquare, 
-  FiSettings, 
-  FiBookOpen, 
-  FiArrowRight, 
-  FiExternalLink, 
-  FiCheckCircle, 
-  FiFileText, 
-  FiPlay 
+import {
+  FiShoppingCart,
+  FiUsers,
+  FiMessageSquare,
+  FiSettings,
+  FiBookOpen,
+  FiArrowRight,
+  FiExternalLink,
+  FiCheckCircle,
+  FiFileText,
+  FiPlay
 } from 'react-icons/fi';
 
 const products = [
   {
-    id: 'vuecart',
-    name: 'VueCart',
+    id: 'Vuecart',
+    name: 'Vuecart',
     category: 'Headless E-Commerce Platform',
     description: 'High-speed, modular commerce platform engineered for modern brands. Fast API-first checkout, multi-currency support, and flexible headless storefronts.',
     pricing: 'Starting at $79/mo · 14-Day Free Trial',
     pilotCustomer: 'Adopted by regional D2C brands & specialty retailers for sub-second catalog speeds.',
     tags: ['E-Commerce', 'Headless API', 'Multi-Currency'],
-    link: 'https://vuecart.heapvue.com/in-en',
-    docsLink: 'https://vuecart.heapvue.com/in-en',
+    link: 'https://Vuecart.heapvue.com/in-en',
+    docsLink: 'https://Vuecart.heapvue.com/in-en',
     iconBg: '#0555FF',
     icon: FiShoppingCart,
-    previewImg: '/images/product_vuecart.png',
+    previewImg: '/images/product_Vuecart.png',
   },
   {
-    id: 'heapsync',
-    name: 'HeapSync',
+    id: 'Heapsync',
+    name: 'Heapsync',
     category: 'Client & Relationship CRM',
     description: 'Unified customer relationship management for modern sales and client servicing teams. Manage deals, automate communication history, and track customer lifecycles.',
     pricing: 'From $29/user/mo · Free Tier for Teams < 5',
     pilotCustomer: 'Used by financial advisory firms and corporate service providers for client lifecycle tracking.',
     tags: ['CRM', 'Pipeline Management', 'Automation'],
-    link: 'https://heapsync.heapvue.com/',
-    docsLink: 'https://heapsync.heapvue.com/',
+    link: 'https://Heapsync.heapvue.com/',
+    docsLink: 'https://Heapsync.heapvue.com/',
     iconBg: '#10B981',
     icon: FiUsers,
-    previewImg: '/images/product_heapsync.png',
+    previewImg: '/images/product_Heapsync.png',
   },
   {
     id: 'chatpress',
@@ -60,18 +60,18 @@ const products = [
     previewImg: '/images/product_chatpress.png',
   },
   {
-    id: 'apptuner',
-    name: 'AppTuner',
+    id: 'Apptuner',
+    name: 'Apptuner',
     category: 'Application Health & DevOps Monitor',
     description: 'Keep your web applications running optimally with automated health checks, uptime alerts, dependency security scanning, and performance telemetry.',
     pricing: 'Starting at $39/mo per cluster · 30-Day Trial',
     pilotCustomer: 'Monitors microservices and high-availability web apps for digital engineering teams.',
     tags: ['DevOps', 'Observability', 'Uptime Alerts'],
-    link: 'https://apptuner.dev/',
-    docsLink: 'https://apptuner.dev/',
+    link: 'https://Apptuner.dev/',
+    docsLink: 'https://Apptuner.dev/',
     iconBg: '#F97316',
     icon: FiSettings,
-    previewImg: '/images/product_apptuner.png',
+    previewImg: '/images/product_Apptuner.png',
   },
   {
     id: 'learnly',
@@ -112,7 +112,7 @@ export default function ProductsGridSection() {
             const IconComponent = prod.icon;
             const isReversed = index % 2 !== 0;
             return (
-              <div 
+              <div
                 key={prod.id}
                 id={prod.id}
                 className="card border-0 shadow-sm p-4 p-md-5"
@@ -122,7 +122,7 @@ export default function ProductsGridSection() {
                   {/* Product Details */}
                   <div className="col-12 col-lg-6">
                     <div className="d-flex align-items-center gap-3 mb-3">
-                      <div 
+                      <div
                         className="rounded-3 p-3 d-flex align-items-center justify-content-center text-white"
                         style={{ backgroundColor: prod.iconBg, width: '52px', height: '52px' }}
                       >
@@ -159,25 +159,25 @@ export default function ProductsGridSection() {
                     </div>
 
                     <div className="d-flex flex-wrap gap-3">
-                      <a 
-                        href={prod.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href={prod.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn btn-primary d-inline-flex align-items-center gap-2 fw-semibold px-4 py-2"
                         style={{ backgroundColor: prod.iconBg, borderColor: prod.iconBg, borderRadius: '8px' }}
                       >
                         Launch Product <FiExternalLink size={15} />
                       </a>
-                      <a 
-                        href={prod.docsLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href={prod.docsLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn btn-outline-secondary d-inline-flex align-items-center gap-2 px-3 py-2"
                         style={{ borderRadius: '8px' }}
                       >
                         <FiFileText size={15} /> Documentation
                       </a>
-                      <Link 
+                      <Link
                         href={`/contact?product=${prod.id}`}
                         className="btn btn-outline-primary d-inline-flex align-items-center gap-2 px-3 py-2"
                         style={{ borderRadius: '8px' }}
@@ -189,12 +189,12 @@ export default function ProductsGridSection() {
 
                   {/* Product Screenshot / Preview */}
                   <div className="col-12 col-lg-6">
-                    <div 
+                    <div
                       className="p-3 rounded-4 bg-light border position-relative overflow-hidden shadow-sm"
                       style={{ minHeight: '320px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                     >
-                      <Image 
-                        src={prod.previewImg} 
+                      <Image
+                        src={prod.previewImg}
                         alt={`${prod.name} interface preview`}
                         width={600}
                         height={380}

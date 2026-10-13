@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import '@/components/solutions/Solutions.css';
 import FaqSection from '@/components/home/FaqSection';
-import { 
-  FiLayers, 
-  FiRefreshCw, 
-  FiCpu, 
-  FiShoppingBag, 
-  FiSmartphone, 
-  FiShield, 
-  FiArrowRight, 
-  FiCheckCircle 
+import {
+  FiLayers,
+  FiRefreshCw,
+  FiCpu,
+  FiShoppingBag,
+  FiSmartphone,
+  FiShield,
+  FiArrowRight,
+  FiCheckCircle
 } from 'react-icons/fi';
 
 export const metadata = {
@@ -108,7 +108,7 @@ const solutionsFaqs = [
   {
     id: 1,
     question: 'How do you determine whether a project needs custom development or a pre-built product?',
-    answer: 'During our discovery phase, we evaluate your workflow complexity, competitive differentiation needs, and timeline. If standard requirements align with our existing platforms (VueCart, HeapSync, Learnly), we recommend licensing or customizing them. When requirements demand proprietary intellectual property or unique integrations, we architect a bespoke custom solution.',
+    answer: 'During our discovery phase, we evaluate your workflow complexity, competitive differentiation needs, and timeline. If standard requirements align with our existing platforms (Vuecart, Heapsync, Learnly), we recommend licensing or customizing them. When requirements demand proprietary intellectual property or unique integrations, we architect a bespoke custom solution.',
   },
   {
     id: 2,
@@ -171,10 +171,10 @@ export default function SolutionsIndexPage() {
               const IconComp = sol.icon;
               return (
                 <div key={sol.id} className="col-12 col-md-6 col-lg-4">
-                  <div 
+                  <div
                     className="card h-100 border-0 shadow-sm p-4 d-flex flex-column justify-content-between"
-                    style={{ 
-                      borderRadius: '16px', 
+                    style={{
+                      borderRadius: '16px',
                       backgroundColor: '#ffffff',
                       transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                       border: '1px solid #e2e8f0'
@@ -182,13 +182,13 @@ export default function SolutionsIndexPage() {
                   >
                     <div>
                       <div className="d-flex align-items-center justify-content-between mb-3">
-                        <div 
+                        <div
                           className="rounded-3 p-3 d-flex align-items-center justify-content-center"
                           style={{ backgroundColor: '#EFF6FF', color: '#0555FF', width: '52px', height: '52px' }}
                         >
                           <IconComp size={24} />
                         </div>
-                        <span 
+                        <span
                           className="badge rounded-pill fw-medium text-secondary"
                           style={{ backgroundColor: '#F1F5F9', fontSize: '0.75rem', padding: '6px 12px' }}
                         >
@@ -218,7 +218,7 @@ export default function SolutionsIndexPage() {
                     </div>
 
                     <div className="pt-3 border-top">
-                      <Link 
+                      <Link
                         href={sol.path}
                         className="btn btn-outline-primary w-100 d-inline-flex align-items-center justify-content-center gap-2 fw-semibold"
                         style={{ borderRadius: '8px', fontSize: '0.9rem' }}
@@ -244,15 +244,15 @@ export default function SolutionsIndexPage() {
             Connect with our engineering architects to assess technical feasibility, analyze infrastructure requirements, and plan your delivery milestones.
           </p>
           <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="btn btn-primary px-4 py-3 fw-semibold shadow-sm"
               style={{ backgroundColor: '#0555FF', borderRadius: '8px', fontSize: '0.95rem' }}
             >
               Discuss Your Project <FiArrowRight size={16} />
             </Link>
-            <Link 
-              href="/products" 
+            <Link
+              href="/products"
               className="btn btn-outline-light px-4 py-3 fw-semibold"
               style={{ borderRadius: '8px', fontSize: '0.95rem' }}
             >
