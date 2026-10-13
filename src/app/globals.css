@@ -27,11 +27,15 @@
   font-family: 'Poppins', sans-serif !important;
 }
 
-html, body {
+html {
+  font-family: 'Poppins', sans-serif !important;
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: 'Poppins', sans-serif !important;
   background-color: var(--bg-color);
   color: var(--text-primary);
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 

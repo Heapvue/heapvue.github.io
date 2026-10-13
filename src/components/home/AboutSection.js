@@ -17,46 +17,49 @@ export default function AboutSection() {
               <span className="badge-text">About Heapvue</span>
             </div>
 
-            {/* Heading */}
-            <div className="wespecialize-img-wrapper">
-              <h2 className="fw-bold text-dark mb-3" style={{ fontSize: '2rem', lineHeight: 1.3 }}>
-                We engineer scalable technology tailored to your business ambitions.
-              </h2>
-            </div>
+            {/* Heading with upright normal accent text */}
+            <h2 className="about-heading">
+              We specialize in creating<br />
+              software solutions that are<br />
+              tailored to your{' '}
+              <span className="about-heading-accent">
+                unique<br />business needs.
+              </span>
+            </h2>
           </div>
 
-          {/* Bottom Features Grid - Distinct React Icons instead of repeating feedback.png */}
+          {/* Bottom Features Grid */}
           <div className="about-features-grid">
-            {/* Feature 1 */}
+            {/* Feature 1: Security */}
             <div className="feature-item">
-              <div className="feature-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0555ff' }}>
-                <FiShield size={24} />
+              <div className="feature-icon-wrapper">
+                <FiShield size={28} color="#0052ff" strokeWidth={2.2} />
               </div>
-              <h4 className="feature-title">Security First</h4>
+              <h4 className="feature-title">Security</h4>
               <p className="feature-desc">
-                Architectures built with zero-trust principles and robust data encryption.
+                We guarantee protection for your business against cyber threats.
               </p>
             </div>
 
-            {/* Feature 2 */}
+            {/* Feature 2: Performance */}
             <div className="feature-item">
-              <div className="feature-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#16a34a' }}>
-                <FiZap size={24} />
+              <div className="feature-icon-wrapper">
+                <FiZap size={28} color="#0052ff" strokeWidth={2.2} />
               </div>
-              <h4 className="feature-title">High Performance</h4>
+              <h4 className="feature-title">Performance</h4>
               <p className="feature-desc">
-                Engineered for low latency, horizontal scalability, and continuous uptime.
+                We ensure optimal performance with 24/7 proactive maintenance.
               </p>
             </div>
 
-            {/* Feature 3 */}
+            {/* Feature 3: Support */}
             <div className="feature-item">
-              <div className="feature-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#8b5cf6' }}>
-                <FiHeadphones size={24} />
+              <div className="feature-icon-wrapper">
+                <FiHeadphones size={28} color="#0052ff" strokeWidth={2.2} />
               </div>
-              <h4 className="feature-title">Dedicated Support</h4>
+              <h4 className="feature-title">Support</h4>
               <p className="feature-desc">
-                Proactive maintenance, SLA guarantees, and ongoing engineering support.
+                Our experts are available 24/7 to keep operations running smoothly.
               </p>
             </div>
           </div>
@@ -65,17 +68,17 @@ export default function AboutSection() {
         {/* Right Box */}
         <div className="about-right-box">
           <div className="about-right-left-col">
-            {/* Value Proposition Card */}
+            {/* Blue Quote Card */}
             <div className="about-quote-card">
               <p className="quote-text">
-                “Bridging ready-to-deploy software products with bespoke cloud and AI engineering.”
+                “We now rely on Heapvue for all our intelligent software solutions.”
               </p>
-              <Link href="/contact" className="btn quote-btn">
-                Contact Our Team <FiArrowRight size={14} />
+              <Link href="/contact" className="quote-btn">
+                Book a demo <FiArrowRight size={15} />
               </Link>
             </div>
 
-            {/* Visual Graphic */}
+            {/* Flower Visual Graphic */}
             <div className="flower-card-wrapper">
               <Image 
                 src="/images/flowerdesign.png" 

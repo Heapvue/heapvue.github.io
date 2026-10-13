@@ -36,6 +36,10 @@ export default function FlowDiagram() {
       {/* The V Logo Card centered at the bottom */}
       <div className="v-logo-wrapper">
         <div className="v-logo-card">
+          <span className="corner-tl" aria-hidden="true"></span>
+          <span className="corner-tr" aria-hidden="true"></span>
+          <span className="corner-bl" aria-hidden="true"></span>
+          <span className="corner-br" aria-hidden="true"></span>
           <Image 
             src="/images/Heapvue_Logo (3).png" 
             alt="Heapvue logo" 

@@ -1,5 +1,4 @@
 import Hero from '@/components/home/Hero';
-import FlowDiagram from '@/components/home/FlowDiagram';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import IndustriesSection from '@/components/home/IndustriesSection';
@@ -9,6 +8,7 @@ import FaqSection from '@/components/home/FaqSection';
 import PlatformSection from '@/components/home/PlatformSection';
 import ClientsSection from '@/components/home/ClientsSection';
 import CaseStudySection from '@/components/home/CaseStudySection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
 
 const homeFaqs = [
   {
@@ -41,15 +41,32 @@ const homeFaqs = [
 export default function Home() {
   return (
     <div className="home-container">
-      {/* Background Image */}
-      <div className="hero-bg-container"></div>
-      
-      {/* Main Home Content */}
+      {/* Hero Video Section */}
+      <section className="hero-video-section">
+        <div className="hero-bg-container">
+          <video
+            className="hero-bg-video"
+            src="/images/gemini_generated_video_29666f92.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <div className="hero-video-overlay"></div>
+        </div>
+
+        <div className="container position-relative z-1">
+          <Hero />
+        </div>
+      </section>
+
+      {/* About Section (Starts after video section) */}
       <div className="container position-relative z-1">
-        <Hero />
-        <FlowDiagram />
         <AboutSection />
       </div>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Technology Services Section */}
       <ServicesSection />

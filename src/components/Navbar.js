@@ -180,14 +180,33 @@ export default function Navbar() {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
   const hoverTimeoutRef = useRef(null);
 
-  // Scroll detection for navbar background on desktop
+  // Scroll detection for navbar background
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    const handleScroll = (e) => {
+      const targetScroll = (e && e.target && typeof e.target.scrollTop === 'number') ? e.target.scrollTop : 0;
+      const scrollPos =
+        window.scrollY ||
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        (document.scrollingElement ? document.scrollingElement.scrollTop : 0) ||
+        targetScroll ||
+        0;
+      setScrolled(scrollPos > 10);
     };
+
     handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { capture: true, passive: true });
+    document.addEventListener('scroll', handleScroll, { capture: true, passive: true });
+    window.addEventListener('touchmove', handleScroll, { passive: true });
+    window.addEventListener('wheel', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll, { capture: true });
+      document.removeEventListener('scroll', handleScroll, { capture: true });
+      window.removeEventListener('touchmove', handleScroll);
+      window.removeEventListener('wheel', handleScroll);
+    };
   }, []);
 
   // Close offcanvas when route changes
@@ -273,9 +292,8 @@ export default function Navbar() {
   ];
 
   const isHome = pathname === '/';
-  const headerClass = `site-header-wrapper fixed-top ${
-    scrolled ? 'scrolled' : (isHome ? 'transparent-header' : 'white-header')
-  }`;
+  const headerClass = `site-header-wrapper fixed-top ${scrolled ? 'scrolled' : (isHome ? 'transparent-header' : 'white-header')
+    }`;
 
   return (
     <>
@@ -293,7 +311,7 @@ export default function Navbar() {
             {/* Brand Logo */}
             <Link href="/" className="navbar-brand d-flex align-items-center me-3 me-xl-4">
               <Image
-                src="/images/Heapvue_Logo.png"
+                src={!scrolled && isHome ? "/images/Heapvue_Logo_white.png" : "/images/Heapvue_Logo.png"}
                 alt="Heapvue Logo"
                 width={181}
                 height={43}
@@ -309,7 +327,7 @@ export default function Navbar() {
               onClick={() => setIsOffcanvasOpen(true)}
               aria-label="Open mobile navigation menu"
             >
-              <FiMenu size={28} className="text-dark" />
+              <FiMenu size={28} className={!scrolled && isHome ? "text-white" : "text-dark"} />
             </button>
 
             {/* Desktop Navigation Links and Right CTA (Visible on lg and up) */}

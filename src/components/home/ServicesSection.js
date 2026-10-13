@@ -37,25 +37,19 @@ export default function ServicesSection() {
       <div className="services-section-container">
         {/* Top Header Area */}
         <div className="services-header">
-          {/* Pill Badge */}
+          {/* Square Pill Badge with Bullet */}
           <div className="services-badge-capsule">
             <span className="badge-bullet"></span>
             <span className="badge-text">Our Services</span>
           </div>
 
-          {/* Title Image (801.54px width x 114.8px height) */}
-          <div className="services-title-img-wrapper">
-            <Image
-              src="/images/technologyservices.png"
-              alt="Technology Services Built for Modern Businesses."
-              width={801}
-              height={115}
-              className="services-title-img"
-              priority
-            />
-          </div>
+          {/* Heading with Poppins and Non-Slanting (Normal) Title */}
+          <h2 className="services-main-heading">
+            Technology <span className="services-heading-accent">Services</span><br className="d-none d-md-block" />
+            Built for Modern Businesses.
+          </h2>
 
-          {/* Subtitle Words (801.54px width x 45px height) */}
+          {/* Subtitle */}
           <p className="services-subtext">
             Heapvue helps businesses accelerate growth with AI-powered software solutions, cloud infrastructure, scalable applications, and modern digital experiences designed for performance and long-term success.
           </p>
@@ -66,11 +60,16 @@ export default function ServicesSection() {
           {servicesData.map((service) => (
             <div key={service.id} className="service-card">
               <div className="service-icon-box">
+                {/* 4 Corner Bracket Accents matching reference image */}
+                <span className="corner-tl" aria-hidden="true"></span>
+                <span className="corner-tr" aria-hidden="true"></span>
+                <span className="corner-bl" aria-hidden="true"></span>
+                <span className="corner-br" aria-hidden="true"></span>
                 <Image
                   src={service.icon}
                   alt={service.title}
-                  width={140}
-                  height={140}
+                  width={80}
+                  height={80}
                   className="service-icon-img"
                 />
               </div>
@@ -80,10 +79,10 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* Bottom Explore Button */}
+        {/* Bottom Explore Button: radius 0, 'Explore Our Services →' */}
         <div className="services-btn-wrapper">
           <Link href="/solutions" className="btn services-btn">
-            Explore Our Solutions <FiArrowRight size={16} />
+            Explore Our Services <FiArrowRight size={16} />
           </Link>
         </div>
       </div>
