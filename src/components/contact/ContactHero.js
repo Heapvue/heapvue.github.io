@@ -10,7 +10,7 @@ export default function ContactHero() {
         {/* Capsule Badge */}
         <div className="contact-hero-badge-capsule">
           <span className="badge-bullet"></span>
-          <span className="badge-text">CONTACT HEAPVUE</span>
+          <span className="badge-text">Contact Heapvue</span>
         </div>
 
         {/* Main Title */}

@@ -38,6 +38,10 @@ export default function ContactOptionsSection() {
           {contactOptionsData.map((item) => (
             <div key={item.id} className="contact-option-card">
               <div className="contact-option-icon-box">
+                <span className="corner-angle corner-tl" aria-hidden="true" />
+                <span className="corner-angle corner-tr" aria-hidden="true" />
+                <span className="corner-angle corner-bl" aria-hidden="true" />
+                <span className="corner-angle corner-br" aria-hidden="true" />
                 <Image
                   src={item.icon}
                   alt={item.title}
