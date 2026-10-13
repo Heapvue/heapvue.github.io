@@ -45,7 +45,7 @@ export default function ServicesSection() {
 
           {/* Heading with Poppins and Non-Slanting (Normal) Title */}
           <h2 className="services-main-heading">
-            Technology <span className="services-heading-accent">Services</span><br className="d-none d-md-block" />
+            Technology <span className="services-heading-accent">Services </span><br className="d-none d-md-block" />
             Built for Modern Businesses.
           </h2>
 

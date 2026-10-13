@@ -33,34 +33,40 @@ export default function AboutSection() {
             {/* Feature 1: Security */}
             <div className="feature-item">
               <div className="feature-icon-wrapper">
-                <FiShield size={28} color="#0052ff" strokeWidth={2.2} />
+                <FiShield size={26} color="#0052ff" strokeWidth={2.2} />
               </div>
-              <h4 className="feature-title">Security</h4>
-              <p className="feature-desc">
-                We guarantee protection for your business against cyber threats.
-              </p>
+              <div className="feature-text-wrapper">
+                <h4 className="feature-title">Security</h4>
+                <p className="feature-desc">
+                  We guarantee protection for your business against cyber threats.
+                </p>
+              </div>
             </div>
 
             {/* Feature 2: Performance */}
             <div className="feature-item">
               <div className="feature-icon-wrapper">
-                <FiZap size={28} color="#0052ff" strokeWidth={2.2} />
+                <FiZap size={26} color="#0052ff" strokeWidth={2.2} />
               </div>
-              <h4 className="feature-title">Performance</h4>
-              <p className="feature-desc">
-                We ensure optimal performance with 24/7 proactive maintenance.
-              </p>
+              <div className="feature-text-wrapper">
+                <h4 className="feature-title">Performance</h4>
+                <p className="feature-desc">
+                  We ensure optimal performance with 24/7 proactive maintenance.
+                </p>
+              </div>
             </div>
 
             {/* Feature 3: Support */}
             <div className="feature-item">
               <div className="feature-icon-wrapper">
-                <FiHeadphones size={28} color="#0052ff" strokeWidth={2.2} />
+                <FiHeadphones size={26} color="#0052ff" strokeWidth={2.2} />
               </div>
-              <h4 className="feature-title">Support</h4>
-              <p className="feature-desc">
-                Our experts are available 24/7 to keep operations running smoothly.
-              </p>
+              <div className="feature-text-wrapper">
+                <h4 className="feature-title">Support</h4>
+                <p className="feature-desc">
+                  Our experts are available 24/7 to keep operations running smoothly.
+                </p>
+              </div>
             </div>
           </div>
         </div>
