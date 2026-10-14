@@ -56,11 +56,15 @@ export default function WhyChooseSection() {
           {whyChooseData.map((item) => (
             <div key={item.id} className="why-card-item">
               <div className="why-icon-box">
+                <span className="corner-bracket corner-tl"></span>
+                <span className="corner-bracket corner-tr"></span>
+                <span className="corner-bracket corner-bl"></span>
+                <span className="corner-bracket corner-br"></span>
                 <Image
                   src={item.icon}
                   alt={item.title}
-                  width={56}
-                  height={56}
+                  width={68}
+                  height={68}
                   className="why-icon-img"
                 />
               </div>

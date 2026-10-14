@@ -190,3 +190,86 @@ p, span, a, button, input, select, textarea, label,
 .responsive-img-container:hover img {
   transform: scale(1.05);
 }
+
+/* ==========================================================================
+   Global Section Badge Capsule (Matching "Our Case Study" standard)
+   ========================================================================== */
+.section-badge-capsule,
+.casestudy-badge-capsule,
+.about-hero-badge-capsule,
+.mission-badge-capsule,
+.story-badge-capsule,
+.values-badge-capsule,
+.why-badge-capsule,
+.testimonials-badge-capsule,
+.contact-hero-badge-capsule,
+.appointment-badge-capsule,
+.faq-badge-capsule,
+.industries-badge-capsule,
+.integrations-badge-capsule,
+.platform-badge-capsule,
+.services-badge-capsule {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 18px !important;
+  border-radius: 0px !important;
+  background-color: #E9F5FF !important;
+  border: 1px solid #CEE1FF !important;
+  box-shadow: none !important;
+  width: fit-content !important;
+  box-sizing: border-box !important;
+}
+
+.section-badge-capsule .badge-bullet,
+.casestudy-badge-capsule .badge-bullet,
+.about-hero-badge-capsule .badge-bullet,
+.mission-badge-capsule .badge-bullet,
+.story-badge-capsule .badge-bullet,
+.values-badge-capsule .badge-bullet,
+.why-badge-capsule .badge-bullet,
+.testimonials-badge-capsule .badge-bullet,
+.contact-hero-badge-capsule .badge-bullet,
+.appointment-badge-capsule .badge-bullet,
+.faq-badge-capsule .badge-bullet,
+.industries-badge-capsule .badge-bullet,
+.integrations-badge-capsule .badge-bullet,
+.platform-badge-capsule .badge-bullet,
+.services-badge-capsule .badge-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  min-width: 6px !important;
+  min-height: 6px !important;
+  background-color: #0555FF !important;
+  border-radius: 0px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  color: transparent !important;
+}
+
+.section-badge-capsule .badge-text,
+.casestudy-badge-capsule .badge-text,
+.about-hero-badge-capsule .badge-text,
+.mission-badge-capsule .badge-text,
+.story-badge-capsule .badge-text,
+.values-badge-capsule .badge-text,
+.why-badge-capsule .badge-text,
+.testimonials-badge-capsule .badge-text,
+.contact-hero-badge-capsule .badge-text,
+.appointment-badge-capsule .badge-text,
+.faq-badge-capsule .badge-text,
+.industries-badge-capsule .badge-text,
+.integrations-badge-capsule .badge-text,
+.platform-badge-capsule .badge-text,
+.services-badge-capsule .badge-text {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: #1E293B !important;
+  letter-spacing: 0.01em !important;
+  font-style: normal !important;
+  line-height: 1.2 !important;
+  text-transform: none !important;
+}

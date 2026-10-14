@@ -9,7 +9,7 @@ export default function AboutHero() {
         {/* Badge Capsule */}
         <div className="about-hero-badge-capsule">
           <span className="badge-bullet"></span>
-          <span className="badge-text">ABOUT HEAPVUE</span>
+          <span className="badge-text">About Heapvue</span>
         </div>
 
         {/* Main Title */}

@@ -120,7 +120,7 @@ export default function TestimonialsSection() {
 
           <div className="trusted-heading-wrapper">
             <h2 className="testimonials-heading">
-              <span className="testimonials-heading-accent">Trusted</span> by Businesses<br className="d-none d-md-block" />
+              <span className="testimonials-heading-accent">Trusted</span> by Businesses <br className="d-none d-md-block" />
               Building for the Future
             </h2>
           </div>
@@ -128,7 +128,7 @@ export default function TestimonialsSection() {
 
         {/* Carousel Viewport with Peeking Next Card like in Case Studies */}
         <div className="testimonials-carousel-viewport">
-          <div 
+          <div
             className="testimonials-carousel-track"
             style={{
               transform: `translateX(calc(-${currentIndex} * (var(--tm-card-w, 1200px) + var(--tm-card-gap, 24px))))`,
@@ -137,15 +137,15 @@ export default function TestimonialsSection() {
             onTransitionEnd={handleTransitionEnd}
           >
             {extendedTestimonials.map((item, idx) => (
-              <div 
+              <div
                 key={item.uniqueKey}
                 className={`testimonial-card ${idx === currentIndex ? 'active' : ''}`}
               >
                 {/* Large B&W Client Image covering full height & 40% width, dispersing to the right */}
                 <div className="testimonial-bg-image-wrapper">
-                  <img 
-                    src={item.avatar} 
-                    alt={item.authorName} 
+                  <img
+                    src={item.avatar}
+                    alt={item.authorName}
                     className="testimonial-card-bg-photo"
                   />
                   <div className="testimonial-photo-dispersion-overlay"></div>
@@ -156,9 +156,9 @@ export default function TestimonialsSection() {
                   {/* Top Row: Company Logo on Right Side */}
                   <div className="testimonial-card-top-header">
                     <div className="testimonial-card-logo-container">
-                      <img 
-                        src={item.logoSrc} 
-                        alt={item.company} 
+                      <img
+                        src={item.logoSrc}
+                        alt={item.company}
                         className="testimonial-client-logo-img"
                       />
                     </div>
@@ -192,19 +192,19 @@ export default function TestimonialsSection() {
 
         {/* Carousel Navigation Buttons like in Case Studies (No numbers) */}
         <div className="testimonials-nav-buttons">
-          <button 
+          <button
             type="button"
-            onClick={handlePrev} 
-            className="testimonials-nav-btn prev-btn" 
+            onClick={handlePrev}
+            className="testimonials-nav-btn prev-btn"
             aria-label="Previous testimonial"
           >
             <FiArrowLeft size={18} />
           </button>
 
-          <button 
+          <button
             type="button"
-            onClick={handleNext} 
-            className="testimonials-nav-btn next-btn" 
+            onClick={handleNext}
+            className="testimonials-nav-btn next-btn"
             aria-label="Next testimonial"
           >
             <FiArrowRight size={18} />

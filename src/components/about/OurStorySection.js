@@ -18,9 +18,8 @@ export default function OurStorySection() {
 
             {/* Title */}
             <h2 className="story-main-title">
-              Building Smarter Systems
-              <br />
-              for the <span className="story-highlight">Digital Future</span>
+              <span className="story-title-line">Building Smarter Systems</span>
+              <span className="story-title-line">for the <span className="story-highlight">Digital Future</span></span>
             </h2>
           </div>
 
@@ -37,9 +36,15 @@ export default function OurStorySection() {
 
         {/* Middle Banner Title (1094w x 100h Hug) */}
         <h3 className="story-middle-title">
-          We're a team of <span className="story-blue-highlight">engineers</span>, <span className="story-blue-highlight">designers</span>, <span className="story-blue-highlight">strategists</span>, and{' '}
-          <br />
-          <span className="story-blue-highlight">innovators building</span> the future of intelligent digital experiences.
+          <span className="story-middle-line">
+            We're a team of <span className="story-blue-highlight">engineers</span>,{' '}
+            <span className="story-blue-highlight">designers</span>,{' '}
+            <span className="story-blue-highlight">strategists</span>, and{' '}
+            <span className="story-blue-highlight">innovators</span>
+          </span>
+          <span className="story-middle-line">
+            building the future of intelligent digital experiences.
+          </span>
         </h3>
 
         {/* Bottom Team Image (1200w x 580h) */}

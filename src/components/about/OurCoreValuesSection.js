@@ -47,7 +47,8 @@ export default function OurCoreValuesSection() {
               <span className="badge-text">Our Core Values</span>
             </div>
             <h2 className="values-main-title">
-              Our <span className="values-blue-highlight">core values</span> guide everything we do.
+              Our <span className="values-blue-highlight">core values</span> guide<br />
+              everything we do.
             </h2>
           </div>
 
@@ -64,7 +65,7 @@ export default function OurCoreValuesSection() {
           {coreValuesData.map((card) => (
             <div
               key={card.id}
-              className="values-card"
+              className={`values-card values-card-${card.id}`}
               style={{ backgroundImage: `url('${card.bgImage}')` }}
             >
               <div className="values-card-top">
