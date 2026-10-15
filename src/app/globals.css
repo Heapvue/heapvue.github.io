@@ -184,11 +184,6 @@ p, span, a, button, input, select, textarea, label,
 
 .responsive-img-container img {
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.responsive-img-container:hover img {
-  transform: scale(1.05);
 }
 
 /* ==========================================================================
@@ -197,6 +192,9 @@ p, span, a, button, input, select, textarea, label,
 .section-badge-capsule,
 .casestudy-badge-capsule,
 .about-hero-badge-capsule,
+.careers-hero-badge-capsule,
+.why-join-badge-capsule,
+.openings-badge-capsule,
 .mission-badge-capsule,
 .story-badge-capsule,
 .values-badge-capsule,
@@ -224,6 +222,9 @@ p, span, a, button, input, select, textarea, label,
 .section-badge-capsule .badge-bullet,
 .casestudy-badge-capsule .badge-bullet,
 .about-hero-badge-capsule .badge-bullet,
+.careers-hero-badge-capsule .badge-bullet,
+.why-join-badge-capsule .badge-bullet,
+.openings-badge-capsule .badge-bullet,
 .mission-badge-capsule .badge-bullet,
 .story-badge-capsule .badge-bullet,
 .values-badge-capsule .badge-bullet,
@@ -252,6 +253,9 @@ p, span, a, button, input, select, textarea, label,
 .section-badge-capsule .badge-text,
 .casestudy-badge-capsule .badge-text,
 .about-hero-badge-capsule .badge-text,
+.careers-hero-badge-capsule .badge-text,
+.why-join-badge-capsule .badge-text,
+.openings-badge-capsule .badge-text,
 .mission-badge-capsule .badge-text,
 .story-badge-capsule .badge-text,
 .values-badge-capsule .badge-text,

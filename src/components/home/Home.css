@@ -408,7 +408,18 @@
   }
 }
 
+.hero-ai-field-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 0;
+  width: 100%;
+}
+
 .hero-ai-input {
+  position: relative;
+  z-index: 2;
   flex-grow: 1;
   border: none !important;
   outline: none !important;
@@ -421,8 +432,60 @@
   width: 100%;
 }
 
+/* Animated typing question placeholder: stays visible on focus until user types */
+.hero-ai-typing-placeholder {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #64748b;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.28rem;
+  line-height: 1.2;
+  user-select: none;
+}
+
+.hero-ai-typing-placeholder .typing-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100% - 15px);
+}
+
+.hero-ai-typing-placeholder .typing-cursor {
+  display: inline-block;
+  color: #0052ff;
+  font-weight: 300;
+  font-size: 1.28rem;
+  margin-left: 2px;
+  animation: typingCursorBlink 0.8s infinite;
+}
+
+@keyframes typingCursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 1023.98px) {
   .hero-ai-input {
+    font-size: 1.1rem;
+  }
+  .hero-ai-typing-placeholder {
+    font-size: 1.1rem;
+  }
+  .hero-ai-typing-placeholder .typing-cursor {
     font-size: 1.1rem;
   }
 }
@@ -431,10 +494,22 @@
   .hero-ai-input {
     font-size: 0.96rem;
   }
+  .hero-ai-typing-placeholder {
+    font-size: 0.96rem;
+  }
+  .hero-ai-typing-placeholder .typing-cursor {
+    font-size: 0.96rem;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-ai-input {
+    font-size: 0.9rem;
+  }
+  .hero-ai-typing-placeholder {
+    font-size: 0.9rem;
+  }
+  .hero-ai-typing-placeholder .typing-cursor {
     font-size: 0.9rem;
   }
 }
@@ -447,26 +522,7 @@
 }
 
 .hero-ai-input::placeholder {
-  color: #64748b;
-  font-size: 1.2rem;
-}
-
-@media (max-width: 1023.98px) {
-  .hero-ai-input::placeholder {
-    font-size: 1.05rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .hero-ai-input::placeholder {
-    font-size: 0.92rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-ai-input::placeholder {
-    font-size: 0.86rem;
-  }
+  color: transparent;
 }
 
 .hero-ai-clear-btn {

@@ -85,14 +85,14 @@ export default function AboutPage() {
       {/* Our Core Values Section */}
       <OurCoreValuesSection />
 
+      {/* Leadership, Founders & Strategic Partners Section */}
+      <OurFoundersSection />
+
       {/* Testimonials Section */}
       <TestimonialsSection />
 
       {/* Why Choose Heapvue */}
       <WhyChooseSection />
-
-      {/* Leadership & Founders Section (Re-enabled with real founders and photos) */}
-      {/* <OurFoundersSection /> */}
 
       {/* Featured Case Study Section */}
       <CaseStudySection />

@@ -14,9 +14,10 @@ export default function OurMissionSection() {
 
         {/* Main Heading */}
         <h2 className="mission-main-title">
-          Transforming Businesses
-          <br />
-          Through <span className="mission-highlight">Intelligent Technology</span>
+          <span className="mission-title-line">Transforming Businesses</span>
+          <span className="mission-title-line">
+            Through <span className="mission-highlight">Intelligent Technology</span>
+          </span>
         </h2>
 
         {/* Subtext Paragraph */}

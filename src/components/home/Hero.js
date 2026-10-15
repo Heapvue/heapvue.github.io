@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import {
   FiArrowRight,
@@ -19,21 +19,78 @@ const QUICK_PROMPTS = [
   'Cloud Architecture & Modernization'
 ];
 
+const RANDOM_QUESTIONS = [
+  'How can AI & LLMs automate our business workflows?',
+  'What enterprise features are included in Vuecart?',
+  'How do we modernize our legacy systems with Heapvue?',
+  'Can you build custom autonomous AI agents for us?',
+  'How does Heapsync compare to enterprise CRMs?',
+  'How can we scale our cloud infrastructure with DevOps?',
+  'Can Heapvue develop a modern mobile app for us?',
+  'How do we schedule a technical architecture consultation?',
+];
+
 export default function Hero() {
   const [inputValue, setInputValue] = useState('');
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [typedText, setTypedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const inputRef = useRef(null);
+
+  // Typing effect animation loop
+  useEffect(() => {
+    // When user has typed something, pause typing animation
+    if (inputValue) return;
+
+    const currentFullText = RANDOM_QUESTIONS[questionIndex];
+    let timeout;
+
+    if (!isDeleting) {
+      // Typing mode
+      if (typedText.length < currentFullText.length) {
+        timeout = setTimeout(() => {
+          setTypedText(currentFullText.slice(0, typedText.length + 1));
+        }, 45);
+      } else {
+        // Full question completed, pause before erasing
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2200);
+      }
+    } else {
+      // Deleting mode
+      if (typedText.length > 0) {
+        timeout = setTimeout(() => {
+          setTypedText(currentFullText.slice(0, typedText.length - 1));
+        }, 25);
+      } else {
+        // Erased completely, pick a different random question
+        setIsDeleting(false);
+        setQuestionIndex((prevIndex) => {
+          let nextIndex;
+          do {
+            nextIndex = Math.floor(Math.random() * RANDOM_QUESTIONS.length);
+          } while (nextIndex === prevIndex && RANDOM_QUESTIONS.length > 1);
+          return nextIndex;
+        });
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [typedText, isDeleting, questionIndex, inputValue]);
 
   const handleSelectPrompt = (promptText) => {
     setInputValue(promptText);
+    inputRef.current?.focus();
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (!inputValue.trim()) return;
+    const query = inputValue.trim() || typedText.trim() || RANDOM_QUESTIONS[questionIndex];
+    if (!query) return;
 
-    const val = inputValue.toLowerCase();
-    if (val.includes('Vuecart') || val.includes('product') || val.includes('e-commerce')) {
-      window.location.href = '/products';
-    } else if (val.includes('crm') || val.includes('Heapsync')) {
+    const val = query.toLowerCase();
+    if (val.includes('vuecart') || val.includes('product') || val.includes('e-commerce') || val.includes('heapsync') || val.includes('crm')) {
       window.location.href = '/products';
     } else {
       window.location.href = '/solutions';
@@ -42,6 +99,7 @@ export default function Hero() {
 
   const handleClear = () => {
     setInputValue('');
+    inputRef.current?.focus();
   };
 
   return (
@@ -62,13 +120,26 @@ export default function Hero() {
               <div className="hero-ai-light-beam" aria-hidden="true"></div>
               <div className="hero-ai-input-rounded">
                 <BsStars className="hero-ai-star-icon" size={28} />
-                <input
-                  type="text"
-                  className="hero-ai-input"
-                  placeholder="Ask Chatpress"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                />
+                <div className="hero-ai-field-container">
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    className="hero-ai-input"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                  />
+                  {/* Animated typing question: remains visible on focus until user actually types */}
+                  {!inputValue && (
+                    <div 
+                      className="hero-ai-typing-placeholder"
+                      onClick={() => inputRef.current?.focus()}
+                      aria-hidden="true"
+                    >
+                      <span className="typing-text">{typedText}</span>
+                      <span className="typing-cursor">|</span>
+                    </div>
+                  )}
+                </div>
                 {inputValue && (
                   <button
                     type="button"

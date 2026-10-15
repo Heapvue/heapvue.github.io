@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FiCheckCircle, FiChevronDown } from 'react-icons/fi';
 
@@ -39,10 +39,14 @@ const CONSULTATION_OPTIONS = [
 ];
 
 const CAREER_OPTIONS = [
-  'Senior Full-Stack Software Engineer',
-  'AI / Machine Learning Engineer',
-  'Cloud Infrastructure & DevOps Engineer',
-  'UI / UX Product Designer',
+  'Senior Software Engineer',
+  'Full Stack Developer',
+  'Cloud & DevOps Engineer',
+  'AI / LLM Application Engineer',
+  'Product Manager',
+  'UX/UI Designer',
+  'Senior Content Writer',
+  'Junior Content Writer',
   'Technical Project Manager',
   'Enterprise Solutions Consultant',
   'General Career Application / Internship',
@@ -61,6 +65,36 @@ export default function ContactFormSection() {
     agreePrivacy: false,
   });
   const [submitted, setSubmitted] = useState(false);
+
+  // Auto-detect tab and role from URL query parameters (e.g. /contact?tab=careers&role=Senior+Software+Engineer)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get('tab');
+      const roleParam = params.get('role');
+
+      if (tabParam && ENQUIRY_TABS.some((t) => t.id === tabParam.toLowerCase())) {
+        setActiveTab(tabParam.toLowerCase());
+      }
+
+      if (roleParam) {
+        setFormData((prev) => ({
+          ...prev,
+          selectedType: roleParam,
+        }));
+      }
+
+      // Smooth scroll to form if coming from a job apply link
+      if (tabParam === 'careers' || roleParam || window.location.hash === '#contact-form') {
+        const formEl = document.getElementById('contact-form');
+        if (formEl) {
+          setTimeout(() => {
+            formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 150);
+        }
+      }
+    }
+  }, []);
 
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
@@ -124,8 +158,12 @@ export default function ContactFormSection() {
         return PLATFORM_OPTIONS;
       case 'consultation':
         return CONSULTATION_OPTIONS;
-      case 'careers':
+      case 'careers': {
+        if (formData.selectedType && !CAREER_OPTIONS.includes(formData.selectedType)) {
+          return [formData.selectedType, ...CAREER_OPTIONS];
+        }
         return CAREER_OPTIONS;
+      }
       default:
         return [];
     }
@@ -162,7 +200,7 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section className="contact-form-main-section">
+    <section id="contact-form" className="contact-form-main-section">
       <div className="contact-form-main-container">
         <div className="contact-form-layout-grid">
           {/* Left Column: Title & Office Details */}
@@ -173,9 +211,10 @@ export default function ContactFormSection() {
             </div>
 
             <h2 className="contact-form-main-title">
-              Let’s Build Smart<br />
-              <span className="contact-title-blue">Technology Solutions</span><br />
-              <span className="contact-title-blue">Together.</span>
+              <span className="contact-title-line">Let’s Build Smart</span>
+              <span className="contact-title-line contact-title-blue">
+                Technology Solutions Together.
+              </span>
             </h2>
 
             <div className="contact-details-list">

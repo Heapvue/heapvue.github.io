@@ -39,15 +39,17 @@ export default function WhyJoinSection() {
   return (
     <section className="why-join-wrapper">
       <div className="why-join-container">
-        {/* Title Box (Spans 2 columns on top left) */}
+        {/* Title Box (Spans first 2 columns on top row) */}
         <div className="why-join-title-box">
           <div className="why-join-badge-capsule">
             <span className="badge-bullet"></span>
-            <span className="badge-text">WHY JOIN HEAPVUE</span>
+            <span className="badge-text">Why Join Heapvue</span>
           </div>
           <h2 className="why-join-main-title">
-            Build the Future with <br />
-            Smart <span className="why-join-blue-highlight">Technology Solutions.</span>
+            <span className="why-join-title-line">Build the Future with </span>
+            <span className="why-join-title-line">
+              Smart <span className="why-join-blue-highlight">Technology Solutions.</span>
+            </span>
           </h2>
         </div>
 
