@@ -70,6 +70,7 @@ export default function ConsultingEngagementsSection() {
                   height={225}
                   className="engagement-card-img"
                   priority
+                  unoptimized
                 />
               </div>
 

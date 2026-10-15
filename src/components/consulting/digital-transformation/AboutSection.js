@@ -14,9 +14,7 @@ export default function AboutSection() {
             <span className="badge-text">About Digital Transformation</span>
           </div>
 
-          <h2 className="about-ai-consulting-title">
-            Aligning Technology with <span className="blue-italic-text">Business Objectives</span>
-          </h2>
+          <h2 className="about-ai-consulting-title">Digital Transformation</h2>
 
           <div className="about-ai-consulting-text-group">
             <p className="about-ai-consulting-text">

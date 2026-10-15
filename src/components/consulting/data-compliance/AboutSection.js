@@ -14,9 +14,7 @@ export default function AboutSection() {
             <span className="badge-text">About Data & Compliance</span>
           </div>
 
-          <h2 className="about-ai-consulting-title">
-            Safeguarding Privacy & <span className="blue-italic-text">Regulatory Alignment</span>
-          </h2>
+          <h2 className="about-ai-consulting-title">Data & Compliance</h2>
 
           <div className="about-ai-consulting-text-group">
             <p className="about-ai-consulting-text">

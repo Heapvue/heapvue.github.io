@@ -136,7 +136,7 @@ export default function ConsultingIndexPage() {
 
       {/* 4 Practices Grid */}
       <section className="py-5">
-        <div className="container" style={{ maxWidth: '1240px' }}>
+        <div className="container" style={{ maxWidth: '1360px' }}>
           <div className="text-center mb-5">
             <span className="d-inline-block px-3 py-1 rounded-pill mb-2 fw-semibold text-primary" style={{ backgroundColor: '#EFF6FF', fontSize: '0.85rem' }}>
               Our Advisory Practices
@@ -237,7 +237,7 @@ export default function ConsultingIndexPage() {
 
       {/* Advisory Principles */}
       <section className="py-5 bg-white border-top border-bottom">
-        <div className="container" style={{ maxWidth: '1100px' }}>
+        <div className="container" style={{ maxWidth: '1360px' }}>
           <div className="row g-4 align-items-center">
             <div className="col-12 col-md-5">
               <span className="text-primary fw-bold small text-uppercase">Our Engagement Philosophy</span>

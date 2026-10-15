@@ -67,6 +67,7 @@ export default function EngagementsSection() {
                   height={225}
                   className="engagement-card-img"
                   priority
+                  unoptimized
                 />
               </div>
 

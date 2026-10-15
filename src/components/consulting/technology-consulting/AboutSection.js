@@ -14,9 +14,7 @@ export default function AboutSection() {
             <span className="badge-text">About Technology Consulting</span>
           </div>
 
-          <h2 className="about-ai-consulting-title">
-            Building Scalable <span className="blue-italic-text">Technology Foundations</span>
-          </h2>
+          <h2 className="about-ai-consulting-title">Technology Consulting</h2>
 
           <div className="about-ai-consulting-text-group">
             <p className="about-ai-consulting-text">

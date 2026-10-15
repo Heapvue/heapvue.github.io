@@ -62,7 +62,7 @@ export default function ServicesGridSection() {
             <h2 className="consulting-grid-main-title">
               Digital Transformation
               <br />
-              <span className="blue-italic-text">Expertise.</span>
+              Expertise.
             </h2>
           </div>
 
@@ -78,7 +78,7 @@ export default function ServicesGridSection() {
           {transformationServices.map((service) => (
             <div
               key={service.id}
-              className="consulting-service-card"
+              className={`consulting-service-card ${service.bg.includes('green') ? 'card-border-green' : 'card-border-blue'}`}
               style={{ backgroundImage: `url('${service.bg}')` }}
             >
               <div className="consulting-card-icon">

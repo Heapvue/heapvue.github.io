@@ -448,33 +448,35 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 60px 0;
+  align-items: center;
   background-color: #ffffff;
+  padding: 60px 24px;
+  box-sizing: border-box;
 }
 
 .map-stack-container {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  min-height: 301.89px;
-  background-color: #040d21;
-  border-radius: 16px;
-  overflow: hidden;
+  min-height: 295px;
+  background-color: #020e2b;
+  border-radius: 0px !important;
+  box-shadow: none !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px 24px;
-  box-shadow: 0 12px 40px rgba(4, 13, 33, 0.15);
+  padding: 52px 24px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .map-stack-graphic-left {
   position: absolute;
   left: 0;
-  top: 57.26px;
-  width: 332.08px;
-  height: 184.75px;
-  opacity: 0.6;
-  mix-blend-mode: screen;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 332px;
+  height: 184px;
   pointer-events: none;
   z-index: 1;
 }
@@ -482,11 +484,10 @@
 .map-stack-graphic-right {
   position: absolute;
   right: 0;
-  top: 57.26px;
-  width: 332.08px;
-  height: 184.75px;
-  opacity: 0.6;
-  mix-blend-mode: screen;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 332px;
+  height: 184px;
   pointer-events: none;
   z-index: 1;
 }
@@ -495,8 +496,9 @@
   width: 100% !important;
   height: 100% !important;
   object-fit: contain;
-  opacity: 0.6;
-  mix-blend-mode: screen;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
 }
 
 .map-stack-content {
@@ -506,86 +508,87 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 680px;
+  max-width: 620px;
   width: 100%;
 }
 
 .map-stack-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-  font-size: 2.15rem;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  margin: 0 0 16px 0;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(1.85rem, 2.5vw, 2.25rem) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 0 14px 0 !important;
+  font-style: normal !important;
 }
 
 .map-stack-subtext {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0 0 28px 0;
-  font-weight: 400;
-  max-width: 620px;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.92rem !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  margin: 0 0 24px 0 !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  max-width: 580px;
 }
 
 .map-stack-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  color: #040d21;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 12px 28px;
-  border-radius: 6px;
-  text-decoration: none;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #ffffff !important;
+  color: #020e2b !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  padding: 10px 26px !important;
+  border-radius: 0px !important;
+  text-decoration: none !important;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+  box-shadow: none !important;
+  border: 1px solid #ffffff !important;
 }
 
 .map-stack-btn:hover {
-  background-color: #f8fafc;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
-  color: #040d21;
+  background-color: #f1f5f9 !important;
+  color: #020e2b !important;
+  transform: none !important;
 }
 
+/* Responsive Queries for Map Stack Section */
 @media (max-width: 1024px) {
   .map-stack-graphic-left,
   .map-stack-graphic-right {
-    width: 250px;
-    height: 138px;
+    width: 220px;
+    height: 125px;
     opacity: 0.4;
   }
 
   .map-stack-title {
-    font-size: 1.8rem;
+    font-size: 1.85rem !important;
   }
 }
 
 @media (max-width: 768px) {
   .map-stack-container {
-    padding: 40px 20px;
+    padding: 50px 20px;
     min-height: auto;
   }
 
   .map-stack-graphic-left,
   .map-stack-graphic-right {
-    width: 180px;
-    height: 100px;
-    opacity: 0.25;
+    display: none;
   }
 
   .map-stack-title {
-    font-size: 1.5rem;
+    font-size: 1.55rem !important;
   }
 
   .map-stack-subtext {
-    font-size: 0.88rem;
-    margin-bottom: 20px;
+    font-size: 0.88rem !important;
+    margin-bottom: 20px !important;
   }
 }
 

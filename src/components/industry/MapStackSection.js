@@ -17,6 +17,7 @@ export default function MapStackSection() {
             height={184}
             className="map-stack-img"
             priority
+            unoptimized
           />
         </div>
 
@@ -29,13 +30,16 @@ export default function MapStackSection() {
             height={184}
             className="map-stack-img"
             priority
+            unoptimized
           />
         </div>
 
         {/* Center Content Box (1200 x 301 container) */}
         <div className="map-stack-content">
           <h2 className="map-stack-title">
-            Discover How To Map Heapvue to Your Stack
+            Discover How To Map
+            <br />
+            Heapvue to Your Stack
           </h2>
           <p className="map-stack-subtext">
             Tell us your existing identity stack and we'll walk through deployment best practices, integration timelines, and how our enterprise customers went from pilot to production in weeks.

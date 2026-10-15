@@ -14,9 +14,7 @@ export default function AboutSection() {
             <span className="badge-text">About AI Consulting</span>
           </div>
 
-          <h2 className="about-ai-consulting-title">
-            Transforming Potential into <span className="blue-italic-text">Measurable AI Impact</span>
-          </h2>
+          <h2 className="about-ai-consulting-title">AI Consulting</h2>
 
           <div className="about-ai-consulting-text-group">
             <p className="about-ai-consulting-text">
