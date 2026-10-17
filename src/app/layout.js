@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ClientProviders from '@/components/ClientProviders';
 import MetaPixel from '@/components/MetaPixel';
+import FloatingChat from '@/components/chat/FloatingChat';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -72,6 +73,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <FloatingChat />
         </ClientProviders>
       </body>
     </html>

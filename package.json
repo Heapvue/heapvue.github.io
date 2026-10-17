@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@rothenhall/things": "file:vendor/rothenhall-things-1.0.0.tgz",
     "bootstrap": "^5.3.3",
     "gray-matter": "^4.0.3",
     "jquery": "^3.7.1",
