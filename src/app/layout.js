@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ClientProviders from '@/components/ClientProviders';
+import MetaPixel from '@/components/MetaPixel';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${poppins.className} ${poppins.variable} d-flex flex-column min-vh-100`}>
+        <MetaPixel />
         <ClientProviders>
           <Navbar />
           <main className="flex-grow-1" style={{ paddingTop: '105px' }}>

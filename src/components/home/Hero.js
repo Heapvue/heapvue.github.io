@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { createChatpressConversation } from '@/lib/chatpress';
+import { trackMetaEvent } from '@/lib/metaPixel';
 import Markdown from 'react-markdown';
 import {
   FiArrowRight,
@@ -56,6 +57,7 @@ export default function Hero() {
   const conversationRef = useRef(null);
   const transcriptRef = useRef(null);
   const autoScrollRef = useRef(true);
+  const chatTrackedRef = useRef(false);
   const hasConversation = messages.length > 0;
   const isAnswering = activeAnswerId !== null;
 
@@ -115,6 +117,10 @@ export default function Hero() {
   const sendQuery = async (rawQuery) => {
     const query = rawQuery.trim();
     if (!query || chatRequestRef.current) return;
+    if (!chatTrackedRef.current) {
+      chatTrackedRef.current = true;
+      trackMetaEvent('ChatStarted', { source_path: window.location.pathname });
+    }
     if (!hasConversation) window.scrollTo({ top: 0, behavior: 'smooth' });
     const request = new AbortController();
     chatRequestRef.current = request;
@@ -225,7 +231,7 @@ export default function Hero() {
                   </div>
                 </div>
                 <div className="hero-conversation-actions">
-                  <Link href="/contact" className="hero-conversation-expert">
+                  <Link href="/contact" className="hero-conversation-expert" data-meta-event="Contact">
                     <FiMessageCircle size={15} /> <span className="hero-action-label">Talk to an expert</span>
                   </Link>
                   <button type="button" onClick={handleNewConversation} aria-label="Start a new conversation" title="New conversation">

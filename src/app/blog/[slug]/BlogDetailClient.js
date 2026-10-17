@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { trackMetaEvent } from '@/lib/metaPixel';
 import {
   FiCalendar,
   FiClock,
@@ -107,6 +108,8 @@ export default function BlogDetailClient({ slug: propSlug }) {
   const handleCtaBook = (e) => {
     e.preventDefault();
     if (!ctaEmail) return;
+    trackMetaEvent('Lead', { content_name: 'blog_article_appointment' });
+    trackMetaEvent('Schedule', { content_name: 'blog_article_appointment' });
     setCtaBooked(true);
     setTimeout(() => {
       setCtaName('');

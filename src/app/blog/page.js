@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FiArrowRight, FiSearch, FiX } from 'react-icons/fi';
 import CaseStudySection from '@/components/home/CaseStudySection';
 import AppointmentSection from '@/components/home/AppointmentSection';
+import { trackMetaEvent } from '@/lib/metaPixel';
 import './Blog.css';
 
 const INITIAL_BLOG_POSTS = [
@@ -111,6 +112,8 @@ export default function BlogPage() {
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (!email) return;
+    trackMetaEvent('Lead', { content_name: 'blog_book_a_call' });
+    trackMetaEvent('Schedule', { content_name: 'blog_book_a_call' });
     setSubmitted(true);
     setTimeout(() => {
       setEmail('');

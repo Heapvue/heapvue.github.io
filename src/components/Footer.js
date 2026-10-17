@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
+import { trackMetaEvent } from '@/lib/metaPixel';
 import {
   FaLinkedinIn,
   FaXTwitter,
@@ -18,6 +19,8 @@ export default function Footer() {
   const handleCtaSubmit = (e) => {
     e.preventDefault();
     if (email) {
+      trackMetaEvent('Lead', { content_name: 'footer_demo_request' });
+      trackMetaEvent('Schedule', { content_name: 'footer_demo_request' });
       alert(`Demo requested for: ${email}`);
       setEmail('');
     }

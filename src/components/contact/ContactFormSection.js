@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { trackMetaEvent } from '@/lib/metaPixel';
 import { FiCheckCircle, FiChevronDown } from 'react-icons/fi';
 
 const ENQUIRY_TABS = [
@@ -65,6 +66,7 @@ export default function ContactFormSection() {
     agreePrivacy: false,
   });
   const [submitted, setSubmitted] = useState(false);
+  const formStartedRef = useRef(false);
 
   // Auto-detect tab and role from URL query parameters (e.g. /contact?tab=careers&role=Senior+Software+Engineer)
   useEffect(() => {
@@ -96,6 +98,13 @@ export default function ContactFormSection() {
     }
   }, []);
 
+  // Fires once per visit on first focus inside the form, so "started but never submitted" can be targeted.
+  const handleFormStart = () => {
+    if (formStartedRef.current) return;
+    formStartedRef.current = true;
+    trackMetaEvent('ContactFormStart', { content_category: activeTab });
+  };
+
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
     setFormData((prev) => ({
@@ -118,6 +127,12 @@ export default function ContactFormSection() {
     if (!formData.agreePrivacy) {
       alert('Please agree to the Privacy Statement before submitting.');
       return;
+    }
+    // Careers applications are not sales leads, so they get their own event.
+    if (activeTab === 'careers') {
+      trackMetaEvent('CareerApplication', { content_name: formData.selectedType });
+    } else {
+      trackMetaEvent('Lead', { content_category: activeTab, content_name: formData.selectedType });
     }
     setSubmitted(true);
     setTimeout(() => {
@@ -271,7 +286,7 @@ export default function ContactFormSection() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="enquiry-actual-form">
+              <form onSubmit={handleSubmit} onFocus={handleFormStart} className="enquiry-actual-form">
                 {/* 1. Group: Your Details */}
                 <div className="form-group-block">
                   <h4 className="form-group-heading">Your Details</h4>
