@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Markdown from 'react-markdown';
 import { createChatpressConversation } from '@/lib/chatpress';
 import { trackMetaEvent } from '@/lib/metaPixel';
+import { HANDOFF_EVENT } from '@/lib/chatHandoff';
 import PlumAvatar from './PlumAvatar';
 import {
   FiArrowRight,
@@ -139,12 +140,12 @@ export default function FloatingChat() {
     safeSession('set', '1');
   };
 
-  const sendQuery = async (rawQuery) => {
+  const sendQuery = async (rawQuery, source = 'floating') => {
     const query = rawQuery.trim();
     if (!query || chatRequestRef.current) return;
     if (!chatTrackedRef.current) {
       chatTrackedRef.current = true;
-      trackMetaEvent('ChatStarted', { source_path: window.location.pathname, chat_surface: 'floating' });
+      trackMetaEvent('ChatStarted', { source_path: window.location.pathname, chat_surface: source });
     }
     const request = new AbortController();
     chatRequestRef.current = request;
@@ -192,6 +193,22 @@ export default function FloatingChat() {
     event.preventDefault();
     sendQuery(inputValue);
   };
+
+  // The hero (or any other part of the page) can hand a question over: the chat opens and answers it.
+  // If an answer is still coming in, the question is left in the box for the visitor to send.
+  const handoffRef = useRef(null);
+  handoffRef.current = (query, source) => {
+    openPanel();
+    if (!query) return;
+    if (chatRequestRef.current) setInputValue(query);
+    else sendQuery(query, source);
+  };
+
+  useEffect(() => {
+    const onHandoff = (event) => handoffRef.current?.(event.detail?.query, event.detail?.source);
+    window.addEventListener(HANDOFF_EVENT, onHandoff);
+    return () => window.removeEventListener(HANDOFF_EVENT, onHandoff);
+  }, []);
 
   const handleStop = () => {
     chatRequestRef.current?.abort();
