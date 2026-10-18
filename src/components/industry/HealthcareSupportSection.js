@@ -59,9 +59,9 @@ export default function HealthcareSupportSection() {
               <span className="badge-text">How We Enable Healthcare</span>
             </div>
             <h2 className="support-main-title">
-              How We <span className="blue-italic-text">Support</span>
+              How We <span className="blue-highlight-text">Support</span>
               <br />
-              <span className="blue-italic-text">Healthcare Organisations</span>
+              <span className="blue-highlight-text">Healthcare Organisations</span>
             </h2>
           </div>
 

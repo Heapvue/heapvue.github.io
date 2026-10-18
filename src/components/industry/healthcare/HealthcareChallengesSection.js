@@ -24,7 +24,7 @@ const challengesData = [
   },
   {
     num: '04',
-    title: 'Platform Modernisation',
+    title: 'Platform Modernization',
     description: 'Modernising outdated software platforms used for healthcare operations.',
     image: '/images/indus4.png',
   },
@@ -49,7 +49,7 @@ export default function HealthcareChallengesSection() {
         <div className="challenges-header-box">
           <div className="challenges-badge-capsule">
             <span className="badge-bullet"></span>
-            <span className="badge-text">Typical Challenges</span>
+            <span className="badge-text">What are the obstacles</span>
           </div>
 
           <h2 className="challenges-main-title">

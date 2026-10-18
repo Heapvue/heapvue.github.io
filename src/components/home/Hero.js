@@ -193,10 +193,10 @@ export default function Hero() {
             <p className="hero-quad-desc">
               Deploy specialized business SaaS platforms including headless e-commerce, CRM, and automated LMS.
             </p>
-            <Link href="/products" className="hero-quad-link">
+            <a href="https://Vuecart.heapvue.com/in-en" target="_blank" rel="noopener noreferrer" className="hero-quad-link">
               <span>Know More</span>
               <FiArrowRight size={14} />
-            </Link>
+            </a>
           </div>
 
           {/* Card 2: AI Engineering */}
@@ -210,7 +210,7 @@ export default function Hero() {
             <p className="hero-quad-desc">
               Engineer bespoke domain models, multi-agent workflows, and intelligent semantic automation.
             </p>
-            <Link href="/solutions" className="hero-quad-link">
+            <Link href="/solutions/ai-intelligent-automation" className="hero-quad-link">
               <span>Know More</span>
               <FiArrowRight size={14} />
             </Link>
@@ -227,7 +227,7 @@ export default function Hero() {
             <p className="hero-quad-desc">
               Architect resilient multi-cloud microservices, Kubernetes clusters, and automated CI/CD pipelines.
             </p>
-            <Link href="/solutions" className="hero-quad-link">
+            <Link href="/solutions/legacy-system-modernisation" className="hero-quad-link">
               <span>Know More</span>
               <FiArrowRight size={14} />
             </Link>
@@ -244,7 +244,7 @@ export default function Hero() {
             <p className="hero-quad-desc">
               Implement enterprise identity governance, encrypted audit logs, and regulatory compliance protocols.
             </p>
-            <Link href="/solutions" className="hero-quad-link">
+            <Link href="/solutions/system-integration-security" className="hero-quad-link">
               <span>Know More</span>
               <FiArrowRight size={14} />
             </Link>

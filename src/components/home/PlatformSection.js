@@ -182,9 +182,9 @@ export default function PlatformSection() {
       {/* CTA Buttons Row Placed Below the Image Area in the White Dispersed Zone */}
       <div className="platform-cta-container">
         <div className="platform-cta-row">
-          <Link href="/products" className="platform-primary-btn">
+          <a href="https://Vuecart.heapvue.com/in-en" target="_blank" rel="noopener noreferrer" className="platform-primary-btn">
             Explore Our Platforms <FiArrowRight size={17} className="btn-arrow" />
-          </Link>
+          </a>
           <Link href="/contact" className="platform-secondary-btn">
             Talk to Our Team <FiArrowUpRight size={17} className="btn-arrow" />
           </Link>

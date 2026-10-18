@@ -163,13 +163,6 @@ const productsSubmenus = [
     icon: FiBookOpen,
     isExternal: true,
   },
-  {
-    name: 'All Products Overview',
-    path: '/products',
-    desc: 'Explore all proprietary software platforms & pricing.',
-    icon: FiLayers,
-    isExternal: false,
-  },
 ];
 
 export default function Navbar() {
@@ -300,7 +293,7 @@ export default function Navbar() {
       <header className={headerClass}>
         {/* 1. Top Announcement Bar */}
         <div className="announcement-banner">
-          <Link href="/solutions" className="announcement-link">
+          <Link href="/solutions/ai-intelligent-automation" className="announcement-link">
             Power Modern Enterprises with Intelligent AI Workflows &amp; Cloud Architecture – Explore Solutions
           </Link>
         </div>
@@ -352,15 +345,15 @@ export default function Navbar() {
                         onMouseLeave={handleMouseLeave}
                       >
                         <div className="d-flex align-items-center">
-                          <Link
-                            href={link.path}
-                            onClick={() => setActiveDropdown(null)}
-                            className={`nav-link site-nav-link d-flex align-items-center ${isActive ? 'active' : ''}`}
+                          <button
+                            type="button"
+                            onClick={(e) => toggleDropdown(link.name, e)}
+                            className={`nav-link site-nav-link d-flex align-items-center bg-transparent border-0 shadow-none p-0 ${isActive ? 'active' : ''}`}
+                            aria-expanded={isDropdownVisible}
                           >
                             <span>{link.name}</span>
                             <span
                               className="dropdown-chevron-btn ms-1"
-                              onClick={(e) => toggleDropdown(link.name, e)}
                               title={`Toggle ${link.name} menu`}
                             >
                               <FiChevronDown
@@ -372,7 +365,7 @@ export default function Navbar() {
                                 }}
                               />
                             </span>
-                          </Link>
+                          </button>
                         </div>
 
                         {/* Desktop Dropdown Mega-Menu */}
@@ -531,16 +524,6 @@ export default function Navbar() {
 
                     {isExpanded && (
                       <div className="offcanvas-submenu-list">
-                        {/* Parent Page Overview Link */}
-                        <Link
-                          href={link.path}
-                          onClick={() => setIsOffcanvasOpen(false)}
-                          className="offcanvas-submenu-overview"
-                        >
-                          <span>Explore {link.name} Overview</span>
-                          <FiArrowRight size={13} />
-                        </Link>
-
                         {/* Submenu Items */}
                         {link.submenus.map((subItem) => {
                           const IconComponent = subItem.icon;

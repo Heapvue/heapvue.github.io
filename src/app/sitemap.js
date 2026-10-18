@@ -10,12 +10,6 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/solutions`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/solutions/platform-development`,
       lastModified,
       changeFrequency: 'monthly',
@@ -52,12 +46,6 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/consulting`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/consulting/digital-transformation`,
       lastModified,
       changeFrequency: 'monthly',
@@ -88,10 +76,34 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/products`,
+      url: `${baseUrl}/industries/healthcare`,
       lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/retail-ecommerce`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/finance`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/education`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/startups`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,

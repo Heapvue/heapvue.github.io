@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function IndustryHero() {
   return (
-    <section className="industry-hero-wrapper">
+    <section className="industry-hero-wrapper industry-hero-healthcare">
       <div className="industry-hero-bg-overlay"></div>
       
       <div className="industry-hero-container">

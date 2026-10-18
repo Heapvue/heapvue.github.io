@@ -10,12 +10,18 @@
   min-height: 648px;
   background-image: url('/images/industrybg.png');
   background-size: cover;
-  background-position: center;
+  background-position: center 25%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  box-sizing: border-box;
+}
+
+.industry-hero-healthcare {
+  background-image: url('/images/industrybg.png') !important;
+  background-position: center 25% !important;
 }
 
 .industry-hero-bg-overlay {
@@ -24,7 +30,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(8, 12, 22, 0.54) 0%, rgba(6, 10, 18, 0.72) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -37,85 +43,114 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1360px;
   padding: 0 24px;
+  box-sizing: border-box;
 }
 
-/* Badge Capsule */
+/* Badge Capsule - Sharp Rectangular White Box Matching About Us */
 .industry-hero-badge-capsule {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 18px;
-  margin-bottom: 24px;
-  border-radius: 50px;
-  background-color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  padding: 6px 14px;
+  margin-bottom: 22px;
+  border-radius: 0px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cde7ff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
   width: fit-content;
 }
 
 .industry-hero-badge-capsule .badge-bullet {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #0555FF;
+  width: 5px;
+  height: 5px;
+  border-radius: 0px !important;
+  background-color: #0555ff !important;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .industry-hero-badge-capsule .badge-text {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #1e293b;
-  letter-spacing: 0.02em;
-}
-
-/* Main Title */
-.industry-hero-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-  font-size: 3.4rem;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: #ffffff;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  color: #0f172a !important;
+  letter-spacing: 0.04em;
+  text-transform: none !important;
+  line-height: 1;
+}
+
+/* Main Title - Bold 2-Line Typography Matching About Us */
+.industry-hero-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(2.3rem, 4.4vw, 3.85rem);
+  font-weight: 700;
+  color: #ffffff !important;
+  line-height: 1.16;
+  letter-spacing: -0.025em;
   margin: 0 0 20px 0;
-  max-width: 860px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
 }
 
-/* Subtitle Text */
+/* Subtitle Text Matching About Us */
 .industry-hero-subtext {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 1rem;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(0.92rem, 1.25vw, 1.02rem);
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.82) !important;
   margin: 0 auto;
-  max-width: 780px;
+  max-width: 900px;
   font-weight: 400;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
-/* Responsive Media Queries for Hero */
-@media (max-width: 991px) {
+/* Responsive Media Queries Matching About Us */
+@media (max-width: 991.98px) {
   .industry-hero-wrapper {
     height: auto;
-    min-height: 520px;
-    padding: 100px 16px 60px 16px;
+    min-height: 540px;
+    padding: 120px 20px 70px 20px;
+    background-position: center center;
   }
 
   .industry-hero-title {
-    font-size: 2.4rem;
+    font-size: 2.7rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
   }
 
   .industry-hero-subtext {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     max-width: 100%;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575.98px) {
+  .industry-hero-wrapper {
+    padding: 100px 16px 60px 16px;
+    min-height: 480px;
+  }
+
+  .industry-hero-badge-capsule {
+    padding: 5px 12px;
+    margin-bottom: 18px;
+  }
+
+  .industry-hero-badge-capsule .badge-text {
+    font-size: 0.68rem;
+  }
+
   .industry-hero-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    line-height: 1.22;
+    margin-bottom: 14px;
+  }
+
+  .industry-hero-subtext {
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 }
 
@@ -133,20 +168,21 @@
 
 .about-healthcare-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px;
   min-height: 510px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  padding: 0 16px;
+  gap: 56px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
-/* Left Written Content Box (W: 541px x H: 428px) */
+/* Left Written Content Box */
 .about-healthcare-content-box {
   width: 100%;
-  max-width: 541px;
+  max-width: 620px;
   min-height: 428px;
   display: flex;
   flex-direction: column;
@@ -154,49 +190,60 @@
   justify-content: center;
 }
 
+/* Badge Capsule - Sharp Rectangular White/Ice-Blue Box */
 .about-healthcare-badge-capsule {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 14px;
-  margin-bottom: 20px;
-  border-radius: 50px;
-  background-color: #ffffff;
-  border: 1px solid rgba(5, 85, 255, 0.15);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  padding: 6px 14px;
+  margin-bottom: 22px;
+  border-radius: 0px !important;
+  background-color: #e9f5ff !important;
+  border: 1px solid #cde7ff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   width: fit-content;
 }
 
 .about-healthcare-badge-capsule .badge-bullet {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #0555FF;
+  width: 5px;
+  height: 5px;
+  border-radius: 0px !important;
+  background-color: #0555ff !important;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .about-healthcare-badge-capsule .badge-text {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #4a5568;
-  letter-spacing: 0.02em;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0f172a !important;
+  letter-spacing: 0.04em;
+  text-transform: none !important;
+  line-height: 1;
 }
 
 .about-healthcare-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-  font-size: 2.35rem;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
   font-weight: 700;
-  color: #2F2C25;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  color: #1e293b !important;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   margin: 0 0 24px 0;
 }
 
+.about-healthcare-title .blue-highlight {
+  color: #0555FF !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+}
+
 .about-healthcare-text {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: #64748b;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(0.9rem, 1.1vw, 0.96rem);
+  line-height: 1.68;
+  color: #475569 !important;
   margin: 0 0 16px 0;
   font-weight: 400;
 }
@@ -205,14 +252,14 @@
   margin-bottom: 0;
 }
 
-/* Right Image Box (W: 570px x H: 510px) */
+/* Right Image Box (W: 570px x H: 510px) - Sharp Corners Exactly Like Reference */
 .about-healthcare-img-box {
   width: 100%;
   max-width: 570px;
   height: 510px;
-  border-radius: 16px;
+  border-radius: 0px !important;
   overflow: hidden;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
 }
 
@@ -222,6 +269,7 @@
   object-fit: cover;
   object-position: center;
   display: block;
+  border-radius: 0px !important;
 }
 
 /* Responsive Queries for About Healthcare */
@@ -248,7 +296,7 @@
   }
 
   .about-healthcare-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -266,12 +314,13 @@
 
 .healthcare-challenges-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px;
   min-height: 1087px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 /* Header Box (W: 801px x H: 171px) */
@@ -286,79 +335,92 @@
   margin-bottom: 56px;
 }
 
+/* Sharp Rectangular Badge Capsule */
 .challenges-badge-capsule {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 14px;
-  margin-bottom: 16px;
-  border-radius: 50px;
-  background-color: #ffffff;
-  border: 1px solid rgba(5, 85, 255, 0.15);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  padding: 6px 14px;
+  margin-bottom: 20px;
+  border-radius: 0px !important;
+  background-color: #e9f5ff !important;
+  border: 1px solid #cde7ff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   width: fit-content;
 }
 
 .challenges-badge-capsule .badge-bullet {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #0555FF;
+  width: 5px;
+  height: 5px;
+  border-radius: 0px !important;
+  background-color: #0555ff !important;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .challenges-badge-capsule .badge-text {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #4a5568;
-  letter-spacing: 0.02em;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0f172a !important;
+  letter-spacing: 0.04em;
+  text-transform: none !important;
+  line-height: 1;
 }
 
 .challenges-main-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-  font-size: 2.35rem;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
   font-weight: 700;
-  color: #2F2C25;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  color: #1e293b !important;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   margin: 0 0 16px 0;
   text-align: center;
 }
 
+.challenges-main-title .blue-highlight {
+  color: #0555FF !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+}
+
 .challenges-subtext {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #64748b;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(0.9rem, 1.1vw, 0.98rem);
+  line-height: 1.68;
+  color: #475569 !important;
   margin: 0;
   font-weight: 400;
   max-width: 680px;
   text-align: center;
 }
 
-/* 6 Cards Grid (3 per row across 1200px) */
+/* 6 Cards Grid (3 per row across 1360px) */
 .challenges-cards-grid {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
+/* Static Challenge Card: 0px radius, no hover effects, no animations */
 .challenge-card-item {
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 0px !important;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: none !important;
+  transform: none !important;
 }
 
 .challenge-card-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  transform: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
 }
 
 .challenge-img-wrapper {
@@ -367,6 +429,7 @@
   position: relative;
   overflow: hidden;
   background-color: #f1f5f9;
+  border-radius: 0px !important;
 }
 
 .challenge-img {
@@ -375,11 +438,13 @@
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: transform 0.4s ease;
+  border-radius: 0px !important;
+  transition: none !important;
+  transform: none !important;
 }
 
 .challenge-card-item:hover .challenge-img {
-  transform: scale(1.03);
+  transform: none !important;
 }
 
 .challenge-card-body {
@@ -390,32 +455,35 @@
   flex-grow: 1;
 }
 
+/* Blue Number Badge with 0px radius: instead of pink, use blue! */
 .challenge-num-badge {
   display: inline-block;
-  padding: 4px 12px;
-  border-radius: 6px;
-  background-color: #F3E8FF;
-  color: #7C3AED;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 0px !important;
+  background-color: #eff6ff !important;
+  color: #0555FF !important;
+  border: 1px solid #dbeafe !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.78rem;
+  font-weight: 700;
   margin-bottom: 14px;
+  line-height: 1.2;
 }
 
 .challenge-card-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1E293B;
+  color: #1e293b !important;
   margin: 0 0 8px 0;
   line-height: 1.3;
 }
 
 .challenge-card-desc {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   font-size: 0.88rem;
-  line-height: 1.55;
-  color: #64748b;
+  line-height: 1.58;
+  color: #64748b !important;
   margin: 0;
   font-weight: 400;
 }
@@ -456,11 +524,12 @@
 
 .industry-solutions-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .industry-solutions-header {
@@ -512,7 +581,7 @@
 
 .blue-highlight {
   color: #0555FF;
-  font-style: italic;
+  font-style: normal !important;
   font-weight: 700;
 }
 
@@ -756,79 +825,83 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 100px 0;
+  padding: 90px 0;
   background-color: #ffffff;
 }
 
 .healthcare-support-container {
   width: 100%;
-  max-width: 1201px;
-  min-height: 1477px;
+  max-width: 1360px;
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  padding: 0 16px;
+  gap: 40px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 /* Header Box (W: 1201px x H: 148px) */
 .support-header-box {
   width: 100%;
-  max-width: 1201px;
-  min-height: 148px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 48px;
+  padding-bottom: 8px;
 }
 
 .support-header-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 620px;
+  max-width: 600px;
 }
 
+/* Sharp rectangular badge with 0px radius */
 .support-badge-capsule {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 14px;
-  margin-bottom: 16px;
-  border-radius: 50px;
-  background-color: #ffffff;
-  border: 1px solid rgba(5, 85, 255, 0.15);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  padding: 6px 14px;
+  margin-bottom: 20px;
+  border-radius: 0px !important;
+  background-color: #eff6ff !important;
+  border: 1px solid #d0e4ff !important;
+  box-shadow: none !important;
 }
 
 .support-badge-capsule .badge-bullet {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #0555FF;
+  width: 5px;
+  height: 5px;
+  border-radius: 0px !important;
+  background-color: #1e293b !important;
 }
 
 .support-badge-capsule .badge-text {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #4a5568;
-  letter-spacing: 0.02em;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  letter-spacing: 0.02em !important;
+  font-style: normal !important;
 }
 
 .support-main-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-  font-size: 2.35rem;
-  font-weight: 700;
-  color: #2F2C25;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin: 0;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(2rem, 3.2vw, 2.5rem) !important;
+  font-weight: 600 !important;
+  color: #1E293B !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 !important;
+  font-style: normal !important;
 }
 
+/* Upright blue text (no slanting / no italic) */
+.blue-highlight-text,
 .blue-italic-text {
-  color: #0555FF;
-  font-style: italic;
-  font-weight: 700;
+  color: #0555FF !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
 }
 
 .support-header-right {
@@ -837,95 +910,109 @@
 }
 
 .support-header-desc {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: #64748b;
-  margin: 0;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  color: #4a5568 !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
 }
 
-/* 5 Rows Container Box (W: 1201px x H: 1273px) */
+/* 5 Rows Container Box */
 .support-rows-container {
   width: 100%;
-  max-width: 1201px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid #e5e7eb;
 }
 
-/* Each Row Item (W: 1201px Fill, Content: 196px, Equal 32px top/bottom padding) */
+/* Each Row Item - Clean 3-column table/row layout */
 .support-row-item {
   width: 100%;
   display: grid;
-  grid-template-columns: 310px 1fr 489px;
-  gap: 32px;
+  grid-template-columns: 290px 1fr 480px;
+  gap: 36px;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e5e7eb;
   padding: 32px 0;
+  border-radius: 0px !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.support-row-item:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
 }
 
 .support-col-title h3 {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 1.18rem;
-  font-weight: 600;
-  color: #1E293B;
-  line-height: 1.35;
-  margin: 0;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: #1E293B !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  font-style: normal !important;
 }
 
 .support-col-desc p {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: #64748b;
-  margin: 0;
-  max-width: 340px;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
+  color: #64748b !important;
+  margin: 0 !important;
+  max-width: 340px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
 }
 
+/* Image container with 0px border-radius, no shadow, no animation */
 .support-col-image {
-  width: 489px;
+  width: 480px;
   height: 196px;
-  border-radius: 12px;
+  border-radius: 0px !important;
   overflow: hidden;
   flex-shrink: 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .support-row-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
-  transition: transform 0.4s ease;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 0px !important;
+  transition: none !important;
+  transform: none !important;
 }
 
 .support-row-item:hover .support-row-img {
-  transform: scale(1.03);
+  transform: none !important;
 }
 
 /* Responsive Queries for Healthcare Support Section */
 @media (max-width: 1100px) {
   .support-row-item {
-    grid-template-columns: 260px 1fr 400px;
-    gap: 20px;
+    grid-template-columns: 240px 1fr 380px;
+    gap: 24px;
   }
 
   .support-col-image {
-    width: 400px;
+    width: 380px;
     height: 160px;
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 900px) {
   .healthcare-support-wrapper {
     padding: 60px 0;
   }
 
   .support-header-box {
     flex-direction: column;
-    min-height: auto;
     gap: 20px;
   }
 
@@ -936,8 +1023,6 @@
 
   .support-row-item {
     grid-template-columns: 1fr 1fr;
-    height: auto;
-    min-height: auto;
     gap: 20px;
     padding: 24px 0;
   }
@@ -951,7 +1036,7 @@
 
 @media (max-width: 600px) {
   .support-main-title {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
   }
 
   .support-row-item {
@@ -978,13 +1063,14 @@
 
 .highlighted-projects-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px;
   min-height: 162px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0 16px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .selected-projects-badge {
@@ -1231,11 +1317,12 @@
 
 .industry-projects-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 16px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .industry-projects-header {
@@ -1247,104 +1334,140 @@
   max-width: 860px;
 }
 
+/* Sharp rectangular badge with 0px radius */
 .industry-projects-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 6px 14px;
   margin-bottom: 20px;
-  border-radius: 50px;
-  background-color: #EFF6FF;
-  border: 1px solid rgba(5, 85, 255, 0.15);
-  box-shadow: 0 2px 8px rgba(5, 85, 255, 0.04);
+  border-radius: 0px !important;
+  background-color: #EFF6FF !important;
+  border: 1px solid #d0e4ff !important;
+  box-shadow: none !important;
 }
 
 .industry-projects-badge .badge-bullet {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #0555FF;
+  width: 5px;
+  height: 5px;
+  border-radius: 0px !important;
+  background-color: #1e293b !important;
 }
 
 .industry-projects-badge .badge-text {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #0555FF;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  letter-spacing: 0.02em !important;
+  font-style: normal !important;
 }
 
 .industry-projects-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
-  font-size: 2.35rem;
-  font-weight: 700;
-  color: #1e293b;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(2rem, 3.2vw, 2.5rem) !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 0 16px 0 !important;
+  font-style: normal !important;
 }
 
 .industry-projects-subtext {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: #64748b;
-  margin: 0;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+  color: #64748b !important;
+  margin: 0 auto !important;
+  font-weight: 400 !important;
+  max-width: 860px !important;
+  font-style: normal !important;
+}
+
+/* Carousel layout with outer left/right navigation arrows */
+.industry-projects-carousel-outer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+}
+
+.projects-slider-btn {
+  width: 36px;
+  height: 36px;
+  background-color: #022B87;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+  z-index: 2;
+}
+
+.projects-slider-btn:hover {
+  background-color: #0555FF;
 }
 
 .industry-projects-grid {
   width: 100%;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.industry-projects-grid.two-cols {
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 840px;
+  gap: 24px;
 }
 
 .industry-project-card {
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 0px !important;
   overflow: hidden;
-  border: 1px solid rgba(5, 85, 255, 0.15);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+  transform: none !important;
   text-decoration: none;
   cursor: pointer;
+  text-align: left;
 }
 
 .industry-project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(5, 85, 255, 0.12);
-  border-color: #0555FF;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .industry-project-card-img-wrapper {
   width: 100%;
-  height: 220px;
+  height: 235px;
   position: relative;
   overflow: hidden;
   background-color: #f1f5f9;
+  border-radius: 0px !important;
 }
 
 .industry-project-card-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 0px !important;
+  transition: none !important;
+  transform: none !important;
 }
 
 .industry-project-card:hover .industry-project-card-img {
-  transform: scale(1.04);
+  transform: none !important;
 }
 
 .industry-project-card-body {
-  padding: 24px;
+  padding: 18px 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1352,54 +1475,364 @@
 }
 
 .industry-project-card-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 1.18rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin: 0 0 12px 0;
-  line-height: 1.35;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  margin: 0 0 10px 0 !important;
+  line-height: 1.35 !important;
+  font-style: normal !important;
 }
 
 .industry-project-card-desc {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #64748b;
-  margin: 0 0 20px 0;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  color: #64748b !important;
+  margin: 0 0 16px 0 !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
 }
 
 .industry-project-card-link {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #0555FF;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  transition: color 0.2s ease;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  color: #0555FF !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
   margin-top: auto;
+  font-style: normal !important;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.industry-project-card:hover .industry-project-card-link {
-  color: #0033cc;
+/* ==========================================================================
+   Project Details Modal Popup (Exact Match to Reference Screenshot)
+   ========================================================================== */
+.project-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
-@media (max-width: 991px) {
-  .industry-projects-grid,
-  .industry-projects-grid.two-cols {
+.project-modal-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1060px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 0px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  position: relative;
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  box-sizing: border-box;
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  line-height: 1;
+  color: #64748b;
+  cursor: pointer;
+  z-index: 10;
+  padding: 2px 6px;
+  transition: color 0.2s ease;
+}
+
+.project-modal-close:hover {
+  color: #0555FF;
+}
+
+.project-modal-img-col {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  background-color: #f1f5f9;
+}
+
+.project-modal-img {
+  object-fit: cover !important;
+  border-radius: 0px !important;
+}
+
+.project-modal-content-col {
+  padding: 36px 36px 28px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Header with Title, Desc and Prev/Next arrows */
+.project-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding-right: 28px; /* space for close button */
+}
+
+.project-modal-header-text {
+  flex: 1;
+}
+
+.project-modal-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1.45rem !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+  line-height: 1.25 !important;
+  margin: 0 0 8px 0 !important;
+  font-style: normal !important;
+}
+
+.project-modal-desc {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+  color: #64748b !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+.project-modal-nav-btns {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.modal-nav-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #022B87;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-nav-btn:hover {
+  background-color: #0555FF;
+}
+
+/* Meta Row */
+.project-modal-meta-row {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+  justify-content: space-between;
+}
+
+.project-modal-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-meta-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 0px !important;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-meta-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-meta-label {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.72rem !important;
+  color: #94a3b8 !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  font-style: normal !important;
+}
+
+.modal-meta-value {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.82rem !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  font-style: normal !important;
+}
+
+.modal-meta-divider {
+  width: 1px;
+  height: 28px;
+  background-color: #e5e7eb;
+  margin: 0 4px;
+}
+
+/* Story Points (The Challenge, Our Solution, The Impact) */
+.project-modal-story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-modal-story-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.story-icon-box {
+  width: 34px;
+  height: 34px;
+  border-radius: 0px !important;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.story-text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  margin: 0 0 3px 0 !important;
+  font-style: normal !important;
+}
+
+.story-desc {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.82rem !important;
+  color: #64748b !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  font-style: normal !important;
+}
+
+/* Bottom Metrics Row */
+.project-modal-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 18px;
+}
+
+.project-modal-metric-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-val {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: #0555FF !important;
+  line-height: 1.1 !important;
+  margin-bottom: 4px !important;
+  font-style: normal !important;
+}
+
+.metric-lbl {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.76rem !important;
+  color: #64748b !important;
+  line-height: 1.35 !important;
+  font-style: normal !important;
+}
+
+/* Responsive Queries for Projects Section & Modal */
+@media (max-width: 1024px) {
+  .project-modal-container {
+    max-width: 90vw;
+    grid-template-columns: 360px 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .industry-projects-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-modal-container {
+    grid-template-columns: 1fr;
+    max-height: 85vh;
+  }
+
+  .project-modal-img-col {
+    min-height: 250px;
+    height: 250px;
+  }
+
+  .project-modal-content-col {
+    padding: 24px 20px;
   }
 }
 
 @media (max-width: 640px) {
-  .industry-projects-grid,
-  .industry-projects-grid.two-cols {
+  .industry-projects-carousel-outer {
+    gap: 8px;
+  }
+
+  .projects-slider-btn {
+    display: none;
+  }
+
+  .industry-projects-grid {
     grid-template-columns: 1fr;
   }
+
   .industry-projects-title {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
+  }
+
+  .project-modal-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .modal-meta-divider {
+    display: none;
+  }
+
+  .project-modal-metrics-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
+
 
 
 

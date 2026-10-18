@@ -176,8 +176,8 @@ export default function Footer() {
                 <h4 className="footer-col-title">Resources</h4>
                 <ul>
                   <li><Link href="/blog">Blog</Link></li>
-                  <li><Link href="/solutions">Solutions</Link></li>
-                  <li><Link href="/consulting">Consulting</Link></li>
+                  <li><Link href="/solutions/platform-development">Solutions</Link></li>
+                  <li><Link href="/consulting/digital-transformation">Consulting</Link></li>
                   <li><Link href="/industries">Industries</Link></li>
                 </ul>
               </div>

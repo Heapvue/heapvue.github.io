@@ -81,7 +81,7 @@ export default function ServicesSection() {
 
         {/* Bottom Explore Button: radius 0, 'Explore Our Services →' */}
         <div className="services-btn-wrapper">
-          <Link href="/solutions" className="btn services-btn">
+          <Link href="/solutions/platform-development" className="btn services-btn">
             Explore Our Services <FiArrowRight size={16} />
           </Link>
         </div>

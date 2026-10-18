@@ -30,11 +30,11 @@ const supportItems = [
   },
   {
     id: 4,
-    title: 'Strengthening infrastructure security and protecting patient data',
+    title: 'Strengthening infrastructure security & protecting patient data',
     description:
       'Enhancing infrastructure security with robust protocols to safeguard patient data, ensure compliance, and prevent unauthorized access or breaches.',
     image: '/images/indus10.png',
-    alt: 'Strengthening infrastructure security and protecting patient data',
+    alt: 'Strengthening infrastructure security & protecting patient data',
   },
   {
     id: 5,
@@ -57,9 +57,9 @@ export default function HealthcareSupportSection() {
               <span className="badge-text">How We Enable Healthcare</span>
             </div>
             <h2 className="support-main-title">
-              How We <span className="blue-italic-text">Support</span>
+              How We <span className="blue-highlight-text">Support</span>
               <br />
-              <span className="blue-italic-text">Healthcare Organisations</span>
+              <span className="blue-highlight-text">Healthcare Organisations</span>
             </h2>
           </div>
 
