@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-import CompanyLogosSection from '@/components/home/CompanyLogosSection';
+import ClientsSection from '@/components/home/ClientsSection';
 
 export default function AboutPlatformDevSection() {
   return (
@@ -30,7 +29,7 @@ export default function AboutPlatformDevSection() {
       </div>
 
       <div className="about-platform-logos-wrapper">
-        <CompanyLogosSection />
+        <ClientsSection />
       </div>
     </section>
   );

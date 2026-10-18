@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-import CompanyLogosSection from '@/components/home/CompanyLogosSection';
+import ClientsSection from '@/components/home/ClientsSection';
 
 export default function AboutPlatformSection({
   badgeText = 'About Platform Development',
@@ -39,7 +38,7 @@ export default function AboutPlatformSection({
 
       {/* Bottom Logos Marquee (1440 Fill x 120) */}
       <div className="about-platform-logos-wrapper">
-        <CompanyLogosSection />
+        <ClientsSection />
       </div>
     </section>
   );

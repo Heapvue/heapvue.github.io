@@ -2,6 +2,7 @@ import '@/components/solutions/Solutions.css';
 import PlatformDevHero from '@/components/solutions/platform-development/PlatformDevHero';
 import AboutPlatformDevSection from '@/components/solutions/platform-development/AboutPlatformDevSection';
 import PlatformsWeBuildDevSection from '@/components/solutions/platform-development/PlatformsWeBuildDevSection';
+import MapStackSection from '@/components/industry/MapStackSection';
 import PlatformDevProjectsSection from '@/components/solutions/platform-development/PlatformDevProjectsSection';
 import PlatformDevApproachSection from '@/components/solutions/platform-development/PlatformDevApproachSection';
 import PlatformDevBanner from '@/components/solutions/platform-development/PlatformDevBanner';
@@ -36,6 +37,7 @@ export default function PlatformDevelopmentPage() {
       <PlatformDevHero />
       <AboutPlatformDevSection />
       <PlatformsWeBuildDevSection />
+      <MapStackSection />
       <PlatformDevProjectsSection />
       <PlatformDevApproachSection />
       <PlatformDevBanner />

@@ -7,71 +7,71 @@ import ProjectModal from '@/components/industry/ProjectModal';
 const healthcareProjects = [
   {
     id: 1,
-    title: 'Patient Engagement Mobile App for a Hospital Chain',
+    title: 'Custom CRM Platform for a Financial Services Firm',
     description:
-      'A hospital chain needed a mobile app for managing appointments and consultations.',
-    image: '/images/indus12.png',
+      'A financial firm needed lead and client management. We built a CRM that streamlined workflows and improved tracking.',
+    image: '/images/induspatient.png',
     meta: {
-      industry: 'Healthcare',
-      service: 'Mobile Application Development',
-      duration: '6 Months',
+      industry: 'Financial Services',
+      service: 'Custom Platform Development',
+      duration: '5 Months',
     },
     challenge:
-      'The hospital chain needed a user-friendly mobile app to streamline appointment scheduling and virtual consultations across multiple locations.',
+      'The client was losing high-value prospects due to disconnected communication channels, manual data entry in legacy spreadsheets, and lack of real-time client interaction tracking.',
     solution:
-      'We developed a secure, scalable mobile app for booking, video consultations, prescriptions, and real-time notifications.',
+      'Heapvue engineered a custom multi-tenant CRM platform with automated lead routing, pipeline analytics, secure document portals, and end-to-end audit trails.',
     impact:
-      'Improved patient engagement, reduced no-shows, and more efficient consultation workflows across the hospital network.',
+      'Eliminated manual tracking overhead, boosted lead conversion velocity, and empowered relationship managers with a single source of client truth.',
     metrics: [
-      { value: '40%', label: 'Reduction in no-show rates' },
-      { value: '60%', label: 'Increase in patient engagement' },
-      { value: '3x', label: 'Faster appointment scheduling' },
+      { value: '45%', label: 'Increase in lead conversion' },
+      { value: '60%', label: 'Reduction in manual reporting' },
+      { value: '99.9%', label: 'Platform availability' },
     ],
   },
   {
     id: 2,
-    title: 'HealthTech Platform Modernisation',
+    title: 'EdTech Student Enrolment and Course Platform',
     description:
-      'Heapvue modernised the architecture, ensuring secure data flow, enhanced performance, and greater scalability.',
-    image: '/images/indus13.png',
+      'An edtech company needed enrolment & course management. We delivered a system that centralised operations & simplified administration.',
+    image: '/images/induspatient.png',
     meta: {
-      industry: 'Healthcare',
-      service: 'Legacy System Modernisation',
-      duration: '8 Months',
+      industry: 'EdTech & Learning',
+      service: 'Web & Platform Development',
+      duration: '4 Months',
     },
     challenge:
-      'A healthcare startup operating on an outdated legacy monolith struggled with severe latency, integration barriers, and escalating maintenance overhead.',
+      'A rapidly expanding EdTech provider struggled with fragmented student registrations, disconnected course payment gateways, and recurring system downtime during peak enrolment seasons.',
     solution:
-      'Heapvue decoupled the system into resilient microservices, optimized database queries, and implemented modern REST/FHIR APIs for real-time interoperability.',
+      'We designed and deployed a unified, cloud-scalable student lifecycle platform featuring automated verification, localized billing gateways, and an interactive student portal.',
     impact:
-      'Achieved 99.99% system availability, reduced server response times drastically, and enabled friction-free integrations with partner health systems.',
+      'Streamlined admissions, provided zero downtime during high-traffic enrolment spikes, and significantly lowered administrative overhead.',
     metrics: [
-      { value: '75%', label: 'Faster data processing speed' },
-      { value: '99.9%', label: 'System uptime and stability' },
-      { value: '4x', label: 'Platform scalability growth' },
+      { value: '80%', label: 'Faster application processing' },
+      { value: '3x', label: 'Concurrent user capacity' },
+      { value: '50%', label: 'Drop in admin overhead' },
     ],
   },
   {
     id: 3,
-    title: 'Infrastructure Security for a Healthcare Platform',
+    title: 'Retail Inventory & Staff Management Platform',
     description:
-      'A healthcare platform faced critical cybersecurity threats, including brute-force attacks and SQL injection attempts.',
-    image: '/images/indus14.png',
+      'A retail chain needed inventory and staff coordination. We built a platform enabling real-time tracking and task management.',
+    image: '/images/induspatient.png',
     meta: {
-      industry: 'Healthcare',
-      service: 'System Integration & Security',
-      duration: '4 Months',
+      industry: 'Retail & Commerce',
+      service: 'Platform & Operations',
+      duration: '6 Months',
     },
     challenge:
-      'The platform experienced unauthorized access attempts, data vulnerability risks, and compliance hurdles against strict HIPAA data privacy regulations.',
+      'Multi-outlet retail chains faced recurrent stock discrepancies, delayed supply-chain replenishments, and lack of shift accountability across store locations.',
     solution:
-      'We implemented comprehensive zero-trust network architecture, multi-factor authentication, end-to-end encryption, and automated intrusion detection.',
+      'Heapvue developed a centralized cloud platform integrating POS data, barcode tracking, dynamic stock replenishment triggers, and an automated staff shift management console.',
     impact:
-      'Zero security breaches post-deployment, full regulatory compliance certification, and hardened defenses against continuous threat vectors.',
+      'Achieved near-zero stockout events, streamlined nationwide workforce scheduling, and provided executive management with instant store-by-store sales analytics.',
     metrics: [
-      { value: '100%', label: 'HIPAA compliance achieved' },
-      { value: '0', label: 'Security breaches recorded' },
-      { value: '90%', label: 'Reduction in vulnerability risks' },
+      { value: '35%', label: 'Reduction in holding costs' },
+      { value: '99.5%', label: 'Inventory tracking accuracy' },
+      { value: '4x', label: 'Faster stock audit cycles' },
     ],
   },
 ];

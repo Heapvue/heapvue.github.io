@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-import CompanyLogosSection from '@/components/home/CompanyLogosSection';
+import ClientsSection from '@/components/home/ClientsSection';
 
 export default function AboutIntegrationSection() {
   return (
@@ -32,7 +31,7 @@ export default function AboutIntegrationSection() {
 
       {/* Bottom Logos Marquee */}
       <div className="about-platform-logos-wrapper">
-        <CompanyLogosSection />
+        <ClientsSection />
       </div>
     </section>
   );

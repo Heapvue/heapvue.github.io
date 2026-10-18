@@ -48,6 +48,9 @@ export default function EcommerceDigitalExperiencePage() {
       {/* What We Build Section */}
       <WhatWeDeliverEcommerceSection />
 
+      {/* Map Stack Section */}
+      <MapStackSection />
+
       {/* Selected Projects Section */}
       <EcommerceProjectsSection />
 

@@ -47,7 +47,7 @@ const defaultApproachSteps = [
 ];
 
 export default function PlatformApproachSection({
-  badgeText = 'Our Methodology',
+  badgeText = 'How We Enable Healthcare',
   title = <>Our Approach to<br /><span className="blue-italic-text">Platform Development</span></>,
   desc = 'Every organisation has unique operational needs. Our development process focuses on understanding these requirements and designing platforms that are both efficient and scalable.',
   steps = defaultApproachSteps,

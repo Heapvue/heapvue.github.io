@@ -48,6 +48,9 @@ export default function MobileApplicationsPage() {
       {/* What We Build Section */}
       <WhatWeBuildMobileSection />
 
+      {/* Map Stack Section */}
+      <MapStackSection />
+
       {/* Selected Projects Section */}
       <MobileProjectsSection />
 

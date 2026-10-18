@@ -48,6 +48,9 @@ export default function AiIntelligentAutomationPage() {
       {/* What We Build Section */}
       <WhatWeAutomateSection />
 
+      {/* Map Stack Section */}
+      <MapStackSection />
+
       {/* Selected Projects Section */}
       <AiProjectsSection />
 
