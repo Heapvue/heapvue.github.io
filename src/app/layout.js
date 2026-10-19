@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ClientProviders from '@/components/ClientProviders';
 import MetaPixel from '@/components/MetaPixel';
+import UtmTracker from '@/components/UtmTracker';
 import FloatingChat from '@/components/chat/FloatingChat';
 
 const poppins = Poppins({
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${poppins.className} ${poppins.variable} d-flex flex-column min-vh-100`}>
         <MetaPixel />
+        <UtmTracker />
         <ClientProviders>
           <Navbar />
           <main className="flex-grow-1" style={{ paddingTop: '105px' }}>

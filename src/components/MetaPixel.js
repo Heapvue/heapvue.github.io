@@ -4,6 +4,7 @@ import { useEffect, Suspense } from 'react';
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { trackMetaEvent } from '@/lib/metaPixel';
+import { getStoredUtm } from '@/lib/utm';
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1103012972101271';
 
@@ -14,7 +15,8 @@ function PageViewTracker() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    window.fbq?.('track', 'PageView');
+    const utm = getStoredUtm();
+    window.fbq?.('track', 'PageView', utm);
   }, [pathname, searchParams]);
 
   return null;

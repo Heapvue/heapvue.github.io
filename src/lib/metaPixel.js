@@ -1,13 +1,18 @@
 // Thin wrapper around the Meta pixel (initialised in components/MetaPixel.js).
 // Never pass personal data (names, emails, phone numbers, chat text) as parameters.
 
+import { getStoredUtm } from '@/lib/utm';
+
 const STANDARD_EVENTS = new Set(['Lead', 'Schedule', 'Contact', 'ViewContent']);
 
 // A fresh eventID per call lets a future Conversions API send be de-duplicated against the pixel.
+// Enriches event payloads with active UTM campaign parameters.
 export function trackMetaEvent(name, params = {}) {
   if (typeof window === 'undefined' || typeof window.fbq !== 'function') return;
+  const utm = getStoredUtm();
+  const enrichedParams = { ...utm, ...params };
   const method = STANDARD_EVENTS.has(name) ? 'track' : 'trackCustom';
-  window.fbq(method, name, params, { eventID: crypto.randomUUID() });
+  window.fbq(method, name, enrichedParams, { eventID: crypto.randomUUID() });
 }
 
 // Funnel events used for retargeting:

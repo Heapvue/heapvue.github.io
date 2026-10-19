@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { trackMetaEvent } from '@/lib/metaPixel';
+import { getStoredUtm, getStoredAttribution, UTM_KEYS } from '@/lib/utm';
 import { FiCheckCircle, FiChevronDown } from 'react-icons/fi';
 
 const ENQUIRY_TABS = [
@@ -66,7 +67,15 @@ export default function ContactFormSection() {
     agreePrivacy: false,
   });
   const [submitted, setSubmitted] = useState(false);
+  const [utmParams, setUtmParams] = useState({});
   const formStartedRef = useRef(false);
+
+  useEffect(() => {
+    setUtmParams(getStoredUtm());
+    const handleUtmUpdated = () => setUtmParams(getStoredUtm());
+    window.addEventListener('heapvue:utm-updated', handleUtmUpdated);
+    return () => window.removeEventListener('heapvue:utm-updated', handleUtmUpdated);
+  }, []);
 
   // Auto-detect tab and role from URL query parameters (e.g. /contact?tab=careers&role=Senior+Software+Engineer)
   useEffect(() => {
@@ -128,11 +137,32 @@ export default function ContactFormSection() {
       alert('Please agree to the Privacy Statement before submitting.');
       return;
     }
+    const activeUtms = getStoredUtm();
+    // Post enquiry to Heapvue CMS with active UTM attribution data
+    try {
+      fetch('https://cms.heapvue.cloud/api/v1/enquiries', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          enquiryType: activeTab,
+          fullName: formData.fullName,
+          phone: formData.phone,
+          email: formData.email,
+          companyOrPortfolio: formData.companyOrPortfolio,
+          selectedType: formData.selectedType,
+          description: formData.description,
+          optInMarketing: formData.optInMarketing,
+          agreePrivacy: formData.agreePrivacy,
+          ...activeUtms,
+        }),
+      }).catch((err) => console.warn('CMS sync notice:', err));
+    } catch (e) {}
+
     // Careers applications are not sales leads, so they get their own event.
     if (activeTab === 'careers') {
-      trackMetaEvent('CareerApplication', { content_name: formData.selectedType });
+      trackMetaEvent('CareerApplication', { content_name: formData.selectedType, ...activeUtms });
     } else {
-      trackMetaEvent('Lead', { content_category: activeTab, content_name: formData.selectedType });
+      trackMetaEvent('Lead', { content_category: activeTab, content_name: formData.selectedType, ...activeUtms });
     }
     setSubmitted(true);
     setTimeout(() => {
@@ -413,6 +443,16 @@ export default function ContactFormSection() {
                     </span>
                   </label>
                 </div>
+
+                {/* Hidden UTM tracking fields */}
+                {UTM_KEYS.map((key) => (
+                  <input
+                    key={key}
+                    type="hidden"
+                    name={key}
+                    value={utmParams[key] || ''}
+                  />
+                ))}
 
                 {/* Submit Button */}
                 <button type="submit" className="form-submit-query-btn">
