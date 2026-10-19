@@ -41,6 +41,18 @@ const LAUNCHER_DISTANCE = 8;
 
 const GREETING = 'Hi there! How can I help you today?';
 
+// Outbound credit links carry UTM tags, so visits from this chat show up as heapvue in Rothenhall's analytics.
+const creditUrl = (base, content) => {
+  const url = new URL(base);
+  url.searchParams.set('utm_source', 'heapvue');
+  url.searchParams.set('utm_medium', 'referral');
+  url.searchParams.set('utm_campaign', 'chat_credit');
+  url.searchParams.set('utm_content', content);
+  return url.toString();
+};
+const THINGS_URL = creditUrl('https://things.rothenhall.com/', 'things_link');
+const ROTHENHALL_URL = creditUrl('https://rothenhall.com/', 'rothenhall_link');
+
 function safeSession(action, value) {
   try {
     if (action === 'get') return window.sessionStorage.getItem(TEASER_KEY);
@@ -387,7 +399,11 @@ export default function FloatingChat() {
             )}
           </form>
           <p className="fc-note">
-            AI answers can be incomplete. For project specifics, <Link href="/contact">talk to our team</Link>.
+            Avatar made with{' '}
+            <a href={THINGS_URL} target="_blank" rel="noopener">Things</a>
+            {' '}by{' '}
+            <a href={ROTHENHALL_URL} target="_blank" rel="noopener">Rothenhall</a>
+            , open-source 3D mascots.
           </p>
         </section>
       )}
