@@ -1,30 +1,50 @@
 import BlogDetailClient from './BlogDetailClient';
+import { fetchPublishedBlogs, fetchBlogBySlug } from '@/lib/cmsBlog';
 
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  return [
-    { slug: 'the-impact-of-ai-and-ml-across-key-industries-in-2024' },
-    { slug: 'improving-prediction-model-accuracy-strategies-solutions' },
-    { slug: 'generative-ai-transforming-content-creation-personalization' },
-    { slug: 'devops-2024-accelerated-digital-growth' },
-    { slug: 'generative-ai-transforming-content-creation-personalization-2' },
-    { slug: 'devops-2024-accelerated-digital-growth-2' },
-    { slug: 'improving-prediction-model-accuracy-strategies-solutions-2' },
-    { slug: 'zero-trust-cloud-architecture-compliance' },
-    { slug: 'headless-ecommerce-micro-frontends' },
-    { slug: 'event-driven-microservices-kubernetes' },
-    { slug: 'building-enterprise-ai-agents-nextjs-go' },
-  ];
+  try {
+    const blogs = await fetchPublishedBlogs({ limit: 100 });
+    if (Array.isArray(blogs) && blogs.length > 0) {
+      return blogs.map((b) => ({ slug: b.slug }));
+    }
+  } catch (err) {
+    console.warn('generateStaticParams error:', err);
+  }
+  return [];
 }
 
-export function generateMetadata({ params }) {
-  const formattedTitle = params?.slug
-    ? params.slug
-        .split('-')
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ')
-    : 'Blog Detail';
+export async function generateMetadata({ params }) {
+  const slug = params?.slug;
+  if (!slug) {
+    return {
+      title: 'Insights | Heapvue',
+      description: 'Insights and expert perspectives from Heapvue on technology, engineering, and digital transformation.',
+    };
+  }
+
+  try {
+    const blog = await fetchBlogBySlug(slug);
+    if (blog) {
+      return {
+        title: `${blog.title} | Heapvue Insights`,
+        description: blog.excerpt || 'Insights and expert perspectives from Heapvue on technology and engineering.',
+        openGraph: {
+          title: blog.title,
+          description: blog.excerpt,
+          images: blog.image ? [{ url: blog.image }] : [],
+        },
+      };
+    }
+  } catch {
+    // fallback
+  }
+
+  const formattedTitle = slug
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
 
   return {
     title: `${formattedTitle} | Heapvue Insights`,

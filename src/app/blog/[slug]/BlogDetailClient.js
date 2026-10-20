@@ -46,49 +46,13 @@ const homeFaqs = [
   },
 ];
 
-const RELATED_POSTS = [
-  {
-    id: 1,
-    title: 'Improving Prediction Model Accuracy: Strategies and Soluti...',
-    slug: 'improving-prediction-model-accuracy-strategies-solutions',
-    excerpt: 'Heapvue partners with businesses across multiple industries to build scalable digital platforms, auto...',
-    date: 'Nov 4, 2024',
-    author: 'Aswin Raj',
-    image: '/images/blog_analytics_dashboard.jpg',
-  },
-  {
-    id: 2,
-    title: 'Generative AI: Transforming Content Creation and Personaliz...',
-    slug: 'generative-ai-transforming-content-creation-personalization',
-    excerpt: 'Discover how generative AI is revolutionizing content creation and personalization, from autom...',
-    date: 'Aug 18, 2024',
-    author: 'Akhil S Kumar',
-    image: '/images/blog_genai_funnel.jpg',
-  },
-  {
-    id: 3,
-    title: "DevOps in 2024: Why It's a Must-Have for Accelerated Digit...",
-    slug: 'devops-2024-accelerated-digital-growth',
-    excerpt: 'Discover why DevOps has become essential for business success in 2024, its key benefits, emer...',
-    date: 'May 11, 2024',
-    author: 'Akhil S Kumar',
-    image: '/images/blog_devops_diagram.jpg',
-  },
-];
-
-const DEFAULT_TOC_SECTIONS = [
-  { id: 'sec-traditional-hr', title: '1. The Current Landscape' },
-  { id: 'sec-integrating-tech', title: '2. Impact Across Key Industries' },
-  { id: 'sec-employer-brand', title: '3. Finance and Banking' },
-  { id: 'sec-scalability', title: '4. Retail and E-commerce' },
-];
-
 export default function BlogDetailClient({ slug: propSlug }) {
   const params = useParams();
   const slug = propSlug || params?.slug;
 
   const [blogPost, setBlogPost] = useState(null);
-  const [relatedPosts, setRelatedPosts] = useState(RELATED_POSTS);
+  const [loading, setLoading] = useState(true);
+  const [relatedPosts, setRelatedPosts] = useState([]);
   const [activeToc, setActiveToc] = useState('');
   const [sidebarEmail, setSidebarEmail] = useState('');
   const [sidebarSubscribed, setSidebarSubscribed] = useState(false);
@@ -102,14 +66,21 @@ export default function BlogDetailClient({ slug: propSlug }) {
   useEffect(() => {
     let isMounted = true;
     async function loadBlog() {
-      if (!slug) return;
+      if (!slug) {
+        setLoading(false);
+        return;
+      }
       try {
+        setLoading(true);
         const post = await fetchBlogBySlug(slug);
-        if (isMounted && post) {
+        if (isMounted) {
           setBlogPost(post);
         }
       } catch (err) {
-        console.warn('Using static blog fallback for detail:', err);
+        console.warn('Failed to load blog detail by slug:', err);
+        if (isMounted) setBlogPost(null);
+      } finally {
+        if (isMounted) setLoading(false);
       }
     }
     loadBlog();
@@ -142,7 +113,7 @@ export default function BlogDetailClient({ slug: propSlug }) {
 
   // Dynamically extract TOC headings from markdown content
   const tocSections = useMemo(() => {
-    if (!blogPost?.content) return DEFAULT_TOC_SECTIONS;
+    if (!blogPost?.content) return [];
     const lines = blogPost.content.split('\n');
     const sections = [];
     let idx = 1;
@@ -158,7 +129,7 @@ export default function BlogDetailClient({ slug: propSlug }) {
         idx++;
       }
     });
-    return sections.length > 0 ? sections : DEFAULT_TOC_SECTIONS;
+    return sections;
   }, [blogPost]);
 
   useEffect(() => {
@@ -190,18 +161,43 @@ export default function BlogDetailClient({ slug: propSlug }) {
     }, 4000);
   };
 
-  // Resolved metadata
-  const title =
-    blogPost?.title ||
-    'The Impact of AI and ML Across Key Industries in 2024';
-  const subtitle =
-    blogPost?.excerpt ||
-    'Capture buying signals, identify decision-makers, and automate personalized outreach with enterprise-grade AI workflows designed for modern sales teams.';
-  const authorName = blogPost?.author || 'Akhil S Kumar';
-  const authorAvatar = blogPost?.authorAvatar || '/images/akhil.jpeg';
-  const dateStr = blogPost?.date || 'Apr 16, 2024';
-  const categoryName = blogPost?.category || 'Technology';
-  const readTimeStr = blogPost?.readTime || '12 min read';
+  if (loading) {
+    return (
+      <div className="blog-page-container text-center py-5" style={{ minHeight: "60vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div>
+          <div className="spinner-border text-primary mb-3" role="status" style={{ width: "2.5rem", height: "2.5rem" }}>
+            <span className="visually-hidden">Loading article...</span>
+          </div>
+          <p className="text-muted">Loading article from Heapvue Insights...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!blogPost) {
+    return (
+      <div className="blog-page-container text-center py-5" style={{ minHeight: "60vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div className="container py-5">
+          <h1 className="h2 mb-3 font-weight-bold">Article Not Found</h1>
+          <p className="text-muted mb-4 fs-5" style={{ maxWidth: 520, margin: "0 auto" }}>
+            The article you are looking for may have been moved, unpublished, or does not exist.
+          </p>
+          <Link href="/blog" className="btn btn-primary" style={{ borderRadius: 0, padding: "10px 24px", fontWeight: 600 }}>
+            Back to All Insights
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  // Resolved metadata from dynamic CMS post
+  const title = blogPost.title;
+  const subtitle = blogPost.excerpt;
+  const authorName = blogPost.author || "Heapvue Team";
+  const authorAvatar = blogPost.authorAvatar || "/images/akhil.jpeg";
+  const dateStr = blogPost.date || "Recently published";
+  const categoryName = blogPost.category || "Technology";
+  const readTimeStr = blogPost.readTime || "5 min read";
 
   return (
     <div className="blog-page-container blog-detail-wrapper">
@@ -281,9 +277,9 @@ export default function BlogDetailClient({ slug: propSlug }) {
                 </div>
               </div>
 
-              {/* Dynamic CMS Markdown Content */}
-              {blogPost?.content ? (
-                <div className="cms-article-body">
+              {/* Dynamic CMS Article Body */}
+              <div className="cms-article-body">
+                {blogPost.content ? (
                   <Markdown
                     components={{
                       h1: ({ children }) => (
@@ -329,196 +325,58 @@ export default function BlogDetailClient({ slug: propSlug }) {
                   >
                     {blogPost.content}
                   </Markdown>
+                ) : (
+                  <p className="lead-paragraph">{blogPost.excerpt}</p>
+                )}
 
-                  {/* In-Article CTA Banner (Preserved for Lead Generation) */}
-                  <div className="article-cta-wrapper my-5" id="sec-scalability">
-                    <div className="article-cta-noise" aria-hidden="true" />
-                    <div className="article-cta-glow-top" aria-hidden="true" />
-                    <div className="article-cta-glow-bottom" aria-hidden="true" />
+                {/* In-Article CTA Banner (Lead Generation) */}
+                <div className="article-cta-wrapper my-5" id="sec-scalability">
+                  <div className="article-cta-noise" aria-hidden="true" />
+                  <div className="article-cta-glow-top" aria-hidden="true" />
+                  <div className="article-cta-glow-bottom" aria-hidden="true" />
 
-                    <div className="article-cta-card">
-                      <div className="article-cta-header">
-                        <h3 className="article-cta-title">
-                          Give your sales team<br />an unfair advantage.
-                        </h3>
-                        <div className="article-cta-divider" />
+                  <div className="article-cta-card">
+                    <div className="article-cta-header">
+                      <h3 className="article-cta-title">
+                        Give your sales team<br />an unfair advantage.
+                      </h3>
+                      <div className="article-cta-divider" />
+                    </div>
+
+                    <form onSubmit={handleCtaBook} className="article-cta-form">
+                      <div className="article-cta-input-row">
+                        <input
+                          type="text"
+                          className="article-cta-input"
+                          placeholder="Enter your first name"
+                          value={ctaName}
+                          onChange={(e) => setCtaName(e.target.value)}
+                        />
+                        <input
+                          type="email"
+                          className="article-cta-input"
+                          placeholder="Enter your work email"
+                          value={ctaEmail}
+                          onChange={(e) => setCtaEmail(e.target.value)}
+                          required
+                        />
                       </div>
 
-                      <form onSubmit={handleCtaBook} className="article-cta-form">
-                        <div className="article-cta-input-row">
-                          <input
-                            type="text"
-                            className="article-cta-input"
-                            placeholder="Enter your first name"
-                            value={ctaName}
-                            onChange={(e) => setCtaName(e.target.value)}
-                          />
-                          <input
-                            type="email"
-                            className="article-cta-input"
-                            placeholder="Enter your work email"
-                            value={ctaEmail}
-                            onChange={(e) => setCtaEmail(e.target.value)}
-                            required
-                          />
-                        </div>
-
-                        <button type="submit" className="article-cta-btn">
-                          {ctaBooked ? (
-                            <>
-                              Appointment Booked! <FiCheck className="ms-1" />
-                            </>
-                          ) : (
-                            <>
-                              Book an Appointment <FiArrowRight className="ms-1" />
-                            </>
-                          )}
-                        </button>
-                      </form>
-                    </div>
+                      <button type="submit" className="article-cta-btn">
+                        {ctaBooked ? (
+                          <>
+                            Appointment Booked! <FiCheck className="ms-1" />
+                          </>
+                        ) : (
+                          <>
+                            Book an Appointment <FiArrowRight className="ms-1" />
+                          </>
+                        )}
+                      </button>
+                    </form>
                   </div>
                 </div>
-              ) : (
-                /* Static Default Article Body Fallback */
-                <>
-                  <p className="lead-paragraph">
-                    Artificial Intelligence (AI) and Machine Learning (ML) are revolutionizing business operations across industries at an unprecedented pace. With the AI market projected to reach $1,811.75 billion by 2030, growing at a CAGR of 38.1%, these technologies are becoming fundamental to business success.
-                  </p>
-
-                  <h2 className="article-heading-2" id="sec-traditional-hr">
-                    The Current Landscape
-                  </h2>
-                  <p className="article-body-p">
-                    According to McKinsey, 50% of organizations are already using AI in at least one business function. This adoption is driving transformative changes across various sectors:
-                  </p>
-                  <ul className="article-bullet-list">
-                    <li>Enhanced operational efficiency</li>
-                    <li>Reduced operational costs</li>
-                    <li>Improved decision-making processes</li>
-                    <li>Better customer experiences</li>
-                    <li>Innovative service delivery methods</li>
-                  </ul>
-
-                  <h2 className="article-heading-2" id="sec-integrating-tech">
-                    Impact Across Key Industries
-                  </h2>
-
-                  <h3 className="article-heading-3">Healthcare</h3>
-                  <p className="article-body-p">
-                    The healthcare sector is experiencing a revolutionary transformation through AI and ML:
-                  </p>
-
-                  <h4 className="article-heading-4">Diagnostic Improvements</h4>
-                  <ul className="article-bullet-list">
-                    <li>AI algorithms analyzing medical images with expert-level accuracy</li>
-                    <li>Early disease detection through pattern recognition</li>
-                    <li>Reduced false positives and negatives in diagnoses</li>
-                  </ul>
-
-                  <h4 className="article-heading-4">Personalized Medicine</h4>
-                  <ul className="article-bullet-list">
-                    <li>Tailored treatment plans based on individual patient data</li>
-                    <li>Analysis of genetic information and medical history</li>
-                    <li>Integration with platforms like IBM Watson Health</li>
-                  </ul>
-
-                  <div className="article-callout-insight">
-                    <span className="callout-tag">Key insight:</span> AI applications could save the U.S. healthcare economy up to $150 billion annually by 2026.
-                  </div>
-
-                  <h3 className="article-heading-3" id="sec-employer-brand">
-                    Finance and Banking
-                  </h3>
-                  <p className="article-body-p">
-                    AI and ML have become cornerstone technologies in financial services:
-                  </p>
-
-                  <h4 className="article-heading-4">Fraud Detection</h4>
-                  <ul className="article-bullet-list">
-                    <li>Real-time transaction monitoring</li>
-                    <li>Pattern recognition for suspicious activities</li>
-                    <li>Enhanced security measures</li>
-                  </ul>
-
-                  <h4 className="article-heading-4">Risk Management</h4>
-                  <ul className="article-bullet-list">
-                    <li>Advanced credit risk assessment</li>
-                    <li>Automated loan approval processes</li>
-                    <li>Predictive analysis for market trends</li>
-                  </ul>
-
-                  <div className="article-callout-insight">
-                    <span className="callout-tag">Impact:</span> Banks could reduce costs by $1 trillion annually by 2030 through AI implementation.
-                  </div>
-
-                  {/* In-Article CTA Banner */}
-                  <div className="article-cta-wrapper" id="sec-scalability">
-                    <div className="article-cta-noise" aria-hidden="true" />
-                    <div className="article-cta-glow-top" aria-hidden="true" />
-                    <div className="article-cta-glow-bottom" aria-hidden="true" />
-
-                    <div className="article-cta-card">
-                      <div className="article-cta-header">
-                        <h3 className="article-cta-title">
-                          Give your sales team<br />an unfair advantage.
-                        </h3>
-                        <div className="article-cta-divider" />
-                      </div>
-
-                      <form onSubmit={handleCtaBook} className="article-cta-form">
-                        <div className="article-cta-input-row">
-                          <input
-                            type="text"
-                            className="article-cta-input"
-                            placeholder="Enter your first name"
-                            value={ctaName}
-                            onChange={(e) => setCtaName(e.target.value)}
-                          />
-                          <input
-                            type="email"
-                            className="article-cta-input"
-                            placeholder="Enter your work email"
-                            value={ctaEmail}
-                            onChange={(e) => setCtaEmail(e.target.value)}
-                            required
-                          />
-                        </div>
-
-                        <button type="submit" className="article-cta-btn">
-                          {ctaBooked ? (
-                            <>
-                              Appointment Booked! <FiCheck className="ms-1" />
-                            </>
-                          ) : (
-                            <>
-                              Book an Appointment <FiArrowRight className="ms-1" />
-                            </>
-                          )}
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-
-                  <h3 className="article-heading-3">Retail and E-commerce</h3>
-                  <p className="article-body-p">
-                    The retail sector is leveraging AI for enhanced customer experience:
-                  </p>
-
-                  <h4 className="article-heading-4">Personalization</h4>
-                  <ul className="article-bullet-list">
-                    <li>Customized product recommendations</li>
-                    <li>Tailored shopping experiences</li>
-                    <li>Behavior-based marketing</li>
-                  </ul>
-
-                  <h4 className="article-heading-4">Inventory Management</h4>
-                  <ul className="article-bullet-list">
-                    <li>Demand forecasting</li>
-                    <li>Automated supply chain optimization</li>
-                    <li>Reduced waste and storage costs</li>
-                  </ul>
-                </>
-              )}
+              </div>
             </article>
 
             {/* Right Column: Sticky Sidebar */}
@@ -585,8 +443,9 @@ export default function BlogDetailClient({ slug: propSlug }) {
       </section>
 
       {/* ====================================================================
-          3. Bottom Section: Our Insights & News
+          3. Bottom Section: Our Insights & News (Only when related posts exist)
           ==================================================================== */}
+      {relatedPosts.length > 0 && (
       <section className="blog-grid-section">
         <div className="blog-grid-container">
           <div className="blog-section-header">
@@ -645,6 +504,7 @@ export default function BlogDetailClient({ slug: propSlug }) {
           </div>
         </div>
       </section>
+      )}
 
       {/* ====================================================================
           4. Bottom Section: FAQs from Home Page
