@@ -1,6 +1,6 @@
 import BlogDetailClient from './BlogDetailClient';
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   return [
@@ -14,6 +14,7 @@ export async function generateStaticParams() {
     { slug: 'zero-trust-cloud-architecture-compliance' },
     { slug: 'headless-ecommerce-micro-frontends' },
     { slug: 'event-driven-microservices-kubernetes' },
+    { slug: 'building-enterprise-ai-agents-nextjs-go' },
   ];
 }
 

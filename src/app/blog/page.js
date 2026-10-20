@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiArrowRight, FiSearch, FiX } from 'react-icons/fi';
 import CaseStudySection from '@/components/home/CaseStudySection';
 import AppointmentSection from '@/components/home/AppointmentSection';
 import { trackMetaEvent } from '@/lib/metaPixel';
+import { fetchPublishedBlogs } from '@/lib/cmsBlog';
 import './Blog.css';
 
 const INITIAL_BLOG_POSTS = [
@@ -103,11 +104,36 @@ const INITIAL_BLOG_POSTS = [
 ];
 
 export default function BlogPage() {
+  const [posts, setPosts] = useState(INITIAL_BLOG_POSTS);
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(6);
+
+  // Fetch published blogs dynamically from CMS backend
+  useEffect(() => {
+    let isMounted = true;
+    async function loadCmsBlogs() {
+      try {
+        const cmsBlogs = await fetchPublishedBlogs({ limit: 50 });
+        if (isMounted && cmsBlogs && cmsBlogs.length > 0) {
+          // Merge CMS blogs ahead of static posts (deduplicating by slug)
+          const cmsSlugs = new Set(cmsBlogs.map((b) => b.slug));
+          const nonDuplicateStatic = INITIAL_BLOG_POSTS.filter(
+            (sp) => !cmsSlugs.has(sp.slug)
+          );
+          setPosts([...cmsBlogs, ...nonDuplicateStatic]);
+        }
+      } catch (err) {
+        console.warn('Using static blog posts fallback:', err);
+      }
+    }
+    loadCmsBlogs();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -121,20 +147,34 @@ export default function BlogPage() {
     }, 4000);
   };
 
-  const categories = ['All', 'Data Science', 'AI & Machine Learning', 'DevOps', 'Cloud Architecture'];
+  // Dynamically compute unique categories from all loaded blogs
+  const categories = useMemo(() => {
+    const cats = ['All'];
+    const seen = new Set();
+    posts.forEach((p) => {
+      if (p.category && !seen.has(p.category)) {
+        seen.add(p.category);
+        cats.push(p.category);
+      }
+    });
+    return cats;
+  }, [posts]);
 
   // Filter posts based on category and live search query
-  const filteredPosts = INITIAL_BLOG_POSTS.filter((post) => {
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
-    const query = searchQuery.trim().toLowerCase();
-    const matchesSearch =
-      query === '' ||
-      post.title.toLowerCase().includes(query) ||
-      post.excerpt.toLowerCase().includes(query) ||
-      post.author.toLowerCase().includes(query) ||
-      post.category.toLowerCase().includes(query);
-    return matchesCategory && matchesSearch;
-  });
+  const filteredPosts = useMemo(() => {
+    return posts.filter((post) => {
+      const matchesCategory =
+        selectedCategory === 'All' || post.category === selectedCategory;
+      const query = searchQuery.trim().toLowerCase();
+      const matchesSearch =
+        query === '' ||
+        (post.title && post.title.toLowerCase().includes(query)) ||
+        (post.excerpt && post.excerpt.toLowerCase().includes(query)) ||
+        (post.author && post.author.toLowerCase().includes(query)) ||
+        (post.category && post.category.toLowerCase().includes(query));
+      return matchesCategory && matchesSearch;
+    });
+  }, [posts, selectedCategory, searchQuery]);
 
   const displayedPosts = filteredPosts.slice(0, visibleCount);
   const hasMore = visibleCount < filteredPosts.length;
