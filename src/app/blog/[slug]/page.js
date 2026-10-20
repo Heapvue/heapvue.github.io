@@ -12,7 +12,7 @@ export async function generateStaticParams() {
   } catch (err) {
     console.warn('generateStaticParams error:', err);
   }
-  return [];
+  return [{ slug: 'default' }];
 }
 
 export async function generateMetadata({ params }) {
