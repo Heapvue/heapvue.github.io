@@ -1,8 +1,6 @@
-import Link from 'next/link';
-
 export const metadata = {
   title: 'Privacy Policy | Heapvue',
-  description: 'Learn how Heapvue collects, uses, and protects your personal information and corporate data in compliance with DPDP, GDPR, and global data privacy standards.',
+  description: 'Learn how Heapvue collects, uses, and protects your personal information and corporate data.',
 };
 
 export default function PrivacyPage() {
@@ -10,90 +8,168 @@ export default function PrivacyPage() {
     <div className="bg-white py-5">
       <div className="container" style={{ maxWidth: '860px', paddingBottom: '60px' }}>
         <div className="mb-5">
-          <span 
-            className="d-inline-block px-3 py-1 rounded-pill mb-3 fw-semibold text-primary"
-            style={{ backgroundColor: '#EFF6FF', fontSize: '0.85rem' }}
-          >
-            Legal &amp; Compliance
-          </span>
           <h1 className="fw-bold mb-3" style={{ fontSize: '2.5rem', color: '#0F172A' }}>
             Privacy Policy
           </h1>
           <p className="text-muted" style={{ fontSize: '0.95rem' }}>
-            Last updated: October 2026
+            Updated at: October 20, 2026
           </p>
         </div>
 
         <div className="content-body" style={{ color: '#334155', lineHeight: '1.75', fontSize: '1rem' }}>
-          <section className="mb-4">
-            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>1. Introduction</h2>
-            <p>
-              Heapvue (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;us&rdquo;) is committed to protecting the privacy and confidentiality of individuals who interact with our website, services, and proprietary software products. This Privacy Policy details our practices concerning data collection, processing, and protection in accordance with applicable data protection laws, including the Digital Personal Data Protection Act (DPDP), General Data Protection Regulation (GDPR), and related regulations.
-            </p>
-          </section>
+          <p className="mb-4">
+            Heapvue (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) values your privacy
+            and is committed to safeguarding your personal information. This
+            Privacy Policy explains how we collect, use, disclose, and protect
+            the information you provide when using our website or services. By
+            accessing our website or utilizing our services, you agree to the
+            terms outlined in this Privacy Policy.
+          </p>
 
           <section className="mb-4">
-            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>2. Information We Collect</h2>
-            <p>We may collect personal and organizational details when you interact with our website, request a consultation, or utilize our services, including:</p>
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>1. Information We Collect</h2>
+            <p>
+              We may collect various types of information to deliver and enhance
+              our services:
+            </p>
             <ul className="ps-3 mb-3">
-              <li><strong>Contact Information:</strong> Name, professional work email address, telephone number, job title, and organization name.</li>
-              <li><strong>Project Inquiries:</strong> Technical requirements, project briefs, estimated budgets, and delivery timelines submitted through our contact and consultation forms.</li>
-              <li><strong>Technical &amp; Usage Data:</strong> IP address, browser type, device information, operating system, pages visited, and interaction timestamps.</li>
+              <li>
+                <strong>Personal Information:</strong> Your name, email address,
+                phone number, and other contact details, collected when you
+                interact with our website or services.
+              </li>
+              <li>
+                <strong>Account Information:</strong> Information like your
+                username, password, and preferences, if you create an account
+                with us.
+              </li>
+              <li>
+                <strong>Usage Data:</strong> Automatically collected details
+                such as IP addresses, device information, browser type, and
+                pages visited to analyze website performance and user
+                interaction.
+              </li>
+              <li>
+                <strong>Third-Party Data:</strong> Information shared with us by
+                trusted third parties or through social media integrations you
+                authorize.
+              </li>
             </ul>
           </section>
 
           <section className="mb-4">
-            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>3. How We Use Your Data</h2>
-            <p>We process your data for clear, legitimate business purposes:</p>
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>2. How We Use Your Information</h2>
+            <p>We use the collected information for the following purposes:</p>
             <ul className="ps-3 mb-3">
-              <li>To evaluate project scopes, respond to technical inquiries, and provide consultative proposals.</li>
-              <li>To deliver, maintain, and enhance our custom engineering solutions and proprietary software products.</li>
-              <li>To ensure information security, detect potential fraudulent activity, and comply with regulatory mandates.</li>
-              <li>To communicate service updates, technical notices, and relevant engineering insights (with clear opt-out options).</li>
+              <li>
+                <strong>To Provide Services:</strong> Process orders, respond to
+                inquiries, and deliver our products or services.
+              </li>
+              <li>
+                <strong>To Improve Experiences:</strong> Use analytics to
+                enhance website functionality, develop new features, and
+                personalize content.
+              </li>
+              <li>
+                <strong>For Communication:</strong> Share updates, newsletters,
+                and promotional offers. You may opt out of marketing
+                communications at any time.
+              </li>
+              <li>
+                <strong>Legal Compliance:</strong> Fulfill obligations under
+                applicable laws or respond to lawful requests from authorities.
+              </li>
             </ul>
           </section>
 
           <section className="mb-4">
-            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>4. Data Security &amp; Storage</h2>
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>3. Sharing Your Information</h2>
+            <p>We may share your information under these circumstances:</p>
+            <ul className="ps-3 mb-3">
+              <li>
+                <strong>Service Providers:</strong> With third parties
+                performing services such as payment processing, email delivery,
+                or website hosting.
+              </li>
+              <li>
+                <strong>Legal Requirements:</strong> To comply with laws,
+                enforce our policies, or protect the rights and safety of
+                others.
+              </li>
+              <li>
+                <strong>Business Transfers:</strong> In the event of a merger,
+                acquisition, or sale of our assets, your information may be
+                transferred to the successor entity.
+              </li>
+              <li>
+                <strong>Marketing Purposes:</strong> As permitted by law, share
+                aggregated or anonymized data with partners for marketing and
+                business analysis.
+              </li>
+            </ul>
+          </section>
+
+          <section className="mb-4">
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>4. Data Security</h2>
             <p>
-              We implement industry-standard technical and organizational security measures, including transport-layer encryption (TLS), restricted role-based data access, and continuous monitoring to safeguard personal and commercial data against unauthorized access, loss, or alteration.
+              We implement industry-standard security measures to protect your
+              personal information. However, no online data transmission can be
+              guaranteed secure. While we strive to protect your data, providing
+              information online is at your own risk.
             </p>
           </section>
 
           <section className="mb-4">
-            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>5. Third-Party Sharing</h2>
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>5. Cookies and Tracking Technologies</h2>
             <p>
-              We do not sell, rent, or trade your personal information. We may share necessary data with trusted cloud infrastructure providers and verified enterprise service partners strictly bound by contractual data protection agreements.
+              We use cookies, web beacons, and other technologies to enhance
+              your browsing experience. You can manage cookie preferences in
+              your browser settings, but some site features may not function
+              properly if you do so.
             </p>
           </section>
 
           <section className="mb-4">
-            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>6. Your Rights</h2>
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>6. Third-Party Websites</h2>
             <p>
-              Depending on your jurisdiction, you have the right to request access to, correction of, or deletion of your personal data held by Heapvue. You may also object to or restrict certain processing activities.
+              Our website may include links to external websites or services. We
+              are not responsible for the privacy practices or content of these
+              third-party entities.
             </p>
           </section>
 
           <section className="mb-4">
-            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>7. Contact Our Privacy Team</h2>
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>7. Children&apos;s Privacy</h2>
             <p>
-              For any questions regarding this policy or to exercise your privacy rights, please reach out directly to:
+              Our services are not intended for children under 18 years of age.
+              If you believe we have collected data from a child, please contact
+              us to delete this information.
             </p>
-            <div className="p-3 rounded-3" style={{ backgroundColor: '#F8FAFC', border: '1px solid #E2E8F0' }}>
-              <p className="mb-1"><strong>Heapvue Privacy &amp; Compliance Office</strong></p>
-              <p className="mb-1">Email: <a href="mailto:contact@heapvue.com" className="text-primary text-decoration-none">contact@heapvue.com</a></p>
-              <p className="mb-0">Address: 39/2475-B1, SUITE C54 LR Towers, SJRRA 104 S J RD, Palarivattom, Ernakulam, Kerala 682025, India</p>
-            </div>
           </section>
-        </div>
 
-        <div className="pt-4 border-top mt-5 d-flex gap-3">
-          <Link href="/" className="btn btn-outline-secondary btn-sm">
-            &larr; Back to Home
-          </Link>
-          <Link href="/terms" className="btn btn-outline-primary btn-sm">
-            View Terms of Service &rarr;
-          </Link>
+          <section className="mb-4">
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>8. Changes to This Policy</h2>
+            <p>
+              We reserve the right to update this Privacy Policy as necessary.
+              Changes will be reflected in the updated date above. Continued
+              use of our website or services constitutes acceptance of the
+              revised policy.
+            </p>
+          </section>
+
+          <section className="mb-4">
+            <h2 className="h4 fw-bold mb-3" style={{ color: '#0F172A' }}>9. Contact Us</h2>
+            <p>
+              For questions or concerns regarding this Privacy Policy, contact
+              us at:
+            </p>
+            <p className="mb-0">
+              <strong>Heapvuedigital Innovations Pvt. Ltd.</strong>
+              <br />
+              Email:{' '}
+              <a href="mailto:contact@heapvue.com" className="text-primary text-decoration-none">contact@heapvue.com</a>
+            </p>
+          </section>
         </div>
       </div>
     </div>
