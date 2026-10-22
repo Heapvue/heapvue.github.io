@@ -68,45 +68,16 @@ const testimonialsData = [
 
 const count = testimonialsData.length;
 
-// Triple dataset for seamless infinite looping
-const extendedTestimonials = [
-  ...testimonialsData.map((t) => ({ ...t, uniqueKey: `copy0-${t.id}` })),
-  ...testimonialsData.map((t) => ({ ...t, uniqueKey: `copy1-${t.id}` })),
-  ...testimonialsData.map((t) => ({ ...t, uniqueKey: `copy2-${t.id}` })),
-];
-
 export default function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(count);
-  const [withTransition, setWithTransition] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setWithTransition(true);
-    setCurrentIndex((prev) => prev - 1);
+    setCurrentIndex((prev) => (prev === 0 ? count - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setWithTransition(true);
-    setCurrentIndex((prev) => prev + 1);
+    setCurrentIndex((prev) => (prev === count - 1 ? 0 : prev + 1));
   };
-
-  const handleTransitionEnd = () => {
-    if (currentIndex >= count * 2) {
-      setWithTransition(false);
-      setCurrentIndex(currentIndex - count);
-    } else if (currentIndex < count) {
-      setWithTransition(false);
-      setCurrentIndex(currentIndex + count);
-    }
-  };
-
-  useEffect(() => {
-    if (!withTransition) {
-      const timer = setTimeout(() => {
-        setWithTransition(true);
-      }, 30);
-      return () => clearTimeout(timer);
-    }
-  }, [withTransition]);
 
   return (
     <section className="testimonials-section-wrapper">
@@ -132,13 +103,12 @@ export default function TestimonialsSection() {
             className="testimonials-carousel-track"
             style={{
               transform: `translateX(calc(-${currentIndex} * (var(--tm-card-w, 1200px) + var(--tm-card-gap, 24px))))`,
-              transition: withTransition ? 'transform 0.48s cubic-bezier(0.25, 1, 0.5, 1)' : 'none',
+              transition: 'transform 0.48s cubic-bezier(0.25, 1, 0.5, 1)',
             }}
-            onTransitionEnd={handleTransitionEnd}
           >
-            {extendedTestimonials.map((item, idx) => (
+            {testimonialsData.map((item, idx) => (
               <div
-                key={item.uniqueKey}
+                key={item.id}
                 className={`testimonial-card ${idx === currentIndex ? 'active' : ''}`}
               >
                 {/* Large B&W Client Image covering full height & 40% width, dispersing to the right */}
