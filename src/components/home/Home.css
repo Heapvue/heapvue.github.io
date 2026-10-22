@@ -1386,7 +1386,7 @@
   height: auto;
   min-height: 720px;
   background-color: #ffffff;
-  background-image: url('/images/testimonibg.png');
+  background-image: url('/images/testimonibg.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -3517,7 +3517,7 @@
   background-color: #ffffff !important;
   text-decoration: none !important;
   padding: 12px 10px;
-  cursor: pointer;
+  cursor: default;
   transition: none !important;
 }
 
@@ -4514,7 +4514,7 @@
   width: 100%;
   min-height: 480px;
   background-color: #0e0e0e;
-  background-image: url('/images/footer_bg_1920.png?v=6');
+  background-image: url('/images/footer_bg_1920.webp?v=6');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;

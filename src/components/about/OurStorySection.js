@@ -50,7 +50,7 @@ export default function OurStorySection() {
         {/* Bottom Team Image (1200w x 580h) */}
         <div className="story-team-img-wrapper">
           <Image
-            src="/images/aboutusbg2.png"
+            src="/images/aboutusbg2.webp"
             alt="Heapvue team of engineers, designers, strategists, and innovators"
             width={1200}
             height={580}
