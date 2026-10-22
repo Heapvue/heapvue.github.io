@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Digital Transformation | Heapvue - Strategy & Roadmap Consulting',
   description: 'Heapvue helps organisations develop practical digital transformation strategies that align technology investments with business objectives.',
+  alternates: {
+    canonical: '/consulting/digital-transformation',
+  },
 };
 
 const transformationFaqs = [

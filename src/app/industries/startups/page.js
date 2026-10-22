@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Technology Solutions for Startups | Heapvue',
   description: 'Heapvue works with startups to design, build, and scale digital products and platforms, from MVP development to architecture.',
+  alternates: {
+    canonical: '/industries/startups',
+  },
 };
 
 export default function StartupsPage() {

@@ -8,7 +8,7 @@
   width: 100%;
   height: 648px;
   min-height: 648px;
-  background-image: url('/images/industrybg.png');
+  background-image: url('/images/industrybg.webp');
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 }
 
 .industry-hero-healthcare {
-  background-image: url('/images/industrybg.png') !important;
+  background-image: url('/images/industrybg.webp') !important;
   background-position: center 25% !important;
 }
 

@@ -18,31 +18,26 @@ import FaqSection from '@/components/home/FaqSection';
 import '../Blog.css';
 import './BlogDetail.css';
 
-const homeFaqs = [
+const blogFaqs = [
   {
     id: 1,
-    question: "Are Valley's messages really personalized, or just sophisticated templates?",
-    answer: "Every Valley message is based on 60+ data points of research - recent LinkedIn posts, company news, podcast appearances, funding rounds, job changes, mutual connections. The AI references what the prospect actually cares about, in your voice. Prospects reply with 'This is one of the best cold DMs I've ever gotten!' (real quote). See 100+ unedited examples at coolnessogebre.com.",
+    question: "How do Heapvue's engineering insights translate into custom client solutions?",
+    answer: "Our technical articles reflect real-world architectural patterns and production lessons from our engineering engagements. We leverage these verified patterns to build custom, scalable, and resilient software for our clients.",
   },
   {
     id: 2,
-    question: 'Does Valley find leads, or do I provide lists?',
-    answer: 'Valley can both source hyper-targeted leads matching your ideal customer profile and enrich lists you provide. Our proprietary scrapers discover verified contact coordinates with sub-zero bounce rates.',
+    question: "How do Heapvue's proprietary software products differ from your custom engineering services?",
+    answer: "Heapvue provides both ready-to-deploy software products (such as Vuecart for e-commerce, Heapsync for CRM, and ChatPress for AI interactions) and bespoke software engineering. You can adopt our pre-built platforms for rapid deployment or engage our teams for bespoke architecture tailored to your business needs.",
   },
   {
     id: 3,
-    question: 'Will my LinkedIn account get restricted?',
-    answer: 'Never. Valley operates within strict cloud session emulations mimicking genuine human interaction rhythms, randomized keystroke intervals, and native regional IP addresses.',
+    question: "Can our team engage Heapvue for technology advisory or architecture audits?",
+    answer: "Yes. In addition to full-cycle software engineering, we offer fractional CTO services, cloud architecture reviews, zero-trust security audits, and buy-vs-build feasibility assessments.",
   },
   {
     id: 4,
-    question: 'What does Valley replace in my current stack?',
-    answer: 'Valley completely replaces fragmented outbound tools including manual lead research spreadsheets, traditional SDR cadences, and static mail-merge senders with a single autonomous agent.',
-  },
-  {
-    id: 5,
-    question: 'How do Heapvue’s software products differ from your custom engineering services?',
-    answer: 'Heapvue provides both ready-to-deploy software products (such as Vuecart, Heapsync, and ChatPress) and bespoke software engineering tailored to your proprietary infrastructure.',
+    question: "How can we discuss a project or request a technical consultation?",
+    answer: "You can reach our engineering team directly via our Contact page or schedule an initial technical discussion. We respond within 24 business hours with an initial review of your requirements.",
   },
 ];
 
@@ -509,7 +504,7 @@ export default function BlogDetailClient({ slug: propSlug }) {
       {/* ====================================================================
           4. Bottom Section: FAQs from Home Page
           ==================================================================== */}
-      <FaqSection customFaqs={homeFaqs} />
+      <FaqSection customFaqs={blogFaqs} />
     </div>
   );
 }

@@ -7,6 +7,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Contact Us | Heapvue - Schedule a Technical Consultation',
   description: 'Connect with Heapvue’s engineering and product teams. Discuss custom platform development, cloud architecture, AI integrations, or product licensing.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 const contactFaqs = [

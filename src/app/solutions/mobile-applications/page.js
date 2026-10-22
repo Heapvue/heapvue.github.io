@@ -11,6 +11,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Mobile Applications | Heapvue - Intuitive & Reliable Mobile Apps',
   description: 'Heapvue helps organisations design and build mobile applications that deliver practical functionality, intuitive user experiences, and reliable performance.',
+  alternates: {
+    canonical: '/solutions/mobile-applications',
+  },
 };
 
 const mobileFaqs = [

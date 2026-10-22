@@ -38,7 +38,7 @@ export default function AboutSection() {
               <div className="feature-text-wrapper">
                 <h4 className="feature-title">Security</h4>
                 <p className="feature-desc">
-                  We guarantee protection for your business against cyber threats.
+                  Zero-trust security architectures and automated threat mitigation to protect your critical systems.
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function AboutSection() {
               <div className="feature-text-wrapper">
                 <h4 className="feature-title">Performance</h4>
                 <p className="feature-desc">
-                  We ensure optimal performance with 24/7 proactive maintenance.
+                  Proactive observability and continuous infrastructure optimization for high-uptime reliability.
                 </p>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function AboutSection() {
               <div className="feature-text-wrapper">
                 <h4 className="feature-title">Support</h4>
                 <p className="feature-desc">
-                  Our experts are available 24/7 to keep operations running smoothly.
+                  Dedicated engineering advisory and SLA-backed support to keep your operations running smoothly.
                 </p>
               </div>
             </div>

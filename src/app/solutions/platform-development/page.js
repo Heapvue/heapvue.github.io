@@ -11,6 +11,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Platform Development | Heapvue - Building Scalable & High-Performance Digital Platforms',
   description: 'Designing and developing robust, scalable platforms tailored to business needs, ensuring seamless performance, flexibility, and future-ready growth.',
+  alternates: {
+    canonical: '/solutions/platform-development',
+  },
 };
 
 const platformFaqs = [

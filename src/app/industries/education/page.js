@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Education & EdTech Solutions | Heapvue',
   description: 'Heapvue helps education organisations build digital platforms that simplify student management and improve learning delivery.',
+  alternates: {
+    canonical: '/industries/education',
+  },
 };
 
 export default function EducationPage() {

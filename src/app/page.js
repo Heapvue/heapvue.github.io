@@ -1,14 +1,23 @@
+import dynamic from 'next/dynamic';
 import Hero from '@/components/home/Hero';
+import HeroBackgroundVideo from '@/components/home/HeroBackgroundVideo';
 import AboutSection from '@/components/home/AboutSection';
-import ServicesSection from '@/components/home/ServicesSection';
-import IndustriesSection from '@/components/home/IndustriesSection';
-import IntegrationsSection from '@/components/home/IntegrationsSection';
-import AppointmentSection from '@/components/home/AppointmentSection';
-import FaqSection from '@/components/home/FaqSection';
-import PlatformSection from '@/components/home/PlatformSection';
-import ClientsSection from '@/components/home/ClientsSection';
-import CaseStudySection from '@/components/home/CaseStudySection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
+
+const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'));
+const ServicesSection = dynamic(() => import('@/components/home/ServicesSection'));
+const PlatformSection = dynamic(() => import('@/components/home/PlatformSection'));
+const ClientsSection = dynamic(() => import('@/components/home/ClientsSection'));
+const CaseStudySection = dynamic(() => import('@/components/home/CaseStudySection'));
+const IndustriesSection = dynamic(() => import('@/components/home/IndustriesSection'));
+const IntegrationsSection = dynamic(() => import('@/components/home/IntegrationsSection'));
+const AppointmentSection = dynamic(() => import('@/components/home/AppointmentSection'));
+const FaqSection = dynamic(() => import('@/components/home/FaqSection'));
+
+export const metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
 
 const homeFaqs = [
   {
@@ -43,17 +52,7 @@ export default function Home() {
     <div className="home-container">
       {/* Hero Video Section */}
       <section className="hero-video-section">
-        <div className="hero-bg-container">
-          <video
-            className="hero-bg-video"
-            src="/images/gemini_generated_video_29666f92.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <div className="hero-video-overlay"></div>
-        </div>
+        <HeroBackgroundVideo />
 
         <div className="container position-relative z-1">
           <Hero />

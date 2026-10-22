@@ -331,8 +331,7 @@ export default function Navbar() {
                     (link.path === '/products' && (pathname === '/product' || pathname.startsWith('/products'))) ||
                     (link.path === '/consulting' && pathname.startsWith('/consulting')) ||
                     (link.path === '/industries' && pathname.startsWith('/industries')) ||
-                    (link.path === '/solutions' && pathname.startsWith('/solutions')) ||
-                    (link.path === '/about' && pathname === '/about-us');
+                    (link.path === '/solutions' && pathname.startsWith('/solutions'));
 
                   if (link.hasDropdown) {
                     const isDropdownVisible = activeDropdown === link.name;
@@ -442,7 +441,7 @@ export default function Navbar() {
               <div className="d-flex align-items-center gap-3 site-nav-actions">
                 <Link
                   href="/contact"
-                  className={`contact-link ${(pathname === '/contact' || pathname === '/contact-us') ? 'active' : ''}`}
+                  className={`contact-link ${pathname === '/contact' ? 'active' : ''}`}
                 >
                   Contact Us
                 </Link>
@@ -501,8 +500,7 @@ export default function Navbar() {
                 (link.path === '/products' && (pathname === '/product' || pathname.startsWith('/products'))) ||
                 (link.path === '/consulting' && pathname.startsWith('/consulting')) ||
                 (link.path === '/industries' && pathname.startsWith('/industries')) ||
-                (link.path === '/solutions' && pathname.startsWith('/solutions')) ||
-                (link.path === '/about' && pathname === '/about-us');
+                (link.path === '/solutions' && pathname.startsWith('/solutions'));
 
               if (link.hasDropdown) {
                 const isExpanded = mobileDropdownOpen === link.name;
@@ -593,7 +591,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setIsOffcanvasOpen(false)}
-              className={`offcanvas-nav-link ${(pathname === '/contact' || pathname === '/contact-us') ? 'active' : ''}`}
+              className={`offcanvas-nav-link ${pathname === '/contact' ? 'active' : ''}`}
             >
               <span>Contact Us</span>
               <FiChevronRight size={16} className="text-muted" />

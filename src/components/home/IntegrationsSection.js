@@ -16,64 +16,44 @@ import {
 
 const platforms = [
   {
-    name: 'Vucart',
-    docUrl: 'https://Vuecart.heapvue.com/in-en',
+    name: 'Vuecart',
     icon: FiShoppingCart,
-    isExternal: true,
   },
   {
     name: 'Learnly',
-    docUrl: 'https://learnly.heapvue.com/',
     icon: FiBookOpen,
-    isExternal: true,
   },
   {
     name: 'Heapvue Cloud Services',
-    docUrl: '/services',
     icon: FiCloud,
-    isExternal: false,
   },
   {
     name: 'Apptuner',
-    docUrl: 'https://Apptuner.dev/',
     icon: FiSliders,
-    isExternal: true,
   },
   {
     name: 'Chatpress',
-    docUrl: 'https://chatpress.heapvue.com/',
     icon: FiMessageSquare,
-    isExternal: true,
   },
   {
     name: 'Heapsync',
-    docUrl: 'https://Heapsync.heapvue.com/',
     icon: FiUsers,
-    isExternal: true,
   },
   {
     name: 'Custom Software',
-    docUrl: '/services',
     icon: FiCode,
-    isExternal: false,
   },
   {
     name: 'DevOps & Cloud',
-    docUrl: '/services',
     icon: FiServer,
-    isExternal: false,
   },
   {
     name: 'Security Engineering',
-    docUrl: '/services',
     icon: FiShield,
-    isExternal: false,
   },
   {
     name: 'Monitoring & Observability',
-    docUrl: '/services',
     icon: FiActivity,
-    isExternal: false,
   },
 ];
 
@@ -87,18 +67,15 @@ export default function IntegrationsSection() {
 
         <div className="integrations-grid">
           {platforms.map((item) => (
-            <a
+            <div
               key={item.name}
-              href={item.docUrl}
-              target={item.isExternal ? '_blank' : '_self'}
-              rel={item.isExternal ? 'noopener noreferrer' : undefined}
               className="integration-box"
             >
               <div className="integration-box-content">
                 <item.icon size={22} className="integration-box-icon" />
                 <span className="integration-box-name">{item.name}</span>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

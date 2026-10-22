@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Data & Compliance (DPDP, GDPR, HIPAA) | Heapvue - Data Privacy Consulting',
   description: 'Heapvue helps organisations design and implement technology solutions that support data privacy, strengthen security, and align with DPDP, GDPR, and HIPAA regulations.',
+  alternates: {
+    canonical: '/consulting/data-compliance',
+  },
 };
 
 const complianceFaqs = [

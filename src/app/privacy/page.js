@@ -1,6 +1,9 @@
 export const metadata = {
   title: 'Privacy Policy | Heapvue',
   description: 'Learn how Heapvue collects, uses, and protects your personal information and corporate data.',
+  alternates: {
+    canonical: '/privacy',
+  },
 };
 
 export default function PrivacyPage() {
