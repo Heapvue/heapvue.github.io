@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Financial Services Technology Solutions | Heapvue',
   description: 'Heapvue helps financial services firms build custom platforms, improve operational workflows, and manage client data more effectively.',
+  alternates: {
+    canonical: '/industries/finance',
+  },
 };
 
 export default function FinancePage() {

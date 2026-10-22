@@ -11,6 +11,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'AI & Intelligent Automation | Heapvue - Building Practical AI Systems',
   description: 'Heapvue helps organisations build AI-powered systems that enhance customer engagement, automate interactions, and improve operational efficiency.',
+  alternates: {
+    canonical: '/solutions/ai-intelligent-automation',
+  },
 };
 
 const aiFaqs = [

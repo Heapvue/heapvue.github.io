@@ -11,6 +11,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'E-commerce & Digital Experience | Heapvue - Modern Digital Platforms',
   description: 'Heapvue helps organisations build modern digital platforms that support online engagement, improve user experience, and enable reliable e-commerce operations.',
+  alternates: {
+    canonical: '/solutions/ecommerce-digital-experience',
+  },
 };
 
 const ecommerceFaqs = [

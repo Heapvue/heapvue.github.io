@@ -11,6 +11,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'System Integration & Security | Heapvue - Connected & Protected Infrastructure',
   description: 'Heapvue helps organisations integrate digital systems and strengthen infrastructure security so data flows seamlessly while maintaining strong protection against cyber threats.',
+  alternates: {
+    canonical: '/solutions/system-integration-security',
+  },
 };
 
 const integrationFaqs = [

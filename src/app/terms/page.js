@@ -1,6 +1,9 @@
 export const metadata = {
   title: 'Terms of Service | Heapvue',
   description: 'Review the Terms of Service governing the use of Heapvue websites, enterprise software engineering services, consulting, and proprietary software products.',
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 export default function TermsPage() {

@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'AI Consulting | Heapvue - Strategy & Practical AI Implementation',
   description: 'Heapvue helps organisations identify high-value AI opportunities, select the right technologies, and implement intelligent solutions that align with business goals.',
+  alternates: {
+    canonical: '/consulting/ai-consulting',
+  },
 };
 
 const aiConsultingFaqs = [

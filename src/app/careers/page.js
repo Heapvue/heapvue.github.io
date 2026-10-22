@@ -6,6 +6,9 @@ import CurrentOpeningsSection from '@/components/careers/CurrentOpeningsSection'
 export const metadata = {
   title: 'Careers | Heapvue - Join Our Team',
   description: 'Be part of our mission to transform. Join a team passionate about AI, software innovation, and building scalable digital solutions.',
+  alternates: {
+    canonical: '/careers',
+  },
 };
 
 export default function CareersPage() {

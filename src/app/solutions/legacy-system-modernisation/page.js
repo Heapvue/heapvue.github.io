@@ -11,6 +11,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Legacy System Modernisation | Heapvue - Upgrade & Secure Legacy Infrastructure',
   description: 'Heapvue helps organisations modernise legacy software systems by redesigning architecture, upgrading technology stacks, and improving system security and performance.',
+  alternates: {
+    canonical: '/solutions/legacy-system-modernisation',
+  },
 };
 
 const legacyFaqs = [

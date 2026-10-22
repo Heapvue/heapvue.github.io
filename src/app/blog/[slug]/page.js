@@ -30,6 +30,9 @@ export async function generateMetadata({ params }) {
       return {
         title: `${blog.title} | Heapvue Insights`,
         description: blog.excerpt || 'Insights and expert perspectives from Heapvue on technology and engineering.',
+        alternates: {
+          canonical: `/blog/${slug}`,
+        },
         openGraph: {
           title: blog.title,
           description: blog.excerpt,
@@ -50,6 +53,9 @@ export async function generateMetadata({ params }) {
     title: `${formattedTitle} | Heapvue Insights`,
     description:
       'Insights and expert perspectives from Heapvue on technology, engineering, and digital transformation.',
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
   };
 }
 

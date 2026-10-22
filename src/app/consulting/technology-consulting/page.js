@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Technology Consulting | Heapvue - Architecture & Tech Stack Evaluation',
   description: 'Heapvue provides technology consulting services that help organisations evaluate, plan, and implement the right technology solutions.',
+  alternates: {
+    canonical: '/consulting/technology-consulting',
+  },
 };
 
 const techConsultingFaqs = [

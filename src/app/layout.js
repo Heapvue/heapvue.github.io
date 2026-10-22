@@ -2,12 +2,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/app/globals.css';
 import '@/components/home/Home.css';
 import { Poppins } from 'next/font/google';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ClientProviders from '@/components/ClientProviders';
 import MetaPixel from '@/components/MetaPixel';
 import UtmTracker from '@/components/UtmTracker';
-import FloatingChat from '@/components/chat/FloatingChat';
+
+const FloatingChat = dynamic(() => import('@/components/chat/FloatingChat'), {
+  ssr: false,
+});
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -17,6 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://heapvue.com'),
   title: 'Heapvue | Premium IT Solutions, Cloud Architecture & AI Integrations',
   description: 'Heapvue builds cutting-edge enterprise software, high-performance cloud architectures, and intelligence-driven custom solutions.',
   keywords: 'IT Consulting, Custom Software, Cloud Infrastructure, AI Development, Enterprise Software, Web Development',

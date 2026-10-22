@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Healthcare Digital Solutions | Heapvue',
   description: 'Heapvue helps healthcare organisations build secure digital platforms, modernise legacy systems, and develop patient-facing applications.',
+  alternates: {
+    canonical: '/industries/healthcare',
+  },
 };
 
 export default function HealthcarePage() {

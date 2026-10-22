@@ -10,6 +10,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'Retail & E-commerce Technology Solutions | Heapvue',
   description: 'Heapvue helps retail and e-commerce organisations build modern digital storefronts, streamline operations, and create scalable commerce platforms.',
+  alternates: {
+    canonical: '/industries/retail-ecommerce',
+  },
 };
 
 export default function RetailEcommercePage() {
