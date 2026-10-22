@@ -117,7 +117,7 @@ export default function BlogPage() {
               </h1>
 
               <p className="blog-hero-description">
-                Learn about the best revenue operations strategies, growth strategies, and ways to increase go-to-market efficiencies from Default&apos;s experts.
+                Explore expert perspectives on software architecture, AI engineering, and modern digital platforms from Heapvue&apos;s technology team.
               </p>
 
               <form onSubmit={handleSubscribe} className="blog-hero-form">

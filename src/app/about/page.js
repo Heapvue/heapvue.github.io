@@ -14,6 +14,9 @@ import FaqSection from '@/components/home/FaqSection';
 export const metadata = {
   title: 'About Us | Heapvue - Innovating for a Better Tomorrow',
   description: 'Learn about Heapvue’s leadership, history, engineering team, and culture. Founded in 2021 in Kochi, India, engineering custom software and SaaS products.',
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 const aboutFaqs = [
@@ -36,34 +39,6 @@ const aboutFaqs = [
     id: 4,
     question: 'How can developers or designers join the Heapvue team?',
     answer: 'We are continually seeking exceptional problem-solvers. You can explore open roles or send your resume, GitHub profile, or portfolio directly to careers@heapvue.com.',
-  },
-];
-
-const homeFaqs = [
-  {
-    id: 1,
-    question: "Are Valley's messages really personalized, or just sophisticated templates?",
-    answer: "Every Valley message is based on 60+ data points of research - recent LinkedIn posts, company news, podcast appearances, funding rounds, job changes, mutual connections. The AI references what the prospect actually cares about, in your voice. Prospects reply with 'This is one of the best cold DMs I've ever gotten!' (real quote). See 100+ unedited examples at coolnessogebre.com.",
-  },
-  {
-    id: 2,
-    question: 'Does Valley find leads, or do I provide lists?',
-    answer: 'Valley can both source hyper-targeted leads matching your ideal customer profile and enrich lists you provide. Our proprietary scrapers discover verified contact coordinates with sub-zero bounce rates.',
-  },
-  {
-    id: 3,
-    question: 'Will my LinkedIn account get restricted?',
-    answer: 'Never. Valley operates within strict cloud session emulations mimicking genuine human interaction rhythms, randomized keystroke intervals, and native regional IP addresses.',
-  },
-  {
-    id: 4,
-    question: 'What does Valley replace in my current stack?',
-    answer: 'Valley completely replaces fragmented outbound tools including manual lead research spreadsheets, traditional SDR cadences, and static mail-merge senders with a single autonomous agent.',
-  },
-  {
-    id: 5,
-    question: 'How do Heapvue’s software products differ from your custom engineering services?',
-    answer: 'Heapvue provides both ready-to-deploy software products (such as Vuecart, Heapsync, and ChatPress) and bespoke software engineering tailored to your proprietary infrastructure.',
   },
 ];
 
@@ -101,7 +76,7 @@ export default function AboutPage() {
       <AppointmentSection />
 
       {/* Have Questions? FAQ Section */}
-      <FaqSection customFaqs={homeFaqs} />
+      <FaqSection customFaqs={aboutFaqs} />
     </div>
   );
 }

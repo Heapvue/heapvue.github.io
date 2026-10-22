@@ -40,7 +40,7 @@ const approachSteps = [
     step: '// 005',
     title: 'Integrating with existing systems and ensuring data continuity',
     description:
-      'Connecting modern applications with existing databases and tools to guarantee complete data integrity and zero operational disruption.',
+      'Connecting modern applications with existing databases and tools engineered for high data integrity and minimal operational impact.',
     image: '/images/sol9.png',
     alt: 'Integrating with existing systems and ensuring data continuity',
   },

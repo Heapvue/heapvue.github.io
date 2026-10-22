@@ -13,9 +13,9 @@ const caseStudies = [
     description: 'Heapvue partnered with Bonnacci to build an AI-powered communication platform that helps users improve writing accuracy and interact naturally through intelligent language assistance.',
     tags: ['UI/UX Design', 'AI & Machine Learning', 'Cloud Computing', 'Software Development', 'Content Writing'],
     image: '/images/bonacci_person.png',
-    bgImage: '/images/bonacci_bg.png',
+    bgImage: '/images/bonacci_bg.webp',
     ctaText: 'Read Full Story',
-    ctaLink: '/contact',
+    ctaLink: '/blog/helping-bonnacci-users-communicate-more-naturally',
   },
   {
     id: 2,
@@ -25,9 +25,9 @@ const caseStudies = [
     description: 'Engineered a HIPAA-compliant real-time patient engagement architecture, eliminating downtime and scaling clinical telemedicine across healthcare networks.',
     tags: ['Healthcare IT', 'Zero Trust Security', 'Cloud Infrastructure', 'API Modernization', 'Compliance'],
     image: '/images/casestudy_flower.png',
-    bgImage: '/images/casestudy_bg_pink.png',
+    bgImage: '/images/casestudy_bg_pink.webp',
     ctaText: 'Read Full Story',
-    ctaLink: '/contact',
+    ctaLink: '/blog/ai-powered-digital-health-telehealth-platform',
   },
   {
     id: 3,
@@ -37,9 +37,9 @@ const caseStudies = [
     description: 'Transformed a legacy monolithic shopping platform into a high-speed modular architecture, reducing catalog loading latency to sub-second thresholds.',
     tags: ['Headless E-Commerce', 'Node.js Microservices', 'High-Availability', 'DevOps Automation', 'Scalability'],
     image: '/images/twoguys.png',
-    bgImage: '/images/casestudy_bg_blue.png',
+    bgImage: '/images/casestudy_bg_blue.webp',
     ctaText: 'Read Full Story',
-    ctaLink: '/contact',
+    ctaLink: '/blog/headless-commerce-scaling-for-enterprise-brands',
   },
 ];
 
