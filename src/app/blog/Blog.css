@@ -314,6 +314,7 @@
 /* ==========================================================================
    2. Blog Insights & News Grid Section (Matches Image 1)
    ========================================================================== */
+.blog-feed-section,
 .blog-grid-section {
   width: 100%;
   background-color: #ffffff;
@@ -321,6 +322,7 @@
   border-bottom: none !important;
 }
 
+.blog-feed-container,
 .blog-grid-container {
   width: 100%;
   max-width: 1360px !important;
@@ -572,6 +574,16 @@
   font-style: normal !important;
 }
 
+.blog-card-title-link {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.blog-card-title-link:hover {
+  color: #0052ff !important;
+}
+
 .blog-card-excerpt {
   font-size: 0.86rem;
   line-height: 1.55;
@@ -739,6 +751,7 @@
     grid-template-columns: 1fr;
   }
 
+  .blog-feed-section,
   .blog-grid-section {
     padding: 50px 0 60px 0;
   }

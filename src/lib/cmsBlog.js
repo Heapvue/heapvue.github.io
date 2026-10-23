@@ -66,6 +66,7 @@ export function formatCmsBlog(blog) {
     author: blog.author_name || 'Heapvue Team',
     authorAvatar: blog.author_avatar || '/images/akhil.jpeg',
     date: dateStr,
+    publishedAt: rawDate || null,
     readTime: blog.read_time || '5 min read',
     image: resolveBlogImage(primaryImage),
     images: Array.isArray(blog.images) ? blog.images : [],
@@ -88,7 +89,9 @@ export async function fetchPublishedBlogs({ limit = 50, page = 1, category = '',
     if (category && category !== 'All') params.append('category', category);
     if (search) params.append('search', search);
 
-    const res = await fetch(`${CMS_BASE_URL}/api/v1/blogs?${params.toString()}`);
+    const res = await fetch(`${CMS_BASE_URL}/api/v1/blogs?${params.toString()}`, {
+      next: { revalidate: 60 },
+    });
     if (!res.ok) {
       throw new Error(`HTTP error ${res.status}`);
     }
@@ -109,7 +112,9 @@ export async function fetchPublishedBlogs({ limit = 50, page = 1, category = '',
 export async function fetchBlogBySlug(slug) {
   if (!slug) return null;
   try {
-    const res = await fetch(`${CMS_BASE_URL}/api/v1/blogs/${encodeURIComponent(slug)}`);
+    const res = await fetch(`${CMS_BASE_URL}/api/v1/blogs/${encodeURIComponent(slug)}`, {
+      next: { revalidate: 60 },
+    });
     if (!res.ok) return null;
     const json = await res.json();
     if (json && json.data) {
