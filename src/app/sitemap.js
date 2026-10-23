@@ -1,8 +1,10 @@
-export default function sitemap() {
+import { fetchPublishedBlogs } from '@/lib/cmsBlog';
+
+export default async function sitemap() {
   const baseUrl = 'https://heapvue.com';
   const lastModified = new Date();
 
-  return [
+  const staticRoutes = [
     {
       url: baseUrl,
       lastModified,
@@ -68,12 +70,6 @@ export default function sitemap() {
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/industries/healthcare`,
@@ -142,4 +138,23 @@ export default function sitemap() {
       priority: 0.5,
     },
   ];
+
+  let blogRoutes = [];
+  try {
+    const blogs = await fetchPublishedBlogs({ limit: 100 });
+    if (Array.isArray(blogs) && blogs.length > 0) {
+      blogRoutes = blogs
+        .filter((b) => b && b.slug)
+        .map((blog) => ({
+          url: `${baseUrl}/blog/${blog.slug}`,
+          lastModified: blog.publishedAt ? new Date(blog.publishedAt) : lastModified,
+          changeFrequency: 'weekly',
+          priority: 0.7,
+        }));
+    }
+  } catch (err) {
+    console.warn('Sitemap blog generation warning:', err);
+  }
+
+  return [...staticRoutes, ...blogRoutes];
 }

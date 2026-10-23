@@ -178,7 +178,7 @@ export default function Footer() {
                   <li><Link href="/blog">Blog</Link></li>
                   <li><Link href="/solutions/platform-development">Solutions</Link></li>
                   <li><Link href="/consulting/digital-transformation">Consulting</Link></li>
-                  <li><Link href="/industries">Industries</Link></li>
+                  <li><Link href="/industries/healthcare">Industries</Link></li>
                 </ul>
               </div>
 
