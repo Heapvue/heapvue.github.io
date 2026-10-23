@@ -119,7 +119,7 @@ export default function IndustriesSection() {
 
         {/* Bottom Explore Link */}
         <div className="industries-footer-link">
-          <Link href="/industries" className="explore-more-link">
+          <Link href="/industries/healthcare" className="explore-more-link">
             Explore More <FiArrowRight size={16} className="explore-arrow" />
           </Link>
         </div>
