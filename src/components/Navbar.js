@@ -294,7 +294,7 @@ export default function Navbar() {
         {/* 1. Top Announcement Bar */}
         <div className="announcement-banner">
           <Link href="/solutions/ai-intelligent-automation" className="announcement-link">
-            Power Modern Enterprises with Intelligent AI Workflows &amp; Cloud Architecture – Explore Solutions
+            Modular Business Platforms &amp; Custom Cloud Engineering for Growing Companies – Explore Solutions
           </Link>
         </div>
 

@@ -109,11 +109,11 @@ export default function Hero() {
       <div className="hero-top-block">
         <h1 className="hero-main-title single-line">Intelligent Technology Solutions</h1>
         <p className="hero-subtitle">
-          Ask anything about our products, AI and cloud engineering, and get an instant answer.
+          Modular software platforms and custom engineering built for growing businesses and modern teams.
         </p>
       </div>
 
-      {/* Center Section: ChatPress Console */}
+      {/* Center Section: Chatpress Console */}
       <div className="hero-center-block">
         <div className="hero-ai-console-wrapper">
           <form onSubmit={handleFormSubmit} className="hero-ai-form-row">
@@ -188,10 +188,10 @@ export default function Hero() {
               <FiBox size={20} />
             </div>
             <h3 className="hero-quad-title">
-              Vuecart &amp; Heapsync Enterprise Suite
+              Vuecart &amp; Heapsync Business Platforms
             </h3>
             <p className="hero-quad-desc">
-              Deploy specialized business SaaS platforms including headless e-commerce, CRM, and automated LMS.
+              Deploy modular business software platforms including headless e-commerce, CRM, and automated LMS.
             </p>
             <a href="https://Vuecart.heapvue.com/in-en" target="_blank" rel="noopener noreferrer" className="hero-quad-link">
               <span>Know More</span>
@@ -205,7 +205,7 @@ export default function Hero() {
               <FiCpu size={20} />
             </div>
             <h3 className="hero-quad-title">
-              Enterprise AI &amp; Autonomous LLM Systems
+              AI Engineering &amp; Autonomous LLM Systems
             </h3>
             <p className="hero-quad-desc">
               Engineer bespoke domain models, multi-agent workflows, and intelligent semantic automation.
