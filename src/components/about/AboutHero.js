@@ -14,9 +14,9 @@ export default function AboutHero() {
 
         {/* Main Title */}
         <h1 className="about-hero-title">
-          Innovating for a
+          Engineering Software &amp;
           <br />
-          Better Tomorrow
+          Cloud Systems That Scale
         </h1>
 
         {/* Subtitle */}

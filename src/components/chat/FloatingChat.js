@@ -111,13 +111,34 @@ export default function FloatingChat() {
     }, 900);
   };
 
-  // Plum greets each visitor once per visit, a moment after they arrive. It never returns once it
-  // has been shown, dismissed, or the chat has been opened.
+  // Plum greets each visitor once per visit after they scroll past the initial hero,
+  // preventing the teaser from covering the fourth hero card on first load.
   useEffect(() => {
     if (safeSession('get')) return undefined;
-    const show = setTimeout(() => setShowTeaser(true), 2500);
-    const hide = setTimeout(() => { setShowTeaser(false); safeSession('set', '1'); }, 30000);
-    return () => { clearTimeout(show); clearTimeout(hide); };
+    let hideTimer = null;
+    const triggerTeaser = () => {
+      setShowTeaser(true);
+      window.removeEventListener('scroll', onScroll);
+      hideTimer = setTimeout(() => { setShowTeaser(false); safeSession('set', '1'); }, 20000);
+    };
+
+    const onScroll = () => {
+      if (window.scrollY > 250) {
+        triggerTeaser();
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // Fallback: show after 15s if user stays on the page
+    const idleTimer = setTimeout(() => {
+      triggerTeaser();
+    }, 15000);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      clearTimeout(idleTimer);
+      if (hideTimer) clearTimeout(hideTimer);
+    };
   }, []);
 
   // Move focus into the panel on open, and back to the launcher on close (it is hidden
@@ -168,8 +189,8 @@ export default function FloatingChat() {
     setInputValue('');
     autoScrollRef.current = true;
     setMessages((previous) => [...previous,
-      { id: crypto.randomUUID(), role: 'user', text: query },
-      { id: answerId, role: 'assistant', text: '' },
+    { id: crypto.randomUUID(), role: 'user', text: query },
+    { id: answerId, role: 'assistant', text: '' },
     ]);
 
     try {

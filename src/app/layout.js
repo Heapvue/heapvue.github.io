@@ -22,14 +22,38 @@ const poppins = Poppins({
 
 export const metadata = {
   metadataBase: new URL('https://heapvue.com'),
-  title: 'Heapvue | Premium IT Solutions, Cloud Architecture & AI Integrations',
-  description: 'Heapvue builds cutting-edge enterprise software, high-performance cloud architectures, and intelligence-driven custom solutions.',
-  keywords: 'IT Consulting, Custom Software, Cloud Infrastructure, AI Development, Enterprise Software, Web Development',
+  title: 'Heapvue | Business Software Platforms, Cloud Architecture & AI Engineering',
+  description: 'Heapvue delivers modular business software platforms and custom engineering across cloud architecture, AI workflows, and modern web applications.',
+  keywords: 'Business Software, Vuecart, Heapsync, Custom Software Development, Cloud Architecture, AI Engineering, DevOps',
   robots: 'index, follow',
   icons: {
     icon: '/images/minilogo_heapvue.png',
     shortcut: '/images/minilogo_heapvue.png',
     apple: '/images/minilogo_heapvue.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://heapvue.com',
+    siteName: 'Heapvue',
+    title: 'Heapvue | Business Software Platforms, Cloud Architecture & AI Engineering',
+    description: 'Heapvue delivers modular business software platforms and custom engineering across cloud architecture, AI workflows, and modern web applications.',
+    images: [
+      {
+        url: '/images/Heapvue_Logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Heapvue Technology & Software Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@heapvue',
+    creator: '@heapvue',
+    title: 'Heapvue | Business Software Platforms, Cloud Architecture & AI Engineering',
+    description: 'Heapvue delivers modular business software platforms and custom engineering across cloud architecture, AI workflows, and modern web applications.',
+    images: ['/images/Heapvue_Logo.png'],
   },
 };
 

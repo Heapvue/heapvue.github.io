@@ -1,0 +1,127 @@
+.not-found-section {
+  width: 100%;
+  min-height: calc(100vh - 105px - 440px);
+  padding: 90px 24px 100px 24px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.not-found-container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 404 Large Brand Number */
+.not-found-code {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(5.5rem, 14vw, 8.5rem);
+  font-weight: 800;
+  color: #0033cc;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+  user-select: none;
+}
+
+/* Headline */
+.not-found-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+  font-weight: 700;
+  color: #0a0f29;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+  max-width: 680px;
+}
+
+/* Subtext */
+.not-found-subtext {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(0.92rem, 1.2vw, 1.02rem);
+  color: #475569;
+  line-height: 1.65;
+  margin: 0 auto 36px auto;
+  max-width: 580px;
+  font-weight: 400;
+}
+
+/* Action Buttons Row */
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.not-found-btn {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: 0px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Primary Button - Exact match to Navbar book-demo-btn */
+.not-found-btn-primary {
+  background-color: #081d63 !important;
+  color: #ffffff !important;
+  border: 1px solid #081d63 !important;
+  box-shadow: 0 2px 8px rgba(8, 29, 99, 0.15);
+}
+
+.not-found-btn-primary:hover {
+  background-color: #002299 !important;
+  border-color: #002299 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(8, 29, 99, 0.25);
+}
+
+/* Secondary Button - Outline match to Contact and Navbar styles */
+.not-found-btn-secondary {
+  background-color: #ffffff !important;
+  color: #081d63 !important;
+  border: 1px solid #081d63 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.not-found-btn-secondary:hover {
+  background-color: #f8fafc !important;
+  color: #002299 !important;
+  border-color: #002299 !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 576px) {
+  .not-found-section {
+    padding: 60px 16px 80px 16px;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .not-found-btn {
+    width: 100%;
+  }
+}

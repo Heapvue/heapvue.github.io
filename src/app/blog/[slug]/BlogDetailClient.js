@@ -27,7 +27,7 @@ const blogFaqs = [
   {
     id: 2,
     question: "How do Heapvue's proprietary software products differ from your custom engineering services?",
-    answer: "Heapvue provides both ready-to-deploy software products (such as Vuecart for e-commerce, Heapsync for CRM, and ChatPress for AI interactions) and bespoke software engineering. You can adopt our pre-built platforms for rapid deployment or engage our teams for bespoke architecture tailored to your business needs.",
+    answer: "Heapvue provides both ready-to-deploy software products (such as Vuecart for e-commerce, Heapsync for CRM, and Chatpress for AI interactions) and bespoke software engineering. You can adopt our pre-built platforms for rapid deployment or engage our teams for bespoke architecture tailored to your business needs.",
   },
   {
     id: 3,
@@ -41,12 +41,12 @@ const blogFaqs = [
   },
 ];
 
-export default function BlogDetailClient({ slug: propSlug }) {
+export default function BlogDetailClient({ slug: propSlug, initialPost = null }) {
   const params = useParams();
   const slug = propSlug || params?.slug;
 
-  const [blogPost, setBlogPost] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [blogPost, setBlogPost] = useState(initialPost);
+  const [loading, setLoading] = useState(!initialPost);
   const [relatedPosts, setRelatedPosts] = useState([]);
   const [activeToc, setActiveToc] = useState('');
   const [sidebarEmail, setSidebarEmail] = useState('');
@@ -57,32 +57,30 @@ export default function BlogDetailClient({ slug: propSlug }) {
   const [ctaEmail, setCtaEmail] = useState('');
   const [ctaBooked, setCtaBooked] = useState(false);
 
-  // Fetch blog detail dynamically from CMS
+  // Fetch blog detail dynamically from CMS if not passed or needed
   useEffect(() => {
-    let isMounted = true;
-    async function loadBlog() {
-      if (!slug) {
-        setLoading(false);
-        return;
-      }
-      try {
-        setLoading(true);
-        const post = await fetchBlogBySlug(slug);
-        if (isMounted) {
-          setBlogPost(post);
+    if (!blogPost && slug) {
+      let isMounted = true;
+      async function loadBlog() {
+        try {
+          setLoading(true);
+          const post = await fetchBlogBySlug(slug);
+          if (isMounted) {
+            setBlogPost(post);
+          }
+        } catch (err) {
+          console.warn('Failed to load blog detail by slug:', err);
+          if (isMounted) setBlogPost(null);
+        } finally {
+          if (isMounted) setLoading(false);
         }
-      } catch (err) {
-        console.warn('Failed to load blog detail by slug:', err);
-        if (isMounted) setBlogPost(null);
-      } finally {
-        if (isMounted) setLoading(false);
       }
+      loadBlog();
+      return () => {
+        isMounted = false;
+      };
     }
-    loadBlog();
-    return () => {
-      isMounted = false;
-    };
-  }, [slug]);
+  }, [slug, blogPost]);
 
   // Fetch related posts from CMS
   useEffect(() => {
@@ -113,7 +111,7 @@ export default function BlogDetailClient({ slug: propSlug }) {
     const sections = [];
     let idx = 1;
     lines.forEach((line) => {
-      const match = line.match(/^##\s+(.+)$/);
+      const match = line.match(/^#{2,3}\s+(.+)$/);
       if (match) {
         const rawTitle = match[1].replace(/[*_`]/g, '').trim();
         const id = 'sec-' + rawTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -208,7 +206,7 @@ export default function BlogDetailClient({ slug: propSlug }) {
           <h1 className="blog-detail-main-title">{title}</h1>
 
           {/* Subtitle */}
-          <p className="blog-detail-subtitle">{subtitle}</p>
+          {subtitle && <p className="blog-detail-subtitle">{subtitle}</p>}
 
           {/* Meta Bar */}
           <div className="blog-detail-meta-bar">
@@ -250,27 +248,29 @@ export default function BlogDetailClient({ slug: propSlug }) {
             {/* Left Column: Article Body */}
             <article className="blog-detail-article">
               {/* Mobile Table of Contents (< 1024px at the TOP) */}
-              <div className="mobile-toc-block d-block d-lg-none mb-4">
-                <div className="sidebar-widget sidebar-toc-widget">
-                  <div className="toc-header">
-                    <FiClock className="toc-clock-icon" />
-                    <span>{readTimeStr}</span>
-                  </div>
+              {tocSections.length > 0 && (
+                <div className="mobile-toc-block d-block d-lg-none mb-4">
+                  <div className="sidebar-widget sidebar-toc-widget">
+                    <div className="toc-header">
+                      <FiClock className="toc-clock-icon" />
+                      <span>{readTimeStr}</span>
+                    </div>
 
-                  <nav className="toc-nav-list">
-                    {tocSections.map((sec) => (
-                      <a
-                        key={sec.id}
-                        href={`#${sec.id}`}
-                        onClick={() => setActiveToc(sec.id)}
-                        className={`toc-nav-item ${activeToc === sec.id ? 'active' : ''}`}
-                      >
-                        {sec.title}
-                      </a>
-                    ))}
-                  </nav>
+                    <nav className="toc-nav-list">
+                      {tocSections.map((sec) => (
+                        <a
+                          key={sec.id}
+                          href={`#${sec.id}`}
+                          onClick={() => setActiveToc(sec.id)}
+                          className={`toc-nav-item ${activeToc === sec.id ? 'active' : ''}`}
+                        >
+                          {sec.title}
+                        </a>
+                      ))}
+                    </nav>
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Dynamic CMS Article Body */}
               <div className="cms-article-body">
@@ -291,9 +291,17 @@ export default function BlogDetailClient({ slug: propSlug }) {
                           </h2>
                         );
                       },
-                      h3: ({ children }) => (
-                        <h3 className="article-heading-3">{children}</h3>
-                      ),
+                      h3: ({ children }) => {
+                        const raw = String(children);
+                        const id =
+                          'sec-' +
+                          raw.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                        return (
+                          <h3 className="article-heading-3" id={id}>
+                            {children}
+                          </h3>
+                        );
+                      },
                       h4: ({ children }) => (
                         <h4 className="article-heading-4">{children}</h4>
                       ),
@@ -324,8 +332,8 @@ export default function BlogDetailClient({ slug: propSlug }) {
                   <p className="lead-paragraph">{blogPost.excerpt}</p>
                 )}
 
-                {/* In-Article CTA Banner (Lead Generation) */}
-                <div className="article-cta-wrapper my-5" id="sec-scalability">
+                {/* In-Article CTA Banner (Engineering Consultation) */}
+                <div className="article-cta-wrapper my-5">
                   <div className="article-cta-noise" aria-hidden="true" />
                   <div className="article-cta-glow-top" aria-hidden="true" />
                   <div className="article-cta-glow-bottom" aria-hidden="true" />
@@ -333,7 +341,7 @@ export default function BlogDetailClient({ slug: propSlug }) {
                   <div className="article-cta-card">
                     <div className="article-cta-header">
                       <h3 className="article-cta-title">
-                        Give your sales team<br />an unfair advantage.
+                        Build scalable platforms<br />with dedicated engineering pods.
                       </h3>
                       <div className="article-cta-divider" />
                     </div>
@@ -360,11 +368,11 @@ export default function BlogDetailClient({ slug: propSlug }) {
                       <button type="submit" className="article-cta-btn">
                         {ctaBooked ? (
                           <>
-                            Appointment Booked! <FiCheck className="ms-1" />
+                            Consultation Requested! <FiCheck className="ms-1" />
                           </>
                         ) : (
                           <>
-                            Book an Appointment <FiArrowRight className="ms-1" />
+                            Schedule Technical Consultation <FiArrowRight className="ms-1" />
                           </>
                         )}
                       </button>
@@ -378,25 +386,27 @@ export default function BlogDetailClient({ slug: propSlug }) {
             <aside className="blog-detail-sidebar">
               <div className="sidebar-sticky-wrapper">
                 {/* 1. Table of Contents / Read Progress (Desktop Only) */}
-                <div className="sidebar-widget sidebar-toc-widget d-none d-lg-block">
-                  <div className="toc-header">
-                    <FiClock className="toc-clock-icon" />
-                    <span>{readTimeStr}</span>
-                  </div>
+                {tocSections.length > 0 && (
+                  <div className="sidebar-widget sidebar-toc-widget d-none d-lg-block">
+                    <div className="toc-header">
+                      <FiClock className="toc-clock-icon" />
+                      <span>{readTimeStr}</span>
+                    </div>
 
-                  <nav className="toc-nav-list">
-                    {tocSections.map((sec) => (
-                      <a
-                        key={sec.id}
-                        href={`#${sec.id}`}
-                        onClick={() => setActiveToc(sec.id)}
-                        className={`toc-nav-item ${activeToc === sec.id ? 'active' : ''}`}
-                      >
-                        {sec.title}
-                      </a>
-                    ))}
-                  </nav>
-                </div>
+                    <nav className="toc-nav-list">
+                      {tocSections.map((sec) => (
+                        <a
+                          key={sec.id}
+                          href={`#${sec.id}`}
+                          onClick={() => setActiveToc(sec.id)}
+                          className={`toc-nav-item ${activeToc === sec.id ? 'active' : ''}`}
+                        >
+                          {sec.title}
+                        </a>
+                      ))}
+                    </nav>
+                  </div>
+                )}
 
                 {/* 2. Sky Blue Newsletter Card */}
                 <div className="sidebar-widget sidebar-newsletter-widget">
@@ -441,64 +451,72 @@ export default function BlogDetailClient({ slug: propSlug }) {
           3. Bottom Section: Our Insights & News (Only when related posts exist)
           ==================================================================== */}
       {relatedPosts.length > 0 && (
-      <section className="blog-grid-section">
-        <div className="blog-grid-container">
-          <div className="blog-section-header">
-            <div className="blog-section-header-left">
-              <div className="casestudy-badge-capsule mb-3">
-                <span className="badge-bullet">▪</span>
-                <span className="badge-text">Our Insights &amp; News</span>
+        <section className="blog-grid-section">
+          <div className="blog-grid-container">
+            <div className="blog-section-header">
+              <div className="blog-section-header-left">
+                <div className="casestudy-badge-capsule mb-3">
+                  <span className="badge-bullet">▪</span>
+                  <span className="badge-text">Our Insights &amp; News</span>
+                </div>
+
+                <h2 className="blog-section-main-title">
+                  Smart Technology <span className="blog-title-blue">Solutions</span><br />
+                  for <span className="blog-title-blue">Modern Industries</span>.
+                </h2>
               </div>
 
-              <h2 className="blog-section-main-title">
-                Smart Technology <span className="blog-title-blue">Solutions</span><br />
-                for <span className="blog-title-blue">Modern Industries</span>.
-              </h2>
+              <div className="blog-section-header-right">
+                <p className="blog-section-description">
+                  Heapvue partners with businesses across multiple industries to build scalable digital platforms, automate operations, and deliver intelligent user experiences powered by modern technology.
+                </p>
+              </div>
             </div>
 
-            <div className="blog-section-header-right">
-              <p className="blog-section-description">
-                Heapvue partners with businesses across multiple industries to build scalable digital platforms, automate operations, and deliver intelligent user experiences powered by modern technology.
-              </p>
-            </div>
-          </div>
+            {/* Related Articles 3-Column Grid */}
+            <div className="blog-cards-grid">
+              {relatedPosts.map((post) => (
+                <article key={post.id || post.slug} className="blog-card-item">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="blog-card-image-box"
+                    aria-label={`Read article: ${post.title}`}
+                  >
+                    <Image
+                      src={post.image || '/images/blog_analytics_dashboard.jpg'}
+                      alt={post.title}
+                      width={440}
+                      height={260}
+                      className="blog-card-img"
+                    />
+                  </Link>
 
-          {/* Related Articles 3-Column Grid */}
-          <div className="blog-cards-grid">
-            {relatedPosts.map((post) => (
-              <article key={post.id || post.slug} className="blog-card-item">
-                <div className="blog-card-image-box">
-                  <Image
-                    src={post.image || '/images/blog_analytics_dashboard.jpg'}
-                    alt={post.title}
-                    width={440}
-                    height={260}
-                    className="blog-card-img"
-                  />
-                </div>
-
-                <div className="blog-card-body">
-                  <h3 className="blog-card-title">{post.title}</h3>
-                  <p className="blog-card-excerpt">{post.excerpt}</p>
-                  <div className="blog-card-divider" />
-                  <div className="blog-card-footer">
-                    <span className="blog-card-meta">
-                      {post.date} &bull; {post.author}
-                    </span>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="blog-card-arrow-btn"
-                      aria-label={`Read article: ${post.title}`}
-                    >
-                      <FiArrowRight />
-                    </Link>
+                  <div className="blog-card-body">
+                    <h3 className="blog-card-title">
+                      <Link href={`/blog/${post.slug}`} className="blog-card-title-link">
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <p className="blog-card-excerpt">{post.excerpt}</p>
+                    <div className="blog-card-divider" />
+                    <div className="blog-card-footer">
+                      <span className="blog-card-meta">
+                        {post.date} &bull; {post.author}
+                      </span>
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="blog-card-arrow-btn"
+                        aria-label={`Read article: ${post.title}`}
+                      >
+                        <FiArrowRight />
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       )}
 
       {/* ====================================================================

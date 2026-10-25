@@ -25,7 +25,7 @@ export function formatCmsBlog(blog) {
   if (!blog) return null;
 
   let dateStr = 'Recently published';
-  const rawDate = blog.published_at || blog.created_at;
+  const rawDate = blog.published_at || blog.publishedAt || blog.created_at || blog.createdAt;
   if (rawDate) {
     try {
       const d = new Date(rawDate);
@@ -56,6 +56,9 @@ export function formatCmsBlog(blog) {
   const primaryImage =
     blog.featured_image || (Array.isArray(blog.images) && blog.images[0]) || '';
 
+  const authorName = blog.author_name || blog.author || 'Heapvue Team';
+  const authorAvatar = blog.author_avatar || blog.authorAvatar || '/images/akhil.jpeg';
+
   return {
     id: blog.id,
     title: blog.title || '',
@@ -63,8 +66,8 @@ export function formatCmsBlog(blog) {
     excerpt: excerpt || '',
     content: blog.content || '',
     category: blog.category || 'Technology',
-    author: blog.author_name || 'Heapvue Team',
-    authorAvatar: blog.author_avatar || '/images/akhil.jpeg',
+    author: authorName,
+    authorAvatar: authorAvatar,
     date: dateStr,
     publishedAt: rawDate || null,
     readTime: blog.read_time || '5 min read',

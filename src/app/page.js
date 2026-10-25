@@ -23,7 +23,7 @@ const homeFaqs = [
   {
     id: 1,
     question: 'How do Heapvue’s software products differ from your custom engineering services?',
-    answer: 'Heapvue provides both ready-to-deploy software products (such as Vuecart for e-commerce, Heapsync for CRM, and ChatPress for AI interactions) and bespoke software engineering. You can adopt our pre-built products for rapid deployment or engage our engineering teams for fully customized architecture tailored to your proprietary requirements.',
+    answer: 'Heapvue provides both ready-to-deploy software products (such as Vuecart for e-commerce, Heapsync for CRM, and Chatpress for AI interactions) and bespoke software engineering. You can adopt our pre-built products for rapid deployment or engage our engineering teams for fully customized architecture tailored to your proprietary requirements.',
   },
   {
     id: 2,
@@ -44,6 +44,11 @@ const homeFaqs = [
     id: 5,
     question: 'How do we begin an engagement with Heapvue?',
     answer: 'You can schedule an introductory architecture consultation directly through our Contact page. Our technical team reviews your current stack and business goals, providing a clear blueprint and buy-vs-build feasibility assessment.',
+  },
+  {
+    id: 6,
+    question: 'How are Heapvue’s software products and engineering services priced?',
+    answer: 'Heapvue operates on a transparent, sales-led pricing model. Our modular SaaS platforms (Vuecart, Heapsync, Chatpress) offer tiered monthly or annual licensing tailored to your active store or user volume, while custom engineering pods and architecture advisory are structured on fixed-deliverable milestones or dedicated monthly retainers. Contact our team for an upfront scope and price estimate.',
   },
 ];
 

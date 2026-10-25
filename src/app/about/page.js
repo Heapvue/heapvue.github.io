@@ -12,7 +12,7 @@ import AppointmentSection from '@/components/home/AppointmentSection';
 import FaqSection from '@/components/home/FaqSection';
 
 export const metadata = {
-  title: 'About Us | Heapvue - Innovating for a Better Tomorrow',
+  title: 'About Heapvue | Engineering Pods, Cloud Architecture & Software Platforms',
   description: 'Learn about Heapvue’s leadership, history, engineering team, and culture. Founded in 2021 in Kochi, India, engineering custom software and SaaS products.',
   alternates: {
     canonical: '/about',

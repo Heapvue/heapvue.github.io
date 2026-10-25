@@ -24,10 +24,10 @@ const SERVICE_OPTIONS = [
 ];
 
 const PLATFORM_OPTIONS = [
-  'AI Revenue Intelligence Platform',
+  'AI Workflows & Intelligent Automation',
   'Heapsync CRM & Operations Engine',
   'Vuecart Headless Commerce Platform',
-  'ChatPress Conversational AI Framework',
+  'Chatpress Conversational AI Framework',
   'Apptuner Cloud & DevOps Suite',
   'Learnly Enterprise LMS',
 ];
@@ -156,7 +156,7 @@ export default function ContactFormSection() {
           ...activeUtms,
         }),
       }).catch((err) => console.warn('CMS sync notice:', err));
-    } catch (e) {}
+    } catch (e) { }
 
     // Careers applications are not sales leads, so they get their own event.
     if (activeTab === 'careers') {

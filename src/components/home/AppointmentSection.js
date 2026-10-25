@@ -100,7 +100,7 @@ export default function AppointmentSection() {
                   Rapid Response SLA
                 </h5>
                 <p className="coverage-card-desc">
-                  All inquiries acknowledged with direct calendar access within 24 hours.
+                  All inquiries acknowledged with direct calendar access within 24 business hours.
                 </p>
               </div>
             </div>

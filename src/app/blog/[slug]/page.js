@@ -59,6 +59,51 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function BlogDetailPage({ params }) {
-  return <BlogDetailClient slug={params?.slug} />;
+export default async function BlogDetailPage({ params }) {
+  const slug = params?.slug;
+  const blog = await fetchBlogBySlug(slug);
+
+  const articleSchema = blog
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: blog.title,
+        description: blog.excerpt,
+        datePublished: blog.publishedAt || undefined,
+        dateModified: blog.publishedAt || undefined,
+        author: {
+          '@type': 'Organization',
+          name: blog.author || 'Heapvue Team',
+          url: 'https://heapvue.com',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Heapvue',
+          url: 'https://heapvue.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://heapvue.com/images/Heapvue_Logo.png',
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://heapvue.com/blog/${slug}`,
+        },
+        image: blog.image
+          ? (blog.image.startsWith('http') ? blog.image : `https://heapvue.com${blog.image}`)
+          : undefined,
+      }
+    : null;
+
+  return (
+    <>
+      {articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
+      <BlogDetailClient slug={slug} initialPost={blog} />
+    </>
+  );
 }
