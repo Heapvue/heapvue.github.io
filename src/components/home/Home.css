@@ -48,7 +48,7 @@
     overflow: visible !important;
   }
 
-  .hero-video-section > .container {
+  .hero-video-section>.container {
     height: 100% !important;
     min-height: 80vh !important;
   }
@@ -238,7 +238,7 @@
   }
 }
 
-/* Center Section: ChatPress Console - ALWAYS in vertical center */
+/* Center Section: Chatpress Console - ALWAYS in vertical center */
 .hero-center-block {
   flex: 1 1 auto;
   margin: auto 0 !important;
@@ -298,7 +298,9 @@
 }
 
 @keyframes rotatePillBeam {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .hero-ai-input-rounded {
@@ -384,8 +386,15 @@
 }
 
 @keyframes typingCursorBlink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-ai-clear-btn {
@@ -497,25 +506,67 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .hero-ai-light-beam,
-  .hero-ai-typing-placeholder .typing-cursor { animation: none; }
+  .hero-ai-typing-placeholder .typing-cursor {
+    animation: none;
+  }
 }
 
 @media (max-width: 1023.98px) {
-  .hero-ai-console-wrapper { max-width: 680px; }
-  .hero-ai-input { height: 50px; font-size: 1.02rem; }
-  .hero-ai-typing-placeholder { font-size: 1.02rem; }
-  .hero-ai-send-btn { width: 50px; height: 50px; }
-  .hero-ai-input-rounded { padding: 6px 6px 6px 20px; gap: 12px; }
+  .hero-ai-console-wrapper {
+    max-width: 680px;
+  }
+
+  .hero-ai-input {
+    height: 50px;
+    font-size: 1.02rem;
+  }
+
+  .hero-ai-typing-placeholder {
+    font-size: 1.02rem;
+  }
+
+  .hero-ai-send-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-ai-input-rounded {
+    padding: 6px 6px 6px 20px;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 767.98px) {
-  .hero-ai-input-rounded { padding: 5px 5px 5px 14px; gap: 8px; }
-  .hero-ai-star-icon { width: 18px; height: 18px; }
-  .hero-ai-input { height: 42px; font-size: 16px; }
-  .hero-ai-typing-placeholder { font-size: 0.9rem; }
-  .hero-ai-send-btn { width: 42px; height: 42px; }
-  .hero-ai-send-btn svg { width: 17px; height: 17px; }
+  .hero-ai-input-rounded {
+    padding: 5px 5px 5px 14px;
+    gap: 8px;
+  }
+
+  .hero-ai-star-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero-ai-input {
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .hero-ai-typing-placeholder {
+    font-size: 0.9rem;
+  }
+
+  .hero-ai-send-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero-ai-send-btn svg {
+    width: 17px;
+    height: 17px;
+  }
 
   .hero-ai-chips-container {
     left: 0;
@@ -531,9 +582,18 @@
     scrollbar-width: none;
   }
 
-  .hero-ai-chips-container::-webkit-scrollbar { display: none; }
-  .hero-ai-chips-label { display: none; }
-  .hero-ai-chip { padding: 7px 13px; font-size: 0.78rem; }
+  .hero-ai-chips-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-ai-chips-label {
+    display: none;
+  }
+
+  .hero-ai-chip {
+    padding: 7px 13px;
+    font-size: 0.78rem;
+  }
 }
 
 /* Bottom Block: Anchored Quad Business Cards - Just One Row, Horizontally Scrollable */
@@ -607,6 +667,37 @@
     max-width: 220px !important;
     min-height: 135px !important;
     padding: 12px 12px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-quad-cards-grid {
+    gap: 12px !important;
+    padding: 4px 12px 14px 12px !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(0, 51, 204, 0.45) rgba(226, 232, 240, 0.3) !important;
+  }
+
+  .hero-quad-cards-grid::-webkit-scrollbar {
+    display: block !important;
+    height: 4px !important;
+  }
+
+  .hero-quad-cards-grid::-webkit-scrollbar-track {
+    background: rgba(226, 232, 240, 0.3);
+    border-radius: 4px;
+  }
+
+  .hero-quad-cards-grid::-webkit-scrollbar-thumb {
+    background: rgba(0, 51, 204, 0.5);
+    border-radius: 4px;
+  }
+
+  .hero-quad-card {
+    flex: 0 0 calc(82vw - 24px) !important;
+    width: calc(82vw - 24px) !important;
+    min-width: 250px !important;
+    max-width: 320px !important;
   }
 }
 

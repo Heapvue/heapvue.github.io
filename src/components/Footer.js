@@ -71,15 +71,15 @@ export default function Footer() {
             <div className="cta-badge-capsule">
               <span className="badge-bullet"></span>
               <span className="badge-text">
-                AI-Powered Revenue Intelligence for Modern GTM Teams
+                Custom Software, Cloud Architecture & AI Engineering
               </span>
             </div>
 
             {/* Main Title (814w x 144h Hug) */}
             <h2 className="cta-main-title">
-              Transform Your Vision Into
+              Scale Your Software Architecture
               <br />
-              Digital Reality
+              With Heapvue
             </h2>
 
             {/* Sub Text (Reduced to fit in one line across all resolutions) */}
@@ -127,7 +127,7 @@ export default function Footer() {
 
               {/* Subtext */}
               <h3 className="footer-tagline">
-                Where Innovation Meets Organization
+                Modular Business Software &amp; Cloud Engineering
               </h3>
 
               {/* Subscribe Newsletter Form */}

@@ -26,7 +26,7 @@ Before executing page restructuring, a fundamental strategic choice must be lock
 
 | Model | Current State | Proposed Structure | Recommendation & Impact |
 | :--- | :--- | :--- | :--- |
-| **Option A: Product Company** | Home sells revenue intelligence. | Home leads with flagship product (Heapsync / ChatPress / Revenue AI). Solutions, consulting, and industries become secondary under `/services`. | Best if Heapvue's primary enterprise value is recurring software licenses (SaaS). |
+| **Option A: Product Company** | Home sells revenue intelligence. | Home leads with flagship product (Heapsync / Chatpress / Revenue AI). Solutions, consulting, and industries become secondary under `/services`. | Best if Heapvue's primary enterprise value is recurring software licenses (SaaS). |
 | **Option B: Services Company** | Solutions, consulting, and industries describe custom software development. | Home leads with engineering capabilities and what Heapvue builds. Products sit as a secondary showcase of proprietary accelerators/frameworks. | Best if Heapvue's revenue is driven by custom engineering, cloud delivery, and client retainers. |
 | **Option C: Hybrid (Both)** *(Recommended)* | Mixed messaging across pages. | **Two distinct lanes from the hero:** "Products" (off-the-shelf software) and "Services" (custom engineering & consulting), each with its own index, FAQ, and CTA. Every industry sector receives a clear **"Built On"** strip explicitly stating *Buy, Build, or Customise*. | **Preserves all existing investments**, removes user confusion, and directly resolves the overlap between products and custom services. |
 
@@ -196,7 +196,7 @@ Before executing page restructuring, a fundamental strategic choice must be lock
 - Integrate the general careers pitch into About.
 
 #### B. `/products`
-- Update product catalog (Vuecart, Heapsync, ChatPress, Apptuner, Learnly):
+- Update product catalog (Vuecart, Heapsync, Chatpress, Apptuner, Learnly):
   - Replace dev URL `https://dev.learnly.heapvue.com/` with production host.
   - Remove unsupported "Enterprise ready" claims.
   - Enrich each product card with:
