@@ -1,18 +1,26 @@
 import BlogDetailClient from './BlogDetailClient';
 import { fetchPublishedBlogs, fetchBlogBySlug } from '@/lib/cmsBlog';
 
-export const dynamicParams = true;
+export const dynamicParams = false;
+
+const FALLBACK_BLOG_SLUGS = [
+  'headless-commerce-scaling-for-enterprise-brands',
+  'ai-powered-digital-health-telehealth-platform',
+  'helping-bonnacci-users-communicate-more-naturally',
+];
 
 export async function generateStaticParams() {
   try {
     const blogs = await fetchPublishedBlogs({ limit: 100 });
     if (Array.isArray(blogs) && blogs.length > 0) {
-      return blogs.map((b) => ({ slug: b.slug }));
+      const cmsSlugs = blogs.map((b) => b.slug).filter(Boolean);
+      const allSlugs = Array.from(new Set([...FALLBACK_BLOG_SLUGS, ...cmsSlugs]));
+      return allSlugs.map((slug) => ({ slug }));
     }
   } catch (err) {
     console.warn('generateStaticParams error:', err);
   }
-  return [];
+  return FALLBACK_BLOG_SLUGS.map((slug) => ({ slug }));
 }
 
 
