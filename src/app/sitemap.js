@@ -1,6 +1,8 @@
 import { fetchPublishedBlogs } from '@/lib/cmsBlog';
 
 export default async function sitemap() {
+
+
   const baseUrl = 'https://heapvue.com';
   const lastModified = new Date();
 
@@ -158,3 +160,4 @@ export default async function sitemap() {
 
   return [...staticRoutes, ...blogRoutes];
 }
+

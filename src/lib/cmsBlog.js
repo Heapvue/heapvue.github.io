@@ -56,7 +56,7 @@ export function formatCmsBlog(blog) {
   const primaryImage =
     blog.featured_image || (Array.isArray(blog.images) && blog.images[0]) || '';
 
-  const authorName = blog.author_name || blog.author || 'Heapvue Team';
+  const authorName = blog.author_name || blog.author || 'Heapvue Engineering';
   const authorAvatar = blog.author_avatar || blog.authorAvatar || '/images/akhil.jpeg';
 
   return {
@@ -74,13 +74,13 @@ export function formatCmsBlog(blog) {
     image: resolveBlogImage(primaryImage),
     images: Array.isArray(blog.images) ? blog.images : [],
     tags: Array.isArray(blog.tags) ? blog.tags : [],
-    isPublished: blog.is_published,
+    isPublished: blog.is_published !== undefined ? blog.is_published : true,
     fromCms: true,
   };
 }
 
 /**
- * Fetches all published blogs from CMS
+ * Fetches all published blogs directly from CMS
  */
 export async function fetchPublishedBlogs({ limit = 50, page = 1, category = '', search = '' } = {}) {
   try {
@@ -104,18 +104,20 @@ export async function fetchPublishedBlogs({ limit = 50, page = 1, category = '',
     }
     return [];
   } catch (err) {
-    console.warn('CMS Blog Fetch Warning (falling back to static content):', err.message);
+    console.warn('CMS Blog Fetch Warning:', err.message);
     return [];
   }
 }
 
 /**
- * Fetches a single blog post by identifier (slug or ID)
+ * Fetches a single blog post directly by slug or ID from CMS
  */
 export async function fetchBlogBySlug(slug) {
   if (!slug) return null;
+  const cleanSlug = encodeURIComponent(slug.trim());
+
   try {
-    const res = await fetch(`${CMS_BASE_URL}/api/v1/blogs/${encodeURIComponent(slug)}`, {
+    const res = await fetch(`${CMS_BASE_URL}/api/v1/blogs/${cleanSlug}`, {
       next: { revalidate: 60 },
     });
     if (!res.ok) return null;

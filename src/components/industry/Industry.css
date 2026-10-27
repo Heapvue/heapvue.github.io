@@ -261,6 +261,7 @@
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
+  position: relative;
 }
 
 .about-healthcare-img {

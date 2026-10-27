@@ -31,14 +31,6 @@ const foundersData = [
     image: '/images/nirmal.jpeg',
     linkedin: 'https://linkedin.com',
   },
-  {
-    id: 'rajiv',
-    name: 'Rajiv Ambat',
-    role: 'Co-Founder & COO',
-    description: 'Visionary leader with a passion for building technology that creates real-world value.',
-    image: '/images/rajiv.jpeg',
-    linkedin: 'https://linkedin.com',
-  },
 ];
 
 const partnersData = [
@@ -68,7 +60,16 @@ const partnersData = [
     description: "Fosters long-term client relationships and expands technological capabilities in strategic sectors.",
     image: '/images/libin.jpeg',
     linkedin: 'https://linkedin.com',
-  }
+  },
+  {
+    id: 'rajiv',
+    name: 'Rajiv Ambat',
+    role: 'Strategic Growth Partner',
+    location: 'Kerala',
+    description: "Drives enterprise technology initiatives, strategic partnerships, and digital transformation across Kerala.",
+    image: '/images/rajiv.jpeg',
+    linkedin: 'https://linkedin.com',
+  },
 ];
 
 export default function OurFoundersSection() {

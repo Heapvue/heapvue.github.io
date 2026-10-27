@@ -181,7 +181,14 @@ export default function Hero() {
 
       {/* Bottom Section: 4 Business Offering Cards */}
       <div className="hero-bottom-block">
+        {/* Mobile visual scroll cue */}
+        <div className="hero-mobile-scroll-cue d-lg-none" aria-hidden="true">
+          <span className="scroll-cue-text">Swipe to explore offerings</span>
+          <FiArrowRight size={13} className="scroll-cue-arrow" />
+        </div>
+
         <div className="hero-quad-cards-grid">
+
           {/* Card 1: SaaS Products */}
           <div className="hero-quad-card">
             <div className="hero-quad-icon">

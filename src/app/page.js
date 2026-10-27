@@ -2,8 +2,7 @@ import dynamic from 'next/dynamic';
 import Hero from '@/components/home/Hero';
 import HeroBackgroundVideo from '@/components/home/HeroBackgroundVideo';
 import AboutSection from '@/components/home/AboutSection';
-
-const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'));
+import TestimonialsSection from '@/components/home/TestimonialsSection';
 const ServicesSection = dynamic(() => import('@/components/home/ServicesSection'));
 const PlatformSection = dynamic(() => import('@/components/home/PlatformSection'));
 const ClientsSection = dynamic(() => import('@/components/home/ClientsSection'));

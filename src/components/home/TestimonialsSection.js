@@ -6,65 +6,56 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 const testimonialsData = [
   {
     id: 1,
-    company: 'Bonnacci',
-    logoSrc: '/images/clients/bonnacci.webp',
-    quote: '“Heapvue enabled us to connect AI agents and scalable workflows seamlessly to our enterprise systems. It truly unlocks immense productivity and operational efficiency for us.”',
-    authorName: 'Elena Rostova',
-    authorTitle: 'Chief Technology Officer',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85',
-    services: ['AI Agents & Workflows', 'Enterprise System Integration', 'Cloud Architecture'],
+    company: 'Forsight Group Pvt. Ltd.',
+    logoSrc: '/images/clients/forsight.png',
+    quote: '“Every AI tool is rushing to add capabilities, but there\'s no way to manage the chaos across them all. We needed a centralized control plane as data sprawl became a real concern. Heapvue solved this - they built the golden path for secure, enterprise-ready digital operations.”',
+    authorName: 'Libin Joseph K',
+    authorTitle: 'Director',
+    avatar: '/images/libin.jpeg',
+    services: ['Zero Trust Security', 'Cloud Infrastructure', 'Enterprise API Modernization'],
   },
   {
     id: 2,
-    company: 'Forsight',
-    logoSrc: '/images/clients/forsight.png',
-    quote: '“Every AI tool is rushing to add capabilities, but there\'s no way to manage the chaos across them all. We needed a centralized control plane as data sprawl became a real concern. Heapvue solved this - they built the golden path for secure, enterprise-ready digital operations.”',
-    authorName: 'Jose Izquierdo',
-    authorTitle: 'Senior Director of Digital Transformation',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=85',
-    services: ['Zero Trust Security', 'Cloud Infrastructure', 'Enterprise API Modernization'],
+    company: 'SOLVEMyHealth',
+    logoSrc: '/images/clients/solvemyhealth.webp',
+    quote: '“The speed of deployment and quality of cloud architecture Heapvue delivered blew our expectations away. Their engineers are top-notch domain experts who ensured data security and high availability from day one.”',
+    authorName: 'Rajiv Ambat',
+    authorTitle: 'Founder & CEO',
+    avatar: '/images/rajiv.jpeg',
+    services: ['HIPAA-Compliant Cloud', 'Real-Time Telemedicine API', 'Microservices Architecture'],
   },
   {
     id: 3,
     company: 'Zentra Learn',
     logoSrc: '/images/clients/zentra-learn.webp',
     quote: '“Modern digital learning isn\'t a distant vision, it\'s the standard for our education platforms. Heapvue provided us with rock-solid cloud infrastructure, lightning-fast performance, and unmatched technical advisory.”',
-    authorName: 'Alberto Martinez',
-    authorTitle: 'Head of Learning Architecture',
+    authorName: 'Abhijith',
+    authorTitle: 'Director',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=85',
     services: ['Cloud Architecture', 'High-Availability DevOps', 'Modern Web Engineering'],
   },
   {
     id: 4,
-    company: 'SolveMyHealth',
-    logoSrc: '/images/clients/solvemyhealth.webp',
-    quote: '“The speed of deployment and quality of cloud architecture Heapvue delivered blew our expectations away. Their engineers are top-notch domain experts who ensured data security and high availability from day one.”',
-    authorName: 'Marcus Vance',
-    authorTitle: 'VP of Product Engineering',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=85',
-    services: ['HIPAA-Compliant Cloud', 'Real-Time Telemedicine API', 'Microservices Architecture'],
+    company: 'Bonnacci',
+    logoSrc: '/images/clients/bonnacci.webp',
+    quote: '“Heapvue enabled us to connect AI agents and scalable workflows seamlessly to our enterprise systems. It truly unlocks immense productivity and operational efficiency for us.”',
+    authorName: 'Varun Vimudhi',
+    authorTitle: 'Founder & CEO',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85',
+    services: ['AI Agents & Workflows', 'Enterprise System Integration', 'Cloud Architecture'],
   },
   {
     id: 5,
     company: 'Conzaura',
     logoSrc: '/images/clients/conzaura.png',
-    quote: '“Heapvue\'s software products automated our business intelligence workflows from day one. Our operations team scaled multi-channel customer engagement with ease and zero downtime.”',
-    authorName: 'Sarah Jenkins',
-    authorTitle: 'Global Operations Director',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85',
+    quote: '“Heapsync is an exceptional CRM that combines power with simplicity. Its intuitive interface ensures a smooth user experience and a very short learning curve for teams”',
+    authorName: 'Somu K E',
+    authorTitle: 'Director',
+    avatar: '/images/somu.webp',
     services: ['Commerce Intelligence', 'Automated Workflows', 'Full-Stack Software Development'],
   },
-  {
-    id: 6,
-    company: 'Pankajakasthuri',
-    logoSrc: '/images/clients/pankajakasthuri.png',
-    quote: '“Partnering with Heapvue transformed how we manage commerce intelligence and digital operations across all our platforms. Their bespoke solutions are robust and future-proof.”',
-    authorName: 'David Chen',
-    authorTitle: 'Principal Systems Architect',
-    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=85',
-    services: ['Headless Commerce', 'Digital Operations Platform', 'Database Optimization'],
-  },
 ];
+
 
 const count = testimonialsData.length;
 
@@ -151,10 +142,11 @@ export default function TestimonialsSection() {
 
                     <div className="testimonial-author-wrapper">
                       <h5 className="author-name">{item.authorName}</h5>
-                      <p className="author-title">{item.authorTitle}</p>
+                      <p className="author-title">{item.authorTitle}, {item.company}</p>
                     </div>
                   </div>
                 </div>
+
               </div>
             ))}
           </div>

@@ -36,8 +36,9 @@ const contactFaqs = [
   {
     id: 5,
     question: 'How do you handle technical support and post-launch maintenance?',
-    answer: 'We provide formal Service Level Agreements (SLAs), 24/7 infrastructure observability, automated zero-trust security patching, and ongoing continuous delivery support for all deployed applications.',
+    answer: 'We provide structured maintenance agreements, proactive health monitoring, automated security patching, and responsive continuous engineering support for all deployed applications.',
   },
+
 ];
 
 export default function ContactPage() {

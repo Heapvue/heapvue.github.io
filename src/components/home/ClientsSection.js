@@ -24,8 +24,9 @@ export default function ClientsSection() {
         <div className="clients-label-block">
           <p className="clients-label-text">
             Trusted by<br />
-            Users Worldwide
+            Growing Businesses
           </p>
+
         </div>
 
         {/* Right Logo Marquee Track */}

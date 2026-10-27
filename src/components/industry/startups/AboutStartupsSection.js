@@ -31,8 +31,8 @@ export default function AboutStartupsSection() {
           <Image
             src="/images/twoguys.png"
             alt="Startup Engineering & Development"
-            width={570}
-            height={510}
+            fill
+            sizes="(max-width: 991px) 100vw, 570px"
             className="about-healthcare-img"
           />
         </div>

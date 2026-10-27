@@ -123,16 +123,17 @@ export default function FloatingChat() {
     };
 
     const onScroll = () => {
-      if (window.scrollY > 250) {
+      if (window.scrollY > 400) {
         triggerTeaser();
       }
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    // Fallback: show after 15s if user stays on the page
+    // Fallback: show after 25s if user stays on the page
     const idleTimer = setTimeout(() => {
       triggerTeaser();
-    }, 15000);
+    }, 25000);
+
 
     return () => {
       window.removeEventListener('scroll', onScroll);

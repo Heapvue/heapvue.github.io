@@ -51,7 +51,7 @@ export default function AboutSection() {
               <div className="feature-text-wrapper">
                 <h4 className="feature-title">Performance</h4>
                 <p className="feature-desc">
-                  Proactive observability and continuous infrastructure optimization for high-uptime reliability.
+                  Proactive system monitoring and continuous infrastructure optimization for dependable application resilience.
                 </p>
               </div>
             </div>
@@ -64,10 +64,11 @@ export default function AboutSection() {
               <div className="feature-text-wrapper">
                 <h4 className="feature-title">Support</h4>
                 <p className="feature-desc">
-                  Dedicated engineering advisory and SLA-backed support to keep your operations running smoothly.
+                  Dedicated engineering advisory and responsive ongoing support to keep your systems running smoothly.
                 </p>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -89,8 +90,8 @@ export default function AboutSection() {
               <Image 
                 src="/images/flowerdesign.png" 
                 alt="Modern technology abstract visual" 
-                width={289} 
-                height={202} 
+                fill
+                sizes="(max-width: 768px) 100vw, 300px"
                 className="flower-img"
               />
             </div>
@@ -101,8 +102,8 @@ export default function AboutSection() {
             <Image 
               src="/images/twoguys.png" 
               alt="Engineering collaboration and platform architecture" 
-              width={299} 
-              height={510} 
+              fill
+              sizes="(max-width: 768px) 100vw, 300px"
               className="twoguys-img"
             />
           </div>
