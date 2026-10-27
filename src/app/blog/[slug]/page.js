@@ -12,8 +12,10 @@ export async function generateStaticParams() {
   } catch (err) {
     console.warn('generateStaticParams error:', err);
   }
-  return [{ slug: 'default' }];
+  return [];
 }
+
+
 
 export async function generateMetadata({ params }) {
   const slug = params?.slug;

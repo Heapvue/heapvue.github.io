@@ -66,8 +66,9 @@ export default function CompanyLogosSection() {
         {/* Left Fixed Label - Left aligned */}
         <div className="logos-label-box">
           <span className="logos-label-line">Trusted by</span>
-          <span className="logos-label-line">Users Worldwide</span>
+          <span className="logos-label-line">Growing Businesses</span>
         </div>
+
 
         {/* Right Marquee Viewport with Spacing: 38px */}
         <div className="logos-marquee-viewport">

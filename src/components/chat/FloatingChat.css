@@ -45,34 +45,35 @@
 .fc-plum--message .fc-plum-fallback { color: var(--fc-blue); background: transparent; }
 .fc-plum-fallback--lg { width: 52px; height: 52px; margin: 40px; }
 
-/* One-off teaser */
+/* One-off teaser - positioned directly above avatar with arrow pointing to cap */
 .fc-teaser {
   position: fixed;
-  right: 58px;
-  bottom: 120px;
+  right: 12px;
+  bottom: 144px;
   z-index: 1040;
   display: flex;
   align-items: center;
   max-width: min(300px, calc(100vw - 32px));
   background: #ffffff;
-  border-radius: 18px 18px 6px 18px;
+  border-radius: 18px;
   box-shadow: 0 12px 34px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(15, 23, 42, 0.05);
   animation: fcRise 0.35s ease-out;
 }
 
-/* tail pointing down at Plum */
+/* tail pointing down at Plum's cap */
 .fc-teaser::after {
   content: '';
   position: absolute;
-  right: 22px;
+  right: 58px;
   bottom: -7px;
   width: 16px;
   height: 16px;
   background: #ffffff;
-  border-radius: 0 0 4px 0;
+  border-radius: 0 0 3px 0;
   transform: rotate(45deg);
-  box-shadow: 3px 3px 5px rgba(15, 23, 42, 0.08);
+  box-shadow: 3px 3px 5px rgba(15, 23, 42, 0.06);
 }
+
 
 .fc-teaser-text {
   border: 0;
@@ -346,7 +347,9 @@
 @media (max-width: 575.98px) {
   .fc-launcher { right: 6px; bottom: 6px; width: 112px; height: 112px; }
   .fc-launcher--open { display: none; }
-  .fc-teaser { right: 40px; bottom: 100px; }
+  .fc-teaser { right: 8px; bottom: 118px; }
+  .fc-teaser::after { right: 46px; }
+
 
   .fc-panel {
     inset: 0;

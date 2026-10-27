@@ -13,17 +13,36 @@ const nextConfig = {
       },
     ],
   },
-  async headers() {
+  async redirects() {
     return [
       {
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
+        source: '/products',
+        destination: '/solutions/ecommerce-digital-experience',
+        permanent: true,
       },
+      {
+        source: '/consulting',
+        destination: '/consulting/digital-transformation',
+        permanent: true,
+      },
+      {
+        source: '/solutions',
+        destination: '/solutions/platform-development',
+        permanent: true,
+      },
+      {
+        source: '/industries',
+        destination: '/industries/healthcare',
+        permanent: true,
+      },
+    ];
+  },
+  async headers() {
+    // Only apply asset caching in production; Next.js handles /_next/static caching automatically.
+    if (process.env.NODE_ENV !== 'production') {
+      return [];
+    }
+    return [
       {
         source: '/images/:path*',
         headers: [
